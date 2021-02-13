@@ -80,15 +80,15 @@
             $menuSidebar.toggleClass('shrinked');
         });
 
-        
+
         // Hero area typing effect
         if($(".typed p span").length){
             $(".typed p span").typed({
-                strings: ["Miguel Cárcamo", "a developer.","an astronomer.","a nasty girl fantastic."],
+                strings: ["Miguel Cárcamo", "a computer scientist","a radio astronomer."],
                 typeSpeed: 50
             });
         }
-        
+
 
         // Camera slider
         var $cameraSlider = $('.hero_slider');
@@ -103,7 +103,7 @@
                 fx: 'random',
             });
         }
-        
+
         // Skill bar animation
         var $skillLabel = $('.single_skill .labels span'),
         $singleSkill = $('.single_skill');
@@ -265,7 +265,7 @@
                         else{
                              resposeMsg.html("<div class='alert alert-danger'><p>" + text + " is required!</p></div>");
                         }
-                       
+
                     }
                 }
             });
