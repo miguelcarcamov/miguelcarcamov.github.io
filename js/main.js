@@ -48,15 +48,10 @@
             var $toBeActivated = $(e.currentTarget.hash);
             currentActiveIndex = Array.prototype.indexOf.call($pages, $($toBeActivated)[0]);
 
-            //Set animation according to order
-            if(prevIndex < currentActiveIndex){
-                $(currentActivePage).addClass('translateToLeft');
-                $toBeActivated.addClass('active translateFromLeft').siblings().removeClass('active translateFromLeft translateFromRight');
-            }
-            else if( prevIndex > currentActiveIndex){
-                $(currentActivePage).addClass('translateToRight');
-                $toBeActivated.addClass('active translateFromRight').siblings().removeClass('active translateFromRight translateFromLeft');
-            }
+            // Always slide in the same direction (like turning pages in a book)
+            // Current page slides left, new page comes from right
+            $(currentActivePage).addClass('translateToLeft');
+            $toBeActivated.addClass('active translateFromLeft').siblings().removeClass('active translateFromLeft translateFromRight');
 
             //active current item
             $(this).parent('li').addClass('active').siblings().removeClass('active');
