@@ -271,4 +271,45 @@
             });
             return false;
         });
+
+        /* Load blog posts from JSON file */
+        function loadBlogPosts() {
+            $.getJSON('blog-posts.json', function(data) {
+                var container = $('#blog-posts-container');
+                container.empty();
+                
+                if (data.length === 0) {
+                    container.html('<div class="col-md-12"><p style="text-align: center; padding: 40px; color: #999;">No blog posts yet. Check back soon!</p></div>');
+                    return;
+                }
+                
+                $.each(data, function(index, post) {
+                    var blogHtml = '<div class="col-md-4 col-sm-6 md-half-width">' +
+                        '<article class="single_blog">' +
+                        '<figure>' +
+                        '<img src="' + post.image + '" alt="' + post.title + '">' +
+                        '</figure>' +
+                        '<div class="blog_content">' +
+                        '<a href="' + post.link + '"><h4 class="blog_title">' + post.title + '</h4></a>' +
+                        '<div class="date"><p>' + post.date + '</p></div>' +
+                        '<p>' + post.excerpt + '</p>' +
+                        '<ul class="meta_data">' +
+                        '<li class="auth"><img src="images/auth.jpg" alt="Author Avatar"> <p>By ' + post.author + '</p></li>' +
+                        '<li class="tag"><span class="pe-7s-ticket"></span> <p>' + post.category + '</p></li>' +
+                        '</ul>' +
+                        '</div>' +
+                        '</article>' +
+                        '</div>';
+                    container.append(blogHtml);
+                });
+            }).fail(function() {
+                // If JSON file doesn't exist or fails to load, show empty state
+                $('#blog-posts-container').html('<div class="col-md-12"><p style="text-align: center; padding: 40px; color: #999;">No blog posts yet. Check back soon!</p></div>');
+            });
+        }
+        
+        // Load blog posts when page is ready
+        $(document).ready(function() {
+            loadBlogPosts();
+        });
 })(jQuery);

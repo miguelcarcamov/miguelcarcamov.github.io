@@ -1,0 +1,21 @@
+[
+  {
+    "title": "Your Blog Post Title Here",
+    "date": "January 1, 2024",
+    "excerpt": "A short description or excerpt of your blog post. This will be displayed on the main blog page.",
+    "image": "images/blog1.jpg",
+    "link": "single_blog.html",
+    "author": "Miguel Cárcamo",
+    "category": "Research"
+  },
+  {
+    "title": "Second Blog Post Example",
+    "date": "February 1, 2024",
+    "excerpt": "Another example post. Notice the comma after the first post - you need commas between posts, but NOT after the last one.",
+    "image": "images/blog2.jpg",
+    "link": "single_blog.html",
+    "author": "Miguel Cárcamo",
+    "category": "Computing"
+  }
+]
+
