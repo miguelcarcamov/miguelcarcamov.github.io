@@ -91,10 +91,25 @@
 
 
         // Hero area typing effect
-        if($(".typed p span").length){
-            $(".typed p span").typed({
-                strings: ["Miguel Cárcamo", "a computer scientist","a radio astronomer."],
-                typeSpeed: 50
+        if($(".typed-text").length){
+            $(".typed-text").typed({
+                strings: [
+                    "Hello",
+                    "I'm Miguel Carcamo",
+                    "I'm a radio astronomer",
+                    "I'm a computer scientist",
+                    "I explore the universe",
+                    "I study cosmic signals",
+                    "I build scientific software",
+                    "I analyze astronomical data",
+                    "I'm passionate about research",
+                    "Welcome to my website"
+                ],
+                typeSpeed: 50,
+                backSpeed: 30,
+                backDelay: 2000,
+                loop: true,
+                showCursor: true
             });
         }
 
