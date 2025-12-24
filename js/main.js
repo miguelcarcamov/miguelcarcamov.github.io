@@ -85,7 +85,9 @@
             }
             
             // Don't do transition if clicking the same section
-            if ($toBeActivated[0] === currentActivePage) {
+            // Check both by element reference and by active class
+            if ($toBeActivated[0] === currentActivePage || $toBeActivated.hasClass('active')) {
+                // Already on this section, do nothing
                 return;
             }
             
