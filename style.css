@@ -518,39 +518,10 @@ MAIN CONTENT AREA CSS
 		overflow: hidden;
 	}
 	
-	/* Allow scrolling on blog post pages */
+	/* Blog post pages - main_content should allow the section to scroll */
 	body.blog-post-page-active .main_content {
-		overflow-y: scroll !important;
-		overflow-x: hidden !important;
-		height: 100vh !important;
-		position: fixed !important;
-		-webkit-overflow-scrolling: touch !important;
-		/* Keep fixed positioning but allow vertical scrolling */
-	}
-	
-	/* Ensure body and html allow scrolling on blog post pages */
-	body.blog-post-page-active {
-		height: auto !important;
-		overflow: visible !important;
-	}
-	
-	body.blog-post-page-active html {
-		height: auto !important;
-		overflow: visible !important;
-	}
-	
-	body.blog-post-page-active .site {
-		height: auto !important;
-		min-height: 100vh;
-		overflow: visible !important;
-	}
-	
-	/* Make sure blog post content can scroll and has enough height */
-	body.blog-post-page-active section.blog-post-page {
-		overflow: visible !important;
-		height: auto !important;
-		min-height: calc(100vh + 100px) !important;
-		padding-bottom: 50px;
+		overflow: hidden !important;
+		/* Keep overflow hidden so the section itself scrolls */
 	}
 /*------ MAIN CONTENT AREA END ------*/
 
@@ -1282,13 +1253,16 @@ SINGLE BLOG PAGE
 	
 	/* Blog post page (standalone, not part of main page) */
 	section.blog-post-page{
-		position: relative !important;
+		position: absolute !important;
 		visibility: visible !important;
 		z-index: 1 !important;
-		height: auto !important;
-		overflow: visible !important;
+		height: 100% !important;
+		width: 100% !important;
+		left: 0 !important;
+		right: 0 !important;
+		top: 0 !important;
+		overflow: auto !important;
 		background: #fff;
-		min-height: calc(100vh + 200px) !important;
 		opacity: 0;
 		animation: fadeInPage 0.6s ease-in-out forwards;
 	}
