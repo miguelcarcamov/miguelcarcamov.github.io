@@ -515,6 +515,15 @@ MAIN CONTENT AREA CSS
 		height: 100%;
 		right: 0;
 		top:0;
+		overflow: hidden;
+	}
+	
+	/* Allow scrolling on blog post pages */
+	.main_content:has(section.blog-post-page),
+	body.blog-post-page-active .main_content {
+		overflow: auto !important;
+		height: auto !important;
+		min-height: 100%;
 	}
 /*------ MAIN CONTENT AREA END ------*/
 
@@ -1252,6 +1261,32 @@ SINGLE BLOG PAGE
 		height: auto !important;
 		overflow: visible !important;
 		background: #fff;
+		min-height: 100vh;
+		opacity: 0;
+		animation: fadeInPage 0.6s ease-in-out forwards;
+	}
+	
+	/* Allow scrolling on blog post pages */
+	.main_content:has(section.blog-post-page) {
+		overflow: auto !important;
+		height: auto !important;
+	}
+	
+	/* Fallback for browsers that don't support :has() */
+	body.blog-post-page-active .main_content {
+		overflow: auto !important;
+		height: auto !important;
+	}
+	
+	@keyframes fadeInPage {
+		from {
+			opacity: 0;
+			transform: translateY(20px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
 	}
 	.blog_title{
 		padding-bottom: 21px;

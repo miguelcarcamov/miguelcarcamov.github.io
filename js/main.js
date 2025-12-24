@@ -427,6 +427,28 @@
         /* Blog posts are now rendered by Jekyll directly in the HTML */
         /* No JavaScript loading needed - posts are included server-side */
         
+        // Add transition effect when clicking blog post links
+        $(document).on('click', '#blog a[href*="/"], .blog_content a[href*="/"]', function(e) {
+            var href = $(this).attr('href');
+            // Only handle relative blog post links (not external links)
+            if (href && !href.match(/^(https?:\/\/|mailto:|#)/) && (href.match(/\d{4}\/\d{2}\/\d{2}/) || href.indexOf('/') > -1)) {
+                // Add fade-out effect before navigation
+                e.preventDefault();
+                var targetUrl = href;
+                
+                // Fade out main content
+                $('.main_content').css({
+                    'transition': 'opacity 0.4s ease-out',
+                    'opacity': '0'
+                });
+                
+                // Navigate after fade
+                setTimeout(function() {
+                    window.location.href = targetUrl;
+                }, 400);
+            }
+        });
+        
         } // End initMainJS function
         
         // Start initialization
