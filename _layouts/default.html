@@ -62,14 +62,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{{ '/images/favicon-16x16.png' | relative_url }}">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ '/images/favicon-32x32.png' | relative_url }}">
     
-    {% if page.layout == 'post' %}
-    <script>
-    // Add class to body for blog post pages to enable scrolling (run immediately)
-    (function() {
-        document.body.classList.add('blog-post-page-active');
-    })();
-    </script>
-    {% endif %}
 </head>
 <body{% if page.layout == 'post' %} class="blog-post-page-active"{% endif %}>
 
