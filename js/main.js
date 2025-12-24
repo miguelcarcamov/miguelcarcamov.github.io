@@ -1,6 +1,15 @@
 
 (function(){
         "use strict";
+        
+        // Wait for sections to be loaded before initializing
+        function initMainJS() {
+            // Check if sections are loaded
+            if (!document.querySelector('#home')) {
+                // Sections not loaded yet, wait for event
+                document.addEventListener('sectionsLoaded', initMainJS, { once: true });
+                return;
+            }
 
         /* Varibles
         -------------*/
@@ -312,4 +321,9 @@
         $(document).ready(function() {
             loadBlogPosts();
         });
+        
+        } // End initMainJS function
+        
+        // Start initialization
+        initMainJS();
 })(jQuery);
