@@ -92,19 +92,58 @@
         Promise.all(loadPromises).then(() => {
             console.log('All sections loaded successfully');
             
+            // Make sure home section is active by default
+            const homeSection = document.querySelector('#home');
+            const allSections = document.querySelectorAll('.single_page');
+            
+            console.log(`Found ${allSections.length} sections in DOM`);
+            
+            if (homeSection) {
+                // Remove active from all sections first
+                allSections.forEach(section => {
+                    section.classList.remove('active');
+                });
+                
+                // Add active to home section
+                homeSection.classList.add('active');
+                console.log('Home section set as active');
+                
+                // Also set the menu item as active
+                const homeLink = document.querySelector('.main_menu a[href="#home"]');
+                if (homeLink) {
+                    const homeMenuItem = homeLink.parentElement;
+                    homeMenuItem.classList.add('active');
+                    // Remove active from other menu items
+                    homeMenuItem.parentElement.querySelectorAll('li').forEach(li => {
+                        if (li !== homeMenuItem) {
+                            li.classList.remove('active');
+                        }
+                    });
+                    console.log('Home menu item set as active');
+                }
+                
+                // Verify the section is actually visible
+                const computedStyle = window.getComputedStyle(homeSection);
+                console.log('Home section visibility:', computedStyle.visibility);
+                console.log('Home section z-index:', computedStyle.zIndex);
+            } else {
+                console.error('Home section not found after loading!');
+            }
+            
             // Dispatch custom event for other scripts (main.js listens for this)
             const event = new CustomEvent('sectionsLoaded', { 
                 detail: { sections: sections } 
             });
             document.dispatchEvent(event);
             
-            // Small delay to ensure DOM is fully updated
+            // Small delay to ensure DOM is fully updated before main.js runs
             setTimeout(() => {
+                console.log('Triggering main.js initialization...');
                 // Re-initialize main.js functionality if needed
                 if (typeof window.initMainJS === 'function') {
                     window.initMainJS();
                 }
-            }, 100);
+            }, 200);
         });
     }
 
