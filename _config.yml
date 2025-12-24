@@ -1,0 +1,41 @@
+# Site Settings
+title: "Miguel Cárcamo - Assistant Professor & Radio Astronomer"
+description: "Assistant Professor at Universidad de Santiago de Chile, Associate Researcher at Data Observatory. Ph.D. in Astronomy and Astrophysics. Expert in radio interferometry, compressed sensing, cosmic magnetism, and high-performance computing."
+url: "https://miguelcarcamov.github.io"
+baseurl: ""
+
+# Author
+author:
+  name: "Miguel Cárcamo"
+  email: "miguel.carcamo@usach.cl"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md
+  - DEPLOYMENT-CHECK.md
+
+# Collections
+collections:
+  sections:
+    output: false
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Miguel Cárcamo"
+

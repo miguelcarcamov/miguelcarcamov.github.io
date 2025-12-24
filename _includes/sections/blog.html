@@ -1,0 +1,47 @@
+<section id="blog" class="blog single_page">
+<!-- blog_area -->
+<div class="blog_area section_padding">
+<!-- container -->
+<div class="container">
+<!-- row -->
+<div class="row">
+<div class="col-md-12">
+<div class="section_title">
+<h2>blog post</h2>
+<p class="sub_title">latest news</p>
+</div>
+</div>
+</div><!-- end .row -->
+<!-- row -->
+<div class="row" data-uk-grid id="blog-posts-container">
+{% for post in site.posts limit:9 %}
+<div class="col-md-4 col-sm-6 md-half-width">
+<article class="single_blog">
+<figure>
+{% if post.image %}
+<img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+{% else %}
+<img src="{{ '/images/blog1.jpg' | relative_url }}" alt="{{ post.title }}">
+{% endif %}
+</figure>
+<div class="blog_content">
+<a href="{{ post.url | relative_url }}"><h4 class="blog_title">{{ post.title }}</h4></a>
+<div class="date"><p>{{ post.date | date: "%B %d, %Y" }}</p></div>
+<p>{{ post.excerpt | default: post.description | strip_html | truncatewords: 20 }}</p>
+<ul class="meta_data">
+<li class="auth"><img src="{{ '/images/auth.jpg' | relative_url }}" alt="Author Avatar"> <p>By {{ post.author | default: site.author.name }}</p></li>
+<li class="tag"><span class="pe-7s-ticket"></span> <p>{{ post.category | default: "General" }}</p></li>
+</ul>
+</div>
+</article>
+</div>
+{% else %}
+<div class="col-md-12">
+<p style="text-align: center; padding: 40px; color: #999;">No blog posts yet. Check back soon!</p>
+</div>
+{% endfor %}
+</div><!-- .row -->
+</div><!-- end container -->
+</div><!-- end blog_area -->
+</section>
+<!-- end #blog -->

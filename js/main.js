@@ -4,12 +4,8 @@
         
         // Wait for sections to be loaded before initializing
         function initMainJS() {
-            // Check if sections are loaded
-            if (!document.querySelector('#home')) {
-                // Sections not loaded yet, wait for event
-                document.addEventListener('sectionsLoaded', initMainJS, { once: true });
-                return;
-            }
+            // Sections are now included directly by Jekyll, no need to wait for loading
+            // All sections should be present in the DOM when this runs
 
         /* Varibles
         -------------*/
@@ -259,78 +255,66 @@
 
         });
 
-        /* PHP mail process */
+        /* Contact form handling (mailto: - opens email client, no signup required) */
         var contactForm = $(".contact_form");
         contactForm.on('submit', function (e) {
-            // var _this = $(this),
             e.preventDefault();
             var resposeMsg = $('.respone_message');
-
-            /* Ajax request */
-            $.ajax({
-                url: "form-process.php",
-                type: "POST",
-                data: contactForm.serialize(),
-                beforeSend: function () {
-                    resposeMsg.html("<div class='alert alert-info'><p>Loading ...</p></div>");
-                },
-                success: function (text) {
-                    if (text === "success") {
-                        resposeMsg.html("<div class='alert alert-success'><p><i class='fa fa-check' aria-hidden='true'></i>Message has been sent successfully.</p></div>");
-                    } else {
-                        if(text.length < 0){
-                            resposeMsg.html("<div class='alert alert-danger'><p>All fields are required!</p></div>");
-                        }
-                        else{
-                             resposeMsg.html("<div class='alert alert-danger'><p>" + text + " is required!</p></div>");
-                        }
-
-                    }
-                }
-            });
+            var form = $(this);
+            
+            // Get form values
+            var name = $('#contact-name').val().trim();
+            var email = $('#contact-email').val().trim();
+            var phone = $('#contact-phone').val().trim() || 'Not provided';
+            var web = $('#contact-web').val().trim() || 'Not provided';
+            var message = $('#contact-message').val().trim();
+            
+            // Validation
+            var errorMSG = [];
+            if (!name) errorMSG.push('Name');
+            if (!email) {
+                errorMSG.push('Email');
+            } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                errorMSG.push('Invalid email format');
+            }
+            if (!message) errorMSG.push('Message');
+            
+            if (errorMSG.length > 0) {
+                resposeMsg.html("<div class='alert alert-danger'><p>" + errorMSG.join(', ') + " is required!</p></div>");
+                return false;
+            }
+            
+            // Prepare email body (same format as PHP version)
+            var emailBody = "Name: " + name + "\n";
+            emailBody += "Email: " + email + "\n";
+            emailBody += "Phone: " + phone + "\n";
+            emailBody += "Website: " + web + "\n\n";
+            emailBody += "Message:\n" + message;
+            
+            // Encode for mailto URL
+            var subject = encodeURIComponent("New Message Received from Website");
+            var body = encodeURIComponent(emailBody);
+            var recipient = "miguel.carcamo@usach.cl";
+            
+            // Create mailto link
+            var mailtoLink = "mailto:" + recipient + "?subject=" + subject + "&body=" + body;
+            
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            // Show success message
+            resposeMsg.html("<div class='alert alert-success'><p><i class='fa fa-check' aria-hidden='true'></i> Your email client should open. If it doesn't, please send an email to <a href='mailto:" + recipient + "'>" + recipient + "</a></p></div>");
+            
+            // Reset form after a short delay
+            setTimeout(function() {
+                form[0].reset();
+            }, 1000);
+            
             return false;
         });
 
-        /* Load blog posts from JSON file */
-        function loadBlogPosts() {
-            $.getJSON('blog-posts.json', function(data) {
-                var container = $('#blog-posts-container');
-                container.empty();
-                
-                if (data.length === 0) {
-                    container.html('<div class="col-md-12"><p style="text-align: center; padding: 40px; color: #999;">No blog posts yet. Check back soon!</p></div>');
-                    return;
-                }
-                
-                $.each(data, function(index, post) {
-                    var blogHtml = '<div class="col-md-4 col-sm-6 md-half-width">' +
-                        '<article class="single_blog">' +
-                        '<figure>' +
-                        '<img src="' + post.image + '" alt="' + post.title + '">' +
-                        '</figure>' +
-                        '<div class="blog_content">' +
-                        '<a href="' + post.link + '"><h4 class="blog_title">' + post.title + '</h4></a>' +
-                        '<div class="date"><p>' + post.date + '</p></div>' +
-                        '<p>' + post.excerpt + '</p>' +
-                        '<ul class="meta_data">' +
-                        '<li class="auth"><img src="images/auth.jpg" alt="Author Avatar"> <p>By ' + post.author + '</p></li>' +
-                        '<li class="tag"><span class="pe-7s-ticket"></span> <p>' + post.category + '</p></li>' +
-                        '</ul>' +
-                        '</div>' +
-                        '</article>' +
-                        '</div>';
-                    container.append(blogHtml);
-                });
-            }).fail(function() {
-                // If JSON file doesn't exist or fails to load, show empty state
-                $('#blog-posts-container').html('<div class="col-md-12"><p style="text-align: center; padding: 40px; color: #999;">No blog posts yet. Check back soon!</p></div>');
-            });
-        }
-        
-        // Load blog posts when page is ready
-        $(document).ready(function() {
-            loadBlogPosts();
-        });
+        /* Blog posts are now rendered by Jekyll directly in the HTML */
+        /* No JavaScript loading needed - posts are included server-side */
         
         } // End initMainJS function
         

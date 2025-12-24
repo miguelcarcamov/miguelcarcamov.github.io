@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- viewport meta -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ site.description }}">
+    <meta name="keywords" content="Miguel Cárcamo, Computer Engineer, Astronomy, Astrophysics, Radio Astronomy, Extragalactic Magnetic Fields, Data Observatory, YEMS, University of Santiago, University of Manchester, Research, Signal Processing">
+    <meta name="author" content="{{ site.author.name }}">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}/">
+    <meta property="og:title" content="{{ site.title }}">
+    <meta property="og:description" content="{{ site.description }}">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ site.url }}{{ site.baseurl }}/">
+    <meta property="twitter:title" content="{{ site.title }}">
+    <meta property="twitter:description" content="{{ site.description }}">
+
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+
+    <!-- owl carousel css -->
+    <link rel="stylesheet" href="{{ '/css/owl.carousel.css' | relative_url }}"/>
+
+    <!-- venobox css -->
+    <link rel="stylesheet" href="{{ '/css/venobox.css' | relative_url }}">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="{{ '/css/font-awesome.min.css' | relative_url }}"/>
+
+    <!-- camera css -->
+    <link rel="stylesheet" href="{{ '/css/camera.css' | relative_url }}">
+
+    <!-- fontello -->
+    <link rel="stylesheet" href="{{ '/css/pe-icon-7-stroke.css' | relative_url }}"/>
+
+    <!-- linear icons css -->
+    <link rel="stylesheet" href="{{ '/css/lnr-icon.css' | relative_url }}">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,900" rel="stylesheet">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="{{ '/css/bootstrap.min.css' | relative_url }}"/>
+
+    <!-- animte css -->
+    <link rel="stylesheet" href="{{ '/css/animate.css' | relative_url }}"/>
+
+    <!-- style css -->
+    <link rel="stylesheet" href="{{ '/style.css' | relative_url }}"/>
+
+    <!-- responsive css -->
+    <link rel="stylesheet" href="{{ '/css/responsive.css' | relative_url }}">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/images/favicon-32x32.png' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ '/images/favicon-16x16.png' | relative_url }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/images/favicon-32x32.png' | relative_url }}">
+</head>
+<body>
+
+    <!-- start main wrapper .site -->
+    <div class="site">
+        <!-- start header -->
+        <aside class="nav_sidebar">
+            <div class="menu_wrapper">
+                <div class="header_top">
+                    <div class="toggle_icon hidden-xs"><span class="lnr lnr-menu"></span></div>
+                    <div class="head_img_wrap">
+                        <img src="{{ '/images/person.png' | relative_url }}" alt="Miguel Cárcamo - Computer Engineer and Radio Astronomer">
+                    </div>
+                    <p class="name">{{ site.author.name }}</p>
+                </div>
+
+                <div class="main_menu">
+                    <ul>
+                        <li class="active"><a href="#home"><span class="lnr lnr-home"></span><p>Home</p></a></li>
+                        <li><a href="#about"><span class="lnr lnr-user"></span><p>about me</p></a></li>
+                        <li><a href="#resume"><span class="lnr lnr-book"></span><p>resume</p></a></li>
+                        <li><a href="#publications"><span class="lnr lnr-file-empty"></span><p>publications</p></a></li>
+                        <li><a href="#teaching"><span class="lnr lnr-graduation-hat"></span><p>teaching</p></a></li>
+                        <li><a href="#collaborators"><span class="lnr lnr-users"></span><p>collaborators</p></a></li>
+                        <li><a href="#students"><span class="lnr lnr-user"></span><p>students</p></a></li>
+                        <li><a href="#blog"><span class="lnr lnr-leaf"></span><p>blog</p></a></li>
+                        <li><a href="#contact"><span class="lnr lnr-envelope"></span><p>contact</p></a></li>
+                    </ul>
+
+                    <div class="social">
+                        <ul>
+                            <li><a href="https://github.com/miguelcarcamov"><span class="fa fa-github"></span></a></li>
+                            <li><a href="https://twitter.com/miguel_carcamov"><span class="fa fa-twitter"></span></a></li>
+                            <li><a href="https://www.linkedin.com/in/miguelcarcamov/"><span class="fa fa-linkedin"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </aside><!-- end header -->
+
+        <!-- menu toggler -->
+        <div class="menu_toggler" role="button" aria-label="Toggle navigation menu" tabindex="0">
+            <span class="fa fa-bars" aria-hidden="true"></span>
+        </div>
+        <!-- menu toggler -->
+
+
+        <!-- main_content -->
+        <div class="main_content">
+            {{ content }}
+        </div><!-- end main_content -->
+    </div><!-- end main wrapper /.site -->
+
+
+
+    <!--//////////////////// JS GOES HERE ////////////////-->
+
+    <!-- jquery latest version -->
+    <script src="{{ '/js/jquery-1.12.3.js' | relative_url }}"></script>
+
+    <!-- bootstrap js -->
+    <script src="{{ '/js/bootstrap.min.js' | relative_url }}"></script>
+
+    <!-- jquery easing 1.3 -->
+    <script src="{{ '/js/jquery.easing1.3.js' | relative_url }}"></script>
+
+    <!-- Owl carousel js-->
+    <script src="{{ '/js/owl.carousel.min.js' | relative_url }}"></script>
+
+    <!-- venobox js -->
+    <script src="{{ '/js/venobox.min.js' | relative_url }}"></script>
+
+    <!-- waypoint js -->
+    <script src="{{ '/js/waypoints.min.js' | relative_url }}"></script>
+
+    <!-- Counter up js-->
+    <script src="{{ '/js/jquery.counterup.min.js' | relative_url }}"></script>
+
+    <!-- google map js -->
+    <!-- Note: Replace YOUR_API_KEY with your actual Google Maps API key -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+
+    <!-- uikit js -->
+    <script src="{{ '/js/uikit.min.js' | relative_url }}"></script>
+
+    <!-- jquery uikit js -->
+    <script src="{{ '/js/grid.min.js' | relative_url }}"></script>
+
+    <!-- Typed js -->
+    <script src="{{ '/js/typed.min.js' | relative_url }}"></script>
+
+    <!-- jQuery tubler js -->
+    <script src="{{ '/js/jquery.tubular.1.0.js' | relative_url }}"></script>
+
+    <!-- Main js - No longer needs section-loader.js since sections are included directly -->
+    <script src="{{ '/js/main.js' | relative_url }}"></script>
+
+    <!-- GOOGLE MAP JS -->
+    <script type="text/javascript" src="{{ '/js/map.js' | relative_url }}"></script>
+</body>
+</html>
+

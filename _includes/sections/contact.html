@@ -22,24 +22,24 @@
 <div class="col-md-7 col-sm-6 col-lg-6">
 <!-- start .contact_form_wrapper -->
 <div class="contact_form_wrapper">
-<form action="#" class="contact_form">
+<form action="#" class="contact_form" id="contact-form">
 <div class="row">
 <div class="col-md-6">
-<input name="name" type="text" placeholder="Name" required>
+<input name="name" type="text" placeholder="Name" required id="contact-name">
 </div>
 <div class="col-md-6">
-<input name="email" type="email" placeholder="Email" required>
+<input name="email" type="email" placeholder="Email" required id="contact-email">
 </div>
 </div>
 <div class="row">
 <div class="col-md-6">
-<input name="phone" type="tel" placeholder="Phone (Optional)">
+<input name="phone" type="tel" placeholder="Phone (Optional)" id="contact-phone">
 </div>
 <div class="col-md-6">
-<input name="web" type="url" placeholder="Website (Optional)">
+<input name="web" type="url" placeholder="Website (Optional)" id="contact-web">
 </div>
 </div>
-<textarea name="description" cols="30" rows="10" placeholder="Message" required></textarea>
+<textarea name="description" cols="30" rows="10" placeholder="Message" required id="contact-message"></textarea>
 <p class="respone_message"></p>
 <button type="submit" class="btn contact_btn" aria-label="Send contact message">send message</button>
 </form>
@@ -53,7 +53,7 @@
 </li>
 <li>
 <p class="info_title">CONTACT INFO</p>
-<p class="info">miguel.carcamo@usach.cl <br> (+56) 2 2718 0940 </p>
+<p class="info">{{ site.author.email }} <br> (+56) 2 2718 0940 </p>
 </li>
 <li>
 <p class="info_title">WORKING HOURS</p>

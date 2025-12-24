@@ -1,0 +1,64 @@
+---
+layout: default
+---
+
+<section class="single_post single_page active">
+<div class="section_padding">
+<!-- start container -->
+<div class="container">
+<!-- row -->
+<div class="row">
+<div class="col-md-12">
+<div class="section_title">
+<h2>{{ page.title }}</h2>
+<p class="sub_title">{{ page.date | date: "%B %d, %Y" }}</p>
+</div>
+</div><!-- .col-md-12 -->
+</div><!-- row -->
+
+<!-- row -->
+<div class="row">
+<div class="col-md-8">
+<article class="single_blog_post">
+{% if page.image %}
+<figure>
+<img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+</figure>
+{% endif %}
+
+<div class="blog_content">
+<div class="date"><p>{{ page.date | date: "%B %d, %Y" }}</p></div>
+<ul class="meta_data">
+<li class="auth"><img src="{{ '/images/auth.jpg' | relative_url }}" alt="Author Avatar"> <p>By {{ page.author | default: site.author.name }}</p></li>
+{% if page.category %}
+<li class="tag"><span class="pe-7s-ticket"></span> <p>{{ page.category }}</p></li>
+{% endif %}
+</ul>
+
+<div class="post_content">
+{{ content }}
+</div>
+</div>
+</article>
+</div>
+
+<div class="col-md-4">
+<div class="sidebar">
+<div class="widget">
+<h4 class="widget_title">Recent Posts</h4>
+<ul class="recent_posts">
+{% for post in site.posts limit:5 %}
+<li>
+<a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+<span>{{ post.date | date: "%B %d, %Y" }}</span>
+</li>
+{% endfor %}
+</ul>
+</div>
+</div>
+</div>
+</div><!-- end row -->
+</div><!-- end container -->
+</div>
+</section>
+
