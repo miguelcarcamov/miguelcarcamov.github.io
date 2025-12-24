@@ -519,11 +519,38 @@ MAIN CONTENT AREA CSS
 	}
 	
 	/* Allow scrolling on blog post pages */
-	.main_content:has(section.blog-post-page),
 	body.blog-post-page-active .main_content {
-		overflow: auto !important;
+		overflow-y: scroll !important;
+		overflow-x: hidden !important;
+		height: 100vh !important;
+		position: fixed !important;
+		-webkit-overflow-scrolling: touch !important;
+		/* Keep fixed positioning but allow vertical scrolling */
+	}
+	
+	/* Ensure body and html allow scrolling on blog post pages */
+	body.blog-post-page-active {
 		height: auto !important;
-		min-height: 100%;
+		overflow: visible !important;
+	}
+	
+	body.blog-post-page-active html {
+		height: auto !important;
+		overflow: visible !important;
+	}
+	
+	body.blog-post-page-active .site {
+		height: auto !important;
+		min-height: 100vh;
+		overflow: visible !important;
+	}
+	
+	/* Make sure blog post content can scroll and has enough height */
+	body.blog-post-page-active section.blog-post-page {
+		overflow: visible !important;
+		height: auto !important;
+		min-height: calc(100vh + 100px) !important;
+		padding-bottom: 50px;
 	}
 /*------ MAIN CONTENT AREA END ------*/
 
@@ -1261,22 +1288,11 @@ SINGLE BLOG PAGE
 		height: auto !important;
 		overflow: visible !important;
 		background: #fff;
-		min-height: 100vh;
+		min-height: calc(100vh + 200px) !important;
 		opacity: 0;
 		animation: fadeInPage 0.6s ease-in-out forwards;
 	}
 	
-	/* Allow scrolling on blog post pages */
-	.main_content:has(section.blog-post-page) {
-		overflow: auto !important;
-		height: auto !important;
-	}
-	
-	/* Fallback for browsers that don't support :has() */
-	body.blog-post-page-active .main_content {
-		overflow: auto !important;
-		height: auto !important;
-	}
 	
 	@keyframes fadeInPage {
 		from {
