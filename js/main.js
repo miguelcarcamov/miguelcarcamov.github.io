@@ -15,42 +15,108 @@
 
 
 
-        // Set current Active section on new tabs or window
-        var link = window.location.href,
-            hashPosition = link.indexOf('#'),
-            hash = link.substr(hashPosition,link.length);
-
-        if(hash.indexOf('#') > -1){
-            if($(hash).length){
-                $(hash).addClass('active').siblings().removeClass('active');
-            }
-            $hashLink.each(function(e){
-                $(this).attr('href') == hash ? $(this).parent('li').addClass('active').siblings().removeClass('active'): '';
-            })
-        }
-        else{
-            $('#home').addClass('active');
-        }
-
         //page transition
         var $pages = $('.single_page'),
-            currentActivePage = $('.single_page.active')[0],
-            prevIndex = Array.prototype.indexOf.call($pages, currentActivePage),
+            currentActivePage,
+            prevIndex = 0,
             currentActiveIndex;
-            console.log(prevIndex);
+
+        // Initialize: Set current Active section on page load
+        var link = window.location.href,
+            hashPosition = link.indexOf('#'),
+            hash = hashPosition > -1 ? link.substr(hashPosition, link.length) : '';
+
+        // Remove active class from all sections first
+        $pages.removeClass('active');
+        
+        if(hash && hash.indexOf('#') > -1){
+            var $targetSection = $(hash);
+            if($targetSection.length && $targetSection.hasClass('single_page')){
+                $targetSection.addClass('active');
+                currentActivePage = $targetSection[0];
+                prevIndex = Array.prototype.indexOf.call($pages, currentActivePage);
+                
+                // Update menu
+                $hashLink.each(function(){
+                    if($(this).attr('href') == hash) {
+                        $(this).parent('li').addClass('active').siblings().removeClass('active');
+                    }
+                });
+            } else {
+                // Hash section not found, default to home
+                $('#home').addClass('active');
+                currentActivePage = $('#home')[0];
+                prevIndex = 0;
+            }
+        }
+        else{
+            // No hash, default to home
+            $('#home').addClass('active');
+            currentActivePage = $('#home')[0];
+            prevIndex = 0;
+        }
 
         $hashLink.on('click',function (e) {
-            //get current Elem and Index
-            var $toBeActivated = $(e.currentTarget.hash);
-            currentActiveIndex = Array.prototype.indexOf.call($pages, $($toBeActivated)[0]);
+            e.preventDefault();
+            
+            //get target section
+            var targetHash = $(this).attr('href');
+            var $toBeActivated = $(targetHash);
+            
+            // Check if we're on a blog post page (separate page, not main index)
+            var isBlogPostPage = $('.single_post').length > 0;
+            
+            // If on blog post page and clicking a section link, go to main page
+            if (isBlogPostPage && targetHash.indexOf('#') === 0) {
+                window.location.href = '/' + targetHash;
+                return;
+            }
+            
+            // Check if target section exists on current page
+            if ($toBeActivated.length === 0 || !$toBeActivated.hasClass('single_page')) {
+                // If section doesn't exist, it might be a blog post or external link
+                // Allow normal navigation
+                if (targetHash.indexOf('#') === 0) {
+                    // It's a hash link but section not found - might be on different page
+                    // Try going to main page with hash
+                    window.location.href = '/' + targetHash;
+                }
+                return;
+            }
+            
+            // Don't do transition if clicking the same section
+            if ($toBeActivated[0] === currentActivePage) {
+                return;
+            }
+            
+            // Get index of target section
+            currentActiveIndex = Array.prototype.indexOf.call($pages, $toBeActivated[0]);
+            
+            // Validate index
+            if (currentActiveIndex === -1) {
+                console.warn('Section not found in pages collection:', targetHash);
+                return;
+            }
 
             // Always slide in the same direction (like turning pages in a book)
             // Current page slides left, new page comes from right
-            $(currentActivePage).addClass('translateToLeft');
-            $toBeActivated.addClass('active translateFromLeft').siblings().removeClass('active translateFromLeft translateFromRight');
+            if (currentActivePage) {
+                $(currentActivePage).removeClass('active').addClass('translateToLeft');
+            }
+            
+            $toBeActivated.addClass('active translateFromLeft');
+            $pages.not($toBeActivated).removeClass('active translateFromLeft translateFromRight');
 
-            //active current item
+            //active current menu item
             $(this).parent('li').addClass('active').siblings().removeClass('active');
+            
+            // Update URL hash without triggering page reload
+            if (history.pushState) {
+                history.pushState(null, null, targetHash);
+            } else {
+                window.location.hash = targetHash;
+            }
+            
             // update state
             prevIndex = currentActiveIndex;
             currentActivePage = $toBeActivated[0];
@@ -59,6 +125,27 @@
         // Remove Class after page Transition
         $pages.on('animationend', function(){
             $(this).removeClass('translateToLeft translateToRight');
+        });
+        
+        // Handle browser back/forward buttons
+        $(window).on('hashchange', function() {
+            var hash = window.location.hash;
+            if (hash) {
+                var $targetSection = $(hash);
+                if ($targetSection.length && $targetSection.hasClass('single_page')) {
+                    // Update active states
+                    $pages.removeClass('active');
+                    $targetSection.addClass('active');
+                    
+                    // Update menu
+                    $hashLink.parent('li').removeClass('active');
+                    $hashLink.filter('[href="' + hash + '"]').parent('li').addClass('active');
+                    
+                    // Update current page reference
+                    currentActivePage = $targetSection[0];
+                    prevIndex = Array.prototype.indexOf.call($pages, currentActivePage);
+                }
+            }
         });
 
         if(windowHeight < 734){
