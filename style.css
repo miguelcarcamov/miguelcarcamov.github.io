@@ -308,7 +308,7 @@ Version: 1.0.0
 SIDEBAR AREA CSS
 ----------------------*/
 	aside.nav_sidebar{
-		width: 160px;
+		width: 200px;
 		background: #372db4;
 	}
 	.site{
@@ -452,7 +452,7 @@ SIDEBAR AREA CSS
 	.main_menu > ul >li:before {
 		position: absolute;
 		content: '';
-		border-left: 60px solid #493fc8;
+		border-left: 80px solid #493fc8;
 		border-top: 45px solid transparent;
 		border-bottom: 45px solid transparent;
 		z-index: -1;
@@ -510,7 +510,7 @@ MAIN CONTENT AREA CSS
 ----------------------*/
 	.main_content{
 		position: fixed;
-		left: 160px;
+		left: 200px;
 		width: auto;
 		height: 100%;
 		right: 0;
