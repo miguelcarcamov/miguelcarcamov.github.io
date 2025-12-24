@@ -1243,6 +1243,16 @@ SINGLE BLOG PAGE
 	section.single_post.single_page{
 		background: #f6f6f6!important;
 	}
+	
+	/* Blog post page (standalone, not part of main page) */
+	section.blog-post-page{
+		position: relative !important;
+		visibility: visible !important;
+		z-index: 1 !important;
+		height: auto !important;
+		overflow: visible !important;
+		background: #fff;
+	}
 	.blog_title{
 		padding-bottom: 21px;
 	}
