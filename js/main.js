@@ -7,7 +7,7 @@
             // Sections are now included directly by Jekyll, no need to wait for loading
             // All sections should be present in the DOM when this runs
 
-        /* Varibles
+        /* Variables
         -------------*/
         var windowWidth = $(window).width(),
             windowHeight = $(window).height(),
@@ -95,17 +95,37 @@
             // Validate index
             if (currentActiveIndex === -1) {
                 console.warn('Section not found in pages collection:', targetHash);
-                return;
+                console.warn('Available sections:', $pages.map(function() { return '#' + this.id; }).get());
+                // Try refreshing the pages collection
+                $pages = $('.single_page');
+                currentActiveIndex = Array.prototype.indexOf.call($pages, $toBeActivated[0]);
+                if (currentActiveIndex === -1) {
+                    console.error('Section still not found after refresh:', targetHash);
+                    return;
+                }
             }
 
             // Always slide in the same direction (like turning pages in a book)
             // Current page slides left, new page comes from right
+            
+            // Remove transition classes from other pages (not current or target)
+            var $otherPages = $pages.not($toBeActivated);
             if (currentActivePage) {
-                $(currentActivePage).removeClass('active').addClass('translateToLeft');
+                $otherPages = $otherPages.not($(currentActivePage));
+            }
+            $otherPages.removeClass('translateFromLeft translateFromRight translateToLeft translateToRight active');
+            
+            // Animate current page out (slide left) if it exists and is different
+            if (currentActivePage && currentActivePage !== $toBeActivated[0]) {
+                var $currentPage = $(currentActivePage);
+                $currentPage.removeClass('active translateFromLeft translateFromRight');
+                $currentPage.addClass('translateToLeft');
             }
             
+            // Animate new page in (slide from right) and make it active
+            // Remove any existing transition classes first
+            $toBeActivated.removeClass('translateFromRight translateToLeft translateToRight');
             $toBeActivated.addClass('active translateFromLeft');
-            $pages.not($toBeActivated).removeClass('active translateFromLeft translateFromRight');
 
             //active current menu item
             $(this).parent('li').addClass('active').siblings().removeClass('active');
@@ -123,8 +143,10 @@
         });
 
         // Remove Class after page Transition
-        $pages.on('animationend', function(){
-            $(this).removeClass('translateToLeft translateToRight');
+        $pages.on('animationend', function(e){
+            // Only remove classes from the element that finished animating
+            var $animatingElement = $(e.target);
+            $animatingElement.removeClass('translateToLeft translateToRight translateFromLeft translateFromRight');
         });
         
         // Handle browser back/forward buttons
