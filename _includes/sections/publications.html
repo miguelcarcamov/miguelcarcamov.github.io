@@ -76,9 +76,33 @@
 {% if pubs.generated_at_utc %}
 <div class="row">
 <div class="col-md-12">
-<p style="color: #999; font-size: 12px; margin-top: 5px;">Last synchronized from NASA ADS: {{ pubs.generated_at_utc }}</p>
+<p style="color: #999; font-size: 12px; margin-top: 5px;">
+Last synchronized from NASA ADS:
+<span id="ads-sync-time" data-utc="{{ pubs.generated_at_utc }}">{{ pubs.generated_at_utc }}</span>
+</p>
 </div>
 </div>
+<script>
+(function () {
+  var el = document.getElementById("ads-sync-time");
+  if (!el) return;
+  var utcValue = el.getAttribute("data-utc");
+  if (!utcValue) return;
+
+  var dt = new Date(utcValue);
+  if (isNaN(dt.getTime())) return;
+
+  var formatted = dt.toLocaleString(undefined, {
+    year: "numeric",
+    month: "long",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    timeZoneName: "short"
+  });
+  el.textContent = formatted;
+})();
+</script>
 {% endif %}
 </div>
 </div><!-- end row -->

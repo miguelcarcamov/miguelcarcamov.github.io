@@ -1,13 +1,13 @@
-generated_at_utc: '2026-04-28T20:00:37Z'
+generated_at_utc: '2026-04-28T20:12:00Z'
 source: NASA ADS API
 orcid: 0000-0003-0564-8167
 query_authors:
 - Carcamo, Miguel
 - Cárcamo, Miguel
 counts:
-  first_author_journal: 4
+  first_author_journal: 2
   first_author_conference: 2
-  coauthored_journal: 12
+  coauthored_journal: 14
   coauthored_conference: 2
 first_author:
   journal:
@@ -21,37 +21,16 @@ first_author:
     pages: '1955'
     doi: 10.1093/mnras/stac3031
     url: https://doi.org/10.1093/mnras/stac3031
-  - authors: Cárcamo, Miguel, Scaife, Anna M. M., Alexander, Emma L., Leahy, J. Patrick
-    title: 'CS-ROMER: Compressed Sensing ROtation MEasure Reconstruction'
-    publication: Astrophysics Source Code Library
-    year: 2022
-    date_label: '2022'
-    volume: ''
+  - authors: Cárcamo, M., Román, P. E., Casassus, S., Moral, V., Rannou, F. R.
+    title: Multi-GPU maximum entropy image synthesis for radio astronomy
+    publication: Astronomy and Computing
+    year: 2018
+    date_label: '2018'
+    volume: '22'
     issue: ''
-    pages: ascl:2205.015
-    doi: ''
-    url: https://ui.adsabs.harvard.edu/abs/2022ascl.soft05015C
-  - authors: Cárcamo, Miguel, Scaife, Anna, Taylor, Russ, Jarvis, Matt, Bowles, Micah, Sekhar, Srikrishna, Heino, Lennart,
-      Stil, Jeroen
-    title: A Compressed Sensing Faraday Depth Reconstruction Framework for the MeerKAT MIGHTEE-POL Survey
-    publication: arXiv e-prints
-    year: 2022
-    date_label: '2022'
-    volume: ''
-    issue: ''
-    pages: arXiv:2206.03283
-    doi: 10.48550/arXiv.2206.03283
-    url: https://doi.org/10.48550/arXiv.2206.03283
-  - authors: Cárcamo, Miguel, Muñoz, Nicolás, Rannou, Fernando, Román, Pablo, Casassus, Simón, Osses, Axel, Moral, Victor
-    title: 'GPUVMEM: Maximum Entropy Method (MEM) GPU algorithm for radio astronomical image synthesis'
-    publication: Astrophysics Source Code Library
-    year: 2019
-    date_label: '2019'
-    volume: ''
-    issue: ''
-    pages: ascl:1906.014
-    doi: ''
-    url: https://ui.adsabs.harvard.edu/abs/2019ascl.soft06014C
+    pages: '16'
+    doi: 10.1016/j.ascom.2017.11.003
+    url: https://doi.org/10.1016/j.ascom.2017.11.003
   conference:
   - authors: Carcamo, Miguel, Scaife, Anna, Taylor, Russ, Jarvis, Matt, Bowles, Micah, Sekhar, Srikrishna, Heino, Lennart,
       Stil, Jeroen
@@ -76,6 +55,17 @@ first_author:
     url: https://doi.org/10.1109/ISSPIT.2015.7394340
 coauthored:
   journal:
+  - authors: Casassus, S., Vidal, M., Cárcamo, M., Verstraete, L., Ysard, N., Habart, E.
+    title: 'ALMA Band 1 observations of the ρ Oph W filament: I. Enhanced power from excess microwave emission at high spatial
+      frequencies'
+    publication: Astronomy and Astrophysics
+    year: 2026
+    date_label: '2026'
+    volume: '707'
+    issue: ''
+    pages: A255
+    doi: 10.1051/0004-6361/202557944
+    url: https://doi.org/10.1051/0004-6361/202557944
   - authors: Domínguez-Jamett, Oriana, Casassus, Simon, Baobab Liu, Hauyu, Aoyama, Yuhiko, Cárcamo, Miguel, Weber, Philipp,
       Chrenko, Onďrej, Marleau, Gabriel-Dominique, Ercolano, Barbara, Szulágyi, Judit
     title: 'Multi-frequency observations of PDS70c: Radio emission mechanisms in the circumplanetary environment'
@@ -151,6 +141,16 @@ coauthored:
     pages: '1248'
     doi: 10.1093/mnras/stab3440
     url: https://doi.org/10.1093/mnras/stab3440
+  - authors: Ndiritu, S. W., Scaife, A. M. M., Tabb, D. L., Cárcamo, M., Hanson, J.
+    title: Gaussian process modelling for improved resolution in Faraday depth reconstruction
+    publication: Monthly Notices of the Royal Astronomical Society
+    year: 2021
+    date_label: '2021'
+    volume: '502'
+    issue: '4'
+    pages: '5839'
+    doi: 10.1093/mnras/stab379
+    url: https://doi.org/10.1093/mnras/stab379
   - authors: Casassus, Simon, Christiaens, Valentin, Cárcamo, Miguel, Pérez, Sebastián, Weber, Philipp, Ercolano, Barbara,
       van der Marel, Nienke, Pinte, Christophe, Dong, Ruobing, Baruteau, Clément, Cieza, Lucas, van Dishoeck, Ewine F., Jordan,
       Andrés, Price, Daniel J., Absil, Olivier, Arce-Tord, Carla, Faramaz, Virginie, Flores, Christian, Reggiani, Maddalena

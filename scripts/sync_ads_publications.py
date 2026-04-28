@@ -18,6 +18,9 @@ ADS_API_URL = "https://api.adsabs.harvard.edu/v1/search/query"
 DEFAULT_ORCID = "0000-0003-0564-8167"
 DEFAULT_AUTHORS = ["Carcamo, Miguel", "Cárcamo, Miguel"]
 OUTPUT_PATH = "_data/publications.yml"
+EXCLUDED_DOIS = {
+    "10.1364/ao.392014",
+}
 
 
 def _normalize_text(value: str) -> str:
@@ -75,6 +78,28 @@ def _is_conference(doc: dict[str, Any]) -> bool:
     return any(marker in haystack for marker in conference_markers)
 
 
+def _is_software_record(doc: dict[str, Any]) -> bool:
+    doctype_value = doc.get("doctype", [])
+    if isinstance(doctype_value, str):
+        doc_type = doctype_value.lower()
+    else:
+        doc_type = " ".join(str(item) for item in doctype_value).lower()
+
+    publication = str(doc.get("pub", "") or "").lower()
+    bibcode = str(doc.get("bibcode", "") or "").lower()
+    identifiers = " ".join(_as_list(doc.get("identifier", []))).lower()
+
+    software_markers = [
+        "software",
+        "astrophysics source code library",
+        "ascl",
+        "ascl.soft",
+    ]
+
+    haystack = f"{doc_type} {publication} {bibcode} {identifiers}"
+    return any(marker in haystack for marker in software_markers)
+
+
 def _extract_doi(doi_values: list[str], identifiers: list[str]) -> str | None:
     candidates: list[str] = []
     for value in doi_values + identifiers:
@@ -101,9 +126,18 @@ def _format_pages(pages: list[str]) -> str:
 
 
 def _is_target_author_present(authors: list[str]) -> bool:
-    accepted_prefixes = ("carcamo, miguel",)
+    accepted_prefixes = ("carcamo, miguel", "carcamo, m.", "carcamo, m ")
+    excluded_prefixes = (
+        "carcamo, mario",
+        "carcamo, marcela",
+        "carcamo, martin",
+        "carcamo, maria",
+        "carcamo, maria paz",
+    )
     for author_name in authors:
         normalized = _normalize_text(author_name)
+        if normalized.startswith(excluded_prefixes):
+            continue
         if normalized.startswith(accepted_prefixes):
             return True
     return False
@@ -129,21 +163,13 @@ def _entry_score(entry: dict[str, Any]) -> int:
         score += 3
     if publication and "arxiv" not in publication:
         score += 2
+    if "proceedings" in publication or "conference" in publication or "symposium" in publication or "meeting" in publication:
+        score += 1
     if entry.get("volume"):
         score += 1
     if entry.get("pages"):
         score += 1
     return score
-
-
-def _deduplicate_entries(entries: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    selected: dict[str, dict[str, Any]] = {}
-    for entry in entries:
-        key = _entry_key(entry)
-        current = selected.get(key)
-        if current is None or _entry_score(entry) > _entry_score(current):
-            selected[key] = entry
-    return list(selected.values())
 
 
 def _sort_entries(entries: list[dict[str, Any]]) -> list[dict[str, Any]]:
@@ -159,7 +185,7 @@ def _sort_entries(entries: list[dict[str, Any]]) -> list[dict[str, Any]]:
 
 
 def _finalize_group(entries: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    return _sort_entries(_deduplicate_entries(entries))
+    return _sort_entries(entries)
 
 
 def _collect_author_args(values: list[str]) -> list[str]:
@@ -258,22 +284,44 @@ def build_publication_entry(doc: dict[str, Any]) -> dict[str, Any]:
     }
 
 
-def split_publications(docs: list[dict[str, Any]]) -> dict[str, Any]:
-    grouped = {
-        "first_author": {"journal": [], "conference": []},
-        "coauthored": {"journal": [], "conference": []},
-    }
+def _is_excluded_entry(entry: dict[str, Any]) -> bool:
+    doi = str(entry.get("doi", "")).strip().lower()
+    return doi in EXCLUDED_DOIS
 
+
+def split_publications(docs: list[dict[str, Any]]) -> dict[str, Any]:
+    selected_by_key: dict[str, tuple[int, str, str, dict[str, Any]]] = {}
+
+    # First pass: global deduplication and quality selection.
     for doc in docs:
         authors = doc.get("author", []) or []
         if not authors:
             continue
         if not _is_target_author_present(authors):
             continue
+        if _is_software_record(doc):
+            continue
 
         bucket = "conference" if _is_conference(doc) else "journal"
         author_group = "first_author" if _is_first_author(authors[0]) else "coauthored"
-        grouped[author_group][bucket].append(build_publication_entry(doc))
+        entry = build_publication_entry(doc)
+        if _is_excluded_entry(entry):
+            continue
+        key = _entry_key(entry)
+        score = _entry_score(entry)
+
+        current = selected_by_key.get(key)
+        if current is None or score > current[0]:
+            selected_by_key[key] = (score, author_group, bucket, entry)
+
+    grouped = {
+        "first_author": {"journal": [], "conference": []},
+        "coauthored": {"journal": [], "conference": []},
+    }
+
+    # Second pass: assign winning entries to their selected buckets.
+    for _, author_group, bucket, entry in selected_by_key.values():
+        grouped[author_group][bucket].append(entry)
 
     grouped["first_author"]["journal"] = _finalize_group(grouped["first_author"]["journal"])
     grouped["first_author"]["conference"] = _finalize_group(grouped["first_author"]["conference"])
