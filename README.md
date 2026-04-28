@@ -120,7 +120,12 @@ Publications are now rendered from `_data/publications.yml`, which is synchroniz
 2. Go to **Actions** and run workflow:
    - `Sync NASA ADS Publications`
 
-The workflow also runs weekly and updates `_data/publications.yml` automatically.
+The workflow also runs:
+- automatically on push to `main`/`master` (excluding pure `_data/publications.yml` bot updates)
+- weekly on schedule
+- manually from Actions
+
+Any resulting commit to `_data/publications.yml` triggers your normal GitHub Pages deployment flow.
 
 ### Run sync locally (optional)
 
