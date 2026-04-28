@@ -1,14 +1,147 @@
-generated_at_utc: null
-source: "NASA ADS API"
-orcid: "0000-0003-0564-8167"
+generated_at_utc: '2026-04-28T19:37:39Z'
+source: NASA ADS API
+orcid: 0000-0003-0564-8167
 counts:
-  first_author_journal: 0
+  first_author_journal: 2
   first_author_conference: 0
-  coauthored_journal: 0
+  coauthored_journal: 10
   coauthored_conference: 0
 first_author:
-  journal: []
+  journal:
+  - authors: Cárcamo, Miguel, Scaife, Anna M. M., Alexander, Emma L., Leahy, J. Patrick
+    title: 'CS-ROMER: a novel compressed sensing framework for Faraday depth reconstruction'
+    publication: Monthly Notices of the Royal Astronomical Society
+    year: 2023
+    date_label: '2023'
+    volume: '518'
+    issue: '2'
+    pages: '1955'
+    doi: 10.48550/arXiv.2205.01413
+    url: https://doi.org/10.48550/arXiv.2205.01413
+  - authors: Cárcamo, M., Román, P. E., Casassus, S., Moral, V., Rannou, F. R.
+    title: Multi-GPU maximum entropy image synthesis for radio astronomy
+    publication: Astronomy and Computing
+    year: 2018
+    date_label: '2018'
+    volume: '22'
+    issue: ''
+    pages: '16'
+    doi: 10.1016/j.ascom.2017.11.003
+    url: https://doi.org/10.1016/j.ascom.2017.11.003
   conference: []
 coauthored:
-  journal: []
+  journal:
+  - authors: Casassus, S., Vidal, M., Cárcamo, M., Verstraete, L., Ysard, N., Habart, E.
+    title: 'ALMA Band 1 observations of the ρ Oph W filament: I. Enhanced power from excess microwave emission at high spatial
+      frequencies'
+    publication: Astronomy and Astrophysics
+    year: 2026
+    date_label: '2026'
+    volume: '707'
+    issue: ''
+    pages: A255
+    doi: 10.1051/0004-6361/202557944
+    url: https://doi.org/10.1051/0004-6361/202557944
+  - authors: Domínguez-Jamett, Oriana, Casassus, Simon, Baobab Liu, Hauyu, Aoyama, Yuhiko, Cárcamo, Miguel, Weber, Philipp,
+      Chrenko, Onďrej, Marleau, Gabriel-Dominique, Ercolano, Barbara, Szulágyi, Judit
+    title: 'Multi-frequency observations of PDS70c: Radio emission mechanisms in the circumplanetary environment'
+    publication: Astronomy and Astrophysics
+    year: 2025
+    date_label: '2025'
+    volume: '702'
+    issue: ''
+    pages: A18
+    doi: 10.48550/arXiv.2507.21970
+    url: https://doi.org/10.48550/arXiv.2507.21970
+  - authors: Arce-Tord, Carla, Casassus, Simon, Dent, William R. F., Pérez, Sebastián, Cárcamo, Miguel, Weber, Philipp, Engler,
+      Natalia, Cieza, Lucas A., Hales, Antonio, Zurlo, Alice, Marino, Sebastian
+    title: Radio-continuum decrements associated to shadowing from the central warp in transition disc DoAr 44
+    publication: Monthly Notices of the Royal Astronomical Society
+    year: 2023
+    date_label: '2023'
+    volume: '526'
+    issue: '2'
+    pages: '2077'
+    doi: 10.1093/mnras/stad2885
+    url: https://doi.org/10.1093/mnras/stad2885
+  - authors: Weber, Philipp, Pérez, Sebastián, Zurlo, Alice, Miley, James, Hales, Antonio, Cieza, Lucas, Principe, David,
+      Cárcamo, Miguel, Garufi, Antonio, Kóspál, Ágnes, Takami, Michihiro, Kastner, Joel, Zhu, Zhaohuan, Williams, Jonathan
+    title: 'Spirals and Clumps in V960 Mon: Signs of Planet Formation via Gravitational Instability around an FU Ori Star?'
+    publication: The Astrophysical Journal
+    year: 2023
+    date_label: '2023'
+    volume: '952'
+    issue: '1'
+    pages: L17
+    doi: 10.48550/arXiv.2307.13433
+    url: https://doi.org/10.48550/arXiv.2307.13433
+  - authors: Casassus, Simon, Cárcamo, Miguel
+    title: Variable structure in the PDS 70 disc and uncertainties in radio-interferometric image restoration
+    publication: Monthly Notices of the Royal Astronomical Society
+    year: 2022
+    date_label: '2022'
+    volume: '513'
+    issue: '4'
+    pages: '5790'
+    doi: 10.1093/mnras/stac1285
+    url: https://doi.org/10.1093/mnras/stac1285
+  - authors: Casassus, Simon, Cárcamo, Miguel, Hales, Antonio, Weber, Philipp, Dent, Bill
+    title: 'The Doppler Flip in HD 100546 as a Disk Eruption: The Elephant in the Room of Kinematic Protoplanet Searches'
+    publication: The Astrophysical Journal
+    year: 2022
+    date_label: '2022'
+    volume: '933'
+    issue: '1'
+    pages: L4
+    doi: 10.3847/2041-8213/ac75e8
+    url: https://doi.org/10.3847/2041-8213/ac75e8
+  - authors: Casassus, Simon, Christiaens, Valentin, Cárcamo, Miguel, Pérez, Sebastián, Weber, Philipp, Ercolano, Barbara,
+      van der Marel, Nienke, Pinte, Christophe, Dong, Ruobing, Baruteau, Clément, Cieza, Lucas, van Dishoeck, Ewine F., Jordan,
+      Andrés, Price, Daniel J., Absil, Olivier, Arce-Tord, Carla, Faramaz, Virginie, Flores, Christian, Reggiani, Maddalena
+    title: A dusty filament and turbulent CO spirals in HD 135344B - SAO 206462
+    publication: Monthly Notices of the Royal Astronomical Society
+    year: 2021
+    date_label: '2021'
+    volume: '507'
+    issue: '3'
+    pages: '3789'
+    doi: 10.1093/mnras/stab2359
+    url: https://doi.org/10.1093/mnras/stab2359
+  - authors: Casassus, Simon, Marino, Sebastián, Lyra, Wladimir, Baruteau, Clément, Vidal, Matías, Wootten, Alwyn, Pérez,
+      Sebastián, Alarcon, Felipe, Barraza, Marcelo, Cárcamo, Miguel, Dong, Ruobing, Sierra, Anibal, Zhu, Zhaohuan, Ricci,
+      Luca, Christiaens, Valentin, Cieza, Lucas
+    title: 'Cm-wavelength observations of MWC 758: resolved dust trapping in a vortex'
+    publication: Monthly Notices of the Royal Astronomical Society
+    year: 2019
+    date_label: '2019'
+    volume: '483'
+    issue: '3'
+    pages: '3278'
+    doi: 10.1093/mnras/sty3269
+    url: https://doi.org/10.1093/mnras/sty3269
+  - authors: Casassus, Simon, Avenhaus, Henning, Pérez, Sebastián, Navarro, Víctor, Cárcamo, Miguel, Marino, Sebastián, Cieza,
+      Lucas, Quanz, Sascha P., Alarcón, Felipe, Zurlo, Alice, Osses, Axel, Rannou, Fernando R., Román, Pablo E., Barraza,
+      Marcelo
+    title: An inner warp in the DoAr 44 T Tauri transition disc
+    publication: Monthly Notices of the Royal Astronomical Society
+    year: 2018
+    date_label: '2018'
+    volume: '477'
+    issue: '4'
+    pages: '5104'
+    doi: 10.48550/arXiv.1804.02360
+    url: https://doi.org/10.48550/arXiv.1804.02360
+  - authors: Cieza, Lucas A., Casassus, Simon, Pérez, Sebastian, Hales, Antonio, Cárcamo, Miguel, Ansdell, Megan, Avenhaus,
+      Henning, Bayo, Amelia, Bertrang, Gesa H.-M., Cánovas, Hector, Christiaens, Valentin, Dent, William, Ferrero, Gabriel,
+      Gamen, Roberto, Olofsson, Johan, Orcajo, Santiago, Osses, Axel, Peña-Ramirez, Karla, Principe, David, Ruíz-Rodríguez,
+      Dary, Schreiber, Matthias R., van der Plas, Gerrit, Williams, Jonathan P., Zurlo, Alice
+    title: 'ALMA Observations of Elias 2-24: A Protoplanetary Disk with Multiple Gaps in the Ophiuchus Molecular Cloud'
+    publication: The Astrophysical Journal
+    year: 2017
+    date_label: '2017'
+    volume: '851'
+    issue: '2'
+    pages: L23
+    doi: 10.3847/2041-8213/aa9b7b
+    url: https://doi.org/10.3847/2041-8213/aa9b7b
   conference: []
