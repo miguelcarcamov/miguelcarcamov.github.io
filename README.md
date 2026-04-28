@@ -121,16 +121,26 @@ Publications are now rendered from `_data/publications.yml`, which is synchroniz
    - `Sync NASA ADS Publications`
 
 The workflow also runs:
-- automatically on push to `main`/`master` (excluding pure `_data/publications.yml` bot updates)
 - weekly on schedule
 - manually from Actions
 
-Any resulting commit to `_data/publications.yml` triggers your normal GitHub Pages deployment flow.
+For push deployments, use the `Build and Deploy Pages` workflow, which runs ADS sync first and only then deploys the site.
+
+> Important: in repository settings, set **Pages source** to **GitHub Actions** so deployment is controlled by workflow order.
 
 ### Run sync locally (optional)
 
 ```bash
 ADS_API_TOKEN=your_token_here python scripts/sync_ads_publications.py --orcid 0000-0003-0564-8167
+```
+
+Recommended explicit query (to avoid same-surname author collisions):
+
+```bash
+ADS_API_TOKEN=your_token_here python scripts/sync_ads_publications.py \
+  --orcid 0000-0003-0564-8167 \
+  --author "Carcamo, Miguel" \
+  --author "Cárcamo, Miguel"
 ```
 
 ### Main Page

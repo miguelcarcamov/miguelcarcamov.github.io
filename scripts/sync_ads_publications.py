@@ -16,7 +16,7 @@ import yaml
 
 ADS_API_URL = "https://api.adsabs.harvard.edu/v1/search/query"
 DEFAULT_ORCID = "0000-0003-0564-8167"
-DEFAULT_AUTHORS = ["Carcamo, Miguel", "Carcamo, M", "Cárcamo, Miguel", "Cárcamo, M"]
+DEFAULT_AUTHORS = ["Carcamo, Miguel", "Cárcamo, Miguel"]
 OUTPUT_PATH = "_data/publications.yml"
 
 
@@ -101,7 +101,12 @@ def _format_pages(pages: list[str]) -> str:
 
 
 def _is_target_author_present(authors: list[str]) -> bool:
-    return any("carcamo" in _normalize_text(author_name) for author_name in authors)
+    accepted_prefixes = ("carcamo, miguel",)
+    for author_name in authors:
+        normalized = _normalize_text(author_name)
+        if normalized.startswith(accepted_prefixes):
+            return True
+    return False
 
 
 def _publication_query(orcid: str, author_names: list[str]) -> str:
@@ -307,7 +312,7 @@ def main() -> int:
     grouped = split_publications(docs)
     _log_stats(docs, grouped)
     data = {
-        "generated_at_utc": dt.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "generated_at_utc": dt.datetime.now(dt.UTC).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "source": "NASA ADS API",
         "orcid": args.orcid,
         "query_authors": author_names,
