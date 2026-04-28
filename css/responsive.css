@@ -197,6 +197,10 @@
     .stats-chart-card canvas{
         height: 280px !important;
     }
+    #top-cited-chart,
+    #fondecyt-top-chart{
+        height: 420px !important;
+    }
 }
 
 @media (min-width: 768px){  }
@@ -447,6 +451,10 @@
     }
     .stats-chart-card canvas{
         height: 250px !important;
+    }
+    #top-cited-chart,
+    #fondecyt-top-chart{
+        height: 360px !important;
     }
 }
 

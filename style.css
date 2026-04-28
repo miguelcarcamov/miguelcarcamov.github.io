@@ -528,6 +528,10 @@ SIDEBAR AREA CSS
 		width: 100% !important;
 		height: 310px !important;
 	}
+	#top-cited-chart,
+	#fondecyt-top-chart{
+		height: 460px !important;
+	}
 	.stats-top-list{
 		margin: 0;
 		padding-left: 20px;

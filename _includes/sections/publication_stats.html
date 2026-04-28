@@ -48,7 +48,7 @@
 </ul>
 <p style="margin-top: 12px; color: #676767;"><strong>FONDECYT-style NP (ANID GE Astronomía y Astrofísica):</strong></p>
 <ul class="stats-method-list">
-<li>Use journal papers from the last 5 calendar years.</li>
+<li>Use journal papers from <code>current_year - 5</code> up to <code>current_year</code> (inclusive).</li>
 <li>For each paper, <code>c_i = citations / max(1, current_year - pub_year)</code>.</li>
 <li>Leadership factor <code>l_i</code> by author position: 1-2: 1.00, 3: 0.90, 4: 0.70, 5: 0.50, 6: 0.30, 7+: 0.20.</li>
 <li><code>s_i = l_i * sqrt(1 + c_i)</code>.</li>
@@ -104,7 +104,7 @@
 <div class="col-md-12">
 <div class="stats-chart-card">
 <h4 class="stats-chart-title">FONDECYT NP Top-10 Contributors</h4>
-<div id="fondecyt-top-list" aria-live="polite"></div>
+<canvas id="fondecyt-top-chart" role="img" aria-label="Horizontal bar chart of top 10 FONDECYT NP contributors by score"></canvas>
 </div>
 </div>
 </div>

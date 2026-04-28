@@ -14,27 +14,6 @@
     });
   }
 
-  function buildTopList(containerId, items, scoreKey) {
-    var container = document.getElementById(containerId);
-    if (!container) return;
-    if (!items || !items.length) {
-      container.innerHTML = "<p style='color:#999;'>No data available.</p>";
-      return;
-    }
-    var html = "<ol class='stats-top-list'>";
-    items.forEach(function (item) {
-      var value = scoreKey ? item[scoreKey] : item.citation_count;
-      var label = scoreKey ? "score" : "citations";
-      html += "<li class='stats-top-item'>" +
-        "<a href='" + (item.url || "#") + "' target='_blank' rel='noopener'>" + item.title + "</a>" +
-        " <span class='stats-top-meta'>(" + (item.year || "") + ", " + (item.publication || "Unknown venue") + ")</span>" +
-        " <strong class='stats-top-count'>" + value + " " + label + "</strong>" +
-        "</li>";
-    });
-    html += "</ol>";
-    container.innerHTML = html;
-  }
-
   function createChart(ctx, config) {
     if (!ctx || typeof Chart === "undefined") return;
     return new Chart(ctx, config);
@@ -56,6 +35,12 @@
     });
     if (current) lines.push(current);
     return lines;
+  }
+
+  function truncateLabel(text, maxChars) {
+    var value = String(text || "");
+    if (value.length <= maxChars) return value;
+    return value.slice(0, Math.max(0, maxChars - 1)) + "…";
   }
 
   var dataNode = document.getElementById("publication-stats-data");
@@ -185,8 +170,8 @@
           type: "bar",
           data: {
             labels: (stats.top_cited || []).map(function (item) {
-              var maxChars = window.innerWidth < 768 ? 30 : 50;
-              return wrapLabel(((item.year || "") + " - " + item.title), maxChars);
+          var maxChars = window.innerWidth < 768 ? 28 : 44;
+          return truncateLabel(((item.year || "") + " - " + item.title), maxChars);
             }),
             datasets: [{
               label: "Citations",
@@ -198,7 +183,21 @@
             indexAxis: "y",
             responsive: true,
             maintainAspectRatio: false,
-            scales: commonScales,
+            scales: {
+              x: {
+                ticks: { color: colors.text },
+                grid: { color: colors.grid },
+                beginAtZero: true
+              },
+              y: {
+                ticks: {
+                  color: colors.text,
+                  autoSkip: false,
+                  font: { size: 10 }
+                },
+                grid: { color: colors.grid }
+              }
+            },
             plugins: {
               legend: { labels: { color: colors.text } },
               tooltip: {
@@ -268,7 +267,62 @@
       )
     );
 
-    buildTopList("fondecyt-top-list", (stats.fondecyt && stats.fondecyt.top_contributors) || [], "s_i");
+    charts.push(
+      createChart(
+        document.getElementById("fondecyt-top-chart"),
+        {
+          type: "bar",
+          data: {
+            labels: ((stats.fondecyt && stats.fondecyt.top_contributors) || []).map(function (item) {
+              var maxChars = window.innerWidth < 768 ? 28 : 44;
+              return truncateLabel(((item.year || "") + " - " + item.title), maxChars);
+            }),
+            datasets: [{
+              label: "s_i score",
+              data: ((stats.fondecyt && stats.fondecyt.top_contributors) || []).map(function (item) { return item.s_i || 0; }),
+              backgroundColor: colors.accent
+            }]
+          },
+          options: {
+            indexAxis: "y",
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+              x: {
+                ticks: { color: colors.text },
+                grid: { color: colors.grid },
+                beginAtZero: true
+              },
+              y: {
+                ticks: {
+                  color: colors.text,
+                  autoSkip: false,
+                  font: { size: 10 }
+                },
+                grid: { color: colors.grid }
+              }
+            },
+            plugins: {
+              legend: { labels: { color: colors.text } },
+              tooltip: {
+                callbacks: {
+                  title: function (tooltipItems) {
+                    var idx = tooltipItems[0].dataIndex;
+                    var item = ((stats.fondecyt && stats.fondecyt.top_contributors) || [])[idx] || {};
+                    return item.title || "";
+                  },
+                  label: function (context) {
+                    var idx = context.dataIndex;
+                    var item = ((stats.fondecyt && stats.fondecyt.top_contributors) || [])[idx] || {};
+                    return "s_i: " + context.parsed.x + " (citations: " + (item.citations || 0) + ", position: " + (item.author_position || "?") + ")";
+                  }
+                }
+              }
+            }
+          }
+        }
+      )
+    );
 
     var lastUpdatedNode = document.getElementById("stats-last-updated");
     if (lastUpdatedNode) {

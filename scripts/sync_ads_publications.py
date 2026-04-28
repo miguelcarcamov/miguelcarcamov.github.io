@@ -497,7 +497,7 @@ def _top_cited(entries: list[dict[str, Any]], limit: int = 10) -> list[dict[str,
 
 
 def _fondecyt_np(entries: list[dict[str, Any]], current_year: int) -> dict[str, Any]:
-    min_year = current_year - 4
+    min_year = current_year - 5
     candidates = []
     for entry in entries:
         if entry.get("publication_type") != "journal":
@@ -529,7 +529,7 @@ def _fondecyt_np(entries: list[dict[str, Any]], current_year: int) -> dict[str, 
     p_sum = sum(item["s_i"] for item in top)
     np_score = min(1.0 + 1.7 * (p_sum ** 0.25), 5.0) if top else 1.0
     return {
-        "window_years": 5,
+        "window_years": current_year - min_year + 1,
         "window_start_year": min_year,
         "window_end_year": current_year,
         "top_contributors": top,
