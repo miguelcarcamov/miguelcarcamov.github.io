@@ -124,7 +124,9 @@ The workflow also runs:
 - weekly on schedule
 - manually from Actions
 
-For push deployments, use the `Build and Deploy Pages` workflow, which runs ADS sync first and only then deploys the site.
+For push deployments, use the `Build and Deploy Pages` workflow, which runs ADS sync first and only then deploys the site. This workflow does not commit `_data/publications.yml`, so your branch is not mutated during deploy.
+
+Use `Sync NASA ADS Publications` when you want to persist synchronized data back into the repository (manual or weekly run).
 
 > Important: in repository settings, set **Pages source** to **GitHub Actions** so deployment is controlled by workflow order.
 
