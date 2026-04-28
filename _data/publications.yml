@@ -1,0 +1,14 @@
+generated_at_utc: null
+source: "NASA ADS API"
+orcid: "0000-0003-0564-8167"
+counts:
+  first_author_journal: 0
+  first_author_conference: 0
+  coauthored_journal: 0
+  coauthored_conference: 0
+first_author:
+  journal: []
+  conference: []
+coauthored:
+  journal: []
+  conference: []
