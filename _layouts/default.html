@@ -163,7 +163,7 @@
     <!-- Main js - No longer needs section-loader.js since sections are included directly -->
     <script src="{{ '/js/main.js' | relative_url }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
-    <script src="{{ '/js/publication-stats.js' | relative_url }}"></script>
+    <script src="{{ '/js/publication-stats.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
 
     <!-- GOOGLE MAP JS -->
     <script type="text/javascript" src="{{ '/js/map.js' | relative_url }}"></script>
