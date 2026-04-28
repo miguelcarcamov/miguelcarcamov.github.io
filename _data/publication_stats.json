@@ -1,0 +1,316 @@
+{
+  "generated_at_utc": "2026-04-28T20:58:23Z",
+  "source": "NASA ADS API",
+  "volume": {
+    "total_publications": 20,
+    "journal_publications": 16,
+    "conference_publications": 4,
+    "first_author_publications": 4,
+    "lead_author_publications": 6,
+    "unique_coauthors": 106
+  },
+  "citations": {
+    "total_citations": 395,
+    "average_citations_per_paper": 19.75,
+    "median_citations_per_paper": 11.0,
+    "h_index": 10,
+    "h_index_h_paper_citations": 13,
+    "h_index_next_paper_citations": 9,
+    "citations_sorted_desc": [
+      92,
+      49,
+      49,
+      36,
+      35,
+      33,
+      24,
+      17,
+      15,
+      13,
+      9,
+      8,
+      7,
+      4,
+      4,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "i10_index": 10,
+    "m_index": 0.8333,
+    "first_publication_year": 2015,
+    "career_years": 12
+  },
+  "yearly": {
+    "years": [
+      2015,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "papers_per_year": [
+      1,
+      1,
+      2,
+      1,
+      1,
+      2,
+      4,
+      5,
+      1,
+      1,
+      1
+    ],
+    "citations_per_year": [
+      0,
+      49,
+      125,
+      35,
+      13,
+      53,
+      75,
+      38,
+      0,
+      7,
+      0
+    ],
+    "cumulative_citations": [
+      0,
+      49,
+      174,
+      209,
+      222,
+      275,
+      350,
+      388,
+      388,
+      395,
+      395
+    ]
+  },
+  "histogram": {
+    "0": 5,
+    "1-4": 2,
+    "5-9": 3,
+    "10-19": 3,
+    "20-49": 6,
+    "50+": 1
+  },
+  "author_position_distribution": {
+    "1": 4,
+    "2": 2,
+    "3": 4,
+    "4": 3,
+    "5": 4,
+    "6": 1,
+    "7+": 2,
+    "unknown": 0
+  },
+  "top_cited": [
+    {
+      "title": "An inner warp in the DoAr 44 T Tauri transition disc",
+      "year": 2018,
+      "publication": "Monthly Notices of the Royal Astronomical Society",
+      "citation_count": 92,
+      "url": "https://doi.org/10.1093/mnras/sty894",
+      "doi": "10.1093/mnras/sty894"
+    },
+    {
+      "title": "A dusty filament and turbulent CO spirals in HD 135344B - SAO 206462",
+      "year": 2021,
+      "publication": "Monthly Notices of the Royal Astronomical Society",
+      "citation_count": 49,
+      "url": "https://doi.org/10.1093/mnras/stab2359",
+      "doi": "10.1093/mnras/stab2359"
+    },
+    {
+      "title": "ALMA Observations of Elias 2-24: A Protoplanetary Disk with Multiple Gaps in the Ophiuchus Molecular Cloud",
+      "year": 2017,
+      "publication": "The Astrophysical Journal",
+      "citation_count": 49,
+      "url": "https://doi.org/10.3847/2041-8213/aa9b7b",
+      "doi": "10.3847/2041-8213/aa9b7b"
+    },
+    {
+      "title": "Variable structure in the PDS 70 disc and uncertainties in radio-interferometric image restoration",
+      "year": 2022,
+      "publication": "Monthly Notices of the Royal Astronomical Society",
+      "citation_count": 36,
+      "url": "https://doi.org/10.1093/mnras/stac1285",
+      "doi": "10.1093/mnras/stac1285"
+    },
+    {
+      "title": "Cm-wavelength observations of MWC 758: resolved dust trapping in a vortex",
+      "year": 2019,
+      "publication": "Monthly Notices of the Royal Astronomical Society",
+      "citation_count": 35,
+      "url": "https://doi.org/10.1093/mnras/sty3269",
+      "doi": "10.1093/mnras/sty3269"
+    },
+    {
+      "title": "Multi-GPU maximum entropy image synthesis for radio astronomy",
+      "year": 2018,
+      "publication": "Astronomy and Computing",
+      "citation_count": 33,
+      "url": "https://doi.org/10.1016/j.ascom.2017.11.003",
+      "doi": "10.1016/j.ascom.2017.11.003"
+    },
+    {
+      "title": "The Doppler Flip in HD 100546 as a Disk Eruption: The Elephant in the Room of Kinematic Protoplanet Searches",
+      "year": 2022,
+      "publication": "The Astrophysical Journal",
+      "citation_count": 24,
+      "url": "https://doi.org/10.3847/2041-8213/ac75e8",
+      "doi": "10.3847/2041-8213/ac75e8"
+    },
+    {
+      "title": "Spirals and Clumps in V960 Mon: Signs of Planet Formation via Gravitational Instability around an FU Ori Star?",
+      "year": 2023,
+      "publication": "The Astrophysical Journal",
+      "citation_count": 17,
+      "url": "https://doi.org/10.3847/2041-8213/ace186",
+      "doi": "10.3847/2041-8213/ace186"
+    },
+    {
+      "title": "High-resolution ALMA observations of V4046 Sgr: a circumbinary disc with a thin ring",
+      "year": 2022,
+      "publication": "Monthly Notices of the Royal Astronomical Society",
+      "citation_count": 15,
+      "url": "https://doi.org/10.1093/mnras/stab3440",
+      "doi": "10.1093/mnras/stab3440"
+    },
+    {
+      "title": "Resolved observations at 31 GHz of spinning dust emissivity variations in ρ Oph",
+      "year": 2020,
+      "publication": "Monthly Notices of the Royal Astronomical Society",
+      "citation_count": 13,
+      "url": "https://doi.org/10.1093/mnras/staa1422",
+      "doi": "10.1093/mnras/staa1422"
+    }
+  ],
+  "fondecyt": {
+    "window_years": 5,
+    "window_start_year": 2022,
+    "window_end_year": 2026,
+    "top_contributors": [
+      {
+        "title": "Variable structure in the PDS 70 disc and uncertainties in radio-interferometric image restoration",
+        "year": 2022,
+        "publication": "Monthly Notices of the Royal Astronomical Society",
+        "citations": 36,
+        "author_position": 2,
+        "leadership_factor": 1.0,
+        "c_i": 9.0,
+        "s_i": 3.1623,
+        "url": "https://doi.org/10.1093/mnras/stac1285"
+      },
+      {
+        "title": "The Doppler Flip in HD 100546 as a Disk Eruption: The Elephant in the Room of Kinematic Protoplanet Searches",
+        "year": 2022,
+        "publication": "The Astrophysical Journal",
+        "citations": 24,
+        "author_position": 2,
+        "leadership_factor": 1.0,
+        "c_i": 6.0,
+        "s_i": 2.6458,
+        "url": "https://doi.org/10.3847/2041-8213/ac75e8"
+      },
+      {
+        "title": "Azimuthal temperature variations in ISO-Oph 2 from multifrequency ALMA observations",
+        "year": 2023,
+        "publication": "Monthly Notices of the Royal Astronomical Society",
+        "citations": 8,
+        "author_position": 3,
+        "leadership_factor": 0.9,
+        "c_i": 2.6667,
+        "s_i": 1.7234,
+        "url": "https://doi.org/10.1093/mnras/stad1981"
+      },
+      {
+        "title": "CS-ROMER: a novel compressed sensing framework for Faraday depth reconstruction",
+        "year": 2023,
+        "publication": "Monthly Notices of the Royal Astronomical Society",
+        "citations": 4,
+        "author_position": 1,
+        "leadership_factor": 1.0,
+        "c_i": 1.3333,
+        "s_i": 1.5275,
+        "url": "https://doi.org/10.1093/mnras/stac3031"
+      },
+      {
+        "title": "Multi-frequency observations of PDS70c: Radio emission mechanisms in the circumplanetary environment",
+        "year": 2025,
+        "publication": "Astronomy and Astrophysics",
+        "citations": 7,
+        "author_position": 5,
+        "leadership_factor": 0.5,
+        "c_i": 7.0,
+        "s_i": 1.4142,
+        "url": "https://doi.org/10.1051/0004-6361/202554485"
+      },
+      {
+        "title": "Radio-continuum decrements associated to shadowing from the central warp in transition disc DoAr 44",
+        "year": 2023,
+        "publication": "Monthly Notices of the Royal Astronomical Society",
+        "citations": 9,
+        "author_position": 5,
+        "leadership_factor": 0.5,
+        "c_i": 3.0,
+        "s_i": 1.0,
+        "url": "https://doi.org/10.1093/mnras/stad2885"
+      },
+      {
+        "title": "ALMA Band 1 observations of the ρ Oph W filament: I. Enhanced power from excess microwave emission at high spatial frequencies",
+        "year": 2026,
+        "publication": "Astronomy and Astrophysics",
+        "citations": 0,
+        "author_position": 3,
+        "leadership_factor": 0.9,
+        "c_i": 0.0,
+        "s_i": 0.9,
+        "url": "https://doi.org/10.1051/0004-6361/202557944"
+      },
+      {
+        "title": "High-resolution ALMA observations of V4046 Sgr: a circumbinary disc with a thin ring",
+        "year": 2022,
+        "publication": "Monthly Notices of the Royal Astronomical Society",
+        "citations": 15,
+        "author_position": 6,
+        "leadership_factor": 0.3,
+        "c_i": 3.75,
+        "s_i": 0.6538,
+        "url": "https://doi.org/10.1093/mnras/stab3440"
+      },
+      {
+        "title": "Spirals and Clumps in V960 Mon: Signs of Planet Formation via Gravitational Instability around an FU Ori Star?",
+        "year": 2023,
+        "publication": "The Astrophysical Journal",
+        "citations": 17,
+        "author_position": 8,
+        "leadership_factor": 0.2,
+        "c_i": 5.6667,
+        "s_i": 0.5164,
+        "url": "https://doi.org/10.3847/2041-8213/ace186"
+      }
+    ],
+    "p_sum": 13.5434,
+    "np_score": 4.2612
+  },
+  "chart_palette": {
+    "primary": "#362cb1",
+    "secondary": "#493fc8",
+    "accent": "#6b5ce7",
+    "muted": "#9ea0a5",
+    "grid": "#e9e9ef",
+    "text": "#4d4f57"
+  }
+}

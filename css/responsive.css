@@ -191,6 +191,12 @@
     .blog_title h3{
         font-size: 25px;
     }
+    .stats-card-grid{
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .stats-chart-card canvas{
+        height: 280px !important;
+    }
 }
 
 @media (min-width: 768px){  }
@@ -429,6 +435,18 @@
     }
     .comment_area_wrapper{
         margin-bottom: 40px;
+    }
+    .stats-card-grid{
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    .stats-card-value{
+        font-size: 24px;
+    }
+    .stats-chart-card{
+        padding: 14px;
+    }
+    .stats-chart-card canvas{
+        height: 250px !important;
     }
 }
 

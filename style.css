@@ -488,6 +488,120 @@ SIDEBAR AREA CSS
 		letter-spacing: 0.2px;
 	}
 
+/* Publication statistics */
+	.stats-card-grid{
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+		gap: 15px;
+	}
+	.stats-card{
+		border: 1px solid #e7e7ee;
+		padding: 15px 16px;
+		background: #ffffff;
+		min-height: 88px;
+	}
+	.stats-card-label{
+		margin: 0;
+		font-size: 12px;
+		color: #8a8a96;
+		text-transform: uppercase;
+	}
+	.stats-card-value{
+		margin: 6px 0 0 0;
+		font-size: 28px;
+		line-height: 1.1;
+		color: #362cb1;
+		font-weight: 500;
+	}
+	.stats-chart-card{
+		border: 1px solid #e7e7ee;
+		background: #ffffff;
+		padding: 18px;
+		margin-bottom: 24px;
+	}
+	.stats-chart-title{
+		font-size: 16px;
+		color: #35373e;
+		margin-bottom: 14px;
+	}
+	.stats-chart-card canvas{
+		width: 100% !important;
+		height: 310px !important;
+	}
+	.stats-top-list{
+		margin: 0;
+		padding-left: 20px;
+	}
+	.stats-top-item{
+		margin-bottom: 12px;
+		line-height: 1.7;
+		color: #676767;
+	}
+	.stats-top-item a{
+		color: #362cb1;
+	}
+	.stats-top-meta{
+		color: #8a8a96;
+	}
+	.stats-top-count{
+		color: #35373e;
+	}
+	.stats-footer-note{
+		color: #8a8a96;
+		font-size: 12px;
+		margin-top: -6px;
+	}
+	.stats-export-link{
+		margin-left: 10px;
+		color: #362cb1;
+		text-decoration: underline;
+		font-weight: 400;
+	}
+	.stats-info-marker{
+		display: inline-block;
+		width: 14px;
+		height: 14px;
+		line-height: 14px;
+		text-align: center;
+		border: 1px solid #b9b5f7;
+		border-radius: 50%;
+		font-size: 10px;
+		color: #6b5ce7;
+		margin-left: 5px;
+		vertical-align: text-top;
+		cursor: help;
+	}
+	.stats-method-list{
+		margin: 10px 0 0 18px;
+		padding: 0;
+	}
+	.stats-method-list li{
+		list-style: disc;
+		color: #676767;
+		margin-bottom: 7px;
+		line-height: 1.7;
+	}
+	.stats-method-list code{
+		font-size: 12px;
+		background: #f4f4fb;
+		color: #35373e;
+		padding: 1px 4px;
+		border-radius: 3px;
+	}
+	.stats-methodology-details summary{
+		cursor: pointer;
+		color: #35373e;
+	}
+	.stats-details-arrow{
+		display: inline-block;
+		font-size: 11px;
+		margin-left: 6px;
+		transition: transform 0.2s ease;
+	}
+	.stats-methodology-details[open] .stats-details-arrow{
+		transform: rotate(180deg);
+	}
+
 
 
 

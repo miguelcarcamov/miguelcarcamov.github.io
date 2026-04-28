@@ -1,4 +1,4 @@
-generated_at_utc: '2026-04-28T20:12:00Z'
+generated_at_utc: '2026-04-28T20:58:23Z'
 source: NASA ADS API
 orcid: 0000-0003-0564-8167
 query_authors:
@@ -12,6 +12,11 @@ counts:
 first_author:
   journal:
   - authors: Cárcamo, Miguel, Scaife, Anna M. M., Alexander, Emma L., Leahy, J. Patrick
+    authors_list:
+    - Cárcamo, Miguel
+    - Scaife, Anna M. M.
+    - Alexander, Emma L.
+    - Leahy, J. Patrick
     title: 'CS-ROMER: a novel compressed sensing framework for Faraday depth reconstruction'
     publication: Monthly Notices of the Royal Astronomical Society
     year: 2023
@@ -21,7 +26,19 @@ first_author:
     pages: '1955'
     doi: 10.1093/mnras/stac3031
     url: https://doi.org/10.1093/mnras/stac3031
+    citation_count: 4
+    author_position: 1
+    publication_type: journal
+    bibcode: 2023MNRAS.518.1955C
+    author_group: first_author
+    publication_bucket: journal
   - authors: Cárcamo, M., Román, P. E., Casassus, S., Moral, V., Rannou, F. R.
+    authors_list:
+    - Cárcamo, M.
+    - Román, P. E.
+    - Casassus, S.
+    - Moral, V.
+    - Rannou, F. R.
     title: Multi-GPU maximum entropy image synthesis for radio astronomy
     publication: Astronomy and Computing
     year: 2018
@@ -31,9 +48,24 @@ first_author:
     pages: '16'
     doi: 10.1016/j.ascom.2017.11.003
     url: https://doi.org/10.1016/j.ascom.2017.11.003
+    citation_count: 33
+    author_position: 1
+    publication_type: journal
+    bibcode: 2018A&C....22...16C
+    author_group: first_author
+    publication_bucket: journal
   conference:
   - authors: Carcamo, Miguel, Scaife, Anna, Taylor, Russ, Jarvis, Matt, Bowles, Micah, Sekhar, Srikrishna, Heino, Lennart,
       Stil, Jeroen
+    authors_list:
+    - Carcamo, Miguel
+    - Scaife, Anna
+    - Taylor, Russ
+    - Jarvis, Matt
+    - Bowles, Micah
+    - Sekhar, Srikrishna
+    - Heino, Lennart
+    - Stil, Jeroen
     title: A Compressed Sensing Faraday Depth Reconstruction Framework for the MeerKAT MIGHTEE-POL Survey
     publication: 2022 3rd URSI Atlantic and Asia Pacific Radio Science Meeting (AT-AP-RASC)
     year: 2022
@@ -43,7 +75,19 @@ first_author:
     pages: '202'
     doi: 10.23919/AT-AP-RASC54737.2022.9814329
     url: https://doi.org/10.23919/AT-AP-RASC54737.2022.9814329
+    citation_count: 0
+    author_position: 1
+    publication_type: conference
+    bibcode: 2022atap.conf..202C
+    author_group: first_author
+    publication_bucket: conference
   - authors: Carcamo, Miguel, Rannou, Fernando R., Roman, Pablo E., Moral, Victor, Casassus, Simon
+    authors_list:
+    - Carcamo, Miguel
+    - Rannou, Fernando R.
+    - Roman, Pablo E.
+    - Moral, Victor
+    - Casassus, Simon
     title: High performance GPU Bayesian image synthesis
     publication: 2015 IEEE International Symposium on Signal Processing and Information Technology (ISSPIT)
     year: 2015
@@ -53,9 +97,22 @@ first_author:
     pages: '37'
     doi: 10.1109/ISSPIT.2015.7394340
     url: https://doi.org/10.1109/ISSPIT.2015.7394340
+    citation_count: 0
+    author_position: 1
+    publication_type: conference
+    bibcode: 2015issp.conf...37C
+    author_group: first_author
+    publication_bucket: conference
 coauthored:
   journal:
   - authors: Casassus, S., Vidal, M., Cárcamo, M., Verstraete, L., Ysard, N., Habart, E.
+    authors_list:
+    - Casassus, S.
+    - Vidal, M.
+    - Cárcamo, M.
+    - Verstraete, L.
+    - Ysard, N.
+    - Habart, E.
     title: 'ALMA Band 1 observations of the ρ Oph W filament: I. Enhanced power from excess microwave emission at high spatial
       frequencies'
     publication: Astronomy and Astrophysics
@@ -66,8 +123,25 @@ coauthored:
     pages: A255
     doi: 10.1051/0004-6361/202557944
     url: https://doi.org/10.1051/0004-6361/202557944
+    citation_count: 0
+    author_position: 3
+    publication_type: journal
+    bibcode: 2026A&A...707A.255C
+    author_group: coauthored
+    publication_bucket: journal
   - authors: Domínguez-Jamett, Oriana, Casassus, Simon, Baobab Liu, Hauyu, Aoyama, Yuhiko, Cárcamo, Miguel, Weber, Philipp,
       Chrenko, Onďrej, Marleau, Gabriel-Dominique, Ercolano, Barbara, Szulágyi, Judit
+    authors_list:
+    - Domínguez-Jamett, Oriana
+    - Casassus, Simon
+    - Baobab Liu, Hauyu
+    - Aoyama, Yuhiko
+    - Cárcamo, Miguel
+    - Weber, Philipp
+    - Chrenko, Onďrej
+    - Marleau, Gabriel-Dominique
+    - Ercolano, Barbara
+    - Szulágyi, Judit
     title: 'Multi-frequency observations of PDS70c: Radio emission mechanisms in the circumplanetary environment'
     publication: Astronomy and Astrophysics
     year: 2025
@@ -77,8 +151,29 @@ coauthored:
     pages: A18
     doi: 10.1051/0004-6361/202554485
     url: https://doi.org/10.1051/0004-6361/202554485
+    citation_count: 7
+    author_position: 5
+    publication_type: journal
+    bibcode: 2025A&A...702A..18D
+    author_group: coauthored
+    publication_bucket: journal
   - authors: Weber, Philipp, Pérez, Sebastián, Zurlo, Alice, Miley, James, Hales, Antonio, Cieza, Lucas, Principe, David,
       Cárcamo, Miguel, Garufi, Antonio, Kóspál, Ágnes, Takami, Michihiro, Kastner, Joel, Zhu, Zhaohuan, Williams, Jonathan
+    authors_list:
+    - Weber, Philipp
+    - Pérez, Sebastián
+    - Zurlo, Alice
+    - Miley, James
+    - Hales, Antonio
+    - Cieza, Lucas
+    - Principe, David
+    - Cárcamo, Miguel
+    - Garufi, Antonio
+    - Kóspál, Ágnes
+    - Takami, Michihiro
+    - Kastner, Joel
+    - Zhu, Zhaohuan
+    - Williams, Jonathan
     title: 'Spirals and Clumps in V960 Mon: Signs of Planet Formation via Gravitational Instability around an FU Ori Star?'
     publication: The Astrophysical Journal
     year: 2023
@@ -88,8 +183,26 @@ coauthored:
     pages: L17
     doi: 10.3847/2041-8213/ace186
     url: https://doi.org/10.3847/2041-8213/ace186
+    citation_count: 17
+    author_position: 8
+    publication_type: journal
+    bibcode: 2023ApJ...952L..17W
+    author_group: coauthored
+    publication_bucket: journal
   - authors: Arce-Tord, Carla, Casassus, Simon, Dent, William R. F., Pérez, Sebastián, Cárcamo, Miguel, Weber, Philipp, Engler,
       Natalia, Cieza, Lucas A., Hales, Antonio, Zurlo, Alice, Marino, Sebastian
+    authors_list:
+    - Arce-Tord, Carla
+    - Casassus, Simon
+    - Dent, William R. F.
+    - Pérez, Sebastián
+    - Cárcamo, Miguel
+    - Weber, Philipp
+    - Engler, Natalia
+    - Cieza, Lucas A.
+    - Hales, Antonio
+    - Zurlo, Alice
+    - Marino, Sebastian
     title: Radio-continuum decrements associated to shadowing from the central warp in transition disc DoAr 44
     publication: Monthly Notices of the Royal Astronomical Society
     year: 2023
@@ -99,8 +212,26 @@ coauthored:
     pages: '2077'
     doi: 10.1093/mnras/stad2885
     url: https://doi.org/10.1093/mnras/stad2885
+    citation_count: 9
+    author_position: 5
+    publication_type: journal
+    bibcode: 2023MNRAS.526.2077A
+    author_group: coauthored
+    publication_bucket: journal
   - authors: Casassus, Simon, Cieza, Lucas, Cárcamo, Miguel, Ribas, Álvaro, Christiaens, Valentin, Rodríguez-Jiménez, Abigali,
       Arce-Tord, Carla, Bhowmik, Trisha, Chavan, Prachi, González-Ruilova, Camilo, Martínez-Brunner, Rafael
+    authors_list:
+    - Casassus, Simon
+    - Cieza, Lucas
+    - Cárcamo, Miguel
+    - Ribas, Álvaro
+    - Christiaens, Valentin
+    - Rodríguez-Jiménez, Abigali
+    - Arce-Tord, Carla
+    - Bhowmik, Trisha
+    - Chavan, Prachi
+    - González-Ruilova, Camilo
+    - Martínez-Brunner, Rafael
     title: Azimuthal temperature variations in ISO-Oph 2 from multifrequency ALMA observations
     publication: Monthly Notices of the Royal Astronomical Society
     year: 2023
@@ -110,7 +241,16 @@ coauthored:
     pages: '1545'
     doi: 10.1093/mnras/stad1981
     url: https://doi.org/10.1093/mnras/stad1981
+    citation_count: 8
+    author_position: 3
+    publication_type: journal
+    bibcode: 2023MNRAS.526.1545C
+    author_group: coauthored
+    publication_bucket: journal
   - authors: Casassus, Simon, Cárcamo, Miguel
+    authors_list:
+    - Casassus, Simon
+    - Cárcamo, Miguel
     title: Variable structure in the PDS 70 disc and uncertainties in radio-interferometric image restoration
     publication: Monthly Notices of the Royal Astronomical Society
     year: 2022
@@ -120,7 +260,19 @@ coauthored:
     pages: '5790'
     doi: 10.1093/mnras/stac1285
     url: https://doi.org/10.1093/mnras/stac1285
+    citation_count: 36
+    author_position: 2
+    publication_type: journal
+    bibcode: 2022MNRAS.513.5790C
+    author_group: coauthored
+    publication_bucket: journal
   - authors: Casassus, Simon, Cárcamo, Miguel, Hales, Antonio, Weber, Philipp, Dent, Bill
+    authors_list:
+    - Casassus, Simon
+    - Cárcamo, Miguel
+    - Hales, Antonio
+    - Weber, Philipp
+    - Dent, Bill
     title: 'The Doppler Flip in HD 100546 as a Disk Eruption: The Elephant in the Room of Kinematic Protoplanet Searches'
     publication: The Astrophysical Journal
     year: 2022
@@ -130,8 +282,26 @@ coauthored:
     pages: L4
     doi: 10.3847/2041-8213/ac75e8
     url: https://doi.org/10.3847/2041-8213/ac75e8
+    citation_count: 24
+    author_position: 2
+    publication_type: journal
+    bibcode: 2022ApJ...933L...4C
+    author_group: coauthored
+    publication_bucket: journal
   - authors: Martinez-Brunner, Rafael, Casassus, Simon, Pérez, Sebastián, Hales, Antonio, Weber, Philipp, Cárcamo, Miguel,
       Arce-Tord, Carla, Cieza, Lucas, Garufi, Antonio, Marino, Sebastián, Zurlo, Alice
+    authors_list:
+    - Martinez-Brunner, Rafael
+    - Casassus, Simon
+    - Pérez, Sebastián
+    - Hales, Antonio
+    - Weber, Philipp
+    - Cárcamo, Miguel
+    - Arce-Tord, Carla
+    - Cieza, Lucas
+    - Garufi, Antonio
+    - Marino, Sebastián
+    - Zurlo, Alice
     title: 'High-resolution ALMA observations of V4046 Sgr: a circumbinary disc with a thin ring'
     publication: Monthly Notices of the Royal Astronomical Society
     year: 2022
@@ -141,7 +311,19 @@ coauthored:
     pages: '1248'
     doi: 10.1093/mnras/stab3440
     url: https://doi.org/10.1093/mnras/stab3440
+    citation_count: 15
+    author_position: 6
+    publication_type: journal
+    bibcode: 2022MNRAS.510.1248M
+    author_group: coauthored
+    publication_bucket: journal
   - authors: Ndiritu, S. W., Scaife, A. M. M., Tabb, D. L., Cárcamo, M., Hanson, J.
+    authors_list:
+    - Ndiritu, S. W.
+    - Scaife, A. M. M.
+    - Tabb, D. L.
+    - Cárcamo, M.
+    - Hanson, J.
     title: Gaussian process modelling for improved resolution in Faraday depth reconstruction
     publication: Monthly Notices of the Royal Astronomical Society
     year: 2021
@@ -151,9 +333,35 @@ coauthored:
     pages: '5839'
     doi: 10.1093/mnras/stab379
     url: https://doi.org/10.1093/mnras/stab379
+    citation_count: 4
+    author_position: 4
+    publication_type: journal
+    bibcode: 2021MNRAS.502.5839N
+    author_group: coauthored
+    publication_bucket: journal
   - authors: Casassus, Simon, Christiaens, Valentin, Cárcamo, Miguel, Pérez, Sebastián, Weber, Philipp, Ercolano, Barbara,
       van der Marel, Nienke, Pinte, Christophe, Dong, Ruobing, Baruteau, Clément, Cieza, Lucas, van Dishoeck, Ewine F., Jordan,
       Andrés, Price, Daniel J., Absil, Olivier, Arce-Tord, Carla, Faramaz, Virginie, Flores, Christian, Reggiani, Maddalena
+    authors_list:
+    - Casassus, Simon
+    - Christiaens, Valentin
+    - Cárcamo, Miguel
+    - Pérez, Sebastián
+    - Weber, Philipp
+    - Ercolano, Barbara
+    - van der Marel, Nienke
+    - Pinte, Christophe
+    - Dong, Ruobing
+    - Baruteau, Clément
+    - Cieza, Lucas
+    - van Dishoeck, Ewine F.
+    - Jordan, Andrés
+    - Price, Daniel J.
+    - Absil, Olivier
+    - Arce-Tord, Carla
+    - Faramaz, Virginie
+    - Flores, Christian
+    - Reggiani, Maddalena
     title: A dusty filament and turbulent CO spirals in HD 135344B - SAO 206462
     publication: Monthly Notices of the Royal Astronomical Society
     year: 2021
@@ -163,8 +371,27 @@ coauthored:
     pages: '3789'
     doi: 10.1093/mnras/stab2359
     url: https://doi.org/10.1093/mnras/stab2359
+    citation_count: 49
+    author_position: 3
+    publication_type: journal
+    bibcode: 2021MNRAS.507.3789C
+    author_group: coauthored
+    publication_bucket: journal
   - authors: Arce-Tord, Carla, Vidal, Matias, Casassus, Simon, Cárcamo, Miguel, Dickinson, Clive, Hensley, Brandon S., Génova-Santos,
       Ricardo, Bond, J. Richard, Jones, Michael E., Readhead, Anthony C. S., Taylor, Angela C., Zensus, J. Anton
+    authors_list:
+    - Arce-Tord, Carla
+    - Vidal, Matias
+    - Casassus, Simon
+    - Cárcamo, Miguel
+    - Dickinson, Clive
+    - Hensley, Brandon S.
+    - Génova-Santos, Ricardo
+    - Bond, J. Richard
+    - Jones, Michael E.
+    - Readhead, Anthony C. S.
+    - Taylor, Angela C.
+    - Zensus, J. Anton
     title: Resolved observations at 31 GHz of spinning dust emissivity variations in ρ Oph
     publication: Monthly Notices of the Royal Astronomical Society
     year: 2020
@@ -174,9 +401,32 @@ coauthored:
     pages: '3482'
     doi: 10.1093/mnras/staa1422
     url: https://doi.org/10.1093/mnras/staa1422
+    citation_count: 13
+    author_position: 4
+    publication_type: journal
+    bibcode: 2020MNRAS.495.3482A
+    author_group: coauthored
+    publication_bucket: journal
   - authors: Casassus, Simon, Marino, Sebastián, Lyra, Wladimir, Baruteau, Clément, Vidal, Matías, Wootten, Alwyn, Pérez,
       Sebastián, Alarcon, Felipe, Barraza, Marcelo, Cárcamo, Miguel, Dong, Ruobing, Sierra, Anibal, Zhu, Zhaohuan, Ricci,
       Luca, Christiaens, Valentin, Cieza, Lucas
+    authors_list:
+    - Casassus, Simon
+    - Marino, Sebastián
+    - Lyra, Wladimir
+    - Baruteau, Clément
+    - Vidal, Matías
+    - Wootten, Alwyn
+    - Pérez, Sebastián
+    - Alarcon, Felipe
+    - Barraza, Marcelo
+    - Cárcamo, Miguel
+    - Dong, Ruobing
+    - Sierra, Anibal
+    - Zhu, Zhaohuan
+    - Ricci, Luca
+    - Christiaens, Valentin
+    - Cieza, Lucas
     title: 'Cm-wavelength observations of MWC 758: resolved dust trapping in a vortex'
     publication: Monthly Notices of the Royal Astronomical Society
     year: 2019
@@ -186,9 +436,30 @@ coauthored:
     pages: '3278'
     doi: 10.1093/mnras/sty3269
     url: https://doi.org/10.1093/mnras/sty3269
+    citation_count: 35
+    author_position: 10
+    publication_type: journal
+    bibcode: 2019MNRAS.483.3278C
+    author_group: coauthored
+    publication_bucket: journal
   - authors: Casassus, Simon, Avenhaus, Henning, Pérez, Sebastián, Navarro, Víctor, Cárcamo, Miguel, Marino, Sebastián, Cieza,
       Lucas, Quanz, Sascha P., Alarcón, Felipe, Zurlo, Alice, Osses, Axel, Rannou, Fernando R., Román, Pablo E., Barraza,
       Marcelo
+    authors_list:
+    - Casassus, Simon
+    - Avenhaus, Henning
+    - Pérez, Sebastián
+    - Navarro, Víctor
+    - Cárcamo, Miguel
+    - Marino, Sebastián
+    - Cieza, Lucas
+    - Quanz, Sascha P.
+    - Alarcón, Felipe
+    - Zurlo, Alice
+    - Osses, Axel
+    - Rannou, Fernando R.
+    - Román, Pablo E.
+    - Barraza, Marcelo
     title: An inner warp in the DoAr 44 T Tauri transition disc
     publication: Monthly Notices of the Royal Astronomical Society
     year: 2018
@@ -198,10 +469,41 @@ coauthored:
     pages: '5104'
     doi: 10.1093/mnras/sty894
     url: https://doi.org/10.1093/mnras/sty894
+    citation_count: 92
+    author_position: 5
+    publication_type: journal
+    bibcode: 2018MNRAS.477.5104C
+    author_group: coauthored
+    publication_bucket: journal
   - authors: Cieza, Lucas A., Casassus, Simon, Pérez, Sebastian, Hales, Antonio, Cárcamo, Miguel, Ansdell, Megan, Avenhaus,
       Henning, Bayo, Amelia, Bertrang, Gesa H.-M., Cánovas, Hector, Christiaens, Valentin, Dent, William, Ferrero, Gabriel,
       Gamen, Roberto, Olofsson, Johan, Orcajo, Santiago, Osses, Axel, Peña-Ramirez, Karla, Principe, David, Ruíz-Rodríguez,
       Dary, Schreiber, Matthias R., van der Plas, Gerrit, Williams, Jonathan P., Zurlo, Alice
+    authors_list:
+    - Cieza, Lucas A.
+    - Casassus, Simon
+    - Pérez, Sebastian
+    - Hales, Antonio
+    - Cárcamo, Miguel
+    - Ansdell, Megan
+    - Avenhaus, Henning
+    - Bayo, Amelia
+    - Bertrang, Gesa H.-M.
+    - Cánovas, Hector
+    - Christiaens, Valentin
+    - Dent, William
+    - Ferrero, Gabriel
+    - Gamen, Roberto
+    - Olofsson, Johan
+    - Orcajo, Santiago
+    - Osses, Axel
+    - Peña-Ramirez, Karla
+    - Principe, David
+    - Ruíz-Rodríguez, Dary
+    - Schreiber, Matthias R.
+    - van der Plas, Gerrit
+    - Williams, Jonathan P.
+    - Zurlo, Alice
     title: 'ALMA Observations of Elias 2-24: A Protoplanetary Disk with Multiple Gaps in the Ophiuchus Molecular Cloud'
     publication: The Astrophysical Journal
     year: 2017
@@ -211,8 +513,19 @@ coauthored:
     pages: L23
     doi: 10.3847/2041-8213/aa9b7b
     url: https://doi.org/10.3847/2041-8213/aa9b7b
+    citation_count: 49
+    author_position: 5
+    publication_type: journal
+    bibcode: 2017ApJ...851L..23C
+    author_group: coauthored
+    publication_bucket: journal
   conference:
   - authors: Rannou, Fernando R., Guzman, Damian, Carcamo, Miguel, Perez, Sebastian
+    authors_list:
+    - Rannou, Fernando R.
+    - Guzman, Damian
+    - Carcamo, Miguel
+    - Perez, Sebastian
     title: Split Bregman Image Synthesis in Radio Interferometry
     publication: 2024 4th URSI Atlantic Radio Science Meeting (AT-RASC)
     year: 2024
@@ -222,7 +535,19 @@ coauthored:
     pages: '151'
     doi: 10.46620/URSIATRASC24/VJYI4215
     url: https://doi.org/10.46620/URSIATRASC24/VJYI4215
+    citation_count: 0
+    author_position: 3
+    publication_type: conference
+    bibcode: 2024atra.conf..151R
+    author_group: coauthored
+    publication_bucket: conference
   - authors: Rickmers Blamey, Belén, Rannou, Fernando, Weber, Philipp, Cárcamo, Miguel, Pérez, Sebastián
+    authors_list:
+    - Rickmers Blamey, Belén
+    - Rannou, Fernando
+    - Weber, Philipp
+    - Cárcamo, Miguel
+    - Pérez, Sebastián
     title: A deep learning approach to complete the uv-plane of interferometric observations
     publication: EAS2023, European Astronomical Society Annual Meeting
     year: 2023
@@ -232,3 +557,9 @@ coauthored:
     pages: '1436'
     doi: ''
     url: https://ui.adsabs.harvard.edu/abs/2023eas..conf.1436R
+    citation_count: 0
+    author_position: 4
+    publication_type: conference
+    bibcode: 2023eas..conf.1436R
+    author_group: coauthored
+    publication_bucket: conference

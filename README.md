@@ -112,6 +112,7 @@ All sections are in `_includes/sections/`. Edit the HTML files directly:
 ## Publications Automation (NASA ADS)
 
 Publications are now rendered from `_data/publications.yml`, which is synchronized from NASA ADS.
+Publication metrics/statistics are rendered from `_data/publication_stats.json`.
 
 ### One-time setup in GitHub
 
@@ -127,6 +128,8 @@ The workflow also runs:
 For push deployments, use the `Build and Deploy Pages` workflow, which runs ADS sync first and only then deploys the site. This workflow does not commit `_data/publications.yml`, so your branch is not mutated during deploy.
 
 Use `Sync NASA ADS Publications` when you want to persist synchronized data back into the repository (manual or weekly run).
+
+The statistics section uses Chart.js from CDN (`chart.umd.min.js`) as a lightweight runtime-only dependency (no npm/build step added).
 
 > Important: in repository settings, set **Pages source** to **GitHub Actions** so deployment is controlled by workflow order.
 

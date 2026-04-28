@@ -35,12 +35,12 @@ jobs:
 
       - name: Commit updated publications data
         run: |
-          if git diff --quiet -- _data/publications.yml; then
-            echo "No publication updates."
+          if git diff --quiet -- _data/publications.yml _data/publication_stats.json; then
+            echo "No publication/statistics updates."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add _data/publications.yml
-          git commit -m "chore: sync publications from NASA ADS"
+          git add _data/publications.yml _data/publication_stats.json
+          git commit -m "chore: sync publications and stats from NASA ADS"
           git push

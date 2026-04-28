@@ -1,0 +1,132 @@
+<section id="publication-stats" class="publication-stats single_page">
+<div class="publications_area section_padding">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<div class="section_title">
+<h2>PUBLICATION STATISTICS</h2>
+<p class="sub_title">Scholarly metrics from NASA ADS</p>
+</div>
+</div>
+</div>
+
+{% assign stats = site.data.publication_stats %}
+{% if stats %}
+<div class="row" style="margin-bottom: 30px;">
+<div class="col-md-12">
+<div class="stats-card-grid" aria-label="Publication metrics headline cards">
+<article class="stats-card" tabindex="0"><p class="stats-card-label">Total Papers <span class="stats-info-marker" title="All journal + conference papers included after filtering and deduplication." aria-label="Info: all journal and conference papers">i</span></p><p class="stats-card-value">{{ stats.volume.total_publications }}</p></article>
+<article class="stats-card" tabindex="0"><p class="stats-card-label">Journal Papers <span class="stats-info-marker" title="Papers classified as journal publications." aria-label="Info: journal paper count">i</span></p><p class="stats-card-value">{{ stats.volume.journal_publications }}</p></article>
+<article class="stats-card" tabindex="0"><p class="stats-card-label">Total Citations <span class="stats-info-marker" title="Sum of citation counts across all included papers." aria-label="Info: total citations definition">i</span></p><p class="stats-card-value">{{ stats.citations.total_citations }}</p></article>
+<article class="stats-card" tabindex="0"><p class="stats-card-label">Avg Citations/Paper <span class="stats-info-marker" title="Total citations divided by total papers." aria-label="Info: average citations per paper">i</span></p><p class="stats-card-value">{{ stats.citations.average_citations_per_paper }}</p></article>
+<article class="stats-card" tabindex="0"><p class="stats-card-label">Median Citations <span class="stats-info-marker" title="Median citation count across all papers." aria-label="Info: median citations per paper">i</span></p><p class="stats-card-value">{{ stats.citations.median_citations_per_paper }}</p></article>
+<article class="stats-card" tabindex="0"><p class="stats-card-label">h-index <span class="stats-info-marker" title="Largest h such that at least h papers have >= h citations." aria-label="Info: h-index formula">i</span></p><p class="stats-card-value">{{ stats.citations.h_index }}</p></article>
+<article class="stats-card" tabindex="0"><p class="stats-card-label">i10-index <span class="stats-info-marker" title="Number of papers with at least 10 citations." aria-label="Info: i10-index formula">i</span></p><p class="stats-card-value">{{ stats.citations.i10_index }}</p></article>
+<article class="stats-card" tabindex="0"><p class="stats-card-label">m-index <span class="stats-info-marker" title="h-index divided by years since first publication." aria-label="Info: m-index formula">i</span></p><p class="stats-card-value">{{ stats.citations.m_index }}</p></article>
+<article class="stats-card" tabindex="0"><p class="stats-card-label">Lead-author Papers <span class="stats-info-marker" title="Papers where Miguel is author position 1 or 2." aria-label="Info: lead-author paper count">i</span></p><p class="stats-card-value">{{ stats.volume.lead_author_publications }}</p></article>
+<article class="stats-card" tabindex="0"><p class="stats-card-label">FONDECYT NP <span class="stats-info-marker" title="Calculated from top-10 journal papers in the last 5 years using the ANID GE Astronomía y Astrofísica formula." aria-label="Info: FONDECYT NP definition">i</span></p><p class="stats-card-value">{{ stats.fondecyt.np_score }}</p></article>
+<article class="stats-card" tabindex="0"><p class="stats-card-label">First-author Papers <span class="stats-info-marker" title="Papers where Miguel Cárcamo is listed in author position 1." aria-label="Info: first-author definition">i</span></p><p class="stats-card-value">{{ stats.volume.first_author_publications }}</p></article>
+<article class="stats-card" tabindex="0"><p class="stats-card-label">Unique Co-authors <span class="stats-info-marker" title="Distinct co-authors across included publications." aria-label="Info: unique co-author count">i</span></p><p class="stats-card-value">{{ stats.volume.unique_coauthors }}</p></article>
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-12">
+<div class="stats-chart-card">
+<h4 class="stats-chart-title">Methodology (Transparency)</h4>
+<details class="stats-methodology-details">
+<summary><strong>Metric definitions and formulas</strong> <span class="stats-details-arrow" aria-hidden="true">▼</span></summary>
+<ul class="stats-method-list">
+<li><code>total_publications</code> = journal papers + conference papers.</li>
+<li><code>lead_author_publications</code> = papers with author position 1 or 2.</li>
+<li><code>h-index</code>: largest <code>h</code> such that at least <code>h</code> papers have <code>&gt;= h</code> citations.</li>
+<li><code>i10-index</code>: number of papers with <code>&gt;= 10</code> citations.</li>
+<li><code>m-index</code> = <code>h-index / years_since_first_publication</code>.</li>
+<li><code>average_citations_per_paper</code> = <code>total_citations / total_publications</code>.</li>
+<li><code>median_citations_per_paper</code>: median citation count across all included papers.</li>
+</ul>
+<p style="margin-top: 12px; color: #676767;"><strong>FONDECYT-style NP (ANID GE Astronomía y Astrofísica):</strong></p>
+<ul class="stats-method-list">
+<li>Use journal papers from the last 5 calendar years.</li>
+<li>For each paper, <code>c_i = citations / max(1, current_year - pub_year)</code>.</li>
+<li>Leadership factor <code>l_i</code> by author position: 1-2: 1.00, 3: 0.90, 4: 0.70, 5: 0.50, 6: 0.30, 7+: 0.20.</li>
+<li><code>s_i = l_i * sqrt(1 + c_i)</code>.</li>
+<li>Take top 10 papers by <code>s_i</code>.</li>
+<li><code>P = sum(s_i)</code> over top 10.</li>
+<li><code>NP = min(1.0 + 1.7 * P^0.25, 5.0)</code>.</li>
+</ul>
+</details>
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-6">
+<div class="stats-chart-card">
+<h4 class="stats-chart-title">Papers per Year</h4>
+<canvas id="papers-per-year-chart" role="img" aria-label="Bar chart of papers per year"></canvas>
+</div>
+</div>
+<div class="col-md-6">
+<div class="stats-chart-card">
+<h4 class="stats-chart-title">Annual and Cumulative Citations</h4>
+<canvas id="citations-combo-chart" role="img" aria-label="Annual citations bars with cumulative citations line"></canvas>
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-6">
+<div class="stats-chart-card">
+<h4 class="stats-chart-title">Citation Distribution</h4>
+<canvas id="citation-histogram-chart" role="img" aria-label="Histogram of citations per paper"></canvas>
+</div>
+</div>
+<div class="col-md-6">
+<div class="stats-chart-card">
+<h4 class="stats-chart-title">Author Position Distribution</h4>
+<canvas id="author-position-chart" role="img" aria-label="Distribution of author positions in publications"></canvas>
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-12">
+<div class="stats-chart-card">
+<h4 class="stats-chart-title">Top 10 Most Cited Papers</h4>
+<canvas id="top-cited-chart" role="img" aria-label="Horizontal bar chart of top 10 most cited papers"></canvas>
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-12">
+<div class="stats-chart-card">
+<h4 class="stats-chart-title">FONDECYT NP Top-10 Contributors</h4>
+<div id="fondecyt-top-list" aria-live="polite"></div>
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-12">
+<p class="stats-footer-note">
+Data source: NASA ADS. Last updated: <span id="stats-last-updated" data-utc="{{ stats.generated_at_utc }}">{{ stats.generated_at_utc }}</span>.
+<a href="{{ '/_data/publication_stats.json' | relative_url }}" target="_blank" rel="noopener" class="stats-export-link">Export stats JSON</a>
+</p>
+</div>
+</div>
+
+<script id="publication-stats-data" type="application/json">{{ stats | jsonify }}</script>
+{% else %}
+<div class="row">
+<div class="col-md-12">
+<p style="text-align: center; color: #999;">Publication statistics are not available yet. Run the NASA ADS sync workflow first.</p>
+</div>
+</div>
+{% endif %}
+
+</div>
+</div>
+</section>
