@@ -109,6 +109,25 @@ All sections are in `_includes/sections/`. Edit the HTML files directly:
 - `blog.html` - Blog listing (auto-generated from `_posts/`)
 - `contact.html` - Contact form
 
+## Publications Automation (NASA ADS)
+
+Publications are now rendered from `_data/publications.yml`, which is synchronized from NASA ADS.
+
+### One-time setup in GitHub
+
+1. In your GitHub repository settings, add secret:
+   - `ADS_API_TOKEN` = your NASA ADS API token
+2. Go to **Actions** and run workflow:
+   - `Sync NASA ADS Publications`
+
+The workflow also runs weekly and updates `_data/publications.yml` automatically.
+
+### Run sync locally (optional)
+
+```bash
+ADS_API_TOKEN=your_token_here python scripts/sync_ads_publications.py --orcid 0000-0003-0564-8167
+```
+
 ### Main Page
 The main page (`index.html`) includes all sections in order. To reorder sections, edit the include statements.
 

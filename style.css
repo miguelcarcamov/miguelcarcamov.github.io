@@ -481,6 +481,12 @@ SIDEBAR AREA CSS
 		line-height: 24px;
 		color: #b5b0f7;
 	}
+	.social ul li > a>span.icon-x-brand{
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 700;
+		font-size: 13px;
+		letter-spacing: 0.2px;
+	}
 
 
 
