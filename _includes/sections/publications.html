@@ -82,27 +82,6 @@ Last synchronized from NASA ADS:
 </p>
 </div>
 </div>
-<script>
-(function () {
-  var el = document.getElementById("ads-sync-time");
-  if (!el) return;
-  var utcValue = el.getAttribute("data-utc");
-  if (!utcValue) return;
-
-  var dt = new Date(utcValue);
-  if (isNaN(dt.getTime())) return;
-
-  var formatted = dt.toLocaleString(undefined, {
-    year: "numeric",
-    month: "long",
-    day: "2-digit",
-    hour: "2-digit",
-    minute: "2-digit",
-    timeZoneName: "short"
-  });
-  el.textContent = formatted;
-})();
-</script>
 {% endif %}
 </div>
 </div><!-- end row -->

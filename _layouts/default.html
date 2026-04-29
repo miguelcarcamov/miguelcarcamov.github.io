@@ -21,7 +21,7 @@
     <meta property="twitter:url" content="{{ site.url }}{{ site.baseurl }}/">
     <meta property="twitter:title" content="{{ site.title }}">
     <meta property="twitter:description" content="{{ site.description }}">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self' mailto:; frame-ancestors 'none'; upgrade-insecure-requests">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://www.gstatic.com https://www.google.com https://maps.googleapis.com https://maps.gstatic.com https://www.youtube.com https://s.ytimg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://www.gstatic.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com https://www.gstatic.com data:; img-src 'self' data: https: https://www.google.com https://maps.gstatic.com https://i.ytimg.com; connect-src 'self' https: https://www.google.com https://maps.googleapis.com https://maps.gstatic.com https://www.youtube.com; frame-src https://www.google.com https://www.youtube.com https://www.youtube-nocookie.com; object-src 'none'; base-uri 'self'; form-action 'self' mailto:; upgrade-insecure-requests">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
 
@@ -34,7 +34,7 @@
     <link rel="stylesheet" href="{{ '/css/venobox.css' | relative_url }}">
 
     <!-- font awesome -->
-    <link rel="stylesheet" href="{{ '/css/font-awesome.min.css' | relative_url }}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
     <!-- camera css -->
     <link rel="stylesheet" href="{{ '/css/camera.css' | relative_url }}">

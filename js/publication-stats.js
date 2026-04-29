@@ -66,7 +66,9 @@
       script.src = "https://www.gstatic.com/charts/loader.js";
       script.async = true;
       script.onload = onReady;
-      script.onerror = reject;
+      script.onerror = function () {
+        reject(new Error("Failed to load Google Charts loader.js from gstatic."));
+      };
       document.head.appendChild(script);
     });
     return googleChartsPromise;
@@ -159,8 +161,12 @@
           legend: "none",
           tooltip: { textStyle: { color: "#222" } }
         });
-      }).catch(function () {
-        mapNode.textContent = "Could not load map renderer.";
+      }).catch(function (err) {
+        // Keep a visible hint in the UI so CSP/network issues are easy to diagnose.
+        mapNode.textContent = "Could not load map renderer. Check browser console for CSP details.";
+        if (window.console && typeof window.console.error === "function") {
+          window.console.error("GeoChart load failed:", err);
+        }
       });
     }
 

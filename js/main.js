@@ -215,6 +215,24 @@
             });
         }
 
+        // Render ADS sync timestamp in local timezone without inline scripts.
+        (function renderAdsSyncTime() {
+            var el = document.getElementById("ads-sync-time");
+            if (!el) return;
+            var utcValue = el.getAttribute("data-utc");
+            if (!utcValue) return;
+            var dt = new Date(utcValue);
+            if (isNaN(dt.getTime())) return;
+            el.textContent = dt.toLocaleString(undefined, {
+                year: "numeric",
+                month: "long",
+                day: "2-digit",
+                hour: "2-digit",
+                minute: "2-digit",
+                timeZoneName: "short"
+            });
+        })();
+
 
         // Camera slider
         var $cameraSlider = $('.hero_slider');
