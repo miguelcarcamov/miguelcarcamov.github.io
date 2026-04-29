@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="MC cosmic favicon">
+  <rect width="64" height="64" rx="12" fill="#362cb1" />
+
+  <!-- M glyph -->
+  <path
+    d="M13 47 L13 20 L21 32 L29 20 L29 47"
+    fill="none"
+    stroke="#ffffff"
+    stroke-width="4.6"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- C as cosmic spiral mark -->
+  <path
+    d="M50 21
+       C45 16, 36 16, 31 23
+       C26 30, 26 40, 31 47
+       C36 54, 45 54, 50 49"
+    fill="none"
+    stroke="#8ee0ff"
+    stroke-width="3.6"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M46 29
+       C42 25, 36 25, 34 30
+       C32 34, 33 39, 37 41
+       C40 43, 44 42, 46 39"
+    fill="none"
+    stroke="#b9ecff"
+    stroke-width="2.4"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <circle cx="50" cy="21" r="2.1" fill="#d7f5ff" />
+</svg>
