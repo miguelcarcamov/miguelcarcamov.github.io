@@ -67,8 +67,12 @@
         $hashLink.on('click',function (e) {
             // Keep href as SEO-friendly real URL; use data-home-hash for home animations.
             var targetUrl = $(this).attr('href') || '';
-            var targetHash = $(this).attr('data-home-hash') || '';
+            var targetHash = $(this).attr('data-home-hash') || targetUrl || '';
             if (targetHash.charAt(0) !== '#') {
+                return;
+            }
+            // Guard against invalid selectors when stale HTML/JS versions mix in cache.
+            if (!/^#[A-Za-z][A-Za-z0-9\-_:.]*$/.test(targetHash)) {
                 return;
             }
             var $toBeActivated = $(targetHash);
