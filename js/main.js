@@ -366,12 +366,8 @@
         //venoboxinit
         $('.venobox').venobox();
 
-        /* Video background (Tubuler) init */
-        var options = { videoId: 'UWK68I1uLZs', start: 3 };
-        $('.video_version .site').tubular(options);
-
         /* preloader js */
-        $(window).load(function(){
+        $(window).on('load', function(){
             $('.preloader_inner').fadeOut(1000);
             $('.preloader-bg').delay('500').fadeOut(1000);
 
