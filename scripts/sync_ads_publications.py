@@ -254,7 +254,7 @@ def fetch_ads_documents(token: str, orcid: str, rows: int, author_names: list[st
     headers = {"Authorization": f"Bearer {token}"}
     params = {
         "q": _publication_query(orcid=orcid, author_names=author_names),
-        "fl": "author,title,pub,pubdate,year,doctype,identifier,doi,volume,issue,page,bibcode,citation_count,orcid_pub,orcid_user,orcid_other",
+        "fl": "author,aff,title,pub,pubdate,year,doctype,identifier,doi,volume,issue,page,bibcode,citation_count,property,orcid_pub,orcid_user,orcid_other",
         "sort": "date desc",
         "rows": rows,
     }
@@ -298,11 +298,14 @@ def build_publication_entry(doc: dict[str, Any], orcid: str) -> dict[str, Any]:
     if citation_count is None:
         citation_count = 0
     citation_count = int(citation_count)
+    properties = {str(item).strip().lower() for item in _as_list(doc.get("property", [])) if str(item).strip()}
+    is_open_access = any(item in properties for item in ("openaccess", "pub_openaccess", "eprint_openaccess"))
     is_conference = _is_conference(doc)
 
     return {
         "authors": ", ".join(authors),
         "authors_list": authors,
+        "affiliations_list": _as_list(doc.get("aff", [])),
         "title": title,
         "publication": doc.get("pub", ""),
         "year": _as_int_or_str(year),
@@ -315,6 +318,7 @@ def build_publication_entry(doc: dict[str, Any], orcid: str) -> dict[str, Any]:
         "citation_count": citation_count,
         "author_position": author_position,
         "publication_type": "conference" if is_conference else "journal",
+        "is_open_access": is_open_access,
         "bibcode": bibcode or "",
     }
 
@@ -496,6 +500,285 @@ def _top_cited(entries: list[dict[str, Any]], limit: int = 10) -> list[dict[str,
     return top
 
 
+def _name_title_case(value: str) -> str:
+    text = str(value).strip()
+    if not text:
+        return text
+    parts = [part.strip() for part in text.split(",")]
+    return ", ".join(part.title() for part in parts)
+
+
+COUNTRY_HINTS: list[tuple[str, list[str]]] = [
+    ("Chile", [" chile", " santiago", " valparaiso", " concepcion"]),
+    ("United States", [" united states", " usa", " u.s.a", " u.s.", " california", " massachusetts"]),
+    ("United Kingdom", [" united kingdom", " uk", " u.k.", " england", " scotland", " wales"]),
+    ("Germany", [" germany", " deutschland", " munchen", " munich", " heidelberg"]),
+    ("France", [" france", " paris", " marseille"]),
+    ("Spain", [" spain", " espana", " madrid", " barcelona"]),
+    ("Italy", [" italy", " italia", " bologna", " milano", " rome"]),
+    ("Netherlands", [" netherlands", " nederland", " leiden", " amsterdam"]),
+    ("Belgium", [" belgium", " belgie", " brussels"]),
+    ("Switzerland", [" switzerland", " suisse", " zurich", " geneva"]),
+    ("Brazil", [" brazil", " brasil", " sao paulo", " rio de janeiro"]),
+    ("Argentina", [" argentina", " buenos aires", " cordoba"]),
+    ("Mexico", [" mexico", " ciudad de mexico"]),
+    ("Canada", [" canada", " toronto", " montreal", " vancouver"]),
+    ("Australia", [" australia", " sydney", " melbourne"]),
+    ("Japan", [" japan", " tokyo", " osaka"]),
+    ("China", [" china", " beijing", " shanghai"]),
+    ("South Korea", [" south korea", " korea", " seoul"]),
+    ("India", [" india", " bengaluru", " bangalore", " delhi"]),
+    ("Portugal", [" portugal", " lisboa", " porto"]),
+    ("Sweden", [" sweden", " stockholm", " uppsala"]),
+    ("Denmark", [" denmark", " copenhagen", " aarhus"]),
+    ("Norway", [" norway", " oslo", " bergen"]),
+    ("Finland", [" finland", " helsinki", " turku"]),
+    ("Austria", [" austria", " wien", " vienna"]),
+]
+
+
+def _normalize_for_country_match(value: str) -> str:
+    normalized = _normalize_text(value)
+    normalized = re.sub(r"[^a-z0-9]+", " ", normalized)
+    return f" {normalized.strip()} "
+
+
+def _infer_countries_from_affiliations(affiliations: list[str]) -> set[str]:
+    countries: set[str] = set()
+    for affiliation in affiliations:
+        if not affiliation:
+            continue
+        haystack = _normalize_for_country_match(str(affiliation))
+        for country, needles in COUNTRY_HINTS:
+            if any(f" {needle.strip()} " in haystack for needle in needles):
+                countries.add(country)
+    return countries
+
+
+def _country_collaboration_metrics(entries: list[dict[str, Any]]) -> dict[str, Any]:
+    papers_with_country_signal = 0
+    international_papers = 0
+    country_counts: dict[str, int] = {}
+    yearly_stats: dict[int, dict[str, int]] = {}
+
+    for entry in entries:
+        countries = _infer_countries_from_affiliations(entry.get("affiliations_list", []))
+        if not countries:
+            continue
+
+        papers_with_country_signal += 1
+        if len(countries) >= 2:
+            international_papers += 1
+
+        year = _safe_int(entry.get("year"))
+        if year > 0:
+            year_bucket = yearly_stats.setdefault(year, {"with_signal": 0, "international": 0})
+            year_bucket["with_signal"] += 1
+            if len(countries) >= 2:
+                year_bucket["international"] += 1
+
+        for country in countries:
+            country_counts[country] = country_counts.get(country, 0) + 1
+
+    country_rows = sorted(
+        (
+            {
+                "country": country,
+                "papers": count,
+                "share_percent": round((count / papers_with_country_signal) * 100.0, 2)
+                if papers_with_country_signal
+                else 0.0,
+            }
+            for country, count in country_counts.items()
+        ),
+        key=lambda item: item["papers"],
+        reverse=True,
+    )
+
+    international_share = (
+        round((international_papers / papers_with_country_signal) * 100.0, 2) if papers_with_country_signal else 0.0
+    )
+    years = sorted(yearly_stats.keys())
+    yearly_international_share = [
+        round((yearly_stats[year]["international"] / yearly_stats[year]["with_signal"]) * 100.0, 2)
+        if yearly_stats[year]["with_signal"] > 0
+        else 0.0
+        for year in years
+    ]
+
+    return {
+        "inference_note": "Country is inferred from affiliation text, not author nationality.",
+        "papers_with_country_signal": papers_with_country_signal,
+        "international_collaboration_papers": international_papers,
+        "international_collaboration_share_percent": international_share,
+        "yearly_international_share": {
+            "years": years,
+            "share_percent": yearly_international_share,
+        },
+        "countries": country_rows,
+        "top_countries": country_rows[:20],
+    }
+
+
+def _collaboration_metrics(entries: list[dict[str, Any]]) -> dict[str, Any]:
+    collaborator_counts: dict[str, int] = {}
+    collaborator_display_name: dict[str, str] = {}
+    total_links = 0
+
+    yearly_pairs: dict[int, set[str]] = {}
+    for entry in entries:
+        year = _safe_int(entry.get("year"))
+        coauthors_this_paper: set[str] = set()
+        for author_name in entry.get("authors_list", []):
+            author_str = str(author_name).strip()
+            if not author_str or _is_target_author_name(author_str):
+                continue
+            normalized = _normalize_text(author_str)
+            if not normalized:
+                continue
+            coauthors_this_paper.add(normalized)
+            if normalized not in collaborator_display_name:
+                collaborator_display_name[normalized] = author_str
+
+        total_links += len(coauthors_this_paper)
+        for normalized in coauthors_this_paper:
+            collaborator_counts[normalized] = collaborator_counts.get(normalized, 0) + 1
+
+        if year > 0:
+            bucket = yearly_pairs.setdefault(year, set())
+            bucket.update(coauthors_this_paper)
+
+    repeat_collaborators = [name for name, count in collaborator_counts.items() if count >= 2]
+    repeat_share = (
+        round((len(repeat_collaborators) / len(collaborator_counts)) * 100.0, 2) if collaborator_counts else 0.0
+    )
+
+    top_collaborators = sorted(
+        (
+            {
+                "name": _name_title_case(collaborator_display_name.get(name, name)),
+                "papers_together": count,
+            }
+            for name, count in collaborator_counts.items()
+        ),
+        key=lambda item: item["papers_together"],
+        reverse=True,
+    )[:12]
+
+    years_sorted = sorted(yearly_pairs.keys())
+    seen_collaborators: set[str] = set()
+    new_counts: list[int] = []
+    returning_counts: list[int] = []
+    for year in years_sorted:
+        year_collaborators = yearly_pairs[year]
+        new_this_year = len([name for name in year_collaborators if name not in seen_collaborators])
+        returning_this_year = len(year_collaborators) - new_this_year
+        new_counts.append(new_this_year)
+        returning_counts.append(returning_this_year)
+        seen_collaborators.update(year_collaborators)
+
+    return {
+        "unique_collaborators": len(collaborator_counts),
+        "total_collaboration_links": total_links,
+        "avg_coauthors_per_paper": round((total_links / len(entries)), 2) if entries else 0.0,
+        "repeat_collaborators": len(repeat_collaborators),
+        "repeat_collaborator_share_percent": repeat_share,
+        "top_collaborators": top_collaborators,
+        "yearly_new_vs_returning": {
+            "years": years_sorted,
+            "new_collaborators": new_counts,
+            "returning_collaborators": returning_counts,
+        },
+    }
+
+
+def _citation_velocity(entries: list[dict[str, Any]], current_year: int, window_years: int = 5) -> dict[str, Any]:
+    window_start = current_year - window_years + 1
+    selected = []
+    total_citations = 0
+    total_age_years = 0
+    for entry in entries:
+        year = _safe_int(entry.get("year"))
+        if year < window_start:
+            continue
+        citations = int(entry.get("citation_count", 0))
+        age = max(1, current_year - year)
+        selected.append(entry)
+        total_citations += citations
+        total_age_years += age
+
+    velocity = (total_citations / total_age_years) if total_age_years else 0.0
+    return {
+        "window_years": window_years,
+        "window_start_year": window_start,
+        "window_end_year": current_year,
+        "papers_in_window": len(selected),
+        "citations_in_window": total_citations,
+        "effective_paper_age_years": total_age_years,
+        "citations_per_effective_year": round(velocity, 4),
+    }
+
+
+def _leadership_impact(entries: list[dict[str, Any]]) -> dict[str, Any]:
+    lead_entries = [entry for entry in entries if entry.get("author_position") is not None and int(entry.get("author_position")) <= 2]
+    supporting_entries = [
+        entry for entry in entries if entry.get("author_position") is None or int(entry.get("author_position")) > 2
+    ]
+
+    def _citations_per_paper(items: list[dict[str, Any]]) -> float:
+        if not items:
+            return 0.0
+        return round(sum(int(item.get("citation_count", 0)) for item in items) / len(items), 2)
+
+    lead_cpp = _citations_per_paper(lead_entries)
+    supporting_cpp = _citations_per_paper(supporting_entries)
+    ratio = round((lead_cpp / supporting_cpp), 3) if supporting_cpp > 0 else 0.0
+
+    return {
+        "lead_papers": len(lead_entries),
+        "supporting_papers": len(supporting_entries),
+        "lead_citations_per_paper": lead_cpp,
+        "supporting_citations_per_paper": supporting_cpp,
+        "leadership_impact_ratio": ratio,
+    }
+
+
+def _momentum_metrics(entries: list[dict[str, Any]], current_year: int, window_years: int = 5) -> dict[str, Any]:
+    window_start = current_year - window_years + 1
+    recent = [entry for entry in entries if _safe_int(entry.get("year")) >= window_start]
+    recent_papers = len(recent)
+    recent_citations = sum(int(entry.get("citation_count", 0)) for entry in recent)
+    total_papers = len(entries)
+    total_citations = sum(int(entry.get("citation_count", 0)) for entry in entries)
+
+    recent_paper_share = round((recent_papers / total_papers) * 100.0, 2) if total_papers else 0.0
+    recent_citation_share = round((recent_citations / total_citations) * 100.0, 2) if total_citations else 0.0
+    momentum_score = round((recent_paper_share + recent_citation_share) / 2.0, 2)
+
+    return {
+        "window_years": window_years,
+        "window_start_year": window_start,
+        "window_end_year": current_year,
+        "recent_papers": recent_papers,
+        "recent_citations": recent_citations,
+        "recent_paper_share_percent": recent_paper_share,
+        "recent_citation_share_percent": recent_citation_share,
+        "momentum_score": momentum_score,
+    }
+
+
+def _impact_concentration(entries: list[dict[str, Any]]) -> dict[str, Any]:
+    citations_sorted = sorted([int(entry.get("citation_count", 0)) for entry in entries], reverse=True)
+    total_citations = sum(citations_sorted)
+    top3 = sum(citations_sorted[:3]) if citations_sorted else 0
+    top5 = sum(citations_sorted[:5]) if citations_sorted else 0
+
+    return {
+        "top3_citation_share_percent": round((top3 / total_citations) * 100.0, 2) if total_citations else 0.0,
+        "top5_citation_share_percent": round((top5 / total_citations) * 100.0, 2) if total_citations else 0.0,
+    }
+
+
 def _fondecyt_np(entries: list[dict[str, Any]], current_year: int) -> dict[str, Any]:
     min_year = current_year - 5
     candidates = []
@@ -570,10 +853,23 @@ def build_publication_stats(entries: list[dict[str, Any]], generated_at_utc: str
     lead_author_count = len(
         [entry for entry in entries if entry.get("author_position") is not None and int(entry.get("author_position")) <= 2]
     )
+    total_count = len(entries)
+    open_access_count = len([entry for entry in entries if entry.get("is_open_access")])
+
+    first_author_share = round((first_author_count / total_count) * 100.0, 2) if total_count else 0.0
+    lead_author_share = round((lead_author_count / total_count) * 100.0, 2) if total_count else 0.0
+    coauthored_share = round(max(0.0, 100.0 - first_author_share), 2) if total_count else 0.0
+    open_access_share = round((open_access_count / total_count) * 100.0, 2) if total_count else 0.0
 
     yearly = _yearly_series(entries)
     histogram = _citation_histogram(citations)
     position_distribution = _author_position_distribution(entries)
+    collaboration = _collaboration_metrics(entries)
+    country_collaboration = _country_collaboration_metrics(entries)
+    citation_velocity = _citation_velocity(entries, current_year=current_year, window_years=5)
+    leadership = _leadership_impact(entries)
+    momentum = _momentum_metrics(entries, current_year=current_year, window_years=5)
+    impact_concentration = _impact_concentration(entries)
     fondecyt = _fondecyt_np(entries, current_year=current_year)
 
     chart_palette = {
@@ -595,6 +891,11 @@ def build_publication_stats(entries: list[dict[str, Any]], generated_at_utc: str
             "first_author_publications": first_author_count,
             "lead_author_publications": lead_author_count,
             "unique_coauthors": len(coauthors),
+            "first_author_share_percent": first_author_share,
+            "lead_author_share_percent": lead_author_share,
+            "coauthored_share_percent": coauthored_share,
+            "open_access_publications": open_access_count,
+            "open_access_share_percent": open_access_share,
         },
         "citations": {
             "total_citations": total_citations,
@@ -609,9 +910,15 @@ def build_publication_stats(entries: list[dict[str, Any]], generated_at_utc: str
             "first_publication_year": first_year,
             "career_years": career_years,
         },
+        "citation_velocity": citation_velocity,
         "yearly": yearly,
         "histogram": histogram,
         "author_position_distribution": position_distribution,
+        "collaboration": collaboration,
+        "country_collaboration": country_collaboration,
+        "leadership": leadership,
+        "momentum": momentum,
+        "impact_concentration": impact_concentration,
         "top_cited": _top_cited(entries, limit=10),
         "fondecyt": fondecyt,
         "chart_palette": chart_palette,

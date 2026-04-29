@@ -43,6 +43,35 @@
     return value.slice(0, Math.max(0, maxChars - 1)) + "…";
   }
 
+  var googleChartsPromise = null;
+  function ensureGoogleCharts() {
+    if (window.google && window.google.charts && window.google.visualization) {
+      return Promise.resolve();
+    }
+    if (googleChartsPromise) return googleChartsPromise;
+    googleChartsPromise = new Promise(function (resolve, reject) {
+      var existing = document.getElementById("google-charts-loader");
+      var onReady = function () {
+        window.google.charts.load("current", { packages: ["geochart"] });
+        window.google.charts.setOnLoadCallback(resolve);
+      };
+
+      if (existing) {
+        if (window.google && window.google.charts) onReady();
+        return;
+      }
+
+      var script = document.createElement("script");
+      script.id = "google-charts-loader";
+      script.src = "https://www.gstatic.com/charts/loader.js";
+      script.async = true;
+      script.onload = onReady;
+      script.onerror = reject;
+      document.head.appendChild(script);
+    });
+    return googleChartsPromise;
+  }
+
   var dataNode = document.getElementById("publication-stats-data");
   if (!dataNode) return;
   var sectionNode = document.getElementById("publication-stats");
@@ -57,6 +86,7 @@
 
   var charts = [];
   var initialized = false;
+  var redrawCountryMap = null;
 
   function isStatsSectionActive() {
     return sectionNode.classList.contains("active");
@@ -68,6 +98,7 @@
         chart.resize();
       }
     });
+    if (typeof redrawCountryMap === "function") redrawCountryMap();
   }
 
   function renderStatsCharts() {
@@ -93,6 +124,48 @@
       x: { ticks: { color: colors.text }, grid: { color: colors.grid } },
       y: { ticks: { color: colors.text }, grid: { color: colors.grid }, beginAtZero: true }
     };
+
+    function drawCountryMap() {
+      var mapNode = document.getElementById("country-collab-map");
+      var colorbarMinNode = document.getElementById("country-colorbar-min");
+      var colorbarMaxNode = document.getElementById("country-colorbar-max");
+      if (!mapNode) return;
+      var countryRows = (((stats.country_collaboration || {}).top_countries) || []);
+      if (!countryRows.length) {
+        mapNode.textContent = "No affiliation-country signal available yet.";
+        if (colorbarMinNode) colorbarMinNode.textContent = "0%";
+        if (colorbarMaxNode) colorbarMaxNode.textContent = "0%";
+        return;
+      }
+
+      var shares = countryRows.map(function (item) { return Number(item.share_percent || 0); });
+      var minShare = Math.min.apply(null, shares);
+      var maxShare = Math.max.apply(null, shares);
+      if (colorbarMinNode) colorbarMinNode.textContent = minShare.toFixed(1) + "%";
+      if (colorbarMaxNode) colorbarMaxNode.textContent = maxShare.toFixed(1) + "%";
+
+      ensureGoogleCharts().then(function () {
+        var dataArray = [["Country", "Paper share (%)", "Papers"]];
+        countryRows.forEach(function (item) {
+          dataArray.push([item.country, Number(item.share_percent || 0), Number(item.papers || 0)]);
+        });
+        var dataTable = window.google.visualization.arrayToDataTable(dataArray);
+        var chart = new window.google.visualization.GeoChart(mapNode);
+        chart.draw(dataTable, {
+          backgroundColor: "transparent",
+          datalessRegionColor: darkMode ? "#2c2d33" : "#f3f3f8",
+          defaultColor: darkMode ? "#434556" : "#e3e4f2",
+          colorAxis: { colors: [colors.accent, colors.primary] },
+          legend: "none",
+          tooltip: { textStyle: { color: "#222" } }
+        });
+      }).catch(function () {
+        mapNode.textContent = "Could not load map renderer.";
+      });
+    }
+
+    redrawCountryMap = drawCountryMap;
+    drawCountryMap();
 
     charts.push(
       createChart(
@@ -165,6 +238,29 @@
 
     charts.push(
       createChart(
+        document.getElementById("citation-histogram-chart"),
+        {
+          type: "bar",
+          data: {
+            labels: Object.keys(stats.histogram),
+            datasets: [{
+              label: "Papers",
+              data: Object.values(stats.histogram),
+              backgroundColor: colors.primary
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: commonScales,
+            plugins: { legend: { labels: { color: colors.text } } }
+          }
+        }
+      )
+    );
+
+    charts.push(
+      createChart(
         document.getElementById("top-cited-chart"),
         {
           type: "bar",
@@ -193,7 +289,7 @@
                 ticks: {
                   color: colors.text,
                   autoSkip: false,
-                  font: { size: 10 }
+                  font: { size: window.innerWidth < 768 ? 9 : 10 }
                 },
                 grid: { color: colors.grid }
               }
@@ -220,45 +316,36 @@
 
     charts.push(
       createChart(
-        document.getElementById("citation-histogram-chart"),
+        document.getElementById("top-collaborators-chart"),
         {
           type: "bar",
           data: {
-            labels: Object.keys(stats.histogram),
+            labels: ((stats.collaboration && stats.collaboration.top_collaborators) || []).map(function (item) {
+              return truncateLabel(item.name || "", window.innerWidth < 768 ? 22 : 34);
+            }),
             datasets: [{
-              label: "Papers",
-              data: Object.values(stats.histogram),
+              label: "Shared papers",
+              data: ((stats.collaboration && stats.collaboration.top_collaborators) || []).map(function (item) {
+                return item.papers_together || 0;
+              }),
               backgroundColor: colors.primary
             }]
           },
           options: {
+            indexAxis: "y",
             responsive: true,
             maintainAspectRatio: false,
-            scales: commonScales,
-            plugins: { legend: { labels: { color: colors.text } } }
-          }
-        }
-      )
-    );
-
-    charts.push(
-      createChart(
-        document.getElementById("author-position-chart"),
-        {
-          type: "pie",
-          data: {
-            labels: Object.keys(stats.author_position_distribution),
-            datasets: [{
-              data: Object.values(stats.author_position_distribution),
-              backgroundColor: [
-                colors.primary, colors.secondary, colors.accent, "#7c73e6",
-                "#8c85ec", "#a29cf2", "#b9b5f7", colors.muted
-              ]
-            }]
-          },
-          options: {
-            responsive: true,
-            maintainAspectRatio: false,
+            scales: {
+              x: {
+                ticks: { color: colors.text },
+                grid: { color: colors.grid },
+                beginAtZero: true
+              },
+              y: {
+                ticks: { color: colors.text, autoSkip: false, font: { size: window.innerWidth < 768 ? 9 : 10 } },
+                grid: { color: colors.grid }
+              }
+            },
             plugins: {
               legend: { labels: { color: colors.text } }
             }
@@ -297,7 +384,7 @@
                 ticks: {
                   color: colors.text,
                   autoSkip: false,
-                  font: { size: 10 }
+                  font: { size: window.innerWidth < 768 ? 9 : 10 }
                 },
                 grid: { color: colors.grid }
               }

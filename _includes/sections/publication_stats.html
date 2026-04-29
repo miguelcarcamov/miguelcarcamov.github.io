@@ -16,22 +16,28 @@
 <div class="col-md-12">
 <div class="stats-card-grid" aria-label="Publication metrics headline cards">
 <article class="stats-card" tabindex="0"><p class="stats-card-label">Total Papers <span class="stats-info-marker" title="All journal + conference papers included after filtering and deduplication." aria-label="Info: all journal and conference papers">i</span></p><p class="stats-card-value">{{ stats.volume.total_publications }}</p></article>
-<article class="stats-card" tabindex="0"><p class="stats-card-label">Journal Papers <span class="stats-info-marker" title="Papers classified as journal publications." aria-label="Info: journal paper count">i</span></p><p class="stats-card-value">{{ stats.volume.journal_publications }}</p></article>
 <article class="stats-card" tabindex="0"><p class="stats-card-label">Total Citations <span class="stats-info-marker" title="Sum of citation counts across all included papers." aria-label="Info: total citations definition">i</span></p><p class="stats-card-value">{{ stats.citations.total_citations }}</p></article>
-<article class="stats-card" tabindex="0"><p class="stats-card-label">Avg Citations/Paper <span class="stats-info-marker" title="Total citations divided by total papers." aria-label="Info: average citations per paper">i</span></p><p class="stats-card-value">{{ stats.citations.average_citations_per_paper }}</p></article>
-<article class="stats-card" tabindex="0"><p class="stats-card-label">Median Citations <span class="stats-info-marker" title="Median citation count across all papers." aria-label="Info: median citations per paper">i</span></p><p class="stats-card-value">{{ stats.citations.median_citations_per_paper }}</p></article>
 <article class="stats-card" tabindex="0"><p class="stats-card-label">h-index <span class="stats-info-marker" title="Largest h such that at least h papers have >= h citations." aria-label="Info: h-index formula">i</span></p><p class="stats-card-value">{{ stats.citations.h_index }}</p></article>
-<article class="stats-card" tabindex="0"><p class="stats-card-label">i10-index <span class="stats-info-marker" title="Number of papers with at least 10 citations." aria-label="Info: i10-index formula">i</span></p><p class="stats-card-value">{{ stats.citations.i10_index }}</p></article>
 <article class="stats-card" tabindex="0"><p class="stats-card-label">m-index <span class="stats-info-marker" title="h-index divided by years since first publication." aria-label="Info: m-index formula">i</span></p><p class="stats-card-value">{{ stats.citations.m_index }}</p></article>
 <article class="stats-card" tabindex="0"><p class="stats-card-label">Lead-author Papers <span class="stats-info-marker" title="Papers where Miguel is author position 1 or 2." aria-label="Info: lead-author paper count">i</span></p><p class="stats-card-value">{{ stats.volume.lead_author_publications }}</p></article>
+<article class="stats-card" tabindex="0"><p class="stats-card-label">First-author Papers <span class="stats-info-marker" title="Papers where Miguel Cárcamo is listed in author position 1." aria-label="Info: first-author paper count">i</span></p><p class="stats-card-value">{{ stats.volume.first_author_publications }}</p></article>
 <article class="stats-card" tabindex="0"><p class="stats-card-label">FONDECYT NP <span class="stats-info-marker" title="Calculated from top-10 journal papers in the last 5 years using the ANID GE Astronomía y Astrofísica formula." aria-label="Info: FONDECYT NP definition">i</span></p><p class="stats-card-value">{{ stats.fondecyt.np_score }}</p></article>
-<article class="stats-card" tabindex="0"><p class="stats-card-label">First-author Papers <span class="stats-info-marker" title="Papers where Miguel Cárcamo is listed in author position 1." aria-label="Info: first-author definition">i</span></p><p class="stats-card-value">{{ stats.volume.first_author_publications }}</p></article>
-<article class="stats-card" tabindex="0"><p class="stats-card-label">Unique Co-authors <span class="stats-info-marker" title="Distinct co-authors across included publications." aria-label="Info: unique co-author count">i</span></p><p class="stats-card-value">{{ stats.volume.unique_coauthors }}</p></article>
+<article class="stats-card" tabindex="0"><p class="stats-card-label">Citation Velocity (5y) <span class="stats-info-marker" title="Citations per effective paper-year over papers published in the last 5 years." aria-label="Info: 5-year citation velocity">i</span></p><p class="stats-card-value">{{ stats.citation_velocity.citations_per_effective_year | default: "N/A" }}</p></article>
+<article class="stats-card" tabindex="0"><p class="stats-card-label">Open Access Share <span class="stats-info-marker" title="Percent of included papers tagged as open access in ADS properties." aria-label="Info: open access share">i</span></p><p class="stats-card-value">{{ stats.volume.open_access_share_percent | default: "N/A" }}{% if stats.volume.open_access_share_percent != nil %}%{% endif %}</p></article>
+<article class="stats-card" tabindex="0"><p class="stats-card-label">Leadership Citation Ratio <span class="stats-info-marker" title="Lead-role citations per paper divided by supporting-role citations per paper." aria-label="Info: leadership citation ratio">i</span></p><p class="stats-card-value">{{ stats.leadership.leadership_impact_ratio | default: "N/A" }}</p></article>
+<article class="stats-card" tabindex="0"><p class="stats-card-label">International Collaboration Share <span class="stats-info-marker" title="Papers with two or more inferred affiliation countries among those with country signal." aria-label="Info: international collaboration share from inferred affiliation countries">i</span></p><p class="stats-card-value">{{ stats.country_collaboration.international_collaboration_share_percent | default: "N/A" }}{% if stats.country_collaboration.international_collaboration_share_percent != nil %}%{% endif %}</p></article>
+<article class="stats-card" tabindex="0"><p class="stats-card-label">Recent Momentum (5y) <span class="stats-info-marker" title="Average of recent paper-share and recent citation-share over the last 5 years." aria-label="Info: recent momentum definition">i</span></p><p class="stats-card-value">{{ stats.momentum.momentum_score | default: "N/A" }}</p></article>
+<article class="stats-card" tabindex="0"><p class="stats-card-label">Flagship Impact Share <span class="stats-info-marker" title="Percent of total citations contributed by the five most-cited papers." aria-label="Info: flagship impact share">i</span></p><p class="stats-card-value">{{ stats.impact_concentration.top5_citation_share_percent | default: "N/A" }}{% if stats.impact_concentration.top5_citation_share_percent != nil %}%{% endif %}</p></article>
 </div>
+</div>
+</div>
+<div class="row" style="margin-top: -8px; margin-bottom: 20px;">
+<div class="col-md-12">
+<p class="stats-map-note" style="margin-top: 0;">In the last 5 years, recent work contributes {{ stats.momentum.recent_citation_share_percent | default: "N/A" }}{% if stats.momentum.recent_citation_share_percent != nil %}%{% endif %} of total citation impact.</p>
 </div>
 </div>
 
-<div class="row">
+<div class="row stats-row">
 <div class="col-md-12">
 <div class="stats-chart-card">
 <h4 class="stats-chart-title">Methodology (Transparency)</h4>
@@ -45,6 +51,13 @@
 <li><code>m-index</code> = <code>h-index / years_since_first_publication</code>.</li>
 <li><code>average_citations_per_paper</code> = <code>total_citations / total_publications</code>.</li>
 <li><code>median_citations_per_paper</code>: median citation count across all included papers.</li>
+<li><code>citation_velocity.citations_per_effective_year</code> uses papers from the last 5 years and computes <code>sum(citations) / sum(max(1, current_year - publication_year))</code>.</li>
+<li><code>open_access_share_percent</code> is computed from ADS <code>property</code> flags.</li>
+<li><code>collaboration.avg_coauthors_per_paper</code> uses distinct co-authors per paper, excluding Miguel.</li>
+<li><code>country_collaboration.*</code> is inferred from affiliation text and should be interpreted as collaboration geography, <strong>not nationality</strong>.</li>
+<li><code>leadership.leadership_impact_ratio</code> compares citations per paper in lead roles (author position 1-2) vs supporting roles.</li>
+<li><code>momentum.momentum_score</code> = average of 5-year paper share and 5-year citation share (0-100 scale).</li>
+<li><code>impact_concentration.top5_citation_share_percent</code> reports how much total citation impact is concentrated in top-5 papers.</li>
 </ul>
 <p style="margin-top: 12px; color: #676767;"><strong>FONDECYT-style NP (ANID GE Astronomía y Astrofísica):</strong></p>
 <ul class="stats-method-list">
@@ -61,7 +74,7 @@
 </div>
 </div>
 
-<div class="row">
+<div class="row stats-row">
 <div class="col-md-6">
 <div class="stats-chart-card">
 <h4 class="stats-chart-title">Papers per Year</h4>
@@ -76,7 +89,7 @@
 </div>
 </div>
 
-<div class="row">
+<div class="row stats-row">
 <div class="col-md-6">
 <div class="stats-chart-card">
 <h4 class="stats-chart-title">Citation Distribution</h4>
@@ -85,22 +98,39 @@
 </div>
 <div class="col-md-6">
 <div class="stats-chart-card">
-<h4 class="stats-chart-title">Author Position Distribution</h4>
-<canvas id="author-position-chart" role="img" aria-label="Distribution of author positions in publications"></canvas>
-</div>
-</div>
-</div>
-
-<div class="row">
-<div class="col-md-12">
-<div class="stats-chart-card">
 <h4 class="stats-chart-title">Top 10 Most Cited Papers</h4>
 <canvas id="top-cited-chart" role="img" aria-label="Horizontal bar chart of top 10 most cited papers"></canvas>
 </div>
 </div>
 </div>
 
-<div class="row">
+<div class="row stats-row">
+<div class="col-md-12">
+<div class="stats-chart-card">
+<h4 class="stats-chart-title">Top Collaborators (by shared papers)</h4>
+<canvas id="top-collaborators-chart" role="img" aria-label="Horizontal bar chart of top collaborators"></canvas>
+</div>
+</div>
+</div>
+
+<div class="row stats-row">
+<div class="col-md-12">
+<div class="stats-chart-card">
+<h4 class="stats-chart-title">Collaboration Map (Inferred Affiliation Countries)</h4>
+<div class="stats-geo-map-wrap">
+<div id="country-collab-map" class="stats-geo-map" role="img" aria-label="World map of inferred collaboration country share"></div>
+<div class="stats-colorbar" aria-hidden="true">
+<span id="country-colorbar-max" class="stats-colorbar-label stats-colorbar-label--top">100%</span>
+<div class="stats-colorbar-gradient"></div>
+<span id="country-colorbar-min" class="stats-colorbar-label stats-colorbar-label--bottom">0%</span>
+</div>
+</div>
+<p class="stats-map-note">Country is inferred from affiliation text in ADS metadata, not author nationality.</p>
+</div>
+</div>
+</div>
+
+<div class="row stats-row">
 <div class="col-md-12">
 <div class="stats-chart-card">
 <h4 class="stats-chart-title">FONDECYT NP Top-10 Contributors</h4>

@@ -197,14 +197,14 @@
             $(".typed-text").typed({
                 strings: [
                     "Hello",
-                    "I'm Miguel Carcamo",
-                    "I'm a radio astronomer",
-                    "I'm a computer scientist",
-                    "I explore the universe",
-                    "I study cosmic signals",
+                    "I'm Miguel Cárcamo",
+                    "I am a radio astronomer",
+                    "I am a computer scientist",
+                    "I study cosmic magnetism",
+                    "I work on radio interferometry",
                     "I build scientific software",
-                    "I analyze astronomical data",
-                    "I'm passionate about research",
+                    "I develop data pipelines",
+                    "I work at USACH and Data Observatory",
                     "Welcome to my website"
                 ],
                 typeSpeed: 50,

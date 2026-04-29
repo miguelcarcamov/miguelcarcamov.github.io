@@ -1,4 +1,4 @@
-generated_at_utc: '2026-04-28T21:30:02Z'
+generated_at_utc: '2026-04-29T15:26:07Z'
 source: NASA ADS API
 orcid: 0000-0003-0564-8167
 query_authors:
@@ -7,7 +7,7 @@ query_authors:
 counts:
   first_author_journal: 2
   first_author_conference: 2
-  coauthored_journal: 14
+  coauthored_journal: 15
   coauthored_conference: 2
 first_author:
   journal:
@@ -17,6 +17,17 @@ first_author:
     - Scaife, Anna M. M.
     - Alexander, Emma L.
     - Leahy, J. Patrick
+    affiliations_list:
+    - Jodrell Bank Centre for Astrophysics, Department of Physics and Astronomy, University of Manchester, Manchester M13
+      9PL, UK; University of Santiago of Chile (USACH), Faculty of Engineering, Computer Engineering Department, Santiago,
+      9160000, Chile; Center for Interdisciplinary Research in Astrophysics and Space Exploration (CIRAS), Universidad de
+      Santiago de Chile, Santiago, 9160000, Chile
+    - Jodrell Bank Centre for Astrophysics, Department of Physics and Astronomy, University of Manchester, Manchester M13
+      9PL, UK; The Alan Turing Institute, Euston Road, London NW1 2DB, UK
+    - Jodrell Bank Centre for Astrophysics, Department of Physics and Astronomy, University of Manchester, Manchester M13
+      9PL, UK
+    - Jodrell Bank Centre for Astrophysics, Department of Physics and Astronomy, University of Manchester, Manchester M13
+      9PL, UK
     title: 'CS-ROMER: a novel compressed sensing framework for Faraday depth reconstruction'
     publication: Monthly Notices of the Royal Astronomical Society
     year: 2023
@@ -29,6 +40,7 @@ first_author:
     citation_count: 4
     author_position: 1
     publication_type: journal
+    is_open_access: true
     bibcode: 2023MNRAS.518.1955C
     author_group: first_author
     publication_bucket: journal
@@ -39,6 +51,12 @@ first_author:
     - Casassus, S.
     - Moral, V.
     - Rannou, F. R.
+    affiliations_list:
+    - Departamento de Ingeniería Informática, Universidad de Santiago de Chile, Av. Ecuador 3659, Santiago, Chile
+    - Departamento de Ingeniería Informática, Universidad de Santiago de Chile, Av. Ecuador 3659, Santiago, Chile
+    - Astronomy Department, Universidad de Chile, Camino El Observatorio 1515, Las Condes, Santiago, Chile
+    - Astronomy Department, Universidad de Chile, Camino El Observatorio 1515, Las Condes, Santiago, Chile
+    - Departamento de Ingeniería Informática, Universidad de Santiago de Chile, Av. Ecuador 3659, Santiago, Chile
     title: Multi-GPU maximum entropy image synthesis for radio astronomy
     publication: Astronomy and Computing
     year: 2018
@@ -51,6 +69,7 @@ first_author:
     citation_count: 33
     author_position: 1
     publication_type: journal
+    is_open_access: true
     bibcode: 2018A&C....22...16C
     author_group: first_author
     publication_bucket: journal
@@ -66,6 +85,15 @@ first_author:
     - Sekhar, Srikrishna
     - Heino, Lennart
     - Stil, Jeroen
+    affiliations_list:
+    - University of Manchester,Jodrell Bank Centre for Astrophysics,Department of Physics and Astronomy,Manchester,UK
+    - University of Manchester,Jodrell Bank Centre for Astrophysics,Department of Physics and Astronomy,Manchester,UK
+    - Inter-Unversity Institute for Data Intensive Astronomy,Cape Town,South Africa
+    - University of Oxford,Astrophysics,Department of Physics,Oxford,UK,OX1 3RH
+    - University of Manchester,Jodrell Bank Centre for Astrophysics,Department of Physics and Astronomy,Manchester,UK
+    - Inter-Unversity Institute for Data Intensive Astronomy,Cape Town,South Africa
+    - Inter-Unversity Institute for Data Intensive Astronomy,Cape Town,South Africa
+    - University of Calgary,Department of Physics and Astronomy,Calgary,AB,Canada,T2N 1N4
     title: A Compressed Sensing Faraday Depth Reconstruction Framework for the MeerKAT MIGHTEE-POL Survey
     publication: 2022 3rd URSI Atlantic and Asia Pacific Radio Science Meeting (AT-AP-RASC)
     year: 2022
@@ -78,6 +106,7 @@ first_author:
     citation_count: 0
     author_position: 1
     publication_type: conference
+    is_open_access: false
     bibcode: 2022atap.conf..202C
     author_group: first_author
     publication_bucket: conference
@@ -88,6 +117,12 @@ first_author:
     - Roman, Pablo E.
     - Moral, Victor
     - Casassus, Simon
+    affiliations_list:
+    - Departamento de Ingeniería Informática, Universidad de Santiago de Chile, Región Metropolitana, Santiago, Chile
+    - Departamento de Ingeniería Informática, Universidad de Santiago de Chile, Región Metropolitana, Santiago, Chile
+    - Center for Mathematical Modeling, Universidad de Chile, Av. Blanco Encalada 2120 Piso 7, Santiago, Chile
+    - Astronomy Department, Universidad de Chile, Camino El Observatorio 1515, Las Condes, Santiago, Chile
+    - Astronomy Department, Universidad de Chile, Camino El Observatorio 1515, Las Condes, Santiago, Chile
     title: High performance GPU Bayesian image synthesis
     publication: 2015 IEEE International Symposium on Signal Processing and Information Technology (ISSPIT)
     year: 2015
@@ -100,11 +135,48 @@ first_author:
     citation_count: 0
     author_position: 1
     publication_type: conference
+    is_open_access: false
     bibcode: 2015issp.conf...37C
     author_group: first_author
     publication_bucket: conference
 coauthored:
   journal:
+  - authors: Casassus, Simon, Carcamo, Miguel, Dominguez-Jamett, Oriana, Aoyama, Yuhiko, Marleau, Gabriel-Dominique, Chrenko,
+      Ondrej, Liu, Hauyu Baobab, Ercolano, Barbar
+    authors_list:
+    - Casassus, Simon
+    - Carcamo, Miguel
+    - Dominguez-Jamett, Oriana
+    - Aoyama, Yuhiko
+    - Marleau, Gabriel-Dominique
+    - Chrenko, Ondrej
+    - Liu, Hauyu Baobab
+    - Ercolano, Barbar
+    affiliations_list:
+    - '-'
+    - '-'
+    - '-'
+    - '-'
+    - '-'
+    - '-'
+    - '-'
+    - '-'
+    title: Hourly radio variability of PDS70c from time-differential photometry
+    publication: arXiv e-prints
+    year: 2026
+    date_label: '2026'
+    volume: ''
+    issue: ''
+    pages: arXiv:2604.24991
+    doi: ''
+    url: https://ui.adsabs.harvard.edu/abs/2026arXiv260424991C
+    citation_count: 0
+    author_position: 2
+    publication_type: journal
+    is_open_access: true
+    bibcode: 2026arXiv260424991C
+    author_group: coauthored
+    publication_bucket: journal
   - authors: Casassus, S., Vidal, M., Cárcamo, M., Verstraete, L., Ysard, N., Habart, E.
     authors_list:
     - Casassus, S.
@@ -113,6 +185,17 @@ coauthored:
     - Verstraete, L.
     - Ysard, N.
     - Habart, E.
+    affiliations_list:
+    - Departamento de Astronomía, Universidad de Chile, Casilla 36-D, Santiago, Chile; Data Observatory Foundation, Eliodoro
+      Yáñez 2990, Providencia, Santiago, Chile;
+    - Núcleo de Astroquímica, Facultad de Ingeniería, Universidad Autónoma de Chile, Av. Pedro de Valdivia 425, Providencia,
+      Santiago, Chile;
+    - Data Observatory Foundation, Eliodoro Yáñez 2990, Providencia, Santiago, Chile; University of Santiago of Chile (USACH),
+      Faculty of Engineering, Computer Engineering Department, Chile;
+    - Institut d'Astrophysique Spatiale (IAS), Université Paris-Saclay, CNRS, Bâtiment 121, 91405, Orsay Cedex, France;
+    - Institut d'Astrophysique Spatiale (IAS), Université Paris-Saclay, CNRS, Bâtiment 121, 91405, Orsay Cedex, France; Institut
+      de Recherche en Astrophysique et Planétologie (IRAP), Toulouse, France;
+    - Institut d'Astrophysique Spatiale (IAS), Université Paris-Saclay, CNRS, Bâtiment 121, 91405, Orsay Cedex, France
     title: 'ALMA Band 1 observations of the ρ Oph W filament: I. Enhanced power from excess microwave emission at high spatial
       frequencies'
     publication: Astronomy and Astrophysics
@@ -126,6 +209,7 @@ coauthored:
     citation_count: 0
     author_position: 3
     publication_type: journal
+    is_open_access: true
     bibcode: 2026A&A...707A.255C
     author_group: coauthored
     publication_bucket: journal
@@ -142,6 +226,27 @@ coauthored:
     - Marleau, Gabriel-Dominique
     - Ercolano, Barbara
     - Szulágyi, Judit
+    affiliations_list:
+    - Departamento de Astronomía, Universidad de Chile, Casilla, 36-D, Santiago, Chile;
+    - Departamento de Astronomía, Universidad de Chile, Casilla, 36-D, Santiago, Chile; Data Observatory Foundation, Eliodoro
+      Yáñez 2990, Providencia, Santiago, Chile;
+    - Department of Physics, National Sun Yat-Sen University, No. 70, Lien-Hai Road, Kaohsiung City, 80424, Taiwan, ROC; Center
+      of Astronomy and Gravitation, National Taiwan Normal University, Taipei, 116, Taiwan;
+    - School of Physics and Astronomy, Sun Yat-sen University, Guangdong, 519082, PR China;
+    - University of Santiago of Chile (USACH), Faculty of Engineering, Computer Engineering Department, Chile; Data Observatory
+      Foundation, Eliodoro Yáñez 2990, Providencia, Santiago, Chile;
+    - Departamento de Física, Universidad de Santiago de Chile, Av. Víctor Jara 3493, Santiago, Chile; Millennium Nucleus
+      on Young Exoplanets and their Moons (YEMS), Chile; Center for Interdisciplinary Research in Astrophysics and Space Exploration
+      (CIRAS), Universidad de Santiago de Chile, Chile;
+    - Charles University, Faculty of Math and Physics, Astronomical Institute, V Holešovičkách 747/2, 180 00, Prague 8, Czech
+      Republic;
+    - Division of Space Research &amp; Planetary Sciences, Physics Institute, University of Bern, Gesellschaftsstr. 6, 3012,
+      Bern, Switzerland; Max-Planck-Institut für Astronomie, Königstuhl 17, 69117, Heidelberg, Germany; Fakultät für Physik,
+      Universität Duisburg-Essen, Lotharstraße 1, 47057, Duisburg, Germany;
+    - University Observatory, Faculty of Physics, Ludwig-Maximilians Universität München, Scheinerstr. 1, 81679, Munich, Germany;
+      Exzellenzcluster "Origins", Boltzmannstr. 2, 85748, Garching, Germany
+    - Institute for Computational Science, University of Zürich, Winterthurerstrasse 190, 8057, Zürich, Switzerland; ETH Zürich,
+      Department of Physics, Wolfgang-Pauli-Strasse 27, 8093, Zürich, Switzerland
     title: 'Multi-frequency observations of PDS70c: Radio emission mechanisms in the circumplanetary environment'
     publication: Astronomy and Astrophysics
     year: 2025
@@ -154,6 +259,7 @@ coauthored:
     citation_count: 7
     author_position: 5
     publication_type: journal
+    is_open_access: true
     bibcode: 2025A&A...702A..18D
     author_group: coauthored
     publication_bucket: journal
@@ -174,6 +280,36 @@ coauthored:
     - Kastner, Joel
     - Zhu, Zhaohuan
     - Williams, Jonathan
+    affiliations_list:
+    - Departamento de Física, Universidad de Santiago de Chile, Av. Victor Jara 3659, Santiago, Chile; Millennium Nucleus
+      on Young Exoplanets and their Moons (YEMS), Chile; Center for Interdisciplinary Research in Astrophysics and Space Exploration
+      (CIRAS), Universidad de Santiago de Chile, Chile
+    - Departamento de Física, Universidad de Santiago de Chile, Av. Victor Jara 3659, Santiago, Chile; Millennium Nucleus
+      on Young Exoplanets and their Moons (YEMS), Chile; Center for Interdisciplinary Research in Astrophysics and Space Exploration
+      (CIRAS), Universidad de Santiago de Chile, Chile
+    - Millennium Nucleus on Young Exoplanets and their Moons (YEMS), Chile; Núcleo de Astronomía, Facultad de Ingeniería y
+      Ciencias, Universidad Diego Portales, Av. Ejercito 441, Santiago, Chile; Escuela de Ingeniería Industrial, Facultad
+      de Ingeniería y Ciencias, Universidad Diego Portales, Av. Ejercito 441, Santiago, Chile
+    - Joint ALMA Observatory, Alonso de Córdova 3107, Vitacura, Santiago 763-0355, Chile; National Astronomical Observatory
+      of Japan (NAOJ), Los Abedules 3085, Office 701, Vitacura, Santiago, Chile
+    - National Radio Astronomy Observatory, 520 Edgemont Rd., Charlottesville, VA 22903-2475, USA
+    - Millennium Nucleus on Young Exoplanets and their Moons (YEMS), Chile; Núcleo de Astronomía, Facultad de Ingeniería y
+      Ciencias, Universidad Diego Portales, Av. Ejercito 441, Santiago, Chile
+    - MIT Kavli Institute for Astrophysics and Space Research, 77 Massachusetts Avenue, Cambridge, MA 02139, USA
+    - Millennium Nucleus on Young Exoplanets and their Moons (YEMS), Chile; Center for Interdisciplinary Research in Astrophysics
+      and Space Exploration (CIRAS), Universidad de Santiago de Chile, Chile; University of Santiago of Chile (USACH), Faculty
+      of Engineering, Computer Engineering Department, Chile
+    - INAF, Osservatorio Astrofisico di Arcetri, Largo Enrico Fermi 5, I-50125 Firenze, Italy
+    - Konkoly Observatory, Research Centre for Astronomy and Earth Sciences, Eötvös Loránd Research Network (ELKH), Konkoly-Thege
+      Miklós út 15-17, 1121 Budapest, Hungary; CSFK, MTA Centre of Excellence, Konkoly Thege Miklós út 15-17, 1121 Budapest,
+      Hungary; ELTE Eötvös Loránd University, Institute of Physics, Pázmány Péter sétány 1/A, 1117 Budapest, Hungary; Max
+      Planck Institute for Astronomy, Königstuhl 17, D-69117 Heidelberg, Germany
+    - Institute of Astronomy and Astrophysics, Academia Sinica, 11F of Astronomy-Mathematics Building, No.1, Sec. 4, Roosevelt
+      Rd., Taipei 10617, Taiwan, R.O.C.
+    - School of Physics &amp; Astronomy, Rochester Institute of Technology, 1 Lomb Memorial Dr., Rochester, NY 14623, USA
+    - Department of Physics and Astronomy, University of Nevada, Las Vegas, 4505 S. Maryland Pkwy., Las Vegas, NV 89154, USA;
+      Nevada Center for Astrophysics, University of Nevada, Las Vegas, Las Vegas, NV 89154, USA
+    - Institute for Astronomy, University of Hawai'i at Manoa, Honolulu, HI 96822, USA
     title: 'Spirals and Clumps in V960 Mon: Signs of Planet Formation via Gravitational Instability around an FU Ori Star?'
     publication: The Astrophysical Journal
     year: 2023
@@ -186,6 +322,7 @@ coauthored:
     citation_count: 17
     author_position: 8
     publication_type: journal
+    is_open_access: true
     bibcode: 2023ApJ...952L..17W
     author_group: coauthored
     publication_bucket: journal
@@ -203,6 +340,32 @@ coauthored:
     - Hales, Antonio
     - Zurlo, Alice
     - Marino, Sebastian
+    affiliations_list:
+    - Departamento de Astronomía, Universidad de Chile, Santiago, 7591245, Chile; European Southern Observatory, Alonso de
+      Cordova 3107, Santiago, 7630355, Chile; Millennium Nucleus on Young Exoplanets and their Moons (YEMS), Santiago, 9170124,
+      Chile
+    - Departamento de Astronomía, Universidad de Chile, Santiago, 7591245, Chile; Millennium Nucleus on Young Exoplanets and
+      their Moons (YEMS), Santiago, 9170124, Chile; Data Observatory Foundation, Santiago de Chile, 7500644, Chile
+    - Joint ALMA Observatory, Alonso de Cordova 3107, Santiago, 7630355, Chile
+    - Departamento de Física, Universidad de Santiago de Chile, Av. Victor Jara 3659, Santiago, 9170124, Chile; Millennium
+      Nucleus on Young Exoplanets and their Moons (YEMS), Santiago, 9170124, Chile; Center for Interdisciplinary Research
+      in Astrophysics and Space Exploration (CIRAS), Universidad de Santiago de Chile, Santiago, 9170124, Chile
+    - Jodrell Bank Centre for Astrophysics, Department of Physics and Astronomy, University of Manchester, SK11 9DL, Manchester,
+      UK; University of Santiago of Chile (USACH), Faculty of Engineering, Computer Engineering Department, Santiago, 9170124,
+      Chile; Center for Interdisciplinary Research in Astrophysics and Space Exploration (CIRAS), Universidad de Santiago
+      de Chile, Santiago, 9170124, Chile
+    - Departamento de Física, Universidad de Santiago de Chile, Av. Victor Jara 3659, Santiago, 9170124, Chile; Millennium
+      Nucleus on Young Exoplanets and their Moons (YEMS), Santiago, 9170124, Chile; Center for Interdisciplinary Research
+      in Astrophysics and Space Exploration (CIRAS), Universidad de Santiago de Chile, Santiago, 9170124, Chile
+    - ETH Zurich, Institute for Particle Physics and Astrophysics, Wolfgang-Pauli-Strasse 27, CH-8093 Zurich, Switzerland
+    - Millennium Nucleus on Young Exoplanets and their Moons (YEMS), Santiago, 9170124, Chile; Núcleo de Astronomía, Facultad
+      de Ingeniería y Ciencias, Universidad Diego Portales, Av. Ejercito 441, Santiago, 8370007, Chile
+    - Joint ALMA Observatory, Alonso de Cordova 3107, Santiago, 7630355, Chile; National Radio Astronomy Observatory, 520
+      Edgemont Road, Charlottesville VA 22903-2475, USA
+    - Millennium Nucleus on Young Exoplanets and their Moons (YEMS), Santiago, 9170124, Chile; Núcleo de Astronomía, Facultad
+      de Ingeniería y Ciencias, Universidad Diego Portales, Av. Ejercito 441, Santiago, 8370007, Chile; Escuela de Ingeniería
+      Industrial, Facultad de Ingeniería y Ciencias, Universidad Diego Portales, Av. Ejercito 441, Santiago, 8370007, Chile
+    - Department of Physics and Astronomy, University of Exeter, Stocker Road, Exeter EX4 4QL, UK
     title: Radio-continuum decrements associated to shadowing from the central warp in transition disc DoAr 44
     publication: Monthly Notices of the Royal Astronomical Society
     year: 2023
@@ -215,6 +378,7 @@ coauthored:
     citation_count: 9
     author_position: 5
     publication_type: journal
+    is_open_access: true
     bibcode: 2023MNRAS.526.2077A
     author_group: coauthored
     publication_bucket: journal
@@ -232,6 +396,32 @@ coauthored:
     - Chavan, Prachi
     - González-Ruilova, Camilo
     - Martínez-Brunner, Rafael
+    affiliations_list:
+    - Departamento de Astronomía, Universidad de Chile, Casilla 36-D, Santiago, Chile; Data Observatory Foundation, to Data
+      Observatory Foundation, Eliodoro Yáñez 2990, Providencia, Santiago, Chile; Millennium Nucleus on Young Exoplanets and
+      Their Moons (YEMS), Santiago, Chile
+    - Millennium Nucleus on Young Exoplanets and Their Moons (YEMS), Santiago, Chile; Núcleo de Astronomía, Facultad de Ingeniería
+      y Ciencias, Universidad Diego Portales, Av Ejército 441, Santiago, Chile
+    - Data Observatory Foundation, to Data Observatory Foundation, Eliodoro Yáñez 2990, Providencia, Santiago, Chile; Millennium
+      Nucleus on Young Exoplanets and Their Moons (YEMS), Santiago, Chile; Computer Engineering Department, Faculty of Engineering,
+      University of Santiago of Chile (USACH),Santiago. Chile; Center for Interdisciplinary Research in Astrophysics and Space
+      Exploration (CIRAS), Universidad de Santiago de Chile,Santiago, Chile
+    - Institute of Astronomy, University of Cambridge, Madingley Road, Cambridge CB3 0HA, UK
+    - Space Sciences, Technologies &amp; Astrophysics Research (STAR) Institute, Université de Liège, Allée du Six Août 19c,
+      B-4000 Sart Tilman, Belgium
+    - Departamento de Astronomía, Universidad de Chile, Casilla 36-D, Santiago, Chile; Millennium Nucleus on Young Exoplanets
+      and Their Moons (YEMS), Santiago, Chile
+    - Departamento de Astronomía, Universidad de Chile, Casilla 36-D, Santiago, Chile; Millennium Nucleus on Young Exoplanets
+      and Their Moons (YEMS), Santiago, Chile
+    - Millennium Nucleus on Young Exoplanets and Their Moons (YEMS), Santiago, Chile; Núcleo de Astronomía, Facultad de Ingeniería
+      y Ciencias, Universidad Diego Portales, Av Ejército 441, Santiago, Chile; Computer Engineering Department, Faculty of
+      Engineering, University of Santiago of Chile (USACH),Santiago. Chile
+    - Millennium Nucleus on Young Exoplanets and Their Moons (YEMS), Santiago, Chile; Núcleo de Astronomía, Facultad de Ingeniería
+      y Ciencias, Universidad Diego Portales, Av Ejército 441, Santiago, Chile
+    - Millennium Nucleus on Young Exoplanets and Their Moons (YEMS), Santiago, Chile; Núcleo de Astronomía, Facultad de Ingeniería
+      y Ciencias, Universidad Diego Portales, Av Ejército 441, Santiago, Chile
+    - Departamento de Astronomía, Universidad de Chile, Casilla 36-D, Santiago, Chile; Millennium Nucleus on Young Exoplanets
+      and Their Moons (YEMS), Santiago, Chile
     title: Azimuthal temperature variations in ISO-Oph 2 from multifrequency ALMA observations
     publication: Monthly Notices of the Royal Astronomical Society
     year: 2023
@@ -244,6 +434,7 @@ coauthored:
     citation_count: 8
     author_position: 3
     publication_type: journal
+    is_open_access: true
     bibcode: 2023MNRAS.526.1545C
     author_group: coauthored
     publication_bucket: journal
@@ -251,6 +442,14 @@ coauthored:
     authors_list:
     - Casassus, Simon
     - Cárcamo, Miguel
+    affiliations_list:
+    - Departamento de Astronomía, Universidad de Chile, Casilla 36-D, Santiago, Chile; Facultad de Ingeniería y Ciencias,
+      Universidad Adolfo Ibáñez, Av. Diagonal las Torres 2640, Peñalolén, Santiago, Chile; Data Observatory Foundation, Santiago,
+      Chile; Millennium Nucleus on Young Exoplanets and their Moons, YEMS, Chile
+    - Jodrell Bank Centre for Astrophysics, Department of Physics and Astronomy, University of Manchester, Alan Turing Building,
+      Oxford Road, Manchester M13 9PL, UK; University of Santiago of Chile (USACH), Faculty of Engineering, Computer Engineering
+      Department, Santiago, Chile; Center for Interdisciplinary Research in Astrophysics and Space Exploration (CIRAS), Universidad
+      de Santiago de Chile, Santiago, Chile; Millennium Nucleus on Young Exoplanets and their Moons, YEMS, Chile
     title: Variable structure in the PDS 70 disc and uncertainties in radio-interferometric image restoration
     publication: Monthly Notices of the Royal Astronomical Society
     year: 2022
@@ -263,6 +462,7 @@ coauthored:
     citation_count: 36
     author_position: 2
     publication_type: journal
+    is_open_access: true
     bibcode: 2022MNRAS.513.5790C
     author_group: coauthored
     publication_bucket: journal
@@ -273,6 +473,21 @@ coauthored:
     - Hales, Antonio
     - Weber, Philipp
     - Dent, Bill
+    affiliations_list:
+    - Departamento de Astronomía, Universidad de Chile, Casilla 36-D, Santiago, Chile; Facultad de Ingeniería y Ciencias,
+      Universidad Adolfo Ibáñez, Av. Diagonal las Torres 2640, Peñalolén, Santiago, Chile; Data Observatory Foundation, Chile;
+      Millennium Nucleus on Young Exoplanets and their Moons-YEMS, Chile
+    - Jodrell Bank Centre for Astrophysics, Department of Physics and Astronomy, University of Manchester, Alan Turing Building,
+      Oxford Road, Manchester, M13 9PL, UK; University of Santiago of Chile (USACH), Faculty of Engineering, Computer Engineering
+      Department, Chile; Center for Interdisciplinary Research in Astrophysics and Space Exploration (CIRAS), Universidad
+      de Santiago de Chile
+    - Joint ALMA Observatory, Avenida Alonso de Córdova 3107, Vitacura 7630355, Santiago, Chile; National Radio Astronomy
+      Observatory, 520 Edgemont Road, Charlottesville, VA 22903-2475, USA
+    - Millennium Nucleus on Young Exoplanets and their Moons-YEMS, Chile; Center for Interdisciplinary Research in Astrophysics
+      and Space Exploration (CIRAS), Universidad de Santiago de Chile; Departamento de Física, Universidad de Santiago de
+      Chile, Av. Victor Jara 3493, Estación Central, Santiago, Chile
+    - Joint ALMA Observatory, Avenida Alonso de Córdova 3107, Vitacura 7630355, Santiago, Chile; European Southern Observatory,
+      Avenida Alonso de Córdova 3107, Vitacura 7630355, Santiago, Chile
     title: 'The Doppler Flip in HD 100546 as a Disk Eruption: The Elephant in the Room of Kinematic Protoplanet Searches'
     publication: The Astrophysical Journal
     year: 2022
@@ -285,6 +500,7 @@ coauthored:
     citation_count: 24
     author_position: 2
     publication_type: journal
+    is_open_access: true
     bibcode: 2022ApJ...933L...4C
     author_group: coauthored
     publication_bucket: journal
@@ -302,6 +518,28 @@ coauthored:
     - Garufi, Antonio
     - Marino, Sebastián
     - Zurlo, Alice
+    affiliations_list:
+    - Departamento de Astronomía, Universidad de Chile, Casilla 36-D, Santiago, Chile
+    - Departamento de Astronomía, Universidad de Chile, Casilla 36-D, Santiago, Chile
+    - Departamento de Física, Universidad de Santiago de Chile, Av. Victor Jara 3659, Santiago, Chile; Center for Interdisciplinary
+      Research in Astrophysics and Space Exploration (CIRAS), Universidad de Santiago de Chile, Estación Central, Chile
+    - Joint ALMA Observatory, Avenida Alonso de Córdova 3107, Vitacura 7630355, Santiago, Chile; National Radio Astronomy
+      Observatory, 520 Edgemont Road, Charlottesville, VA 22903-2475, USA
+    - Departamento de Astronomía, Universidad de Chile, Casilla 36-D, Santiago, Chile; Departamento de Física, Universidad
+      de Santiago de Chile, Av. Victor Jara 3659, Santiago, Chile; Center for Interdisciplinary Research in Astrophysics and
+      Space Exploration (CIRAS), Universidad de Santiago de Chile, Estación Central, Chile
+    - Center for Interdisciplinary Research in Astrophysics and Space Exploration (CIRAS), Universidad de Santiago de Chile,
+      Estación Central, Chile; Departamento de Ingeniería Informática, Universidad de Santiago de Chile, Av. Ecuador, 3659
+      Santiago, Chile; Department of Physics and Astronomy, Jodrell Bank Centre for Astrophysics, Alan Turing Building, Alan
+      Turing Building, University of Manchester, Oxford Road, Manchester, M13 9PL, UK
+    - Departamento de Astronomía, Universidad de Chile, Casilla 36-D, Santiago, Chile
+    - Núcleo de Astronomía, Facultad de Ingeniería y Ciencias, Universidad Diego Portales, Av. Ejercito 441, Santiago, Chile
+    - INAF, Osservatorio Astrofisico di Arcetri, Largo Enrico Fermi 5, I-50125, Firenze, Italy
+    - Institute of Astronomy, University of Cambridge, Madingley Road, Cambridge CB3 0HA, UK
+    - Núcleo de Astronomía, Facultad de Ingeniería y Ciencias, Universidad Diego Portales, Av. Ejercito 441, Santiago, Chile;
+      Escuela de Ingeniería Industrial, Facultad de Ingeniería y Ciencias, Universidad Diego Portales, Av. Ejercito 441, Santiago,
+      Chile; Aix Marseille Université, CNRS, LAM - Laboratoire d'Astrophysique de Marseille, UMR 7326, F-13388, Marseille,
+      France
     title: 'High-resolution ALMA observations of V4046 Sgr: a circumbinary disc with a thin ring'
     publication: Monthly Notices of the Royal Astronomical Society
     year: 2022
@@ -314,6 +552,7 @@ coauthored:
     citation_count: 15
     author_position: 6
     publication_type: journal
+    is_open_access: true
     bibcode: 2022MNRAS.510.1248M
     author_group: coauthored
     publication_bucket: journal
@@ -324,6 +563,19 @@ coauthored:
     - Tabb, D. L.
     - Cárcamo, M.
     - Hanson, J.
+    affiliations_list:
+    - Max Planck Institute for Astrophysics, Karl-Schwarzschildstraße 1, D-85748 Garching, Germany; Jodrell Bank Centre for
+      Astrophysics, Department of Physics and Astronomy, University of Manchester, Alan Turing Building, Oxford Road, Manchester
+      M13 9PL, UK
+    - Jodrell Bank Centre for Astrophysics, Department of Physics and Astronomy, University of Manchester, Alan Turing Building,
+      Oxford Road, Manchester M13 9PL, UK; The Alan Turing Institute, Euston Road, London NW1 2DB, UK
+    - Division of Molecular Biology and Human Genetics, Stellenbosch University Faculty of Medicine and Health Sciences, Cape
+      Town 7505, South Africa
+    - Jodrell Bank Centre for Astrophysics, Department of Physics and Astronomy, University of Manchester, Alan Turing Building,
+      Oxford Road, Manchester M13 9PL, UK; Departamento de Ingeniería Informática, Universidad de Santiago de Chile, Av. Ecuador
+      3659, Santiago, Chile
+    - Jodrell Bank Centre for Astrophysics, Department of Physics and Astronomy, University of Manchester, Alan Turing Building,
+      Oxford Road, Manchester M13 9PL, UK
     title: Gaussian process modelling for improved resolution in Faraday depth reconstruction
     publication: Monthly Notices of the Royal Astronomical Society
     year: 2021
@@ -336,6 +588,7 @@ coauthored:
     citation_count: 4
     author_position: 4
     publication_type: journal
+    is_open_access: true
     bibcode: 2021MNRAS.502.5839N
     author_group: coauthored
     publication_bucket: journal
@@ -362,6 +615,34 @@ coauthored:
     - Faramaz, Virginie
     - Flores, Christian
     - Reggiani, Maddalena
+    affiliations_list:
+    - Departamento de Astronomía, Universidad de Chile, Casilla 36-D, Santiago, Chile
+    - School of Physics and Astronomy, Monash University, Clayton Vic 3800, Australia
+    - Jodrell Bank Centre for Astrophysics, Department of Physics and Astronomy, University of Manchester, Alan Turing Building,
+      Oxford Road, Manchester, M13 9PL, UK; University of Santiago of Chile (USACH), Faculty of Engineering, Computer Engineering
+      Department, Chile; Center for Interdisciplinary Research in Astrophysics and Space Exploration (CIRAS), Universidad
+      de Santiago de Chile
+    - Center for Interdisciplinary Research in Astrophysics and Space Exploration (CIRAS), Universidad de Santiago de Chile;
+      Departamento de Física, Universidad de Santiago de Chile, Avenida Ecuador 3493, Estación Central, Santiago, Chile
+    - Departamento de Astronomía, Universidad de Chile, Casilla 36-D, Santiago, Chile; Departamento de Física, Universidad
+      de Santiago de Chile, Avenida Ecuador 3493, Estación Central, Santiago, Chile
+    - Universitäts-Sternwarte, Ludwig-Maximilians-Universität München, Scheinerstr. 1, 81679 München, Germany
+    - Department of Physics &amp; Astronomy, University of Victoria, Victoria, BC, V8P 1A1, Canada
+    - School of Physics and Astronomy, Monash University, Clayton Vic 3800, Australia; University of Grenoble Alpes, CNRS,
+      IPAG, F-38000 Grenoble, France
+    - Department of Physics &amp; Astronomy, University of Victoria, Victoria, BC, V8P 1A1, Canada
+    - IRAP, Université de Toulouse, CNRS, UPS, Toulouse, France
+    - Núcleo de Astronomía, Facultad de Ingeniería y Ciencias, Universidad Diego Portales, Av Ejército 441, Santiago, Chile
+    - Leiden Observatory, Leiden University, PO Box 9513, 2300 RA Leiden, The Netherlands; Max-Plank-Institut fur Extraterrestrische
+      Physik, Giessenbachstrasse 1, D-85748 Garching, Germany
+    - Facultad de Ingeniería y Ciencias, Universidad Adolfo Ibáñez, Av. Diagonal las Torres 2640, Peñalolén, Santiago, Chile;
+      Millennium Institute for Astrophysics, Chile
+    - School of Physics and Astronomy, Monash University, Clayton Vic 3800, Australia
+    - STAR Institute, Université de Liège, 19c Allée du Six Août, 4000 Liège, Belgium
+    - Departamento de Astronomía, Universidad de Chile, Casilla 36-D, Santiago, Chile
+    - Jet Propulsion Laboratory, California Institute of Technology, 4800 Oak Grove drive, Pasadena CA 91109, USA
+    - Institute for Astronomy, University of Hawaii at Manoa, 640 N. Aohoku Place, Hilo, HI 96720, USA
+    - Institute of Astronomy, KU Leuven, Celestijnenlaan 200D, B-3001 Leuven, Belgium
     title: A dusty filament and turbulent CO spirals in HD 135344B - SAO 206462
     publication: Monthly Notices of the Royal Astronomical Society
     year: 2021
@@ -374,6 +655,7 @@ coauthored:
     citation_count: 49
     author_position: 3
     publication_type: journal
+    is_open_access: true
     bibcode: 2021MNRAS.507.3789C
     author_group: coauthored
     publication_bucket: journal
@@ -392,6 +674,24 @@ coauthored:
     - Readhead, Anthony C. S.
     - Taylor, Angela C.
     - Zensus, J. Anton
+    affiliations_list:
+    - Departamento de Astronomía, Universidad de Chile, Camino El Observatorio 1515, Las Condes, Santiago, Chile
+    - Facultad de Ingeniería, Núcleo de Astroquímica &amp; Astrofísica, Universidad Autónoma de Chile,Av. Pedro de Valdivia
+      425, Providencia, Santiago, Chile
+    - Departamento de Astronomía, Universidad de Chile, Camino El Observatorio 1515, Las Condes, Santiago, Chile
+    - Departamento de Ingeniería Informática, Universidad de Santiago de Chile, Av. Ecuador, 3659, Santiago, Chile; Department
+      of Physics and Astronomy, School of Natural Sciences, Jodrell Bank Centre for Astrophysics, Alan Turing Building, The
+      University of Manchester, Oxford Road, Manchester, M13 9PL, UK
+    - Department of Physics and Astronomy, School of Natural Sciences, Jodrell Bank Centre for Astrophysics, Alan Turing Building,
+      The University of Manchester, Oxford Road, Manchester, M13 9PL, UK
+    - Department of Astrophysical Sciences, Princeton University, Princeton, NJ 08544, USA
+    - Instituto de Astrofísica de Canarias, E-38200 La Laguna, Tenerife, Canary Islands, Spain; Departamento de Astrofísica,
+      Universidad de La Laguna (ULL), E-38206 La Laguna, Tenerife, Spain
+    - Canadian Institute for Theoretical Astrophysics, University of Toronto, 60 St George Street, Toronto, ON, M5S 3H8, Canada
+    - Sub-department of Astrophysics, University of Oxford, Denys Wilkinson Building, Keble Road, Oxford OX1 3RH, UK
+    - Cahill Centre for Astronomy and Astrophysics, California Institute of Technology, Pasadena, CA 91125, USA
+    - Sub-department of Astrophysics, University of Oxford, Denys Wilkinson Building, Keble Road, Oxford OX1 3RH, UK
+    - Max-Planck-Institut für Radioastronomie, Postfach 2024, D-53010 Bonn, Germany
     title: Resolved observations at 31 GHz of spinning dust emissivity variations in ρ Oph
     publication: Monthly Notices of the Royal Astronomical Society
     year: 2020
@@ -404,6 +704,7 @@ coauthored:
     citation_count: 13
     author_position: 4
     publication_type: journal
+    is_open_access: true
     bibcode: 2020MNRAS.495.3482A
     author_group: coauthored
     publication_bucket: journal
@@ -427,6 +728,26 @@ coauthored:
     - Ricci, Luca
     - Christiaens, Valentin
     - Cieza, Lucas
+    affiliations_list:
+    - Departamento de Astronomía, Universidad de Chile, Casilla 36-D Santiago, Chile; Millennium Nucleus `Protoplanetary Disks',
+      Departamento de Astronomía, Universidad de Chile, Casilla 36-D Santiago, Chile
+    - Institute of Astronomy, University of Cambridge, Madingley Road, Cambridge CB3 0HA, UK
+    - Department of Physics and Astronomy, California State University Northrige, 18111 Nordhoff St, Northridge CA 91130,
+      USA; Jet Propulsion Laboratory, California Institute of Technology, 4800 Oak Grove Drive, Pasadena, CA 91109, USA
+    - CNRS / Institut de Recherche en Astrophysique et Planétologie, 14 avenue Edouard Belin, F-31400 Toulouse, France
+    - Departamento de Astronomía, Universidad de Chile, Casilla 36-D Santiago, Chile
+    - National Radio Astronomy Observatory, Charlottesville, VA 22903, USA
+    - Departamento de Astronomía, Universidad de Chile, Casilla 36-D Santiago, Chile
+    - Departamento de Astronomía, Universidad de Chile, Casilla 36-D Santiago, Chile
+    - Departamento de Astronomía, Universidad de Chile, Casilla 36-D Santiago, Chile
+    - Departamento de Ingeniería Informática, Universidad de Santiago de Chile
+    - Department of Physics &amp; Astronomy, University of Victoria, Victoria, BC V8P 1A1, Canada
+    - Instituto de Radioastronomía y Astrofísica, UNAM, Apartado Postal 3-72, 58089 Morelia Michoacán, México
+    - Physics &amp; Astronomy University of Nevada - Las Vegas
+    - Department of Physics and Astronomy, California State University Northrige, 18111 Nordhoff St, Northridge CA 91130,
+      USA
+    - Departamento de Astronomía, Universidad de Chile, Casilla 36-D Santiago, Chile
+    - Facultad de Ingeniería y Ciencias, Núcleo de Astronomía, Universidad Diego Portales, Av. Ejercito 441. Santiago, Chile
     title: 'Cm-wavelength observations of MWC 758: resolved dust trapping in a vortex'
     publication: Monthly Notices of the Royal Astronomical Society
     year: 2019
@@ -439,6 +760,7 @@ coauthored:
     citation_count: 35
     author_position: 10
     publication_type: journal
+    is_open_access: true
     bibcode: 2019MNRAS.483.3278C
     author_group: coauthored
     publication_bucket: journal
@@ -460,6 +782,31 @@ coauthored:
     - Rannou, Fernando R.
     - Román, Pablo E.
     - Barraza, Marcelo
+    affiliations_list:
+    - Departamento de Astronomía, Universidad de Chile, Casilla 36-D, Santiago, Chile; Millennium Nucleus "Protoplanetary
+      Disks", Santiago, Chile
+    - Departamento de Astronomía, Universidad de Chile, Casilla 36-D, Santiago, Chile; Millennium Nucleus "Protoplanetary
+      Disks", Santiago, Chile; ETH Zurich, Institute for Particle Physics and Astrophysics, Wolfgang-Pauli-Str. 27, CH-8093
+      Zurich, Switzerland; Max Planck Institute for Astronomy, Königstuhl 17, D-69117 Heidelberg, Germany
+    - Departamento de Astronomía, Universidad de Chile, Casilla 36-D, Santiago, Chile; Millennium Nucleus "Protoplanetary
+      Disks", Santiago, Chile
+    - Departamento de Astronomía, Universidad de Chile, Casilla 36-D, Santiago, Chile
+    - Departamento de Ingeniería Informática, Universidad de Santiago de Chile, Santiago, Chile
+    - Institute of Astronomy, University of Cambridge, Madingley Road, Cambridge CB3 0HA, UK
+    - Millennium Nucleus "Protoplanetary Disks", Santiago, Chile; Facultad de Ingeniería y Ciencias, Núcleo de Astronomía,
+      Universidad Diego Portales, Av. Ejercito 441, Santiago, Chile
+    - ETH Zurich, Institute for Particle Physics and Astrophysics, Wolfgang-Pauli-Str. 27, CH-8093 Zurich, Switzerland
+    - Departamento de Astronomía, Universidad de Chile, Casilla 36-D, Santiago, Chile; Millennium Nucleus "Protoplanetary
+      Disks", Santiago, Chile
+    - Departamento de Astronomía, Universidad de Chile, Casilla 36-D, Santiago, Chile; Millennium Nucleus "Protoplanetary
+      Disks", Santiago, Chile; Facultad de Ingeniería y Ciencias, Núcleo de Astronomía, Universidad Diego Portales, Av. Ejercito
+      441, Santiago, Chile
+    - Departamento de Ingeniería Matemática, Facultad de Ciencias Físicas y Matemáticas, Universidad de Chile, Beauchef 851,
+      Santiago, Chile
+    - Departamento de Ingeniería Informática, Universidad de Santiago de Chile, Santiago, Chile
+    - Departamento de Ingeniería Informática, Universidad de Santiago de Chile, Santiago, Chile
+    - Departamento de Astronomía, Universidad de Chile, Casilla 36-D, Santiago, Chile; Millennium Nucleus "Protoplanetary
+      Disks", Santiago, Chile
     title: An inner warp in the DoAr 44 T Tauri transition disc
     publication: Monthly Notices of the Royal Astronomical Society
     year: 2018
@@ -472,6 +819,7 @@ coauthored:
     citation_count: 92
     author_position: 5
     publication_type: journal
+    is_open_access: true
     bibcode: 2018MNRAS.477.5104C
     author_group: coauthored
     publication_bucket: journal
@@ -504,6 +852,48 @@ coauthored:
     - van der Plas, Gerrit
     - Williams, Jonathan P.
     - Zurlo, Alice
+    affiliations_list:
+    - Facultad de Ingeniería y Ciencias, Núcleo de Astronomía, Universidad Diego Portales, Av. Ejercito 441, Santiago, Chile
+      ; Millennium Nucleus “Protoplanetary Disks in ALMA Early Science,” Av. Ejercito 441, Santiago, Chile
+    - Millennium Nucleus “Protoplanetary Disks in ALMA Early Science,” Av. Ejercito 441, Santiago, Chile ; Departamento de
+      Astronomía, Universidad de Chile, Casilla 36-D Santiago, Chile
+    - Millennium Nucleus “Protoplanetary Disks in ALMA Early Science,” Av. Ejercito 441, Santiago, Chile ; Departamento de
+      Astronomía, Universidad de Chile, Casilla 36-D Santiago, Chile
+    - Joint ALMA Observatory, Alonso de Cordova 3107, Vitacura 763-0355, Santiago, Chile ; National Radio Astronomy Observatory,
+      520 Edgemont Road, Charlottesville, VA 22903-2475, USA
+    - Departamento de Ingeniería Informática, Universidad de Santiago de Chile, Av. Ecuador 3659, Santiago, Chile
+    - Department of Astronomy, University of California at Berkeley, Berkeley, CA 94720-3411, USA
+    - ETH Zurich, Institute for Particle Physics and Astrophysics, Wolfgang-Pauli-Strasse 27, CH-8093 Zurich, Switzerland
+    - Facultad de Ciencias, Instituto de Física y Astronomía, Universidad de Valparaíso, Av. Gran Bretaña 1111, 5030 Casilla,
+      Valparaíso, Chile ; Millennium Nucleus for Planet Formation, Universidad de Valparaíso, Av. Gran Bretaña 1111, Valparaíso,
+      Chile
+    - Millennium Nucleus “Protoplanetary Disks in ALMA Early Science,” Av. Ejercito 441, Santiago, Chile ; Departamento de
+      Astronomía, Universidad de Chile, Casilla 36-D Santiago, Chile
+    - European Space Astronomy Centre (ESA), Camino Bajo del Castillo s/n, E-28692, Villanueva de la Cañada, Madrid, Spain
+    - Millennium Nucleus “Protoplanetary Disks in ALMA Early Science,” Av. Ejercito 441, Santiago, Chile ; Departamento de
+      Astronomía, Universidad de Chile, Casilla 36-D Santiago, Chile
+    - Joint ALMA Observatory, Alonso de Cordova 3107, Vitacura 763-0355, Santiago, Chile
+    - Instituto de Astrofísica de La Plata y Facultad de Ciencias Astronómicas y Geofísicas, Universidad Nacional de La Plata,
+      Paseo del Bosque s/n, La Plata, Argentina
+    - Instituto de Astrofísica de La Plata y Facultad de Ciencias Astronómicas y Geofísicas, Universidad Nacional de La Plata,
+      Paseo del Bosque s/n, La Plata, Argentina
+    - Facultad de Ciencias, Instituto de Física y Astronomía, Universidad de Valparaíso, Av. Gran Bretaña 1111, 5030 Casilla,
+      Valparaíso, Chile ; Millennium Nucleus for Planet Formation, Universidad de Valparaíso, Av. Gran Bretaña 1111, Valparaíso,
+      Chile
+    - Instituto de Astrofísica de La Plata y Facultad de Ciencias Astronómicas y Geofísicas, Universidad Nacional de La Plata,
+      Paseo del Bosque s/n, La Plata, Argentina
+    - El Departamento de Ingeniería Matemática, Facultad de Ciencias Físicas y Matemáticas, Universidad de Chile, Beauchef
+      851, Santiago, Chile
+    - Unidad de Astronomía de la Universidad de Antofagasta, Av. U. de Antofagasta, 02800 Antofagasta, Chile
+    - Massachusetts Institute of Technology, Kavli Institute for Astrophysics, Cambridge, MA, USA
+    - Chester F. Carlson Center for Imaging Science, Rochester Institute of Technology, Rochester, NY 14623-5603, USA
+    - Facultad de Ciencias, Instituto de Física y Astronomía, Universidad de Valparaíso, Av. Gran Bretaña 1111, 5030 Casilla,
+      Valparaíso, Chile ; Millennium Nucleus for Planet Formation, Universidad de Valparaíso, Av. Gran Bretaña 1111, Valparaíso,
+      Chile
+    - Univ. Grenoble Alpes, CNRS, IPAG, F-38000 Grenoble, France
+    - Institute for Astronomy, University of Hawaii at Manoa, Honolulu, HI 96822, USA
+    - Facultad de Ingeniería y Ciencias, Núcleo de Astronomía, Universidad Diego Portales, Av. Ejercito 441, Santiago, Chile
+      ; Millennium Nucleus “Protoplanetary Disks in ALMA Early Science,” Av. Ejercito 441, Santiago, Chile
     title: 'ALMA Observations of Elias 2-24: A Protoplanetary Disk with Multiple Gaps in the Ophiuchus Molecular Cloud'
     publication: The Astrophysical Journal
     year: 2017
@@ -516,6 +906,7 @@ coauthored:
     citation_count: 49
     author_position: 5
     publication_type: journal
+    is_open_access: true
     bibcode: 2017ApJ...851L..23C
     author_group: coauthored
     publication_bucket: journal
@@ -526,6 +917,11 @@ coauthored:
     - Guzman, Damian
     - Carcamo, Miguel
     - Perez, Sebastian
+    affiliations_list:
+    - Universidad de Santiago de Chile,Departamento Ingeniería Informática
+    - Universidad de Santiago de Chile,Departamento Ingeniería Informática
+    - Universidad de Santiago de Chile,Departamento Ingeniería Informática
+    - Universidad de Santiago de Chile,Departamento de Física
     title: Split Bregman Image Synthesis in Radio Interferometry
     publication: 2024 4th URSI Atlantic Radio Science Meeting (AT-RASC)
     year: 2024
@@ -538,6 +934,7 @@ coauthored:
     citation_count: 0
     author_position: 3
     publication_type: conference
+    is_open_access: false
     bibcode: 2024atra.conf..151R
     author_group: coauthored
     publication_bucket: conference
@@ -548,6 +945,12 @@ coauthored:
     - Weber, Philipp
     - Cárcamo, Miguel
     - Pérez, Sebastián
+    affiliations_list:
+    - Universidad de Santiago de Chile, Chile
+    - Universidad de Santiago de Chile, Chile
+    - Universidad de Santiago de Chile, Chile
+    - Universidad de Santiago de Chile, Chile
+    - Universidad de Santiago de Chile, Chile
     title: A deep learning approach to complete the uv-plane of interferometric observations
     publication: EAS2023, European Astronomical Society Annual Meeting
     year: 2023
@@ -560,6 +963,7 @@ coauthored:
     citation_count: 0
     author_position: 4
     publication_type: conference
+    is_open_access: false
     bibcode: 2023eas..conf.1436R
     author_group: coauthored
     publication_bucket: conference

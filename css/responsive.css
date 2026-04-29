@@ -122,6 +122,10 @@
     .slider_version .home .hero_content p{
         font-size: 40px;
     }
+    .hero_trust_links a{
+        font-size: 11px;
+        padding: 6px 10px;
+    }
     .progress-bar .percent_indicator {
         width: 13px;
     }
@@ -192,7 +196,11 @@
         font-size: 25px;
     }
     .stats-card-grid{
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+    .stats-card{
+        min-height: 96px;
     }
     .stats-chart-card canvas{
         height: 280px !important;
@@ -364,6 +372,15 @@
     .home .hero_content p{
         font-size: 32px;
     }
+    .hero_trust_links{
+        margin-top: 10px;
+        gap: 7px;
+        padding: 0 8px;
+    }
+    .hero_trust_links a{
+        font-size: 10px;
+        padding: 5px 9px;
+    }
 
     /* ABOUT AREA CSS */
     .about_info{
@@ -442,12 +459,43 @@
     }
     .stats-card-grid{
         grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 10px;
+    }
+    .stats-card{
+        padding: 12px 13px;
+        min-height: 84px;
+    }
+    .stats-card-label{
+        font-size: 11px;
+        line-height: 1.35;
     }
     .stats-card-value{
         font-size: 24px;
     }
     .stats-chart-card{
         padding: 14px;
+    }
+    .stats-chart-title{
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    .stats-methodology-details summary{
+        font-size: 13px;
+    }
+    .stats-method-list li{
+        line-height: 1.55;
+    }
+    .stats-geo-map-wrap{
+        gap: 8px;
+    }
+    .stats-colorbar{
+        width: 26px;
+    }
+    .stats-colorbar-gradient{
+        width: 8px;
+    }
+    .stats-map-note{
+        font-size: 11px;
     }
     .stats-chart-card canvas{
         height: 250px !important;
@@ -487,6 +535,16 @@
     .slider_version .home .hero_content p,
     .home .hero_content p{
         font-size: 22px;
+    }
+    .hero_trust_links{
+        gap: 6px;
+    }
+    .hero_trust_links a{
+        font-size: 9px;
+        padding: 4px 8px;
+    }
+    .selected-contrib-title{
+        font-size: 16px;
     }
 
     /* RESUME AREA */

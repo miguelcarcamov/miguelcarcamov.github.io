@@ -1,18 +1,23 @@
 {
-  "generated_at_utc": "2026-04-28T21:30:02Z",
+  "generated_at_utc": "2026-04-29T15:26:07Z",
   "source": "NASA ADS API",
   "volume": {
-    "total_publications": 20,
-    "journal_publications": 16,
+    "total_publications": 21,
+    "journal_publications": 17,
     "conference_publications": 4,
     "first_author_publications": 4,
-    "lead_author_publications": 6,
-    "unique_coauthors": 106
+    "lead_author_publications": 7,
+    "unique_coauthors": 109,
+    "first_author_share_percent": 19.05,
+    "lead_author_share_percent": 33.33,
+    "coauthored_share_percent": 80.95,
+    "open_access_publications": 17,
+    "open_access_share_percent": 80.95
   },
   "citations": {
     "total_citations": 395,
-    "average_citations_per_paper": 19.75,
-    "median_citations_per_paper": 11.0,
+    "average_citations_per_paper": 18.81,
+    "median_citations_per_paper": 9.0,
     "h_index": 10,
     "h_index_h_paper_citations": 13,
     "h_index_next_paper_citations": 9,
@@ -36,12 +41,22 @@
       0,
       0,
       0,
+      0,
       0
     ],
     "i10_index": 10,
     "m_index": 0.8333,
     "first_publication_year": 2015,
     "career_years": 12
+  },
+  "citation_velocity": {
+    "window_years": 5,
+    "window_start_year": 2022,
+    "window_end_year": 2026,
+    "papers_in_window": 13,
+    "citations_in_window": 120,
+    "effective_paper_age_years": 36,
+    "citations_per_effective_year": 3.3333
   },
   "yearly": {
     "years": [
@@ -68,7 +83,7 @@
       5,
       1,
       1,
-      1
+      2
     ],
     "citations_per_year": [
       0,
@@ -98,7 +113,7 @@
     ]
   },
   "histogram": {
-    "0": 5,
+    "0": 6,
     "1-4": 2,
     "5-9": 3,
     "10-19": 3,
@@ -107,13 +122,330 @@
   },
   "author_position_distribution": {
     "1": 4,
-    "2": 2,
+    "2": 3,
     "3": 4,
     "4": 3,
     "5": 4,
     "6": 1,
     "7+": 2,
     "unknown": 0
+  },
+  "collaboration": {
+    "unique_collaborators": 109,
+    "total_collaboration_links": 178,
+    "avg_coauthors_per_paper": 8.48,
+    "repeat_collaborators": 28,
+    "repeat_collaborator_share_percent": 25.69,
+    "top_collaborators": [
+      {
+        "name": "Casassus, Simon",
+        "papers_together": 13
+      },
+      {
+        "name": "Perez, Sebastian",
+        "papers_together": 9
+      },
+      {
+        "name": "Weber, Philipp",
+        "papers_together": 7
+      },
+      {
+        "name": "Cieza, Lucas",
+        "papers_together": 6
+      },
+      {
+        "name": "Hales, Antonio",
+        "papers_together": 5
+      },
+      {
+        "name": "Zurlo, Alice",
+        "papers_together": 5
+      },
+      {
+        "name": "Arce-Tord, Carla",
+        "papers_together": 5
+      },
+      {
+        "name": "Marino, Sebastian",
+        "papers_together": 4
+      },
+      {
+        "name": "Christiaens, Valentin",
+        "papers_together": 4
+      },
+      {
+        "name": "Rannou, Fernando R.",
+        "papers_together": 3
+      },
+      {
+        "name": "Dominguez-Jamett, Oriana",
+        "papers_together": 2
+      },
+      {
+        "name": "Marleau, Gabriel-Dominique",
+        "papers_together": 2
+      }
+    ],
+    "yearly_new_vs_returning": {
+      "years": [
+        2015,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "new_collaborators": [
+        4,
+        22,
+        10,
+        8,
+        9,
+        15,
+        10,
+        17,
+        1,
+        6,
+        7
+      ],
+      "returning_collaborators": [
+        0,
+        1,
+        7,
+        7,
+        2,
+        7,
+        8,
+        14,
+        2,
+        3,
+        5
+      ]
+    }
+  },
+  "country_collaboration": {
+    "inference_note": "Country is inferred from affiliation text, not author nationality.",
+    "papers_with_country_signal": 20,
+    "international_collaboration_papers": 16,
+    "international_collaboration_share_percent": 80.0,
+    "yearly_international_share": {
+      "years": [
+        2015,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "share_percent": [
+        0.0,
+        100.0,
+        50.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        80.0,
+        0.0,
+        100.0,
+        100.0
+      ]
+    },
+    "countries": [
+      {
+        "country": "Chile",
+        "papers": 19,
+        "share_percent": 95.0
+      },
+      {
+        "country": "United Kingdom",
+        "papers": 12,
+        "share_percent": 60.0
+      },
+      {
+        "country": "United States",
+        "papers": 8,
+        "share_percent": 40.0
+      },
+      {
+        "country": "Germany",
+        "papers": 6,
+        "share_percent": 30.0
+      },
+      {
+        "country": "France",
+        "papers": 5,
+        "share_percent": 25.0
+      },
+      {
+        "country": "Canada",
+        "papers": 5,
+        "share_percent": 25.0
+      },
+      {
+        "country": "Switzerland",
+        "papers": 4,
+        "share_percent": 20.0
+      },
+      {
+        "country": "Italy",
+        "papers": 2,
+        "share_percent": 10.0
+      },
+      {
+        "country": "Belgium",
+        "papers": 2,
+        "share_percent": 10.0
+      },
+      {
+        "country": "Spain",
+        "papers": 2,
+        "share_percent": 10.0
+      },
+      {
+        "country": "China",
+        "papers": 1,
+        "share_percent": 5.0
+      },
+      {
+        "country": "Japan",
+        "papers": 1,
+        "share_percent": 5.0
+      },
+      {
+        "country": "Australia",
+        "papers": 1,
+        "share_percent": 5.0
+      },
+      {
+        "country": "Netherlands",
+        "papers": 1,
+        "share_percent": 5.0
+      },
+      {
+        "country": "Mexico",
+        "papers": 1,
+        "share_percent": 5.0
+      },
+      {
+        "country": "Argentina",
+        "papers": 1,
+        "share_percent": 5.0
+      }
+    ],
+    "top_countries": [
+      {
+        "country": "Chile",
+        "papers": 19,
+        "share_percent": 95.0
+      },
+      {
+        "country": "United Kingdom",
+        "papers": 12,
+        "share_percent": 60.0
+      },
+      {
+        "country": "United States",
+        "papers": 8,
+        "share_percent": 40.0
+      },
+      {
+        "country": "Germany",
+        "papers": 6,
+        "share_percent": 30.0
+      },
+      {
+        "country": "France",
+        "papers": 5,
+        "share_percent": 25.0
+      },
+      {
+        "country": "Canada",
+        "papers": 5,
+        "share_percent": 25.0
+      },
+      {
+        "country": "Switzerland",
+        "papers": 4,
+        "share_percent": 20.0
+      },
+      {
+        "country": "Italy",
+        "papers": 2,
+        "share_percent": 10.0
+      },
+      {
+        "country": "Belgium",
+        "papers": 2,
+        "share_percent": 10.0
+      },
+      {
+        "country": "Spain",
+        "papers": 2,
+        "share_percent": 10.0
+      },
+      {
+        "country": "China",
+        "papers": 1,
+        "share_percent": 5.0
+      },
+      {
+        "country": "Japan",
+        "papers": 1,
+        "share_percent": 5.0
+      },
+      {
+        "country": "Australia",
+        "papers": 1,
+        "share_percent": 5.0
+      },
+      {
+        "country": "Netherlands",
+        "papers": 1,
+        "share_percent": 5.0
+      },
+      {
+        "country": "Mexico",
+        "papers": 1,
+        "share_percent": 5.0
+      },
+      {
+        "country": "Argentina",
+        "papers": 1,
+        "share_percent": 5.0
+      }
+    ]
+  },
+  "leadership": {
+    "lead_papers": 7,
+    "supporting_papers": 14,
+    "lead_citations_per_paper": 13.86,
+    "supporting_citations_per_paper": 21.29,
+    "leadership_impact_ratio": 0.651
+  },
+  "momentum": {
+    "window_years": 5,
+    "window_start_year": 2022,
+    "window_end_year": 2026,
+    "recent_papers": 13,
+    "recent_citations": 120,
+    "recent_paper_share_percent": 61.9,
+    "recent_citation_share_percent": 30.38,
+    "momentum_score": 46.14
+  },
+  "impact_concentration": {
+    "top3_citation_share_percent": 48.1,
+    "top5_citation_share_percent": 66.08
   },
   "top_cited": [
     {
@@ -269,6 +601,17 @@
         "url": "https://doi.org/10.1051/0004-6361/202554485"
       },
       {
+        "title": "Hourly radio variability of PDS70c from time-differential photometry",
+        "year": 2026,
+        "publication": "arXiv e-prints",
+        "citations": 0,
+        "author_position": 2,
+        "leadership_factor": 1.0,
+        "c_i": 0.0,
+        "s_i": 1.0,
+        "url": "https://ui.adsabs.harvard.edu/abs/2026arXiv260424991C"
+      },
+      {
         "title": "Radio-continuum decrements associated to shadowing from the central warp in transition disc DoAr 44",
         "year": 2023,
         "publication": "Monthly Notices of the Royal Astronomical Society",
@@ -300,21 +643,10 @@
         "c_i": 0.0,
         "s_i": 0.9,
         "url": "https://doi.org/10.1051/0004-6361/202557944"
-      },
-      {
-        "title": "High-resolution ALMA observations of V4046 Sgr: a circumbinary disc with a thin ring",
-        "year": 2022,
-        "publication": "Monthly Notices of the Royal Astronomical Society",
-        "citations": 15,
-        "author_position": 6,
-        "leadership_factor": 0.3,
-        "c_i": 3.75,
-        "s_i": 0.6538,
-        "url": "https://doi.org/10.1093/mnras/stab3440"
       }
     ],
-    "p_sum": 16.9238,
-    "np_score": 4.448
+    "p_sum": 17.27,
+    "np_score": 4.4655
   },
   "chart_palette": {
     "primary": "#362cb1",
