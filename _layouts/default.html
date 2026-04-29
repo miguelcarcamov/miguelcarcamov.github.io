@@ -52,10 +52,10 @@
     <link rel="stylesheet" href="{{ '/css/animate.css' | relative_url }}"/>
 
     <!-- style css -->
-    <link rel="stylesheet" href="{{ '/style.css' | relative_url }}"/>
+    <link rel="stylesheet" href="{{ '/style.css' | relative_url }}?v={{ site.time | date: '%s' }}"/>
 
     <!-- responsive css -->
-    <link rel="stylesheet" href="{{ '/css/responsive.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/css/responsive.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="{{ '/images/favicon-32x32.png' | relative_url }}">
