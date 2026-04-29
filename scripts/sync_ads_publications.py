@@ -15,6 +15,8 @@ from typing import Any
 import requests
 import yaml
 
+from fondecyt_scoring import compute_aya_np_from_entries
+
 
 ADS_API_URL = "https://api.adsabs.harvard.edu/v1/search/query"
 DEFAULT_ORCID = "0000-0003-0564-8167"
@@ -384,20 +386,6 @@ def _safe_int(value: Any) -> int:
     if isinstance(value, str) and value.isdigit():
         return int(value)
     return 0
-
-
-def _leadership_factor(position: int | None) -> float:
-    if position in (1, 2):
-        return 1.0
-    if position == 3:
-        return 0.9
-    if position == 4:
-        return 0.7
-    if position == 5:
-        return 0.5
-    if position == 6:
-        return 0.3
-    return 0.2
 
 
 def _h_index(citations: list[int]) -> int:
@@ -780,45 +768,7 @@ def _impact_concentration(entries: list[dict[str, Any]]) -> dict[str, Any]:
 
 
 def _fondecyt_np(entries: list[dict[str, Any]], current_year: int) -> dict[str, Any]:
-    min_year = current_year - 5
-    candidates = []
-    for entry in entries:
-        if entry.get("publication_type") != "journal":
-            continue
-        year = _safe_int(entry.get("year"))
-        if year < min_year:
-            continue
-
-        citations = int(entry.get("citation_count", 0))
-        age = max(1, current_year - year)
-        c_i = citations / age
-        l_i = _leadership_factor(entry.get("author_position"))
-        s_i = l_i * ((1.0 + c_i) ** 0.5)
-        candidates.append(
-            {
-                "title": entry.get("title", ""),
-                "year": year,
-                "publication": entry.get("publication", ""),
-                "citations": citations,
-                "author_position": entry.get("author_position"),
-                "leadership_factor": round(l_i, 4),
-                "c_i": round(c_i, 4),
-                "s_i": round(s_i, 4),
-                "url": entry.get("url", ""),
-            }
-        )
-
-    top = sorted(candidates, key=lambda item: item["s_i"], reverse=True)[:10]
-    p_sum = sum(item["s_i"] for item in top)
-    np_score = min(1.0 + 1.7 * (p_sum ** 0.25), 5.0) if top else 1.0
-    return {
-        "window_years": current_year - min_year + 1,
-        "window_start_year": min_year,
-        "window_end_year": current_year,
-        "top_contributors": top,
-        "p_sum": round(p_sum, 4),
-        "np_score": round(np_score, 4),
-    }
+    return compute_aya_np_from_entries(entries=entries, current_year=current_year, window_years=5)
 
 
 def build_publication_stats(entries: list[dict[str, Any]], generated_at_utc: str) -> dict[str, Any]:
