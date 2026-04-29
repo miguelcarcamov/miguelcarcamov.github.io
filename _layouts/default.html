@@ -21,7 +21,7 @@
     <meta property="twitter:url" content="{{ site.url }}{{ site.baseurl }}/">
     <meta property="twitter:title" content="{{ site.title }}">
     <meta property="twitter:description" content="{{ site.description }}">
-    <meta http-equiv="Content-Security-Policy-Report-Only" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' mailto:; frame-ancestors 'none'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self' mailto:; frame-ancestors 'none'; upgrade-insecure-requests">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
 
@@ -128,7 +128,8 @@
     <!--//////////////////// JS GOES HERE ////////////////-->
 
     <!-- jquery latest version -->
-    <script src="{{ '/js/jquery-1.12.3.js' | relative_url }}"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.5.2.min.js" integrity="sha384-q8xaSZ1piumPohq/TeRG7Teq801W0tUq/00Kt0PcnM9d4hb3w9+vMocDmnPq72ts" crossorigin="anonymous"></script>
 
     <!-- bootstrap js -->
     <script src="{{ '/js/bootstrap.min.js' | relative_url }}"></script>
