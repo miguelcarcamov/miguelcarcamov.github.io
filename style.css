@@ -481,11 +481,10 @@ SIDEBAR AREA CSS
 		line-height: 24px;
 		color: #b5b0f7;
 	}
-	.social ul li > a>span.icon-x-brand{
-		font-family: 'Montserrat', sans-serif;
-		font-weight: 700;
-		font-size: 13px;
-		letter-spacing: 0.2px;
+	.social ul li > a>img.social-x-icon{
+		width: 13px;
+		height: 13px;
+		vertical-align: middle;
 	}
 
 /* Publication statistics */
@@ -876,6 +875,44 @@ START ABOUT AREA CSS
 	}
 	.about_info ul li p:after{
 		content: ":";
+	}
+	.about-links-list{
+		padding-left: 0;
+		padding-left: 24px;
+	}
+	.about-link-item{
+		list-style: none;
+		line-height: 36px;
+	}
+	.about-link-item a{
+		display: inline-flex;
+		align-items: center;
+		gap: 10px;
+		color: #676767;
+		text-decoration: none;
+		border-bottom: 1px solid transparent;
+		transition: color .2s ease, border-color .2s ease;
+	}
+	.about-link-item a:hover,
+	.about-link-item a:focus{
+		color: #362cb1;
+		border-bottom-color: #362cb1;
+		text-decoration: none;
+	}
+	.about-link-item a > span:first-child{
+		width: 18px;
+		text-align: center;
+		color: #35373e;
+	}
+	.about-x-icon{
+		width: 14px;
+		height: 14px;
+		display: inline-block;
+	}
+	.about-link-item .icon-x-brand{
+		font-size: 12px;
+		font-weight: 700;
+		letter-spacing: 0.2px;
 	}
 	.about_btn .btn {
 	    width: 190px;
