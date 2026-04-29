@@ -28,6 +28,18 @@
 
         // Remove active class from all sections first
         $pages.removeClass('active');
+
+        function activateDefaultSection() {
+            var $homeSection = $('#home');
+            var $fallbackSection = $pages.first();
+            var $defaultSection = $homeSection.length ? $homeSection : $fallbackSection;
+            if (!$defaultSection.length) return;
+
+            $defaultSection.addClass('active');
+            currentActivePage = $defaultSection[0];
+            prevIndex = Array.prototype.indexOf.call($pages, currentActivePage);
+            if (prevIndex < 0) prevIndex = 0;
+        }
         
         if(hash && hash.indexOf('#') > -1){
             var $targetSection = $(hash);
@@ -38,49 +50,39 @@
                 
                 // Update menu
                 $hashLink.each(function(){
-                    if($(this).attr('href') == hash) {
+                    if($(this).attr('href') == hash || $(this).attr('data-home-hash') == hash) {
                         $(this).parent('li').addClass('active').siblings().removeClass('active');
                     }
                 });
             } else {
-                // Hash section not found, default to home
-                $('#home').addClass('active');
-                currentActivePage = $('#home')[0];
-                prevIndex = 0;
+                // Hash section not found, default to home (or first section on standalone pages)
+                activateDefaultSection();
             }
         }
         else{
-            // No hash, default to home
-            $('#home').addClass('active');
-            currentActivePage = $('#home')[0];
-            prevIndex = 0;
+            // No hash, default to home (or first section on standalone pages)
+            activateDefaultSection();
         }
 
         $hashLink.on('click',function (e) {
-            e.preventDefault();
-            
-            //get target section
-            var targetHash = $(this).attr('href');
+            // Keep href as SEO-friendly real URL; use data-home-hash for home animations.
+            var targetUrl = $(this).attr('href') || '';
+            var targetHash = $(this).attr('data-home-hash') || '';
+            if (targetHash.charAt(0) !== '#') {
+                return;
+            }
             var $toBeActivated = $(targetHash);
+            if ($toBeActivated.length === 0 || !$toBeActivated.hasClass('single_page')) {
+                return;
+            }
+            e.preventDefault();
             
             // Check if we're on a blog post page (separate page, not main index)
             var isBlogPostPage = $('.single_post').length > 0;
             
-            // If on blog post page and clicking a section link, go to main page
+            // If on a blog post page, use normal navigation to the SEO-friendly URL.
             if (isBlogPostPage && targetHash.indexOf('#') === 0) {
-                window.location.href = '/' + targetHash;
-                return;
-            }
-            
-            // Check if target section exists on current page
-            if ($toBeActivated.length === 0 || !$toBeActivated.hasClass('single_page')) {
-                // If section doesn't exist, it might be a blog post or external link
-                // Allow normal navigation
-                if (targetHash.indexOf('#') === 0) {
-                    // It's a hash link but section not found - might be on different page
-                    // Try going to main page with hash
-                    window.location.href = '/' + targetHash;
-                }
+                window.location.href = targetUrl || '/';
                 return;
             }
             
@@ -132,11 +134,11 @@
             //active current menu item
             $(this).parent('li').addClass('active').siblings().removeClass('active');
             
-            // Update URL hash without triggering page reload
+            // Keep the visible URL SEO-friendly while preserving one-page transitions.
             if (history.pushState) {
-                history.pushState(null, null, targetHash);
+                history.pushState(null, null, targetUrl || '/');
             } else {
-                window.location.hash = targetHash;
+                window.location.href = targetUrl || '/';
             }
             
             // update state
@@ -163,7 +165,7 @@
                     
                     // Update menu
                     $hashLink.parent('li').removeClass('active');
-                    $hashLink.filter('[href="' + hash + '"]').parent('li').addClass('active');
+                    $hashLink.filter('[data-home-hash="' + hash + '"], [href="' + hash + '"]').parent('li').addClass('active');
                     
                     // Update current page reference
                     currentActivePage = $targetSection[0];
