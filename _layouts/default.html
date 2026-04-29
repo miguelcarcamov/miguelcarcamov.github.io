@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% assign meta_title = page.title | default: site.title %}
+    {% assign meta_description = page.description | default: site.description %}
+    {% assign canonical_url = site.url | append: site.baseurl | append: page.url | replace:'index.html','' %}
     <meta charset="UTF-8">
 
     <!-- viewport meta -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{{ site.description }}">
+    <meta name="description" content="{{ meta_description }}">
     <meta name="keywords" content="Miguel Cárcamo, Computer Engineer, Astronomy, Astrophysics, Radio Astronomy, Extragalactic Magnetic Fields, Data Observatory, YEMS, University of Santiago, University of Manchester, Research, Signal Processing">
     <meta name="author" content="{{ site.author.name }}">
     <meta name="robots" content="index, follow, max-image-preview:large">
-    <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url | replace:'index.html','' }}">
+    <link rel="canonical" href="{{ canonical_url }}">
     {% if site.google_site_verification and site.google_site_verification != "" %}
     <meta name="google-site-verification" content="{{ site.google_site_verification }}">
     {% endif %}
@@ -19,16 +22,57 @@
     {% endif %}
     
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}/">
-    <meta property="og:title" content="{{ site.title }}">
-    <meta property="og:description" content="{{ site.description }}">
+    <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+    <meta property="og:url" content="{{ canonical_url }}">
+    <meta property="og:title" content="{{ meta_title }}">
+    <meta property="og:description" content="{{ meta_description }}">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="{{ site.url }}{{ site.baseurl }}/">
-    <meta property="twitter:title" content="{{ site.title }}">
-    <meta property="twitter:description" content="{{ site.description }}">
+    <meta property="twitter:url" content="{{ canonical_url }}">
+    <meta property="twitter:title" content="{{ meta_title }}">
+    <meta property="twitter:description" content="{{ meta_description }}">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "{{ site.url }}{{ site.baseurl }}/#website",
+          "url": "{{ site.url }}{{ site.baseurl }}/",
+          "name": {{ site.title | jsonify }},
+          "description": {{ site.description | jsonify }}
+        },
+        {
+          "@type": "Person",
+          "@id": "{{ site.url }}{{ site.baseurl }}/#person",
+          "name": {{ site.author.name | jsonify }},
+          "url": "{{ site.url }}{{ site.baseurl }}/",
+          "jobTitle": "Assistant Professor",
+          "worksFor": {
+            "@type": "CollegeOrUniversity",
+            "name": "Universidad de Santiago de Chile"
+          },
+          "affiliation": [
+            {
+              "@type": "Organization",
+              "name": "Data Observatory"
+            }
+          ],
+          "sameAs": [
+            "https://orcid.org/0000-0003-0564-8167",
+            "https://ui.adsabs.harvard.edu/search/q=orcid%3A0000-0003-0564-8167",
+            "https://scholar.google.com/citations?user=NcAtfpMAAAAJ&hl=es&oi=sra",
+            "https://www.researchgate.net/profile/Miguel-Carcamo-2",
+            "https://github.com/miguelcarcamov",
+            "https://gitlab.com/miguelcarcamov",
+            "https://www.linkedin.com/in/miguelcarcamov/",
+            "https://x.com/miguel_carcamov"
+          ]
+        }
+      ]
+    }
+    </script>
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://www.gstatic.com https://www.google.com https://maps.googleapis.com https://maps.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://www.gstatic.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com https://www.gstatic.com data:; img-src 'self' data: https: https://www.google.com https://maps.gstatic.com; connect-src 'self' https: https://www.google.com https://maps.googleapis.com https://maps.gstatic.com; frame-src https://www.google.com; object-src 'none'; base-uri 'self'; form-action 'self' mailto:; upgrade-insecure-requests">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
