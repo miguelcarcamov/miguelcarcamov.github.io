@@ -26,7 +26,7 @@
 <ol style="padding-left: 20px; color: #676767;">
 {% for item in first_journal %}
 <li style="margin-bottom: 20px; line-height: 1.8;">
-<strong>{{ item.authors }}</strong>, "{{ item.title }}," <em>{{ item.publication }}</em>{% if item.volume %}, vol. {{ item.volume }}{% endif %}{% if item.issue %}, no. {{ item.issue }}{% endif %}{% if item.pages %}, pp. {{ item.pages }}{% endif %}, {{ item.date_label }}.{% if item.doi %} <a href="{{ item.url }}" target="_blank" style="color: #362cb1;">DOI: {{ item.doi }}</a>{% elsif item.url %} <a href="{{ item.url }}" target="_blank" style="color: #362cb1;">NASA ADS</a>{% endif %}
+<strong>{{ item.authors }}</strong>, "{{ item.title }}," <em>{{ item.publication }}</em>{% if item.volume %}, vol. {{ item.volume }}{% endif %}{% if item.issue %}, no. {{ item.issue }}{% endif %}{% if item.pages %}, pp. {{ item.pages }}{% endif %}, {{ item.date_label }}.{% if item.doi %} <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer" style="color: #362cb1;">DOI: {{ item.doi }}</a>{% elsif item.url %} <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer" style="color: #362cb1;">NASA ADS</a>{% endif %}
 </li>
 {% else %}
 <li style="margin-bottom: 20px; line-height: 1.8;">No first-author journal records found yet.</li>
@@ -36,7 +36,7 @@
 <ol style="padding-left: 20px; color: #676767;">
 {% for item in first_conference %}
 <li style="margin-bottom: 20px; line-height: 1.8;">
-<strong>{{ item.authors }}</strong>, "{{ item.title }}," <em>{{ item.publication }}</em>{% if item.volume %}, vol. {{ item.volume }}{% endif %}{% if item.issue %}, no. {{ item.issue }}{% endif %}{% if item.pages %}, pp. {{ item.pages }}{% endif %}, {{ item.date_label }}.{% if item.doi %} <a href="{{ item.url }}" target="_blank" style="color: #362cb1;">DOI: {{ item.doi }}</a>{% elsif item.url %} <a href="{{ item.url }}" target="_blank" style="color: #362cb1;">NASA ADS</a>{% endif %}
+<strong>{{ item.authors }}</strong>, "{{ item.title }}," <em>{{ item.publication }}</em>{% if item.volume %}, vol. {{ item.volume }}{% endif %}{% if item.issue %}, no. {{ item.issue }}{% endif %}{% if item.pages %}, pp. {{ item.pages }}{% endif %}, {{ item.date_label }}.{% if item.doi %} <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer" style="color: #362cb1;">DOI: {{ item.doi }}</a>{% elsif item.url %} <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer" style="color: #362cb1;">NASA ADS</a>{% endif %}
 </li>
 {% else %}
 <li style="margin-bottom: 20px; line-height: 1.8;">No first-author conference records found yet.</li>
@@ -54,7 +54,7 @@
 <ol style="padding-left: 20px; color: #676767;">
 {% for item in co_journal %}
 <li style="margin-bottom: 20px; line-height: 1.8;">
-<strong>{{ item.authors }}</strong>, "{{ item.title }}," <em>{{ item.publication }}</em>{% if item.volume %}, vol. {{ item.volume }}{% endif %}{% if item.issue %}, no. {{ item.issue }}{% endif %}{% if item.pages %}, pp. {{ item.pages }}{% endif %}, {{ item.date_label }}.{% if item.doi %} <a href="{{ item.url }}" target="_blank" style="color: #362cb1;">DOI: {{ item.doi }}</a>{% elsif item.url %} <a href="{{ item.url }}" target="_blank" style="color: #362cb1;">NASA ADS</a>{% endif %}
+<strong>{{ item.authors }}</strong>, "{{ item.title }}," <em>{{ item.publication }}</em>{% if item.volume %}, vol. {{ item.volume }}{% endif %}{% if item.issue %}, no. {{ item.issue }}{% endif %}{% if item.pages %}, pp. {{ item.pages }}{% endif %}, {{ item.date_label }}.{% if item.doi %} <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer" style="color: #362cb1;">DOI: {{ item.doi }}</a>{% elsif item.url %} <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer" style="color: #362cb1;">NASA ADS</a>{% endif %}
 </li>
 {% else %}
 <li style="margin-bottom: 20px; line-height: 1.8;">No co-authored journal records found yet.</li>
@@ -64,7 +64,7 @@
 <ol style="padding-left: 20px; color: #676767;">
 {% for item in co_conference %}
 <li style="margin-bottom: 20px; line-height: 1.8;">
-<strong>{{ item.authors }}</strong>, "{{ item.title }}," <em>{{ item.publication }}</em>{% if item.volume %}, vol. {{ item.volume }}{% endif %}{% if item.issue %}, no. {{ item.issue }}{% endif %}{% if item.pages %}, pp. {{ item.pages }}{% endif %}, {{ item.date_label }}.{% if item.doi %} <a href="{{ item.url }}" target="_blank" style="color: #362cb1;">DOI: {{ item.doi }}</a>{% elsif item.url %} <a href="{{ item.url }}" target="_blank" style="color: #362cb1;">NASA ADS</a>{% endif %}
+<strong>{{ item.authors }}</strong>, "{{ item.title }}," <em>{{ item.publication }}</em>{% if item.volume %}, vol. {{ item.volume }}{% endif %}{% if item.issue %}, no. {{ item.issue }}{% endif %}{% if item.pages %}, pp. {{ item.pages }}{% endif %}, {{ item.date_label }}.{% if item.doi %} <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer" style="color: #362cb1;">DOI: {{ item.doi }}</a>{% elsif item.url %} <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer" style="color: #362cb1;">NASA ADS</a>{% endif %}
 </li>
 {% else %}
 <li style="margin-bottom: 20px; line-height: 1.8;">No co-authored conference records found yet.</li>
