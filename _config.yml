@@ -9,6 +9,10 @@ author:
   name: "Miguel Cárcamo"
   email: "miguel.carcamo@usach.cl"
 
+# Search Console (set this token after verification)
+google_site_verification: ""
+bing_site_verification: ""
+
 # Build settings
 markdown: kramdown
 highlighter: rouge
