@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Publication Statistics"
-description: "Bibliometric and collaboration statistics from NASA ADS data."
+title: "Publication Metrics (NASA ADS) | Miguel Cárcamo"
+description: "Bibliometric and collaboration metrics based on NASA ADS, including citation trends, collaboration geography, and publication impact indicators."
 permalink: /stats/
 ---
 

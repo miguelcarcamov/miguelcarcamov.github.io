@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Teaching"
-description: "Current and previous teaching activities by Miguel Cárcamo."
+title: "Teaching in Distributed Systems and Astronomy | Miguel Cárcamo"
+description: "Current and previous teaching by Miguel Cárcamo, including distributed systems, operating systems, and astronomy-related courses."
 permalink: /teaching/
 ---
 
