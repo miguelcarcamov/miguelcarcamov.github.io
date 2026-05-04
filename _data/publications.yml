@@ -1,4 +1,4 @@
-generated_at_utc: '2026-04-29T15:26:07Z'
+generated_at_utc: '2026-05-04T11:18:25Z'
 source: NASA ADS API
 orcid: 0000-0003-0564-8167
 query_authors:
@@ -7,7 +7,7 @@ query_authors:
 counts:
   first_author_journal: 2
   first_author_conference: 2
-  coauthored_journal: 15
+  coauthored_journal: 14
   coauthored_conference: 2
 first_author:
   journal:
@@ -66,7 +66,7 @@ first_author:
     pages: '16'
     doi: 10.1016/j.ascom.2017.11.003
     url: https://doi.org/10.1016/j.ascom.2017.11.003
-    citation_count: 33
+    citation_count: 34
     author_position: 1
     publication_type: journal
     is_open_access: true
@@ -141,42 +141,6 @@ first_author:
     publication_bucket: conference
 coauthored:
   journal:
-  - authors: Casassus, Simon, Carcamo, Miguel, Dominguez-Jamett, Oriana, Aoyama, Yuhiko, Marleau, Gabriel-Dominique, Chrenko,
-      Ondrej, Liu, Hauyu Baobab, Ercolano, Barbar
-    authors_list:
-    - Casassus, Simon
-    - Carcamo, Miguel
-    - Dominguez-Jamett, Oriana
-    - Aoyama, Yuhiko
-    - Marleau, Gabriel-Dominique
-    - Chrenko, Ondrej
-    - Liu, Hauyu Baobab
-    - Ercolano, Barbar
-    affiliations_list:
-    - '-'
-    - '-'
-    - '-'
-    - '-'
-    - '-'
-    - '-'
-    - '-'
-    - '-'
-    title: Hourly radio variability of PDS70c from time-differential photometry
-    publication: arXiv e-prints
-    year: 2026
-    date_label: '2026'
-    volume: ''
-    issue: ''
-    pages: arXiv:2604.24991
-    doi: ''
-    url: https://ui.adsabs.harvard.edu/abs/2026arXiv260424991C
-    citation_count: 0
-    author_position: 2
-    publication_type: journal
-    is_open_access: true
-    bibcode: 2026arXiv260424991C
-    author_group: coauthored
-    publication_bucket: journal
   - authors: Casassus, S., Vidal, M., Cárcamo, M., Verstraete, L., Ysard, N., Habart, E.
     authors_list:
     - Casassus, S.
@@ -431,7 +395,7 @@ coauthored:
     pages: '1545'
     doi: 10.1093/mnras/stad1981
     url: https://doi.org/10.1093/mnras/stad1981
-    citation_count: 8
+    citation_count: 9
     author_position: 3
     publication_type: journal
     is_open_access: true
@@ -459,7 +423,7 @@ coauthored:
     pages: '5790'
     doi: 10.1093/mnras/stac1285
     url: https://doi.org/10.1093/mnras/stac1285
-    citation_count: 36
+    citation_count: 37
     author_position: 2
     publication_type: journal
     is_open_access: true
