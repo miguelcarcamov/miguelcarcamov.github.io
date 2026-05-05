@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<section id="course-syllabus" class="about single_page standalone-syllabus">
+  <div class="about_area section_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p class="syllabus-back-wrap">
+            <a href="{{ '/teaching/' | relative_url }}" class="syllabus-back-link" data-home-hash="#teaching">{{ page.back_label | default: "← Teaching" }}</a>
+          </p>
+          <div class="section_title">
+            <h2>{{ page.syllabus_title | default: page.title | escape }}</h2>
+            {% if page.sub_title_extra %}
+              <p class="sub_title">{{ page.sub_title_extra | escape }}</p>
+            {% elsif page.role or page.semester %}
+              <p class="sub_title">{% if page.semester %}{{ page.semester | escape }}{% endif %}{% if page.semester and page.role %} · {% endif %}{% if page.role %}{{ page.role | escape }}{% endif %}</p>
+            {% endif %}
+          </div>
+          <div class="about_content syllabus-body">
+            {{ content }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
