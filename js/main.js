@@ -18,8 +18,7 @@
         //page transition
         var $pages = $('.single_page'),
             currentActivePage,
-            prevIndex = 0,
-            currentActiveIndex;
+            prevIndex = 0;
 
         // Initialize: Set current Active section on page load
         var link = window.location.href,
@@ -37,7 +36,7 @@
 
             $defaultSection.addClass('active');
             currentActivePage = $defaultSection[0];
-            prevIndex = Array.prototype.indexOf.call($pages, currentActivePage);
+            prevIndex = $pages.toArray().indexOf(currentActivePage);
             if (prevIndex < 0) prevIndex = 0;
         }
         
@@ -46,8 +45,8 @@
             if($targetSection.length && $targetSection.hasClass('single_page')){
                 $targetSection.addClass('active');
                 currentActivePage = $targetSection[0];
-                prevIndex = Array.prototype.indexOf.call($pages, currentActivePage);
-                
+                prevIndex = $pages.toArray().indexOf(currentActivePage);
+
                 // Update menu
                 $hashLink.each(function(){
                     if($(this).attr('href') == hash || $(this).attr('data-home-hash') == hash) {
@@ -79,61 +78,57 @@
             if ($toBeActivated.length === 0 || !$toBeActivated.hasClass('single_page')) {
                 return;
             }
-            e.preventDefault();
-            
-            // Check if we're on a blog post page (separate page, not main index)
+
+            /* Check if we're on a blog post page (separate page, not main index) */
             var isBlogPostPage = $('.single_post').length > 0;
-            
-            // If on a blog post page, use normal navigation to the SEO-friendly URL.
+
+            /* Same section — block default link follow only */
+            if ($toBeActivated[0] === currentActivePage || $toBeActivated.hasClass('active')) {
+                e.preventDefault();
+                return;
+            }
+
+            /* On a blog post, full navigation replaces in-page transitions */
             if (isBlogPostPage && targetHash.indexOf('#') === 0) {
                 window.location.href = targetUrl || '/';
                 return;
             }
-            
-            // Don't do transition if clicking the same section
-            // Check both by element reference and by active class
-            if ($toBeActivated[0] === currentActivePage || $toBeActivated.hasClass('active')) {
-                // Already on this section, do nothing
+
+            /* Live list; index via real array ($.fn is not reliably compatible with Array#indexOf) */
+            $pages = $('.single_page');
+            var pageList = $pages.toArray();
+            var fromIndex = currentActivePage ? pageList.indexOf(currentActivePage) : 0;
+            var targetIndex = pageList.indexOf($toBeActivated[0]);
+
+            if (fromIndex === -1) fromIndex = 0;
+            if (targetIndex === -1) {
+                console.warn('Section not found in DOM order:', targetHash);
                 return;
             }
-            
-            // Get index of target section
-            currentActiveIndex = Array.prototype.indexOf.call($pages, $toBeActivated[0]);
-            
-            // Validate index
-            if (currentActiveIndex === -1) {
-                console.warn('Section not found in pages collection:', targetHash);
-                console.warn('Available sections:', $pages.map(function() { return '#' + this.id; }).get());
-                // Try refreshing the pages collection
-                $pages = $('.single_page');
-                currentActiveIndex = Array.prototype.indexOf.call($pages, $toBeActivated[0]);
-                if (currentActiveIndex === -1) {
-                    console.error('Section still not found after refresh:', targetHash);
-                    return;
-                }
-            }
 
-            // Always slide in the same direction (like turning pages in a book)
-            // Current page slides left, new page comes from right
-            
-            // Remove transition classes from other pages (not current or target)
+            e.preventDefault();
+
+            /* Book / carousel direction: DOM order follows the menu (home → … → contact). */
+            var goingForward = targetIndex > fromIndex;
+
+            /* Remove transition classes from other sections */
             var $otherPages = $pages.not($toBeActivated);
             if (currentActivePage) {
                 $otherPages = $otherPages.not($(currentActivePage));
             }
             $otherPages.removeClass('translateFromLeft translateFromRight translateToLeft translateToRight active');
-            
-            // Animate current page out (slide left) if it exists and is different
+
+            var exitClass = goingForward ? 'translateToLeft' : 'translateToRight';
+            var enterClass = goingForward ? 'translateFromLeft' : 'translateFromRight';
+
             if (currentActivePage && currentActivePage !== $toBeActivated[0]) {
                 var $currentPage = $(currentActivePage);
-                $currentPage.removeClass('active translateFromLeft translateFromRight');
-                $currentPage.addClass('translateToLeft');
+                $currentPage.removeClass('active translateFromLeft translateFromRight translateToLeft translateToRight');
+                $currentPage.addClass(exitClass);
             }
-            
-            // Animate new page in (slide from right) and make it active
-            // Remove any existing transition classes first
-            $toBeActivated.removeClass('translateFromRight translateToLeft translateToRight');
-            $toBeActivated.addClass('active translateFromLeft');
+
+            $toBeActivated.removeClass('translateFromRight translateFromLeft translateToLeft translateToRight');
+            $toBeActivated.addClass('active').addClass(enterClass);
 
             //active current menu item
             $(this).parent('li').addClass('active').siblings().removeClass('active');
@@ -146,7 +141,7 @@
             }
             
             // update state
-            prevIndex = currentActiveIndex;
+            prevIndex = targetIndex;
             currentActivePage = $toBeActivated[0];
         });
 
@@ -173,7 +168,7 @@
                     
                     // Update current page reference
                     currentActivePage = $targetSection[0];
-                    prevIndex = Array.prototype.indexOf.call($pages, currentActivePage);
+                    prevIndex = $('.single_page').toArray().indexOf(currentActivePage);
                 }
             }
         });
@@ -205,13 +200,12 @@
                     "Hello",
                     "I'm Miguel Cárcamo",
                     "I am a radio astronomer",
-                    "I am a computer scientist",
+                    "I am a computer engineer",
                     "I study cosmic magnetism",
                     "I work on radio interferometry",
                     "I build scientific software",
                     "I develop data pipelines",
-                    "I work at USACH and Data Observatory",
-                    "Welcome to my website"
+                    "I work at USACH"
                 ],
                 typeSpeed: 50,
                 backSpeed: 30,

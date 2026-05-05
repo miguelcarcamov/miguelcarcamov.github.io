@@ -1,4 +1,7 @@
 <section id="about" class="about single_page">
+{% capture about_intro %}
+{% include render-markdown-section.html slug="about-intro" %}
+{% endcapture %}
 <!-- start about_area -->
 <div class="about_area section_padding">
 <!-- container -->
@@ -17,7 +20,7 @@
 <!-- col-md-4 -->
 <div class="col-md-4 col-sm-6 col-lg-4 col-md-offset-0 col-sm-offset-3 v_middle_md">
 <div class="about_img">
-<img src="images/about_img.jpg" alt="Miguel Cárcamo - Computer Engineer and Radio Astronomer">
+<img src="{{ '/images/about_img.jpg' | relative_url }}" alt="Miguel Cárcamo - Computer Engineer and Radio Astronomer">
 </div>
 </div><!-- end col-md-4 -->
 <!-- .col-md-8 -->
@@ -31,7 +34,7 @@
 </li>
 <li>
 <p>Position</p>
-<span>Assistant Professor, Universidad de Santiago de Chile</span>
+<span>Assistant Professor, Departamento de Ingeniería Informática, Universidad de Santiago de Chile</span>
 </li>
 <li>
 <p>Address</p>
@@ -54,6 +57,9 @@
 <a href="https://orcid.org/0000-0003-0564-8167" target="_blank" rel="noopener noreferrer"><span class="fa fa-id-card-o"></span><span>ORCID</span></a>
 </li>
 <li class="about-link-item">
+<a href="https://scholar.google.com/citations?user=NcAtfpMAAAAJ&amp;hl=es&amp;oi=sra" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar"><span class="fa fa-google" aria-hidden="true"></span><span>Scholar</span></a>
+</li>
+<li class="about-link-item">
 <a href="https://www.researchgate.net/profile/Miguel-Carcamo-2" target="_blank" rel="noopener noreferrer"><span class="fa fa-graduation-cap"></span><span>ResearchGate</span></a>
 </li>
 <li class="about-link-item">
@@ -69,14 +75,18 @@
 <a href="https://www.linkedin.com/in/miguelcarcamov/" target="_blank" rel="noopener noreferrer"><span class="fa fa-linkedin"></span><span>LinkedIn</span></a>
 </li>
 </ul>
+<div class="about-affiliation">
+<a href="https://informatica.usach.cl/" target="_blank" rel="noopener noreferrer" title="Departamento de Ingeniería Informática, USACH">
+<img src="{{ '/images/logos/logos_diinf/DIINF-opc.black.png' | relative_url }}" alt="DIINF — Departamento de Ingeniería Informática, Universidad de Santiago de Chile" class="about-diinf-logo" decoding="async" loading="lazy">
+</a>
+</div>
 </div>
 <!-- about_content -->
 <div class="about_content hidden_md hidden_sm">
-<p>I am an Assistant Professor at the Universidad de Santiago de Chile and an Associate Researcher at the Data Observatory. I hold a Ph.D. in Astronomy and Astrophysics from the University of Manchester (2019-2023), where I developed novel compressed sensing frameworks for Faraday depth reconstruction. My research program encompasses radio interferometry and advanced imaging techniques, cosmic magnetism, high-performance computing, and large-scale data processing for astronomical applications. I am the principal developer of Pyralysis, a Python object-oriented framework designed for big data processing and high-performance computing applications targeting SKA-era data volumes. My work emphasizes end-to-end computational workflows for radio astronomical data, developing software systems that handle the complete processing chain from raw observations through to calibrated, imaged, and validated scientific datasets.</p>
-<p style="margin-top: 12px;"><a class="selected-contrib-link" href="{{ '/research/' | relative_url }}">See research focus and expertise overview</a></p>
+{{ about_intro }}
 <!-- about_btn -->
 <div class="about_btn">
-<a href="cv-llt.pdf" class="btn" aria-label="Download resume" target="_blank" rel="noopener noreferrer">download resume</a>
+<a href="{{ '/cv-llt.pdf' | relative_url }}" class="btn" aria-label="Download resume" target="_blank" rel="noopener noreferrer">download resume</a>
 </div><!-- end about_btn -->
 </div><!-- end about_content -->
 </div><!-- end .col-md-8 -->
@@ -87,12 +97,11 @@
 <div class="col-md-12">
 <!-- about_content -->
 <div class="about_content visible_md visible_sm">
-<p>I am an Assistant Professor at the Universidad de Santiago de Chile and an Associate Researcher at the Data Observatory. I hold a Ph.D. in Astronomy and Astrophysics from the University of Manchester (2019-2023), where I developed novel compressed sensing frameworks for Faraday depth reconstruction. My research program encompasses radio interferometry and advanced imaging techniques, cosmic magnetism, high-performance computing, and large-scale data processing for astronomical applications. I am the principal developer of Pyralysis, a Python object-oriented framework designed for big data processing and high-performance computing applications targeting SKA-era data volumes. My work emphasizes end-to-end computational workflows for radio astronomical data, developing software systems that handle the complete processing chain from raw observations through to calibrated, imaged, and validated scientific datasets.</p>
-<p style="margin-top: 12px;"><a class="selected-contrib-link" href="{{ '/research/' | relative_url }}">See research focus and expertise overview</a></p>
+{{ about_intro }}
 <!-- about_btn -->
 <div class="about_btn">
 <a href="{{ '/contact/' | relative_url }}" data-home-hash="#contact" class="btn" aria-label="Contact me">contact me</a>
-<a href="cv-llt.pdf" class="btn" aria-label="Download resume" target="_blank" rel="noopener noreferrer">download resume</a>
+<a href="{{ '/cv-llt.pdf' | relative_url }}" class="btn" aria-label="Download resume" target="_blank" rel="noopener noreferrer">download resume</a>
 </div><!-- end about_btn -->
 </div><!-- end about_content -->
 </div><!-- end col-md-12 -->
@@ -103,27 +112,18 @@
 <div class="selected-contrib">
 <h4 class="selected-contrib-title">SELECTED CONTRIBUTIONS</h4>
 <ul class="selected-contrib-list">
-<li><strong>Multi-GPU maximum entropy image synthesis for radio astronomy:</strong> Early work on high-performance computational imaging for interferometric data. <a class="selected-contrib-link" href="https://doi.org/10.1016/j.ascom.2017.11.003" target="_blank" rel="noopener noreferrer">View paper</a>.</li>
-<li><strong>CS-ROMER: a novel compressed sensing framework for Faraday depth reconstruction:</strong> 1D Faraday Tomography using compressed sensing for next-generation telescopes. <a class="selected-contrib-link" href="https://doi.org/10.1093/mnras/stac3031" target="_blank" rel="noopener noreferrer">View paper</a>.</li>
-<li><strong>Variable structure in the PDS 70 disc and uncertainties in radio-interferometric image restoration:</strong> Study connecting source variability and imaging systematics in disc observations. <a class="selected-contrib-link" href="https://doi.org/10.1093/mnras/stac1285" target="_blank" rel="noopener noreferrer">View paper</a>.</li>
-<li><strong>Hourly radio variability of PDS70c from time-differential photometry:</strong> Recent arXiv work on short-timescale variability analysis in circumplanetary radio emission. <a class="selected-contrib-link" href="https://ui.adsabs.harvard.edu/abs/2026arXiv260424991C" target="_blank" rel="noopener noreferrer">View preprint</a>.</li>
+{% include render-markdown-section.html slug="about-selected-contributions" %}
 </ul>
 </div>
 </div>
 </div>
 <!-- start row -->
-<div class="row" style="margin-top: 20px;">
+<div class="row">
 <div class="col-md-12">
-<div class="about_content">
+<div class="about_content about-miscellaneous-block">
 <h4 style="margin-bottom: 15px; color: #35373e;">MISCELLANEOUS</h4>
 <ul style="color: #676767; padding-left: 20px; line-height: 1.9;">
-<li>Currently I am a master's swimmer and part of <strong>Ñuñoa Master Club</strong>.</li>
-<li>I enjoy building LEGO sets in my free time.</li>
-<li>I like reading suspense and thriller novels, and also books on psychology and neuroscience.</li>
-<li>I am a registered member and supporter of <strong>Colo-Colo</strong>.</li>
-<li>I enjoy listening to music.</li>
-<li>I enjoy watching movies and TV series.</li>
-<li>I like both video and board games.</li>
+{% include render-markdown-section.html slug="about-miscellaneous" %}
 </ul>
 </div>
 </div>

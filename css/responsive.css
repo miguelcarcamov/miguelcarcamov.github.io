@@ -126,6 +126,10 @@
         font-size: 11px;
         padding: 6px 10px;
     }
+    .hero-diinf-corner img{
+        max-height: 50px;
+        max-width: 38vw;
+    }
     .progress-bar .percent_indicator {
         width: 13px;
     }
@@ -381,10 +385,17 @@
         font-size: 10px;
         padding: 5px 9px;
     }
+    .hero-diinf-corner img{
+        max-height: 38px;
+        max-width: 46vw;
+    }
 
     /* ABOUT AREA CSS */
     .about_info{
         margin-top: 35px;
+    }
+    .about-diinf-logo{
+        max-height: 68px;
     }
     .about_btn{
         text-align: center;
@@ -542,6 +553,14 @@
     .hero_trust_links a{
         font-size: 9px;
         padding: 4px 8px;
+    }
+    .hero-diinf-corner{
+        top: 8px;
+        right: 8px;
+    }
+    .hero-diinf-corner img{
+        max-height: 30px;
+        max-width: 50vw;
     }
     .selected-contrib-title{
         font-size: 16px;

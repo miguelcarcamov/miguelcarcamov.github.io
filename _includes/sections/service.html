@@ -14,66 +14,7 @@
 </div><!-- end .row -->
 <!-- row -->
 <div class="row">
-<!-- single_service -->
-<div class="col-md-6 col-sm-6 col-lg-4">
-<div class="single_service">
-<div class="service_icon"><span class="pe-7s-diamond"></span></div>
-<div class="service_content">
-<h5 class="service_title">Radio Interferometry</h5>
-<p>Advanced imaging techniques and radio interferometric data processing for next-generation radio telescopes, including SKA-era applications.</p>
-</div>
-</div>
-</div>
-<!-- single_service -->
-<div class="col-md-6 col-sm-6 col-lg-4">
-<div class="single_service">
-<div class="service_icon"><span class="pe-7s-airplay"></span></div>
-<div class="service_content">
-<h5 class="service_title">Compressed Sensing</h5>
-<p>Development of novel compressed sensing frameworks for Faraday depth reconstruction and cosmic magnetism studies.</p>
-</div>
-</div>
-</div>
-<!-- single_service -->
-<div class="col-md-6 col-sm-6 col-lg-4">
-<div class="single_service">
-<div class="service_icon"><span class="pe-7s-phone"></span></div>
-<div class="service_content">
-<h5 class="service_title">High-Performance Computing</h5>
-<p>CUDA, OpenMP, MPI, and parallel computing solutions for large-scale astronomical data processing. Principal developer of Pyralysis framework.</p>
-</div>
-</div>
-</div>
-<!-- single_service -->
-<div class="col-md-6 col-sm-6 col-lg-4">
-<div class="single_service">
-<div class="service_icon"><span class="pe-7s-light"></span></div>
-<div class="service_content">
-<h5 class="service_title">Cosmic Magnetism</h5>
-<p>Research on extragalactic magnetic fields using Rotation Measure Synthesis and advanced signal reconstruction techniques.</p>
-</div>
-</div>
-</div>
-<!-- single_service -->
-<div class="col-md-6 col-sm-6 col-lg-4">
-<div class="single_service">
-<div class="service_icon"><span class="pe-7s-vector"></span></div>
-<div class="service_content">
-<h5 class="service_title">Scientific Software Development</h5>
-<p>End-to-end computational workflows for radio astronomical data, from raw observations to calibrated, imaged, and validated datasets.</p>
-</div>
-</div>
-</div>
-<!-- single_service -->
-<div class="col-md-6 col-sm-6 col-lg-4">
-<div class="single_service">
-<div class="service_icon"><span class="pe-7s-display1"></span></div>
-<div class="service_content">
-<h5 class="service_title">Academic Teaching</h5>
-<p>Teaching Operating Systems, Distributed Systems, Software Development, and Radio Interferometry at Universidad de Santiago de Chile.</p>
-</div>
-</div>
-</div>
+{% include render-markdown-section.html slug="service-core-cards" %}
 </div><!-- .row -->
 </div><!-- end .container -->
 </div><!-- end services_area -->
@@ -92,27 +33,21 @@
 <div class="col-md-6">
 <h4 style="margin-bottom: 20px; color: #35373e; font-size: 20px; font-weight: 400;">Funded Projects</h4>
 <ul style="color: #676767; line-height: 1.8; padding-left: 20px; margin-bottom: 35px;">
-<li style="margin-bottom: 15px;"><strong>Principal Investigator (PI)</strong> - DICYT Regular 2026, Universidad de Santiago de Chile. Project: <em>Pyralysis: Desentrañando los Campos Magnéticos del Cosmos con Big Data y Supercómputo</em>.</li>
-<li style="margin-bottom: 15px;"><strong>Co-Principal Investigator (co-PI)</strong> - FONDECYT Regular 2025. Project: <em>Physical conditions and kinematics in planet-forming systems</em>.</li>
+{% include render-markdown-section.html slug="service-funded-projects" %}
 </ul>
 <h4 style="margin-bottom: 20px; color: #35373e; font-size: 20px; font-weight: 400;">Academic Service</h4>
 <ul style="color: #676767; line-height: 1.8; padding-left: 20px;">
-<li style="margin-bottom: 15px;">Journal Reviewer for <strong><a href="https://academic.oup.com/rasti" target="_blank" rel="noopener noreferrer" style="color: #35373e; text-decoration: underline;">RAS Techniques &amp; Instruments (RASTI)</a></strong>.</li>
+{% include render-markdown-section.html slug="service-academic-service" %}
 </ul>
 </div>
 <div class="col-md-6">
 <h4 style="margin-bottom: 20px; color: #35373e; font-size: 20px; font-weight: 400;">Invitations, Talks, and Posters</h4>
 <ul style="color: #676767; line-height: 1.8; padding-left: 20px; margin-bottom: 35px;">
-<li style="margin-bottom: 15px;"><strong>2024</strong> - Invited lecturer, 1st FARGO3D Workshop (Radio Interferometry and Radio Interferometric Synthetic Observations).</li>
-<li style="margin-bottom: 15px;"><strong>2023</strong> - Invited participant, Isaac Newton Institute multidisciplinary programme: <em>Rich and Nonlinear Tomography</em>.</li>
-<li style="margin-bottom: 15px;"><strong>2022</strong> - Talk at URSI AT-RASC, Gran Canaria: <em>A Compressed Sensing Faraday Depth Reconstruction Framework for the MeerKAT MIGHTEE-POL Survey</em>.</li>
-<li style="margin-bottom: 15px;"><strong>2021</strong> - Talk at National Astronomy Meeting (University of Bath): <em>High-throughput computing for Cosmic Magnetism studies in the SKA-era</em>.</li>
-<li style="margin-bottom: 15px;"><strong>2023</strong> - Poster at BASP Frontiers conference, Villars-sur-Ollon: <em>The importance of compressed sensing and regularization: An application to Faraday depth imaging</em>.</li>
+{% include render-markdown-section.html slug="service-talks-posters" %}
 </ul>
 <h4 style="margin-bottom: 20px; color: #35373e; font-size: 20px; font-weight: 400;">Awards &amp; Honors</h4>
 <ul style="color: #676767; line-height: 1.8; padding-left: 20px;">
-<li style="margin-bottom: 15px;"><strong>2022</strong> - Young Scientist Award, URSI Atlantic Radio Science Conference. <a href="https://www.ursi.org/young_scientists.php" target="_blank" rel="noopener noreferrer" style="color: #362cb1;">Program</a> | <a href="https://www.ursi.org/proceedings/procAT22/ATAPRASC2022-papers/JZWL6RBG4V.pdf" target="_blank" rel="noopener noreferrer" style="color: #362cb1;">Awarded paper</a></li>
-<li style="margin-bottom: 15px;"><strong>2019 - 2023</strong> - Chilean National Scholarship for Graduate Studies (ANID).</li>
+{% include render-markdown-section.html slug="service-awards-honors" %}
 </ul>
 </div>
 </div>

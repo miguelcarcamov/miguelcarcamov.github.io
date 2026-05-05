@@ -760,7 +760,33 @@ HOME AREA CSS
 		background: rgba(54, 44, 177, 1);
 	}
 
-	.selected-contrib{
+	/* DIINF on hero — top-right, scales down on narrow viewports */
+	.hero-diinf-corner{
+		position: absolute;
+		top: clamp(10px, 2.8vw, 26px);
+		right: clamp(10px, 2.8vw, 26px);
+		z-index: 2;
+		display: inline-block;
+		line-height: 0;
+		opacity: 0.94;
+		transition: opacity 0.2s ease;
+	}
+	.hero-diinf-corner:hover,
+	.hero-diinf-corner:focus{
+		opacity: 1;
+		outline: none;
+	}
+	.hero-diinf-corner img{
+		display: block;
+		max-height: clamp(32px, 5.8vw, 62px);
+		max-width: min(42vw, 200px);
+		width: auto;
+		height: auto;
+		filter: drop-shadow(0 1px 10px rgba(0, 0, 0, 0.4));
+	}
+
+	.selected-contrib,
+	.about-miscellaneous-block{
 		border-top: 1px solid #e7e7ee;
 		margin-top: 24px;
 		padding-top: 24px;
@@ -913,6 +939,31 @@ START ABOUT AREA CSS
 		font-size: 12px;
 		font-weight: 700;
 		letter-spacing: 0.2px;
+	}
+	.about-affiliation{
+		clear: both;
+		margin-top: 18px;
+		margin-bottom: 6px;
+		padding-top: 14px;
+		border-top: 1px solid #e7e7ee;
+	}
+	.about-affiliation a{
+		display: inline-block;
+		line-height: 0;
+		opacity: 1;
+		transition: opacity .2s ease;
+	}
+	.about-affiliation a:hover,
+	.about-affiliation a:focus{
+		opacity: .85;
+		outline: none;
+	}
+	.about-diinf-logo{
+		max-height: 76px;
+		max-width: 100%;
+		width: auto;
+		height: auto;
+		display: block;
 	}
 	.about_btn .btn {
 	    width: 190px;

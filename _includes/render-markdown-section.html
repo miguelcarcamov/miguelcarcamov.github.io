@@ -1,0 +1,4 @@
+{% assign section_doc = site.sections | where: "slug", include.slug | first %}
+{% if section_doc %}
+  {{ section_doc.content | markdownify }}
+{% endif %}
