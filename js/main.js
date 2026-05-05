@@ -28,39 +28,106 @@
         // Remove active class from all sections first
         $pages.removeClass('active');
 
+        function pathnameToRouteHash() {
+            var path = window.location.pathname || '/';
+            var base = (document.body && document.body.getAttribute('data-baseurl')) ? String(document.body.getAttribute('data-baseurl')).trim() : '';
+            if (base && base !== '/') {
+                var bn = base.replace(/\/+$/, '');
+                if (path.indexOf(bn) === 0) {
+                    path = path.slice(bn.length) || '/';
+                }
+            }
+            path = path.replace(/\/index\.html$/i, '');
+            path = path.replace(/\/+$/, '');
+            var segments = path.split('/').filter(Boolean);
+            if (segments.length >= 3 && segments[0] === 'teaching' && segments[1] === 'courses') {
+                return null;
+            }
+            if (segments.length === 0) {
+                return '#home';
+            }
+            var seg = segments[segments.length - 1];
+            if (seg === 'index.html') {
+                segments.pop();
+                if (segments.length === 0) {
+                    return '#home';
+                }
+                seg = segments[segments.length - 1];
+            }
+            var routeMap = {
+                'about': '#about',
+                'resume': '#resume',
+                'publications': '#publications',
+                'stats': '#publication-stats',
+                'teaching': '#teaching',
+                'collaborators': '#collaborators',
+                'students': '#students',
+                'service': '#service',
+                'blog': '#blog',
+                'contact': '#contact',
+                'research': '#research'
+            };
+            return routeMap[seg] || null;
+        }
+
+        function activateSection($section) {
+            if (!$section.length || !$section.hasClass('single_page')) {
+                return false;
+            }
+            $section.addClass('active');
+            currentActivePage = $section[0];
+            prevIndex = $pages.toArray().indexOf(currentActivePage);
+            if (prevIndex < 0) {
+                prevIndex = 0;
+            }
+            return true;
+        }
+
+        function setMenuActiveForHash(selHash) {
+            if (!selHash || selHash.charAt(0) !== '#') {
+                return;
+            }
+            $hashLink.parent('li').removeClass('active');
+            $hashLink.filter('[data-home-hash="' + selHash + '"]').parent('li').addClass('active');
+        }
+
         function activateDefaultSection() {
             var $homeSection = $('#home');
             var $fallbackSection = $pages.first();
             var $defaultSection = $homeSection.length ? $homeSection : $fallbackSection;
-            if (!$defaultSection.length) return;
+            if (!$defaultSection.length) {
+                return;
+            }
 
             $defaultSection.addClass('active');
             currentActivePage = $defaultSection[0];
             prevIndex = $pages.toArray().indexOf(currentActivePage);
-            if (prevIndex < 0) prevIndex = 0;
-        }
-        
-        if(hash && hash.indexOf('#') > -1){
-            var $targetSection = $(hash);
-            if($targetSection.length && $targetSection.hasClass('single_page')){
-                $targetSection.addClass('active');
-                currentActivePage = $targetSection[0];
-                prevIndex = $pages.toArray().indexOf(currentActivePage);
-
-                // Update menu
-                $hashLink.each(function(){
-                    if($(this).attr('href') == hash || $(this).attr('data-home-hash') == hash) {
-                        $(this).parent('li').addClass('active').siblings().removeClass('active');
-                    }
-                });
-            } else {
-                // Hash section not found, default to home (or first section on standalone pages)
-                activateDefaultSection();
+            if (prevIndex < 0) {
+                prevIndex = 0;
             }
         }
-        else{
-            // No hash, default to home (or first section on standalone pages)
-            activateDefaultSection();
+        
+        if (hash && hash.indexOf('#') > -1) {
+            var $targetSection = $(hash);
+            if ($targetSection.length && $targetSection.hasClass('single_page')) {
+                activateSection($targetSection);
+                setMenuActiveForHash(hash);
+            } else {
+                activateDefaultSection();
+            }
+        } else {
+            var routeHash = pathnameToRouteHash();
+            if (routeHash) {
+                var $fromPath = $(routeHash);
+                if ($fromPath.length && $fromPath.hasClass('single_page')) {
+                    activateSection($fromPath);
+                    setMenuActiveForHash(routeHash);
+                } else {
+                    activateDefaultSection();
+                }
+            } else {
+                activateDefaultSection();
+            }
         }
 
         $hashLink.on('click',function (e) {
@@ -154,22 +221,18 @@
         
         // Handle browser back/forward buttons
         $(window).on('hashchange', function() {
-            var hash = window.location.hash;
-            if (hash) {
-                var $targetSection = $(hash);
-                if ($targetSection.length && $targetSection.hasClass('single_page')) {
-                    // Update active states
-                    $pages.removeClass('active');
-                    $targetSection.addClass('active');
-                    
-                    // Update menu
-                    $hashLink.parent('li').removeClass('active');
-                    $hashLink.filter('[data-home-hash="' + hash + '"], [href="' + hash + '"]').parent('li').addClass('active');
-                    
-                    // Update current page reference
-                    currentActivePage = $targetSection[0];
-                    prevIndex = $('.single_page').toArray().indexOf(currentActivePage);
-                }
+            var h = window.location.hash;
+            if (!h || !/^#[A-Za-z][A-Za-z0-9\-_:.]*$/.test(h)) {
+                return;
+            }
+            var $targetSection = $(h);
+            if ($targetSection.length && $targetSection.hasClass('single_page')) {
+                $pages = $('.single_page');
+                $pages.removeClass('active translateFromLeft translateFromRight translateToLeft translateToRight');
+                $targetSection.addClass('active');
+                setMenuActiveForHash(h);
+                currentActivePage = $targetSection[0];
+                prevIndex = $pages.toArray().indexOf(currentActivePage);
             }
         });
 

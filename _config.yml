@@ -33,9 +33,17 @@ exclude:
 collections:
   sections:
     output: false
+  syllabi:
+    output: true
+    permalink: /teaching/courses/:name/
 
 # Defaults
 defaults:
+  - scope:
+      path: ""
+      type: "syllabi"
+    values:
+      layout: syllabus
   - scope:
       path: ""
       type: "posts"

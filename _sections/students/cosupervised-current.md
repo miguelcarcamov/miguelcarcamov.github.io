@@ -2,4 +2,6 @@
 slug: students-cosupervised-current
 ---
 
-<!-- Add current co-supervised students here -->
+<li style="margin-bottom: 12px;">
+<strong>Ricardo Hasbún</strong>
+</li>

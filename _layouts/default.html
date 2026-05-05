@@ -119,7 +119,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="{{ '/images/favicon-32x32.png' | relative_url }}">
     
 </head>
-<body{% if page.layout == 'post' %} class="blog-post-page-active"{% endif %}>
+<body{% if page.layout == 'post' %} class="blog-post-page-active"{% endif %} data-baseurl="{{ site.baseurl }}">
 
     <!-- start main wrapper .site -->
     <div class="site">
