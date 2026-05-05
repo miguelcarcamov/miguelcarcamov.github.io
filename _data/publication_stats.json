@@ -1,23 +1,23 @@
 {
-  "generated_at_utc": "2026-04-29T15:26:07Z",
+  "generated_at_utc": "2026-05-04T11:18:25Z",
   "source": "NASA ADS API",
   "volume": {
-    "total_publications": 21,
-    "journal_publications": 17,
+    "total_publications": 20,
+    "journal_publications": 16,
     "conference_publications": 4,
     "first_author_publications": 4,
-    "lead_author_publications": 7,
-    "unique_coauthors": 109,
-    "first_author_share_percent": 19.05,
-    "lead_author_share_percent": 33.33,
-    "coauthored_share_percent": 80.95,
-    "open_access_publications": 17,
-    "open_access_share_percent": 80.95
+    "lead_author_publications": 6,
+    "unique_coauthors": 106,
+    "first_author_share_percent": 20.0,
+    "lead_author_share_percent": 30.0,
+    "coauthored_share_percent": 80.0,
+    "open_access_publications": 16,
+    "open_access_share_percent": 80.0
   },
   "citations": {
-    "total_citations": 395,
-    "average_citations_per_paper": 18.81,
-    "median_citations_per_paper": 9.0,
+    "total_citations": 398,
+    "average_citations_per_paper": 19.9,
+    "median_citations_per_paper": 11.0,
     "h_index": 10,
     "h_index_h_paper_citations": 13,
     "h_index_next_paper_citations": 9,
@@ -25,19 +25,18 @@
       92,
       49,
       49,
-      36,
+      37,
       35,
-      33,
+      34,
       24,
       17,
       15,
       13,
       9,
-      8,
+      9,
       7,
       4,
       4,
-      0,
       0,
       0,
       0,
@@ -53,10 +52,10 @@
     "window_years": 5,
     "window_start_year": 2022,
     "window_end_year": 2026,
-    "papers_in_window": 13,
-    "citations_in_window": 120,
-    "effective_paper_age_years": 36,
-    "citations_per_effective_year": 3.3333
+    "papers_in_window": 12,
+    "citations_in_window": 122,
+    "effective_paper_age_years": 35,
+    "citations_per_effective_year": 3.4857
   },
   "yearly": {
     "years": [
@@ -83,17 +82,17 @@
       5,
       1,
       1,
-      2
+      1
     ],
     "citations_per_year": [
       0,
       49,
-      125,
+      126,
       35,
       13,
       53,
-      75,
-      38,
+      76,
+      39,
       0,
       7,
       0
@@ -101,19 +100,19 @@
     "cumulative_citations": [
       0,
       49,
-      174,
-      209,
-      222,
-      275,
-      350,
-      388,
-      388,
-      395,
-      395
+      175,
+      210,
+      223,
+      276,
+      352,
+      391,
+      391,
+      398,
+      398
     ]
   },
   "histogram": {
-    "0": 6,
+    "0": 5,
     "1-4": 2,
     "5-9": 3,
     "10-19": 3,
@@ -122,7 +121,7 @@
   },
   "author_position_distribution": {
     "1": 4,
-    "2": 3,
+    "2": 2,
     "3": 4,
     "4": 3,
     "5": 4,
@@ -131,15 +130,15 @@
     "unknown": 0
   },
   "collaboration": {
-    "unique_collaborators": 109,
-    "total_collaboration_links": 178,
-    "avg_coauthors_per_paper": 8.48,
-    "repeat_collaborators": 28,
-    "repeat_collaborator_share_percent": 25.69,
+    "unique_collaborators": 106,
+    "total_collaboration_links": 171,
+    "avg_coauthors_per_paper": 8.55,
+    "repeat_collaborators": 25,
+    "repeat_collaborator_share_percent": 23.58,
     "top_collaborators": [
       {
         "name": "Casassus, Simon",
-        "papers_together": 13
+        "papers_together": 12
       },
       {
         "name": "Perez, Sebastian",
@@ -178,11 +177,11 @@
         "papers_together": 3
       },
       {
-        "name": "Dominguez-Jamett, Oriana",
+        "name": "Casassus, S.",
         "papers_together": 2
       },
       {
-        "name": "Marleau, Gabriel-Dominique",
+        "name": "Ercolano, Barbara",
         "papers_together": 2
       }
     ],
@@ -211,7 +210,7 @@
         17,
         1,
         6,
-        7
+        4
       ],
       "returning_collaborators": [
         0,
@@ -224,7 +223,7 @@
         14,
         2,
         3,
-        5
+        1
       ]
     }
   },
@@ -427,25 +426,25 @@
     ]
   },
   "leadership": {
-    "lead_papers": 7,
+    "lead_papers": 6,
     "supporting_papers": 14,
-    "lead_citations_per_paper": 13.86,
-    "supporting_citations_per_paper": 21.29,
-    "leadership_impact_ratio": 0.651
+    "lead_citations_per_paper": 16.5,
+    "supporting_citations_per_paper": 21.36,
+    "leadership_impact_ratio": 0.772
   },
   "momentum": {
     "window_years": 5,
     "window_start_year": 2022,
     "window_end_year": 2026,
-    "recent_papers": 13,
-    "recent_citations": 120,
-    "recent_paper_share_percent": 61.9,
-    "recent_citation_share_percent": 30.38,
-    "momentum_score": 46.14
+    "recent_papers": 12,
+    "recent_citations": 122,
+    "recent_paper_share_percent": 60.0,
+    "recent_citation_share_percent": 30.65,
+    "momentum_score": 45.33
   },
   "impact_concentration": {
-    "top3_citation_share_percent": 48.1,
-    "top5_citation_share_percent": 66.08
+    "top3_citation_share_percent": 47.74,
+    "top5_citation_share_percent": 65.83
   },
   "top_cited": [
     {
@@ -476,7 +475,7 @@
       "title": "Variable structure in the PDS 70 disc and uncertainties in radio-interferometric image restoration",
       "year": 2022,
       "publication": "Monthly Notices of the Royal Astronomical Society",
-      "citation_count": 36,
+      "citation_count": 37,
       "url": "https://doi.org/10.1093/mnras/stac1285",
       "doi": "10.1093/mnras/stac1285"
     },
@@ -492,7 +491,7 @@
       "title": "Multi-GPU maximum entropy image synthesis for radio astronomy",
       "year": 2018,
       "publication": "Astronomy and Computing",
-      "citation_count": 33,
+      "citation_count": 34,
       "url": "https://doi.org/10.1016/j.ascom.2017.11.003",
       "doi": "10.1016/j.ascom.2017.11.003"
     },
@@ -538,11 +537,11 @@
         "title": "Variable structure in the PDS 70 disc and uncertainties in radio-interferometric image restoration",
         "year": 2022,
         "publication": "Monthly Notices of the Royal Astronomical Society",
-        "citations": 36,
+        "citations": 37,
         "author_position": 2,
         "leadership_factor": 1.0,
-        "c_i": 9.0,
-        "s_i": 3.1623,
+        "c_i": 9.25,
+        "s_i": 3.2016,
         "url": "https://doi.org/10.1093/mnras/stac1285"
       },
       {
@@ -571,11 +570,11 @@
         "title": "Azimuthal temperature variations in ISO-Oph 2 from multifrequency ALMA observations",
         "year": 2023,
         "publication": "Monthly Notices of the Royal Astronomical Society",
-        "citations": 8,
+        "citations": 9,
         "author_position": 3,
         "leadership_factor": 0.9,
-        "c_i": 2.6667,
-        "s_i": 1.7234,
+        "c_i": 3.0,
+        "s_i": 1.8,
         "url": "https://doi.org/10.1093/mnras/stad1981"
       },
       {
@@ -599,17 +598,6 @@
         "c_i": 7.0,
         "s_i": 1.4142,
         "url": "https://doi.org/10.1051/0004-6361/202554485"
-      },
-      {
-        "title": "Hourly radio variability of PDS70c from time-differential photometry",
-        "year": 2026,
-        "publication": "arXiv e-prints",
-        "citations": 0,
-        "author_position": 2,
-        "leadership_factor": 1.0,
-        "c_i": 0.0,
-        "s_i": 1.0,
-        "url": "https://ui.adsabs.harvard.edu/abs/2026arXiv260424991C"
       },
       {
         "title": "Radio-continuum decrements associated to shadowing from the central warp in transition disc DoAr 44",
@@ -643,10 +631,21 @@
         "c_i": 0.0,
         "s_i": 0.9,
         "url": "https://doi.org/10.1051/0004-6361/202557944"
+      },
+      {
+        "title": "High-resolution ALMA observations of V4046 Sgr: a circumbinary disc with a thin ring",
+        "year": 2022,
+        "publication": "Monthly Notices of the Royal Astronomical Society",
+        "citations": 15,
+        "author_position": 6,
+        "leadership_factor": 0.3,
+        "c_i": 3.75,
+        "s_i": 0.6538,
+        "url": "https://doi.org/10.1093/mnras/stab3440"
       }
     ],
-    "p_sum": 17.27,
-    "np_score": 4.4655
+    "p_sum": 17.0397,
+    "np_score": 4.4539
   },
   "chart_palette": {
     "primary": "#362cb1",
