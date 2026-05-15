@@ -515,6 +515,21 @@
     #fondecyt-top-chart{
         height: 360px !important;
     }
+    .research-tab{
+        font-size: 12px;
+        padding: 12px 12px;
+    }
+    .research-panel-body{
+        padding: 18px 16px 22px;
+    }
+    .research-area-banner{
+        width: 100%;
+    }
+    .research-footer-links .btn{
+        display: block;
+        width: 100%;
+        margin: 0 0 12px 0;
+    }
 }
 
 

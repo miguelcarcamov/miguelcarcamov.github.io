@@ -1,19 +1,69 @@
-<section id="research" class="about single_page active">
+<section id="research" class="about single_page">
   <div class="about_area section_padding">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <div class="section_title">
-            <h2>RESEARCH FOCUS</h2>
-            <p class="sub_title">RADIO ASTRONOMY, INTERFEROMETRY, AND SCIENTIFIC COMPUTING</p>
+            <h2>RESEARCH</h2>
+            <p class="sub_title">SCIENTIFIC FOCUS AREAS</p>
           </div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-md-12">
-          <div class="about_content">
-            {% include render-markdown-section.html slug="research-overview" %}
+          <div class="about_content research-intro">
+            {% include render-markdown-section.html slug="research-intro" %}
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="research-areas" data-research-areas>
+            <div class="research-tabs" role="tablist" aria-label="Research focus areas">
+              <button type="button" class="research-tab active" role="tab" id="research-tab-magnetism" aria-selected="true" aria-controls="research-panel-magnetism" data-research-tab="magnetism">Cosmic magnetism</button>
+              <button type="button" class="research-tab" role="tab" id="research-tab-planet-formation" aria-selected="false" aria-controls="research-panel-planet-formation" data-research-tab="planet-formation" tabindex="-1">Planet formation &amp; discs</button>
+              <button type="button" class="research-tab" role="tab" id="research-tab-imaging" aria-selected="false" aria-controls="research-panel-imaging" data-research-tab="imaging" tabindex="-1">Radio interferometric imaging</button>
+              <button type="button" class="research-tab" role="tab" id="research-tab-compressed-sensing" aria-selected="false" aria-controls="research-panel-compressed-sensing" data-research-tab="compressed-sensing" tabindex="-1">Compressed sensing</button>
+            </div>
+
+            <div id="research-panel-magnetism" class="research-panel active" role="tabpanel" aria-labelledby="research-tab-magnetism" data-research-panel="magnetism">
+              <div class="research-area-banner-wrap">
+                <a class="research-area-banner-link" href="https://www.skao.int/en/science-users/science-working-groups/112/magnetism/415/magnetism-science-working-group" target="_blank" rel="noopener noreferrer" title="SKAO Magnetism Science Working Group members">
+                  <picture>
+                    <source srcset="{{ '/images/affiliations/magnetism-swg-banner-full.webp' | relative_url }}" type="image/webp">
+                    <img src="{{ '/images/affiliations/magnetism-swg-banner-full.jpg' | relative_url }}" alt="SKAO Magnetism Science Working Group — full banner" class="research-area-banner" width="900" height="2118" decoding="async" loading="lazy">
+                  </picture>
+                </a>
+              </div>
+              <div class="research-panel-body">
+                {% include render-markdown-section.html slug="research-area-magnetism" %}
+              </div>
+            </div>
+
+            <div id="research-panel-planet-formation" class="research-panel" role="tabpanel" aria-labelledby="research-tab-planet-formation" data-research-panel="planet-formation" hidden>
+              <div class="research-panel-body">
+                {% include render-markdown-section.html slug="research-area-planet-formation" %}
+              </div>
+            </div>
+
+            <div id="research-panel-imaging" class="research-panel" role="tabpanel" aria-labelledby="research-tab-imaging" data-research-panel="imaging" hidden>
+              <div class="research-panel-body">
+                {% include render-markdown-section.html slug="research-area-imaging" %}
+              </div>
+            </div>
+
+            <div id="research-panel-compressed-sensing" class="research-panel" role="tabpanel" aria-labelledby="research-tab-compressed-sensing" data-research-panel="compressed-sensing" hidden>
+              <div class="research-panel-body">
+                {% include render-markdown-section.html slug="research-area-compressed-sensing" %}
+              </div>
+            </div>
+          </div>
+
+          <div class="research-footer-links about_btn" style="padding-top: 28px;">
+            <a href="{{ '/publications/' | relative_url }}" class="btn" aria-label="View publications">view publications</a>
+            <a href="{{ '/stats/' | relative_url }}" class="btn" aria-label="View publication statistics">view statistics</a>
           </div>
         </div>
       </div>

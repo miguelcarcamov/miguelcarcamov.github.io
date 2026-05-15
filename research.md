@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Research Focus: Interferometry, Faraday Tomography, and HPC | Miguel Cárcamo"
-description: "Research focus of Miguel Cárcamo on radio interferometry, Faraday tomography, compressed sensing, cosmic magnetism, and scalable scientific computing."
+title: "Research Areas: Cosmic Magnetism, Imaging, and Compressed Sensing | Miguel Cárcamo"
+description: "Research areas of Miguel Cárcamo: cosmic magnetism and the SKAO Magnetism SWG, protoplanetary discs, radio interferometric imaging, and compressed sensing for Faraday tomography."
 permalink: /research/
 ---
 

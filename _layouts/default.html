@@ -139,6 +139,7 @@
                         <li class="active"><a href="{{ '/' | relative_url }}" data-home-hash="#home"><span class="lnr lnr-home"></span><p>Home</p></a></li>
                         <li><a href="{{ '/about/' | relative_url }}" data-home-hash="#about"><span class="lnr lnr-user"></span><p>about me</p></a></li>
                         <li><a href="{{ '/resume/' | relative_url }}" data-home-hash="#resume"><span class="lnr lnr-book"></span><p>resume</p></a></li>
+                        <li><a href="{{ '/research/' | relative_url }}" data-home-hash="#research"><span class="lnr lnr-magnifier"></span><p>research</p></a></li>
                         <li><a href="{{ '/publications/' | relative_url }}" data-home-hash="#publications"><span class="lnr lnr-file-empty"></span><p>publications</p></a></li>
                         <li><a href="{{ '/stats/' | relative_url }}" data-home-hash="#publication-stats"><span class="lnr lnr-chart-bars"></span><p>stats</p></a></li>
                         <li><a href="{{ '/teaching/' | relative_url }}" data-home-hash="#teaching"><span class="lnr lnr-graduation-hat"></span><p>teaching</p></a></li>
@@ -212,6 +213,7 @@
 
     <!-- Main js - No longer needs section-loader.js since sections are included directly -->
     <script src="{{ '/js/main.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
+    <script src="{{ '/js/research-areas.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js" integrity="sha384-JUh163oCRItcbPme8pYnROHQMC6fNKTBWtRG3I3I0erJkzNgL7uxKlNwcrcFKeqF" crossorigin="anonymous"></script>
     <script src="{{ '/js/publication-stats.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
 </body>
