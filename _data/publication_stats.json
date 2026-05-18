@@ -1,23 +1,23 @@
 {
-  "generated_at_utc": "2026-05-11T12:24:12Z",
+  "generated_at_utc": "2026-05-18T12:48:10Z",
   "source": "NASA ADS API",
   "volume": {
-    "total_publications": 20,
-    "journal_publications": 16,
+    "total_publications": 21,
+    "journal_publications": 17,
     "conference_publications": 4,
     "first_author_publications": 4,
-    "lead_author_publications": 6,
-    "unique_coauthors": 106,
-    "first_author_share_percent": 20.0,
-    "lead_author_share_percent": 30.0,
-    "coauthored_share_percent": 80.0,
-    "open_access_publications": 16,
-    "open_access_share_percent": 80.0
+    "lead_author_publications": 7,
+    "unique_coauthors": 109,
+    "first_author_share_percent": 19.05,
+    "lead_author_share_percent": 33.33,
+    "coauthored_share_percent": 80.95,
+    "open_access_publications": 17,
+    "open_access_share_percent": 80.95
   },
   "citations": {
     "total_citations": 398,
-    "average_citations_per_paper": 19.9,
-    "median_citations_per_paper": 11.0,
+    "average_citations_per_paper": 18.95,
+    "median_citations_per_paper": 9.0,
     "h_index": 10,
     "h_index_h_paper_citations": 13,
     "h_index_next_paper_citations": 9,
@@ -41,6 +41,7 @@
       0,
       0,
       0,
+      0,
       0
     ],
     "i10_index": 10,
@@ -52,10 +53,10 @@
     "window_years": 5,
     "window_start_year": 2022,
     "window_end_year": 2026,
-    "papers_in_window": 12,
+    "papers_in_window": 13,
     "citations_in_window": 122,
-    "effective_paper_age_years": 35,
-    "citations_per_effective_year": 3.4857
+    "effective_paper_age_years": 36,
+    "citations_per_effective_year": 3.3889
   },
   "yearly": {
     "years": [
@@ -82,7 +83,7 @@
       5,
       1,
       1,
-      1
+      2
     ],
     "citations_per_year": [
       0,
@@ -112,7 +113,7 @@
     ]
   },
   "histogram": {
-    "0": 5,
+    "0": 6,
     "1-4": 2,
     "5-9": 3,
     "10-19": 3,
@@ -121,7 +122,7 @@
   },
   "author_position_distribution": {
     "1": 4,
-    "2": 2,
+    "2": 3,
     "3": 4,
     "4": 3,
     "5": 4,
@@ -130,15 +131,15 @@
     "unknown": 0
   },
   "collaboration": {
-    "unique_collaborators": 106,
-    "total_collaboration_links": 171,
-    "avg_coauthors_per_paper": 8.55,
-    "repeat_collaborators": 25,
-    "repeat_collaborator_share_percent": 23.58,
+    "unique_collaborators": 109,
+    "total_collaboration_links": 178,
+    "avg_coauthors_per_paper": 8.48,
+    "repeat_collaborators": 28,
+    "repeat_collaborator_share_percent": 25.69,
     "top_collaborators": [
       {
         "name": "Casassus, Simon",
-        "papers_together": 12
+        "papers_together": 13
       },
       {
         "name": "Perez, Sebastian",
@@ -177,11 +178,11 @@
         "papers_together": 3
       },
       {
-        "name": "Casassus, S.",
+        "name": "Aoyama, Yuhiko",
         "papers_together": 2
       },
       {
-        "name": "Ercolano, Barbara",
+        "name": "Dominguez-Jamett, Oriana",
         "papers_together": 2
       }
     ],
@@ -210,7 +211,7 @@
         17,
         1,
         6,
-        4
+        7
       ],
       "returning_collaborators": [
         0,
@@ -223,7 +224,7 @@
         14,
         2,
         3,
-        1
+        5
       ]
     }
   },
@@ -322,12 +323,12 @@
         "share_percent": 5.0
       },
       {
-        "country": "Australia",
+        "country": "Netherlands",
         "papers": 1,
         "share_percent": 5.0
       },
       {
-        "country": "Netherlands",
+        "country": "Australia",
         "papers": 1,
         "share_percent": 5.0
       },
@@ -404,12 +405,12 @@
         "share_percent": 5.0
       },
       {
-        "country": "Australia",
+        "country": "Netherlands",
         "papers": 1,
         "share_percent": 5.0
       },
       {
-        "country": "Netherlands",
+        "country": "Australia",
         "papers": 1,
         "share_percent": 5.0
       },
@@ -426,21 +427,21 @@
     ]
   },
   "leadership": {
-    "lead_papers": 6,
+    "lead_papers": 7,
     "supporting_papers": 14,
-    "lead_citations_per_paper": 16.5,
+    "lead_citations_per_paper": 14.14,
     "supporting_citations_per_paper": 21.36,
-    "leadership_impact_ratio": 0.772
+    "leadership_impact_ratio": 0.662
   },
   "momentum": {
     "window_years": 5,
     "window_start_year": 2022,
     "window_end_year": 2026,
-    "recent_papers": 12,
+    "recent_papers": 13,
     "recent_citations": 122,
-    "recent_paper_share_percent": 60.0,
+    "recent_paper_share_percent": 61.9,
     "recent_citation_share_percent": 30.65,
-    "momentum_score": 45.33
+    "momentum_score": 46.27
   },
   "impact_concentration": {
     "top3_citation_share_percent": 47.74,
@@ -600,6 +601,17 @@
         "url": "https://doi.org/10.1051/0004-6361/202554485"
       },
       {
+        "title": "Hourly radio variability of PDS70c from time-differential photometry",
+        "year": 2026,
+        "publication": "arXiv e-prints",
+        "citations": 0,
+        "author_position": 2,
+        "leadership_factor": 1.0,
+        "c_i": 0.0,
+        "s_i": 1.0,
+        "url": "https://doi.org/10.48550/arXiv.2604.24991"
+      },
+      {
         "title": "Radio-continuum decrements associated to shadowing from the central warp in transition disc DoAr 44",
         "year": 2023,
         "publication": "Monthly Notices of the Royal Astronomical Society",
@@ -631,21 +643,10 @@
         "c_i": 0.0,
         "s_i": 0.9,
         "url": "https://doi.org/10.1051/0004-6361/202557944"
-      },
-      {
-        "title": "High-resolution ALMA observations of V4046 Sgr: a circumbinary disc with a thin ring",
-        "year": 2022,
-        "publication": "Monthly Notices of the Royal Astronomical Society",
-        "citations": 15,
-        "author_position": 6,
-        "leadership_factor": 0.3,
-        "c_i": 3.75,
-        "s_i": 0.6538,
-        "url": "https://doi.org/10.1093/mnras/stab3440"
       }
     ],
-    "p_sum": 17.0397,
-    "np_score": 4.4539
+    "p_sum": 17.3859,
+    "np_score": 4.4713
   },
   "chart_palette": {
     "primary": "#362cb1",
