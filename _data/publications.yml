@@ -1,4 +1,4 @@
-generated_at_utc: '2026-05-25T12:45:00Z'
+generated_at_utc: '2026-06-01T15:33:18Z'
 source: NASA ADS API
 orcid: 0000-0003-0564-8167
 query_authors:
@@ -497,7 +497,7 @@ coauthored:
     pages: L4
     doi: 10.3847/2041-8213/ac75e8
     url: https://doi.org/10.3847/2041-8213/ac75e8
-    citation_count: 24
+    citation_count: 25
     author_position: 2
     publication_type: journal
     is_open_access: true
@@ -652,7 +652,7 @@ coauthored:
     pages: '3789'
     doi: 10.1093/mnras/stab2359
     url: https://doi.org/10.1093/mnras/stab2359
-    citation_count: 49
+    citation_count: 51
     author_position: 3
     publication_type: journal
     is_open_access: true
@@ -816,7 +816,7 @@ coauthored:
     pages: '5104'
     doi: 10.1093/mnras/sty894
     url: https://doi.org/10.1093/mnras/sty894
-    citation_count: 92
+    citation_count: 93
     author_position: 5
     publication_type: journal
     is_open_access: true
