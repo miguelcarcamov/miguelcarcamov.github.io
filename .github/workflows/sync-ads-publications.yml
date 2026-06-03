@@ -23,10 +23,11 @@ jobs:
       - name: Install script dependencies
         run: pip install requests pyyaml
 
-      - name: Sync publications from NASA ADS
+      - name: Sync publications from NASA ADS and Crossref
         env:
           ADS_API_TOKEN: ${{ secrets.ADS_API_TOKEN }}
           ADS_ORCID: 0000-0003-0564-8167
+          CROSSREF_MAILTO: miguel.carcamo@usach.cl
         run: |
           python scripts/sync_ads_publications.py \
             --orcid "$ADS_ORCID" \

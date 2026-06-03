@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import datetime as dt
+import html
 import json
 import os
 import re
@@ -19,8 +20,10 @@ from fondecyt_scoring import compute_aya_np_from_entries
 
 
 ADS_API_URL = "https://api.adsabs.harvard.edu/v1/search/query"
+CROSSREF_API_URL = "https://api.crossref.org/works"
 DEFAULT_ORCID = "0000-0003-0564-8167"
 DEFAULT_AUTHORS = ["Carcamo, Miguel", "Cárcamo, Miguel"]
+DEFAULT_CROSSREF_MAILTO = "miguel.carcamo@usach.cl"
 OUTPUT_PATH = "_data/publications.yml"
 STATS_OUTPUT_PATH = "_data/publication_stats.json"
 EXCLUDED_DOIS = {
@@ -119,6 +122,14 @@ def _is_software_record(doc: dict[str, Any]) -> bool:
     return any(marker in haystack for marker in software_markers)
 
 
+def _is_arxiv_doi(doi_value: str) -> bool:
+    return doi_value.lower().startswith("10.48550/arxiv.")
+
+
+def _compact_title_key(title: str) -> str:
+    return re.sub(r"\s+", "", _normalize_text(title))
+
+
 def _extract_doi(doi_values: list[str], identifiers: list[str]) -> str | None:
     candidates: list[str] = []
     for value in doi_values + identifiers:
@@ -158,7 +169,7 @@ def _publication_query(orcid: str, author_names: list[str]) -> str:
 
 
 def _entry_key(entry: dict[str, Any]) -> str:
-    base = _normalize_text(entry.get("title", ""))
+    base = _compact_title_key(entry.get("title", ""))
     year = str(entry.get("year", ""))
     return f"{base}|{year}"
 
@@ -252,6 +263,112 @@ def _format_date_label(pubdate: str, year: str | int | None) -> str:
     return str(year) if year else ""
 
 
+def _crossref_headers(mailto: str) -> dict[str, str]:
+    contact = mailto.strip() or DEFAULT_CROSSREF_MAILTO
+    return {"User-Agent": f"miguelcarcamov.github.io-sync/1.0 (mailto:{contact})"}
+
+
+def fetch_crossref_works(orcid: str, mailto: str = "") -> list[dict[str, Any]]:
+    headers = _crossref_headers(mailto=mailto)
+    works: list[dict[str, Any]] = []
+    cursor = "*"
+    total_results: int | None = None
+    while cursor:
+        params = {
+            "filter": f"orcid:{orcid}",
+            "rows": 100,
+            "cursor": cursor,
+            "select": "DOI,title,container-title,volume,page,published,issued,type,license",
+        }
+        response = requests.get(CROSSREF_API_URL, headers=headers, params=params, timeout=60)
+        response.raise_for_status()
+        payload = response.json().get("message", {})
+        if total_results is None:
+            total_results = int(payload.get("total-results", 0))
+        items = payload.get("items", [])
+        works.extend(items)
+        if not items or (total_results is not None and len(works) >= total_results):
+            break
+        cursor = payload.get("next-cursor")
+        if not cursor:
+            break
+    return works
+
+
+def build_crossref_title_lookup(works: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
+    lookup: dict[str, dict[str, Any]] = {}
+    for work in works:
+        doi = str(work.get("DOI", "")).strip()
+        if not doi or _is_arxiv_doi(doi):
+            continue
+        titles = work.get("title", [])
+        if not titles:
+            continue
+        lookup[_compact_title_key(str(titles[0]))] = work
+    return lookup
+
+
+def _crossref_date_label(work: dict[str, Any]) -> tuple[int | str, str]:
+    date_parts = work.get("published", {}).get("date-parts") or work.get("issued", {}).get("date-parts") or []
+    if not date_parts or not date_parts[0]:
+        return "", ""
+
+    parts = date_parts[0]
+    year = parts[0]
+    year_value: int | str = year if isinstance(year, int) else str(year)
+    if len(parts) >= 3:
+        try:
+            parsed = dt.date(int(parts[0]), int(parts[1]), int(parts[2]))
+            return year_value, parsed.strftime("%b. %Y")
+        except ValueError:
+            pass
+    if len(parts) >= 2:
+        return year_value, f"{int(parts[1]):02d}. {int(parts[0])}"
+    return year_value, str(year)
+
+
+def enrich_entry_from_crossref(entry: dict[str, Any], crossref_lookup: dict[str, dict[str, Any]]) -> dict[str, Any]:
+    doi = str(entry.get("doi", "")).strip()
+    if not doi or not _is_arxiv_doi(doi):
+        return entry
+
+    work = crossref_lookup.get(_compact_title_key(str(entry.get("title", ""))))
+    if not work:
+        return entry
+
+    journal_doi = _trim_doi_prefix(str(work.get("DOI", "")))
+    if not journal_doi:
+        return entry
+
+    enriched = dict(entry)
+    enriched["doi"] = journal_doi
+    enriched["url"] = f"https://doi.org/{journal_doi}"
+
+    container_titles = work.get("container-title", [])
+    if container_titles:
+        enriched["publication"] = html.unescape(str(container_titles[0]))
+
+    volume = work.get("volume")
+    if volume:
+        enriched["volume"] = str(volume)
+
+    page = work.get("page")
+    if page:
+        enriched["pages"] = str(page)
+
+    year, date_label = _crossref_date_label(work)
+    if year:
+        enriched["year"] = year
+    if date_label:
+        enriched["date_label"] = date_label
+
+    licenses = work.get("license", [])
+    if licenses:
+        enriched["is_open_access"] = True
+
+    return enriched
+
+
 def fetch_ads_documents(token: str, orcid: str, rows: int, author_names: list[str]) -> list[dict[str, Any]]:
     headers = {"Authorization": f"Bearer {token}"}
     params = {
@@ -330,8 +447,14 @@ def _is_excluded_entry(entry: dict[str, Any]) -> bool:
     return doi in EXCLUDED_DOIS
 
 
-def split_publications(docs: list[dict[str, Any]], orcid: str) -> tuple[dict[str, Any], list[dict[str, Any]]]:
+def split_publications(
+    docs: list[dict[str, Any]],
+    orcid: str,
+    crossref_lookup: dict[str, dict[str, Any]] | None = None,
+) -> tuple[dict[str, Any], list[dict[str, Any]], int]:
     selected_by_key: dict[str, tuple[int, str, str, dict[str, Any]]] = {}
+    crossref_lookup = crossref_lookup or {}
+    crossref_enriched_count = 0
 
     # First pass: global deduplication and quality selection.
     for doc in docs:
@@ -346,6 +469,11 @@ def split_publications(docs: list[dict[str, Any]], orcid: str) -> tuple[dict[str
         bucket = "conference" if _is_conference(doc) else "journal"
         author_group = "first_author" if _is_first_author(authors[0]) else "coauthored"
         entry = build_publication_entry(doc, orcid=orcid)
+        if crossref_lookup:
+            before_doi = entry.get("doi", "")
+            entry = enrich_entry_from_crossref(entry, crossref_lookup=crossref_lookup)
+            if before_doi != entry.get("doi", ""):
+                crossref_enriched_count += 1
         if _is_excluded_entry(entry):
             continue
         key = _entry_key(entry)
@@ -377,7 +505,7 @@ def split_publications(docs: list[dict[str, Any]], orcid: str) -> tuple[dict[str
 
     selected_entries = _sort_entries(selected_entries)
 
-    return grouped, selected_entries
+    return grouped, selected_entries, crossref_enriched_count
 
 
 def _safe_int(value: Any) -> int:
@@ -887,6 +1015,16 @@ def main() -> int:
     parser.add_argument("--rows", default=200, type=int, help="Maximum ADS rows to fetch")
     parser.add_argument("--output", default=OUTPUT_PATH, help="Output YAML file path")
     parser.add_argument("--stats-output", default=STATS_OUTPUT_PATH, help="Output stats JSON file path")
+    parser.add_argument(
+        "--no-crossref",
+        action="store_true",
+        help="Skip Crossref enrichment for arXiv-only ADS records.",
+    )
+    parser.add_argument(
+        "--crossref-mailto",
+        default=os.environ.get("CROSSREF_MAILTO", DEFAULT_CROSSREF_MAILTO),
+        help="Contact email for Crossref API polite pool (User-Agent mailto).",
+    )
     args = parser.parse_args()
 
     token = os.environ.get("ADS_API_TOKEN", "").strip()
@@ -902,12 +1040,27 @@ def main() -> int:
         print(f"Error while calling NASA ADS API: {exc}", file=sys.stderr)
         return 1
 
-    grouped, selected_entries = split_publications(docs, orcid=args.orcid)
+    crossref_lookup: dict[str, dict[str, Any]] = {}
+    if not args.no_crossref:
+        try:
+            crossref_works = fetch_crossref_works(orcid=args.orcid, mailto=args.crossref_mailto)
+            crossref_lookup = build_crossref_title_lookup(crossref_works)
+            print(f"Fetched {len(crossref_works)} Crossref works ({len(crossref_lookup)} journal DOIs indexed).")
+        except requests.RequestException as exc:
+            print(f"Warning: Crossref enrichment skipped: {exc}", file=sys.stderr)
+
+    grouped, selected_entries, crossref_enriched_count = split_publications(
+        docs,
+        orcid=args.orcid,
+        crossref_lookup=crossref_lookup,
+    )
     _log_stats(docs, grouped)
+    if crossref_enriched_count:
+        print(f"Crossref upgraded {crossref_enriched_count} arXiv-only record(s) to journal DOIs.")
     generated_at_utc = dt.datetime.now(dt.UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
     data = {
         "generated_at_utc": generated_at_utc,
-        "source": "NASA ADS API",
+        "source": "NASA ADS API + Crossref" if crossref_lookup else "NASA ADS API",
         "orcid": args.orcid,
         "query_authors": author_names,
         "counts": {
