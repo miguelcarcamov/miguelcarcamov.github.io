@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-06-03T18:32:59Z",
+  "generated_at_utc": "2026-06-08T13:16:29Z",
   "source": "NASA ADS API",
   "volume": {
     "total_publications": 21,
@@ -15,20 +15,20 @@
     "open_access_share_percent": 80.95
   },
   "citations": {
-    "total_citations": 403,
-    "average_citations_per_paper": 19.19,
+    "total_citations": 400,
+    "average_citations_per_paper": 19.05,
     "median_citations_per_paper": 9.0,
     "h_index": 10,
     "h_index_h_paper_citations": 13,
     "h_index_next_paper_citations": 9,
     "citations_sorted_desc": [
       93,
-      51,
+      49,
       49,
       37,
       36,
       34,
-      25,
+      24,
       17,
       15,
       13,
@@ -54,9 +54,9 @@
     "window_start_year": 2022,
     "window_end_year": 2026,
     "papers_in_window": 13,
-    "citations_in_window": 123,
+    "citations_in_window": 122,
     "effective_paper_age_years": 36,
-    "citations_per_effective_year": 3.4167
+    "citations_per_effective_year": 3.3889
   },
   "yearly": {
     "years": [
@@ -91,8 +91,8 @@
       127,
       36,
       13,
-      55,
-      77,
+      53,
+      76,
       39,
       0,
       7,
@@ -104,12 +104,12 @@
       176,
       212,
       225,
-      280,
-      357,
-      396,
-      396,
-      403,
-      403
+      278,
+      354,
+      393,
+      393,
+      400,
+      400
     ]
   },
   "histogram": {
@@ -117,8 +117,8 @@
     "1-4": 2,
     "5-9": 3,
     "10-19": 3,
-    "20-49": 5,
-    "50+": 2
+    "20-49": 6,
+    "50+": 1
   },
   "author_position_distribution": {
     "1": 4,
@@ -178,7 +178,7 @@
         "papers_together": 3
       },
       {
-        "name": "Marleau, Gabriel-Dominique",
+        "name": "Aoyama, Yuhiko",
         "papers_together": 2
       },
       {
@@ -429,22 +429,22 @@
   "leadership": {
     "lead_papers": 7,
     "supporting_papers": 14,
-    "lead_citations_per_paper": 14.29,
-    "supporting_citations_per_paper": 21.64,
-    "leadership_impact_ratio": 0.66
+    "lead_citations_per_paper": 14.14,
+    "supporting_citations_per_paper": 21.5,
+    "leadership_impact_ratio": 0.658
   },
   "momentum": {
     "window_years": 5,
     "window_start_year": 2022,
     "window_end_year": 2026,
     "recent_papers": 13,
-    "recent_citations": 123,
+    "recent_citations": 122,
     "recent_paper_share_percent": 61.9,
-    "recent_citation_share_percent": 30.52,
-    "momentum_score": 46.21
+    "recent_citation_share_percent": 30.5,
+    "momentum_score": 46.2
   },
   "impact_concentration": {
-    "top3_citation_share_percent": 47.89,
+    "top3_citation_share_percent": 47.75,
     "top5_citation_share_percent": 66.0
   },
   "top_cited": [
@@ -460,7 +460,7 @@
       "title": "A dusty filament and turbulent CO spirals in HD 135344B - SAO 206462",
       "year": 2021,
       "publication": "Monthly Notices of the Royal Astronomical Society",
-      "citation_count": 51,
+      "citation_count": 49,
       "url": "https://doi.org/10.1093/mnras/stab2359",
       "doi": "10.1093/mnras/stab2359"
     },
@@ -500,7 +500,7 @@
       "title": "The Doppler Flip in HD 100546 as a Disk Eruption: The Elephant in the Room of Kinematic Protoplanet Searches",
       "year": 2022,
       "publication": "The Astrophysical Journal",
-      "citation_count": 25,
+      "citation_count": 24,
       "url": "https://doi.org/10.3847/2041-8213/ac75e8",
       "doi": "10.3847/2041-8213/ac75e8"
     },
@@ -549,22 +549,22 @@
         "title": "A dusty filament and turbulent CO spirals in HD 135344B - SAO 206462",
         "year": 2021,
         "publication": "Monthly Notices of the Royal Astronomical Society",
-        "citations": 51,
+        "citations": 49,
         "author_position": 3,
         "leadership_factor": 0.9,
-        "c_i": 10.2,
-        "s_i": 3.012,
+        "c_i": 9.8,
+        "s_i": 2.9577,
         "url": "https://doi.org/10.1093/mnras/stab2359"
       },
       {
         "title": "The Doppler Flip in HD 100546 as a Disk Eruption: The Elephant in the Room of Kinematic Protoplanet Searches",
         "year": 2022,
         "publication": "The Astrophysical Journal",
-        "citations": 25,
+        "citations": 24,
         "author_position": 2,
         "leadership_factor": 1.0,
-        "c_i": 6.25,
-        "s_i": 2.6926,
+        "c_i": 6.0,
+        "s_i": 2.6458,
         "url": "https://doi.org/10.3847/2041-8213/ac75e8"
       },
       {
@@ -603,13 +603,13 @@
       {
         "title": "Hourly radio variability of PDS70c from time-differential photometry",
         "year": 2026,
-        "publication": "arXiv e-prints",
+        "publication": "Astronomy & Astrophysics",
         "citations": 0,
         "author_position": 2,
         "leadership_factor": 1.0,
         "c_i": 0.0,
         "s_i": 1.0,
-        "url": "https://doi.org/10.48550/arXiv.2604.24991"
+        "url": "https://doi.org/10.1051/0004-6361/202659553"
       },
       {
         "title": "Radio-continuum decrements associated to shadowing from the central warp in transition disc DoAr 44",
@@ -645,8 +645,8 @@
         "url": "https://doi.org/10.1051/0004-6361/202557944"
       }
     ],
-    "p_sum": 17.487,
-    "np_score": 4.4764
+    "p_sum": 17.3859,
+    "np_score": 4.4713
   },
   "chart_palette": {
     "primary": "#362cb1",
