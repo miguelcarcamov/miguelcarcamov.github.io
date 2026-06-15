@@ -1,4 +1,4 @@
-generated_at_utc: '2026-06-08T13:16:29Z'
+generated_at_utc: '2026-06-15T15:24:53Z'
 source: NASA ADS API + Crossref
 orcid: 0000-0003-0564-8167
 query_authors:
@@ -141,30 +141,34 @@ first_author:
     publication_bucket: conference
 coauthored:
   journal:
-  - authors: Casassus, Simon, Carcamo, Miguel, Dominguez-Jamett, Oriana, Aoyama, Yuhiko, Marleau, Gabriel-Dominique, Chrenko,
-      Ondrej, Liu, Hauyu Baobab, Ercolano, Barbar
+  - authors: Casassus, Simon, Cárcamo, Miguel, Domínguez-Jamett, Oriana, Aoyama, Yuhiko, Marleau, Gabriel-Dominique, Chrenko,
+      Ondřej, Baobab Liu, Hauyu, Ercolano, Barbara
     authors_list:
     - Casassus, Simon
-    - Carcamo, Miguel
-    - Dominguez-Jamett, Oriana
+    - Cárcamo, Miguel
+    - Domínguez-Jamett, Oriana
     - Aoyama, Yuhiko
     - Marleau, Gabriel-Dominique
-    - Chrenko, Ondrej
-    - Liu, Hauyu Baobab
-    - Ercolano, Barbar
+    - Chrenko, Ondřej
+    - Baobab Liu, Hauyu
+    - Ercolano, Barbara
     affiliations_list:
-    - '-'
-    - '-'
-    - '-'
-    - '-'
-    - '-'
-    - '-'
-    - '-'
-    - '-'
-    title: Hourly radio variability of PDS70c from time-differential photometry
-    publication: Astronomy & Astrophysics
+    - Departamento de Astronomía, Universidad de Chile, Santiago, Chile; Data Observatory Foundation, Eliodoro Yáñez 2990,
+      Providencia, Santiago, Chile;
+    - University of Santiago of Chile (USACH), Faculty of Engineering, Computer Engineering Department, Santiago, Chile; Data
+      Observatory Foundation, Eliodoro Yáñez 2990, Providencia, Santiago, Chile;
+    - Departamento de Astronomía, Universidad de Chile, Santiago, Chile;
+    - School of Physics and Astronomy, Sun Yat-sen University, Guangdong, 519082, People's Republic of China;
+    - Fakultät für Physik, Universität Duisburg-Essen, Lotharstraße 1, 47057, Duisburg, Germany; Max-Planck-Institut für Astronomie,
+      Königstuhl 17, 69117, Heidelberg, Germany;
+    - Charles University, Faculty of Math and Physics, Astronomical Institute, V Holešovičkách 747/2, 180 00, Prague 8, Czech
+      Republic;
+    - Department of Physics, National Sun Yat-Sen University, No. 70, Lien-Hai Road, Kaohsiung City, 80424, Taiwan;
+    - University Observatory, Faculty of Physics, Ludwig-Maximilians-Universität München, Scheinerstr. 1, 81679, Munich, Germany;
+    title: Hourly radio variability of PDS 70c from time-differential photometry
+    publication: Astronomy and Astrophysics
     year: 2026
-    date_label: 06. 2026
+    date_label: '2026'
     volume: '710'
     issue: ''
     pages: L10
@@ -174,7 +178,7 @@ coauthored:
     author_position: 2
     publication_type: journal
     is_open_access: true
-    bibcode: 2026arXiv260424991C
+    bibcode: 2026A&A...710L..10C
     author_group: coauthored
     publication_bucket: journal
   - authors: Casassus, S., Vidal, M., Cárcamo, M., Verstraete, L., Ysard, N., Habart, E.
@@ -256,7 +260,7 @@ coauthored:
     pages: A18
     doi: 10.1051/0004-6361/202554485
     url: https://doi.org/10.1051/0004-6361/202554485
-    citation_count: 7
+    citation_count: 8
     author_position: 5
     publication_type: journal
     is_open_access: true
@@ -497,7 +501,7 @@ coauthored:
     pages: L4
     doi: 10.3847/2041-8213/ac75e8
     url: https://doi.org/10.3847/2041-8213/ac75e8
-    citation_count: 24
+    citation_count: 25
     author_position: 2
     publication_type: journal
     is_open_access: true
@@ -652,7 +656,7 @@ coauthored:
     pages: '3789'
     doi: 10.1093/mnras/stab2359
     url: https://doi.org/10.1093/mnras/stab2359
-    citation_count: 49
+    citation_count: 51
     author_position: 3
     publication_type: journal
     is_open_access: true

@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-06-08T13:16:29Z",
+  "generated_at_utc": "2026-06-15T15:24:53Z",
   "source": "NASA ADS API",
   "volume": {
     "total_publications": 21,
@@ -7,7 +7,7 @@
     "conference_publications": 4,
     "first_author_publications": 4,
     "lead_author_publications": 7,
-    "unique_coauthors": 109,
+    "unique_coauthors": 107,
     "first_author_share_percent": 19.05,
     "lead_author_share_percent": 33.33,
     "coauthored_share_percent": 80.95,
@@ -15,26 +15,26 @@
     "open_access_share_percent": 80.95
   },
   "citations": {
-    "total_citations": 400,
-    "average_citations_per_paper": 19.05,
+    "total_citations": 404,
+    "average_citations_per_paper": 19.24,
     "median_citations_per_paper": 9.0,
     "h_index": 10,
     "h_index_h_paper_citations": 13,
     "h_index_next_paper_citations": 9,
     "citations_sorted_desc": [
       93,
-      49,
+      51,
       49,
       37,
       36,
       34,
-      24,
+      25,
       17,
       15,
       13,
       9,
       9,
-      7,
+      8,
       4,
       4,
       0,
@@ -54,9 +54,9 @@
     "window_start_year": 2022,
     "window_end_year": 2026,
     "papers_in_window": 13,
-    "citations_in_window": 122,
+    "citations_in_window": 124,
     "effective_paper_age_years": 36,
-    "citations_per_effective_year": 3.3889
+    "citations_per_effective_year": 3.4444
   },
   "yearly": {
     "years": [
@@ -91,11 +91,11 @@
       127,
       36,
       13,
-      53,
-      76,
+      55,
+      77,
       39,
       0,
-      7,
+      8,
       0
     ],
     "cumulative_citations": [
@@ -104,12 +104,12 @@
       176,
       212,
       225,
-      278,
-      354,
-      393,
-      393,
-      400,
-      400
+      280,
+      357,
+      396,
+      396,
+      404,
+      404
     ]
   },
   "histogram": {
@@ -117,8 +117,8 @@
     "1-4": 2,
     "5-9": 3,
     "10-19": 3,
-    "20-49": 6,
-    "50+": 1
+    "20-49": 5,
+    "50+": 2
   },
   "author_position_distribution": {
     "1": 4,
@@ -131,11 +131,11 @@
     "unknown": 0
   },
   "collaboration": {
-    "unique_collaborators": 109,
+    "unique_collaborators": 107,
     "total_collaboration_links": 178,
     "avg_coauthors_per_paper": 8.48,
-    "repeat_collaborators": 28,
-    "repeat_collaborator_share_percent": 25.69,
+    "repeat_collaborators": 29,
+    "repeat_collaborator_share_percent": 27.1,
     "top_collaborators": [
       {
         "name": "Casassus, Simon",
@@ -154,11 +154,11 @@
         "papers_together": 6
       },
       {
-        "name": "Hales, Antonio",
+        "name": "Zurlo, Alice",
         "papers_together": 5
       },
       {
-        "name": "Zurlo, Alice",
+        "name": "Hales, Antonio",
         "papers_together": 5
       },
       {
@@ -174,15 +174,15 @@
         "papers_together": 4
       },
       {
+        "name": "Ercolano, Barbara",
+        "papers_together": 3
+      },
+      {
         "name": "Rannou, Fernando R.",
         "papers_together": 3
       },
       {
         "name": "Aoyama, Yuhiko",
-        "papers_together": 2
-      },
-      {
-        "name": "Dominguez-Jamett, Oriana",
         "papers_together": 2
       }
     ],
@@ -211,7 +211,7 @@
         17,
         1,
         6,
-        7
+        5
       ],
       "returning_collaborators": [
         0,
@@ -224,15 +224,15 @@
         14,
         2,
         3,
-        5
+        7
       ]
     }
   },
   "country_collaboration": {
     "inference_note": "Country is inferred from affiliation text, not author nationality.",
-    "papers_with_country_signal": 20,
-    "international_collaboration_papers": 16,
-    "international_collaboration_share_percent": 80.0,
+    "papers_with_country_signal": 21,
+    "international_collaboration_papers": 17,
+    "international_collaboration_share_percent": 80.95,
     "yearly_international_share": {
       "years": [
         2015,
@@ -264,173 +264,173 @@
     "countries": [
       {
         "country": "Chile",
-        "papers": 19,
-        "share_percent": 95.0
+        "papers": 20,
+        "share_percent": 95.24
       },
       {
         "country": "United Kingdom",
         "papers": 12,
-        "share_percent": 60.0
+        "share_percent": 57.14
       },
       {
         "country": "United States",
         "papers": 8,
-        "share_percent": 40.0
+        "share_percent": 38.1
       },
       {
         "country": "Germany",
-        "papers": 6,
-        "share_percent": 30.0
+        "papers": 7,
+        "share_percent": 33.33
       },
       {
         "country": "France",
         "papers": 5,
-        "share_percent": 25.0
+        "share_percent": 23.81
       },
       {
         "country": "Canada",
         "papers": 5,
-        "share_percent": 25.0
+        "share_percent": 23.81
       },
       {
         "country": "Switzerland",
         "papers": 4,
-        "share_percent": 20.0
+        "share_percent": 19.05
+      },
+      {
+        "country": "China",
+        "papers": 2,
+        "share_percent": 9.52
       },
       {
         "country": "Italy",
         "papers": 2,
-        "share_percent": 10.0
+        "share_percent": 9.52
       },
       {
         "country": "Belgium",
         "papers": 2,
-        "share_percent": 10.0
+        "share_percent": 9.52
       },
       {
         "country": "Spain",
         "papers": 2,
-        "share_percent": 10.0
-      },
-      {
-        "country": "China",
-        "papers": 1,
-        "share_percent": 5.0
+        "share_percent": 9.52
       },
       {
         "country": "Japan",
         "papers": 1,
-        "share_percent": 5.0
+        "share_percent": 4.76
       },
       {
         "country": "Australia",
         "papers": 1,
-        "share_percent": 5.0
+        "share_percent": 4.76
       },
       {
         "country": "Netherlands",
         "papers": 1,
-        "share_percent": 5.0
+        "share_percent": 4.76
       },
       {
         "country": "Mexico",
         "papers": 1,
-        "share_percent": 5.0
+        "share_percent": 4.76
       },
       {
         "country": "Argentina",
         "papers": 1,
-        "share_percent": 5.0
+        "share_percent": 4.76
       }
     ],
     "top_countries": [
       {
         "country": "Chile",
-        "papers": 19,
-        "share_percent": 95.0
+        "papers": 20,
+        "share_percent": 95.24
       },
       {
         "country": "United Kingdom",
         "papers": 12,
-        "share_percent": 60.0
+        "share_percent": 57.14
       },
       {
         "country": "United States",
         "papers": 8,
-        "share_percent": 40.0
+        "share_percent": 38.1
       },
       {
         "country": "Germany",
-        "papers": 6,
-        "share_percent": 30.0
+        "papers": 7,
+        "share_percent": 33.33
       },
       {
         "country": "France",
         "papers": 5,
-        "share_percent": 25.0
+        "share_percent": 23.81
       },
       {
         "country": "Canada",
         "papers": 5,
-        "share_percent": 25.0
+        "share_percent": 23.81
       },
       {
         "country": "Switzerland",
         "papers": 4,
-        "share_percent": 20.0
+        "share_percent": 19.05
+      },
+      {
+        "country": "China",
+        "papers": 2,
+        "share_percent": 9.52
       },
       {
         "country": "Italy",
         "papers": 2,
-        "share_percent": 10.0
+        "share_percent": 9.52
       },
       {
         "country": "Belgium",
         "papers": 2,
-        "share_percent": 10.0
+        "share_percent": 9.52
       },
       {
         "country": "Spain",
         "papers": 2,
-        "share_percent": 10.0
-      },
-      {
-        "country": "China",
-        "papers": 1,
-        "share_percent": 5.0
+        "share_percent": 9.52
       },
       {
         "country": "Japan",
         "papers": 1,
-        "share_percent": 5.0
+        "share_percent": 4.76
       },
       {
         "country": "Australia",
         "papers": 1,
-        "share_percent": 5.0
+        "share_percent": 4.76
       },
       {
         "country": "Netherlands",
         "papers": 1,
-        "share_percent": 5.0
+        "share_percent": 4.76
       },
       {
         "country": "Mexico",
         "papers": 1,
-        "share_percent": 5.0
+        "share_percent": 4.76
       },
       {
         "country": "Argentina",
         "papers": 1,
-        "share_percent": 5.0
+        "share_percent": 4.76
       }
     ]
   },
   "leadership": {
     "lead_papers": 7,
     "supporting_papers": 14,
-    "lead_citations_per_paper": 14.14,
-    "supporting_citations_per_paper": 21.5,
+    "lead_citations_per_paper": 14.29,
+    "supporting_citations_per_paper": 21.71,
     "leadership_impact_ratio": 0.658
   },
   "momentum": {
@@ -438,14 +438,14 @@
     "window_start_year": 2022,
     "window_end_year": 2026,
     "recent_papers": 13,
-    "recent_citations": 122,
+    "recent_citations": 124,
     "recent_paper_share_percent": 61.9,
-    "recent_citation_share_percent": 30.5,
-    "momentum_score": 46.2
+    "recent_citation_share_percent": 30.69,
+    "momentum_score": 46.3
   },
   "impact_concentration": {
-    "top3_citation_share_percent": 47.75,
-    "top5_citation_share_percent": 66.0
+    "top3_citation_share_percent": 47.77,
+    "top5_citation_share_percent": 65.84
   },
   "top_cited": [
     {
@@ -460,7 +460,7 @@
       "title": "A dusty filament and turbulent CO spirals in HD 135344B - SAO 206462",
       "year": 2021,
       "publication": "Monthly Notices of the Royal Astronomical Society",
-      "citation_count": 49,
+      "citation_count": 51,
       "url": "https://doi.org/10.1093/mnras/stab2359",
       "doi": "10.1093/mnras/stab2359"
     },
@@ -500,7 +500,7 @@
       "title": "The Doppler Flip in HD 100546 as a Disk Eruption: The Elephant in the Room of Kinematic Protoplanet Searches",
       "year": 2022,
       "publication": "The Astrophysical Journal",
-      "citation_count": 24,
+      "citation_count": 25,
       "url": "https://doi.org/10.3847/2041-8213/ac75e8",
       "doi": "10.3847/2041-8213/ac75e8"
     },
@@ -549,22 +549,22 @@
         "title": "A dusty filament and turbulent CO spirals in HD 135344B - SAO 206462",
         "year": 2021,
         "publication": "Monthly Notices of the Royal Astronomical Society",
-        "citations": 49,
+        "citations": 51,
         "author_position": 3,
         "leadership_factor": 0.9,
-        "c_i": 9.8,
-        "s_i": 2.9577,
+        "c_i": 10.2,
+        "s_i": 3.012,
         "url": "https://doi.org/10.1093/mnras/stab2359"
       },
       {
         "title": "The Doppler Flip in HD 100546 as a Disk Eruption: The Elephant in the Room of Kinematic Protoplanet Searches",
         "year": 2022,
         "publication": "The Astrophysical Journal",
-        "citations": 24,
+        "citations": 25,
         "author_position": 2,
         "leadership_factor": 1.0,
-        "c_i": 6.0,
-        "s_i": 2.6458,
+        "c_i": 6.25,
+        "s_i": 2.6926,
         "url": "https://doi.org/10.3847/2041-8213/ac75e8"
       },
       {
@@ -593,17 +593,17 @@
         "title": "Multi-frequency observations of PDS70c: Radio emission mechanisms in the circumplanetary environment",
         "year": 2025,
         "publication": "Astronomy and Astrophysics",
-        "citations": 7,
+        "citations": 8,
         "author_position": 5,
         "leadership_factor": 0.5,
-        "c_i": 7.0,
-        "s_i": 1.4142,
+        "c_i": 8.0,
+        "s_i": 1.5,
         "url": "https://doi.org/10.1051/0004-6361/202554485"
       },
       {
-        "title": "Hourly radio variability of PDS70c from time-differential photometry",
+        "title": "Hourly radio variability of PDS 70c from time-differential photometry",
         "year": 2026,
-        "publication": "Astronomy & Astrophysics",
+        "publication": "Astronomy and Astrophysics",
         "citations": 0,
         "author_position": 2,
         "leadership_factor": 1.0,
@@ -645,8 +645,8 @@
         "url": "https://doi.org/10.1051/0004-6361/202557944"
       }
     ],
-    "p_sum": 17.3859,
-    "np_score": 4.4713
+    "p_sum": 17.5728,
+    "np_score": 4.4806
   },
   "chart_palette": {
     "primary": "#362cb1",
