@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-06-15T15:24:53Z",
+  "generated_at_utc": "2026-06-22T14:50:26Z",
   "source": "NASA ADS API",
   "volume": {
     "total_publications": 21,
@@ -15,8 +15,8 @@
     "open_access_share_percent": 80.95
   },
   "citations": {
-    "total_citations": 404,
-    "average_citations_per_paper": 19.24,
+    "total_citations": 405,
+    "average_citations_per_paper": 19.29,
     "median_citations_per_paper": 9.0,
     "h_index": 10,
     "h_index_h_paper_citations": 13,
@@ -34,7 +34,7 @@
       13,
       9,
       9,
-      8,
+      9,
       4,
       4,
       0,
@@ -54,9 +54,9 @@
     "window_start_year": 2022,
     "window_end_year": 2026,
     "papers_in_window": 13,
-    "citations_in_window": 124,
+    "citations_in_window": 125,
     "effective_paper_age_years": 36,
-    "citations_per_effective_year": 3.4444
+    "citations_per_effective_year": 3.4722
   },
   "yearly": {
     "years": [
@@ -95,7 +95,7 @@
       77,
       39,
       0,
-      8,
+      9,
       0
     ],
     "cumulative_citations": [
@@ -108,8 +108,8 @@
       357,
       396,
       396,
-      404,
-      404
+      405,
+      405
     ]
   },
   "histogram": {
@@ -182,7 +182,7 @@
         "papers_together": 3
       },
       {
-        "name": "Aoyama, Yuhiko",
+        "name": "Domínguez-Jamett, Oriana",
         "papers_together": 2
       }
     ],
@@ -430,22 +430,22 @@
     "lead_papers": 7,
     "supporting_papers": 14,
     "lead_citations_per_paper": 14.29,
-    "supporting_citations_per_paper": 21.71,
-    "leadership_impact_ratio": 0.658
+    "supporting_citations_per_paper": 21.79,
+    "leadership_impact_ratio": 0.656
   },
   "momentum": {
     "window_years": 5,
     "window_start_year": 2022,
     "window_end_year": 2026,
     "recent_papers": 13,
-    "recent_citations": 124,
+    "recent_citations": 125,
     "recent_paper_share_percent": 61.9,
-    "recent_citation_share_percent": 30.69,
-    "momentum_score": 46.3
+    "recent_citation_share_percent": 30.86,
+    "momentum_score": 46.38
   },
   "impact_concentration": {
-    "top3_citation_share_percent": 47.77,
-    "top5_citation_share_percent": 65.84
+    "top3_citation_share_percent": 47.65,
+    "top5_citation_share_percent": 65.68
   },
   "top_cited": [
     {
@@ -579,6 +579,17 @@
         "url": "https://doi.org/10.1093/mnras/stad1981"
       },
       {
+        "title": "Multi-frequency observations of PDS70c: Radio emission mechanisms in the circumplanetary environment",
+        "year": 2025,
+        "publication": "Astronomy and Astrophysics",
+        "citations": 9,
+        "author_position": 5,
+        "leadership_factor": 0.5,
+        "c_i": 9.0,
+        "s_i": 1.5811,
+        "url": "https://doi.org/10.1051/0004-6361/202554485"
+      },
+      {
         "title": "CS-ROMER: a novel compressed sensing framework for Faraday depth reconstruction",
         "year": 2023,
         "publication": "Monthly Notices of the Royal Astronomical Society",
@@ -588,17 +599,6 @@
         "c_i": 1.3333,
         "s_i": 1.5275,
         "url": "https://doi.org/10.1093/mnras/stac3031"
-      },
-      {
-        "title": "Multi-frequency observations of PDS70c: Radio emission mechanisms in the circumplanetary environment",
-        "year": 2025,
-        "publication": "Astronomy and Astrophysics",
-        "citations": 8,
-        "author_position": 5,
-        "leadership_factor": 0.5,
-        "c_i": 8.0,
-        "s_i": 1.5,
-        "url": "https://doi.org/10.1051/0004-6361/202554485"
       },
       {
         "title": "Hourly radio variability of PDS 70c from time-differential photometry",
@@ -645,8 +645,8 @@
         "url": "https://doi.org/10.1051/0004-6361/202557944"
       }
     ],
-    "p_sum": 17.5728,
-    "np_score": 4.4806
+    "p_sum": 17.6539,
+    "np_score": 4.4846
   },
   "chart_palette": {
     "primary": "#362cb1",
