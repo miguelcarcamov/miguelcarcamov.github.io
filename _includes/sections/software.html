@@ -1,0 +1,150 @@
+<section id="software" class="about single_page standalone-software">
+<div class="about_area section_padding">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<div class="section_title">
+<h2 data-i18n="software.title">RESEARCH SOFTWARE</h2>
+<p class="sub_title" data-i18n="software.subtitle">Open source tools for radio astronomy and scientific computing</p>
+</div>
+</div>
+</div>
+
+{% assign sw = site.data.software %}
+
+<div class="row">
+<div class="col-md-12">
+<h3 class="software-tier-heading" data-i18n="software.featured_heading">Featured projects</h3>
+</div>
+</div>
+
+<div class="row software-featured-grid">
+{% for tool in sw.featured %}
+<div class="col-md-12">
+<article class="software-card software-card--featured" id="software-{{ tool.id }}">
+<header class="software-card-header">
+<div class="software-card-title-row">
+<h4 class="software-card-name">
+<a href="{{ tool.repo }}" target="_blank" rel="noopener noreferrer">{{ tool.name }}</a>
+{% if tool.platform == 'gitlab' %}
+<span class="fa fa-gitlab software-card-platform" aria-hidden="true"></span><span class="sr-only">GitLab</span>
+{% else %}
+<span class="fa fa-github software-card-platform" aria-hidden="true"></span><span class="sr-only">GitHub</span>
+{% endif %}
+</h4>
+<span class="software-status software-status--{{ tool.status }}" data-i18n="software.status_{{ tool.status }}">{{ sw.status_labels[tool.status] }}</span>
+</div>
+<p class="software-card-tagline">{{ tool.tagline }}</p>
+</header>
+
+<p class="software-card-description">{{ tool.description }}</p>
+
+{% if tool.areas %}
+<div class="software-card-meta">
+<span class="software-meta-label" data-i18n="software.areas_label">Research areas</span>
+<ul class="software-area-tags">
+{% for area in tool.areas %}
+<li><span data-i18n="software.area_{{ area | replace: '-', '_' }}">{{ sw.area_labels[area] }}</span></li>
+{% endfor %}
+</ul>
+</div>
+{% endif %}
+
+<div class="software-card-actions">
+<a href="{{ tool.repo }}" class="btn software-repo-btn" target="_blank" rel="noopener noreferrer">
+<span data-i18n="software.repository">Repository</span> →
+</a>
+</div>
+
+{% if tool.paper_bibcodes %}
+<div class="software-related-papers">
+<h5 data-i18n="software.related_papers">Related publications</h5>
+<ul class="software-paper-list">
+{% assign lookup = site.data.publication_lookup %}
+{% for bibcode in tool.paper_bibcodes %}
+{% assign paper = lookup[bibcode] %}
+{% if paper %}
+<li>
+<span class="research-paper-meta">{{ paper.year }} · {{ paper.publication_bucket | capitalize }}</span>
+<a class="selected-contrib-link" href="{{ '/publications/' | relative_url }}#pub-{{ paper.bibcode }}">{{ paper.title }}</a>
+</li>
+{% endif %}
+{% endfor %}
+</ul>
+</div>
+{% endif %}
+
+{% if tool.citation %}
+<div class="software-cite-block">
+<h5 data-i18n="software.cite_heading">Cite this software</h5>
+{% assign cite_key = tool.id | replace: '-', '' %}
+<pre class="software-bibtex" id="bibtex-{{ tool.id }}">@software{ {{ cite_key }}{{ tool.citation.year }},
+  author = {Cárcamo, Miguel},
+  title = {{ tool.citation.title | jsonify }},
+  year = {{ tool.citation.year }},
+  url = {{ tool.citation.url | jsonify }},
+  publisher = {{ tool.citation.publisher | jsonify }}
+}</pre>
+<button type="button" class="btn software-copy-bibtex" data-bibtex-target="bibtex-{{ tool.id }}" data-i18n="software.copy_bibtex">Copy BibTeX</button>
+</div>
+{% endif %}
+
+{% assign releases = site.data.software_releases.projects[tool.id] %}
+{% if releases and releases.size > 0 %}
+<div class="software-releases-block">
+<h5 data-i18n="software.releases_heading">Recent releases</h5>
+<ul class="software-release-list">
+{% for release in releases limit:3 %}
+<li>
+<a href="{{ release.url }}" target="_blank" rel="noopener noreferrer" class="software-release-link">{{ release.name | default: release.tag }}</a>
+{% if release.published_at %}<span class="software-release-date">{{ release.published_at | slice: 0, 10 }}</span>{% endif %}
+</li>
+{% endfor %}
+</ul>
+</div>
+{% endif %}
+</article>
+</div>
+{% endfor %}
+</div>
+
+{% if sw.secondary %}
+<div class="row" style="margin-top: 40px;">
+<div class="col-md-12">
+<h3 class="software-tier-heading" data-i18n="software.secondary_heading">Additional tools</h3>
+</div>
+</div>
+
+<div class="row software-secondary-grid">
+{% for tool in sw.secondary %}
+<div class="col-md-6 col-sm-12">
+<article class="software-card software-card--secondary" id="software-{{ tool.id }}">
+<h4 class="software-card-name">
+<a href="{{ tool.repo }}" target="_blank" rel="noopener noreferrer">{{ tool.name }}</a>
+{% if tool.platform == 'gitlab' %}
+<span class="fa fa-gitlab software-card-platform" aria-hidden="true"></span>
+{% else %}
+<span class="fa fa-github software-card-platform" aria-hidden="true"></span>
+{% endif %}
+</h4>
+<p class="software-card-tagline">{{ tool.tagline }}</p>
+<p class="software-card-description">{{ tool.description }}</p>
+<a href="{{ tool.repo }}" class="software-inline-link" target="_blank" rel="noopener noreferrer">
+<span data-i18n="software.repository">Repository</span> →
+</a>
+</article>
+</div>
+{% endfor %}
+</div>
+{% endif %}
+
+<div class="row" style="padding-top: 28px;">
+<div class="col-md-12 about_btn">
+<a href="{{ '/resume/' | relative_url }}" class="btn" data-i18n="software.see_resume">See full CV</a>
+<a href="{{ '/publications/' | relative_url }}" class="btn" data-i18n="nav.publications">publications</a>
+</div>
+</div>
+
+</div>
+</div>
+</section>

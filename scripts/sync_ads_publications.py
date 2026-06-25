@@ -16,6 +16,11 @@ from typing import Any
 import requests
 import yaml
 
+from author_names import (
+    apply_canonical_author_names,
+    canonical_author_key,
+    remember_display_name,
+)
 from fondecyt_scoring import compute_aya_np_from_entries
 
 
@@ -749,16 +754,15 @@ def _collaboration_metrics(entries: list[dict[str, Any]]) -> dict[str, Any]:
             author_str = str(author_name).strip()
             if not author_str or _is_target_author_name(author_str):
                 continue
-            normalized = _normalize_text(author_str)
-            if not normalized:
+            key = canonical_author_key(author_str)
+            if not key:
                 continue
-            coauthors_this_paper.add(normalized)
-            if normalized not in collaborator_display_name:
-                collaborator_display_name[normalized] = author_str
+            coauthors_this_paper.add(key)
+            remember_display_name(collaborator_display_name, key, author_str)
 
         total_links += len(coauthors_this_paper)
-        for normalized in coauthors_this_paper:
-            collaborator_counts[normalized] = collaborator_counts.get(normalized, 0) + 1
+        for key in coauthors_this_paper:
+            collaborator_counts[key] = collaborator_counts.get(key, 0) + 1
 
         if year > 0:
             bucket = yearly_pairs.setdefault(year, set())
@@ -916,14 +920,14 @@ def build_publication_stats(entries: list[dict[str, Any]], generated_at_utc: str
     career_years = max(1, current_year - first_year + 1)
     m_index = round(h_index / career_years, 4)
 
-    coauthors = set()
+    coauthors: set[str] = set()
     for entry in entries:
         for author_name in entry.get("authors_list", []):
             if _is_target_author_name(str(author_name)):
                 continue
-            normalized = _normalize_text(str(author_name))
-            if normalized:
-                coauthors.add(normalized)
+            key = canonical_author_key(str(author_name))
+            if key:
+                coauthors.add(key)
 
     journal_count = len([entry for entry in entries if entry.get("publication_type") == "journal"])
     conference_count = len([entry for entry in entries if entry.get("publication_type") == "conference"])
@@ -1054,6 +1058,7 @@ def main() -> int:
         orcid=args.orcid,
         crossref_lookup=crossref_lookup,
     )
+    apply_canonical_author_names(selected_entries)
     _log_stats(docs, grouped)
     if crossref_enriched_count:
         print(f"Crossref upgraded {crossref_enriched_count} arXiv-only record(s) to journal DOIs.")

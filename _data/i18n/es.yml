@@ -1,0 +1,189 @@
+lang_toggle: English
+search:
+  open: Abrir búsqueda del sitio
+  placeholder: Buscar publicaciones, software, cursos…
+  no_results: No se encontraron resultados.
+  section_publications: Publicaciones
+  section_software: Software
+  section_courses: Cursos
+  section_join: Únete
+  section_writing: Escritos
+nav:
+  home: Inicio
+  about: sobre mí
+  resume: currículum
+  software: software
+  research: investigación
+  publications: publicaciones
+  stats: estadísticas
+  teaching: docencia
+  collaborators: colaboradores
+  students: estudiantes
+  join: únete
+  service: servicio
+  blog: blog
+  writing: escritos
+  contact: contacto
+software:
+  title: SOFTWARE DE INVESTIGACIÓN
+  subtitle: Herramientas de código abierto para radioastronomía y computación científica
+  featured_heading: Proyectos destacados
+  secondary_heading: Herramientas adicionales
+  status_label: Estado
+  areas_label: Áreas de investigación
+  repository: Repositorio
+  related_papers: Publicaciones relacionadas
+  cite_heading: Citar este software
+  copy_bibtex: Copiar BibTeX
+  copied: ¡Copiado!
+  view_all: Ver todo el software
+  see_resume: Ver CV completo
+  area_imaging: Imagen interferométrica en radio
+  area_hpc: Computación de alto rendimiento
+  area_compressed_sensing: Detección comprimida
+  area_magnetism: Magnetismo cósmico
+  status_active: Desarrollo activo
+  status_maintained: Mantenido
+  status_archived: Archivado
+  releases_heading: Lanzamientos recientes
+resume:
+  projects_teaser: >-
+    Pyralysis, CS-ROMER y GPUVMEM son los principales proyectos de código abierto de mi grupo.
+    Herramientas adicionales están en la página de software.
+  view_software: ver todo el software →
+publications:
+  title: PUBLICACIONES
+  subtitle: Artículos de investigación y actas de congresos (sincronizados desde NASA ADS)
+  search_label: Buscar publicaciones
+  search_placeholder: Buscar título, autores, revista, DOI…
+  filter_year: Año
+  filter_role: Rol
+  filter_type: Tipo
+  filter_sort: Orden
+  filter_all: Todos
+  filter_first_author: Primer autor
+  filter_lead_author: Autor principal (1–2)
+  filter_coauthored: Coautoría
+  filter_journal: Artículo
+  filter_conference: Conferencia
+  filter_open_access: Solo acceso abierto
+  sort_year_desc: Más recientes
+  sort_year_asc: Más antiguos
+  sort_citations: Más citados
+  no_results: Ninguna publicación coincide con los filtros.
+  count: Mostrando {shown} de {total} publicaciones
+  sync_label: "Última sincronización desde NASA ADS:"
+  badge_first_author: Primer autor
+  badge_lead_author: Autor principal
+  badge_coauthored: Coautoría
+  badge_journal: Artículo
+  badge_conference: Conferencia
+  badge_open_access: Acceso abierto
+  badge_has_assets: Código / datos
+  citations_label: Citas
+  linked_software: Software
+  repro_heading: Reproducibilidad
+  repro_default: Hay software y datos vinculados disponibles para este trabajo.
+  copy_citation: Copiar cita
+  copy_bibtex: Copiar BibTeX
+  copied: ¡Copiado!
+join:
+  title: ÚNETE AL GRUPO
+  subtitle: Oportunidades de investigación para estudiantes en la USACH
+  grants_heading: Proyectos financiados con cupos para estudiantes
+  positions_heading: Posiciones abiertas
+  projects_heading: Ideas de proyectos ejemplo
+  projects_note: Los temas concretos varían — esto ilustra el tipo de trabajo que hacemos.
+  skills_heading: Qué ayuda
+  skill_required: Esperado
+  skill_optional: Deseable
+  apply_heading: Cómo postular
+  related_software: Software relacionado
+  cta_office_hours: Reservar hora de oficina
+  cta_contact: Contactar
+  cta_email: Escríbeme
+  cta_current_students: Estudiantes actuales
+contact:
+  title: HABLEMOS
+  subtitle: Ponte en contacto conmigo
+  intro: Escríbeme cuando quieras, ya sea por trabajo o simplemente para saludar.
+  office_hours: Reservar hora de oficina
+stats:
+  title: ESTADÍSTICAS DE PUBLICACIONES
+  subtitle: Métricas académicas desde NASA ADS
+  unavailable: Las estadísticas de publicaciones aún no están disponibles. Ejecuta primero la sincronización con NASA ADS.
+  momentum_note: En los últimos 5 años, el trabajo reciente aporta {percent} del impacto total en citas.
+  methodology_title: Metodología (transparencia)
+  methodology_summary: Definiciones y fórmulas de las métricas
+  chart_papers_per_year: Artículos por año
+  chart_citations_combo: Citas anuales y acumuladas
+  chart_citation_distribution: Distribución de citas
+  chart_top_cited: 10 artículos más citados
+  chart_top_collaborators: Principales colaboradores (por artículos compartidos)
+  chart_collab_network: Red de colaboración
+  chart_collab_map: Mapa de colaboración (países inferidos por afiliación)
+  chart_fondecyt: Top 10 contribuyentes FONDECYT NP
+  collab_hint: Principales coautores por artículos compartidos. El tamaño del nodo refleja la frecuencia de colaboración. Pasa el cursor o haz clic para ver detalles — Miguel está en el centro.
+  collab_filters_label: Filtrar red
+  collab_year_from: Desde año
+  collab_year_to: Hasta año
+  collab_first_author_only: Solo artículos como primer autor
+  collab_graph_aria: Gráfico de red de colaboración
+  collab_self_hint: Miguel Cárcamo · nodo central
+  collab_shared_paper_one: "{count} artículo compartido"
+  collab_shared_paper_many: "{count} artículos compartidos"
+  collab_joint_heading: Publicaciones conjuntas
+  map_note: El país se infiere del texto de afiliación en los metadatos de ADS, no de la nacionalidad del autor.
+  footer_source: "Fuente: NASA ADS. Última actualización:"
+  footer_export: Exportar JSON de estadísticas
+  card_total_papers: Total de artículos
+  card_total_citations: Total de citas
+  card_h_index: índice h
+  card_m_index: índice m
+  card_lead_author: Artículos como autor principal
+  card_first_author: Artículos como primer autor
+  card_fondecyt: FONDECYT NP
+  card_citation_velocity: Velocidad de citas (5 años)
+  card_open_access: Porcentaje de acceso abierto
+  card_leadership_ratio: Ratio de citas en rol principal
+  card_intl_collab: Porcentaje de colaboración internacional
+  card_momentum: Momento reciente (5 años)
+  card_flagship: Participación de impacto estrella
+  chart_label_papers: Artículos
+  chart_label_annual_citations: Citas anuales
+  chart_label_cumulative_citations: Citas acumuladas
+  chart_label_citations: Citas
+  chart_label_shared_papers: Artículos compartidos
+  chart_label_score: puntuación s_i
+  map_no_data: Aún no hay señal de país por afiliación.
+  map_load_error: No se pudo cargar el mapa. Revisa la consola del navegador por detalles de CSP.
+collaborators:
+  title: COLABORADORES Y SOCIOS
+  subtitle: Instituciones de investigación y colaboradores clave
+  key_heading: Colaboradores clave
+  institutions_heading: Instituciones y facilidades colaboradoras
+about:
+  title: SOBRE MÍ
+  subtitle: SOY MIGUEL CÁRCAMO
+teaching:
+  title: DOCENCIA
+  subtitle: Cursos e instrucción académica
+  current_heading: Cursos actuales
+service:
+  title: servicio
+  subtitle: servicio académico y reconocimientos
+students:
+  recruitment_cta: estudiantes interesados →
+  title: SUPERVISIÓN DE ESTUDIANTES
+  subtitle: Estudiantes actuales y anteriores
+  current_heading: Estudiantes actuales
+writing:
+  title: THE FAINT SIGNAL
+  subtitle: Ensayos sobre radioastronomía, computación y todo lo demás
+  subscribe: Suscribirse en Substack
+  subscribe_short: Suscribirse
+  read_archive: Leer en Substack
+  latest_heading: Publicaciones recientes
+  read_on_substack: Leer en Substack →
+  source_substack: Substack
+  empty_feed: Las publicaciones se sincronizan desde Substack al compilar el sitio. Visita el archivo para ver el boletín completo.

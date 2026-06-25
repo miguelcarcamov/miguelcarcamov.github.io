@@ -9,6 +9,11 @@ author:
   name: "Miguel Cárcamo"
   email: "miguel.carcamo@usach.cl"
 
+# External integrations (Phase 4 placeholders)
+substack_url: "https://thefaintsignal.substack.com/"
+substack_feed_url: "https://thefaintsignal.substack.com/feed"
+office_hours_url: ""
+
 # Search Console (set this token after verification)
 google_site_verification: "2QPOvGRD33gpzUngOgVDygqfT-VQDeXQpka0c29d_PI"
 bing_site_verification: ""
@@ -28,6 +33,8 @@ exclude:
   - vendor
   - README.md
   - DEPLOYMENT-CHECK.md
+  - scripts/__pycache__
+  - "**/__pycache__"
 
 # Collections
 collections:

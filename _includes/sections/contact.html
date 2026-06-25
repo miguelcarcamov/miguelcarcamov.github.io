@@ -7,8 +7,8 @@
 <div class="row">
 <div class="col-md-12">
 <div class="section_title">
-<h2>LET'S TALK</h2>
-<p class="sub_title">Get in touch with me</p>
+<h2 data-i18n="contact.title">LET'S TALK</h2>
+<p class="sub_title" data-i18n="contact.subtitle">Get in touch with me</p>
 </div>
 </div>
 </div><!-- end .row -->
@@ -16,7 +16,12 @@
 <div class="row">
 <div class="col-md-12">
 <div class="contact_txt">
-<p>Please Feel free to get in Touch Anytime, whether for Work Inquiries or to just say Hello!</p>
+<p data-i18n="contact.intro">Please feel free to get in touch anytime, whether for work inquiries or to just say hello.</p>
+{% if site.office_hours_url != "" %}
+<div class="contact-office-hours about_btn" style="padding-top: 12px;">
+<a href="{{ site.office_hours_url }}" class="btn" target="_blank" rel="noopener noreferrer" data-i18n="contact.office_hours">Book office hours</a>
+</div>
+{% endif %}
 </div>
 </div>
 <div class="col-md-7 col-sm-6 col-lg-6">

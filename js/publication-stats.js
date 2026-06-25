@@ -1,6 +1,23 @@
 (function () {
   "use strict";
 
+  function t(key, fallback) {
+    if (window.SiteI18n && typeof window.SiteI18n.t === "function") {
+      var value = window.SiteI18n.t(key);
+      if (value) return value;
+    }
+    return fallback || key;
+  }
+
+  function updateMomentumNote() {
+    var node = document.getElementById("stats-momentum-note");
+    if (!node) return;
+    var pct = node.getAttribute("data-percent") || "N/A";
+    var display = pct === "N/A" ? pct : pct + "%";
+    var template = t("stats.momentum_note", "In the last 5 years, recent work contributes {percent} of total citation impact.");
+    node.textContent = template.replace("{percent}", display);
+  }
+
   function toLocalDateString(iso) {
     var dt = new Date(iso);
     if (isNaN(dt.getTime())) return iso;
@@ -134,7 +151,7 @@
       if (!mapNode) return;
       var countryRows = (((stats.country_collaboration || {}).top_countries) || []);
       if (!countryRows.length) {
-        mapNode.textContent = "No affiliation-country signal available yet.";
+        mapNode.textContent = t("stats.map_no_data", "No affiliation-country signal available yet.");
         if (colorbarMinNode) colorbarMinNode.textContent = "0%";
         if (colorbarMaxNode) colorbarMaxNode.textContent = "0%";
         return;
@@ -163,7 +180,7 @@
         });
       }).catch(function (err) {
         // Keep a visible hint in the UI so CSP/network issues are easy to diagnose.
-        mapNode.textContent = "Could not load map renderer. Check browser console for CSP details.";
+        mapNode.textContent = t("stats.map_load_error", "Could not load map renderer. Check browser console for CSP details.");
         if (window.console && typeof window.console.error === "function") {
           window.console.error("GeoChart load failed:", err);
         }
@@ -181,7 +198,7 @@
           data: {
             labels: stats.yearly.years,
             datasets: [{
-              label: "Papers",
+              label: t("stats.chart_label_papers", "Papers"),
               data: stats.yearly.papers_per_year,
               backgroundColor: colors.primary
             }]
@@ -206,14 +223,14 @@
             datasets: [
               {
                 type: "bar",
-                label: "Annual citations",
+                label: t("stats.chart_label_annual_citations", "Annual citations"),
                 data: stats.yearly.citations_per_year,
                 backgroundColor: colors.secondary,
                 yAxisID: "y"
               },
               {
                 type: "line",
-                label: "Cumulative citations",
+                label: t("stats.chart_label_cumulative_citations", "Cumulative citations"),
                 data: stats.yearly.cumulative_citations,
                 borderColor: colors.accent,
                 backgroundColor: colors.accent,
@@ -250,7 +267,7 @@
           data: {
             labels: Object.keys(stats.histogram),
             datasets: [{
-              label: "Papers",
+              label: t("stats.chart_label_papers", "Papers"),
               data: Object.values(stats.histogram),
               backgroundColor: colors.primary
             }]
@@ -276,7 +293,7 @@
           return truncateLabel(((item.year || "") + " - " + item.title), maxChars);
             }),
             datasets: [{
-              label: "Citations",
+              label: t("stats.chart_label_citations", "Citations"),
               data: (stats.top_cited || []).map(function (item) { return item.citation_count || 0; }),
               backgroundColor: colors.secondary
             }]
@@ -310,7 +327,7 @@
                     return item.title || "";
                   },
                   label: function (context) {
-                    return "Citations: " + context.parsed.x;
+                    return t("stats.chart_label_citations", "Citations") + ": " + context.parsed.x;
                   }
                 }
               }
@@ -330,7 +347,7 @@
               return truncateLabel(item.name || "", window.innerWidth < 768 ? 22 : 34);
             }),
             datasets: [{
-              label: "Shared papers",
+              label: t("stats.chart_label_shared_papers", "Shared papers"),
               data: ((stats.collaboration && stats.collaboration.top_collaborators) || []).map(function (item) {
                 return item.papers_together || 0;
               }),
@@ -371,7 +388,7 @@
               return truncateLabel(((item.year || "") + " - " + item.title), maxChars);
             }),
             datasets: [{
-              label: "s_i score",
+              label: t("stats.chart_label_score", "s_i score"),
               data: ((stats.fondecyt && stats.fondecyt.top_contributors) || []).map(function (item) { return item.s_i || 0; }),
               backgroundColor: colors.accent
             }]
@@ -425,7 +442,20 @@
       }
     }
 
+    updateMomentumNote();
+
     initialized = true;
+  }
+
+  function destroyCharts() {
+    charts.forEach(function (chart) {
+      if (chart && typeof chart.destroy === "function") {
+        chart.destroy();
+      }
+    });
+    charts = [];
+    initialized = false;
+    redrawCountryMap = null;
   }
 
   function ensureStatsRendering() {
@@ -434,6 +464,9 @@
       renderStatsCharts();
     } else {
       resizeCharts();
+    }
+    if (typeof window.renderCollaborationNetwork === "function") {
+      window.renderCollaborationNetwork();
     }
   }
 
@@ -450,4 +483,14 @@
 
   // Initial attempt for direct links (#publication-stats).
   setTimeout(ensureStatsRendering, 180);
+
+  document.addEventListener("site:langchange", function () {
+    updateMomentumNote();
+    if (!isStatsSectionActive()) return;
+    destroyCharts();
+    renderStatsCharts();
+    if (typeof window.renderCollaborationNetwork === "function") {
+      window.renderCollaborationNetwork();
+    }
+  });
 })();

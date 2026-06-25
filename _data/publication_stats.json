@@ -7,7 +7,7 @@
     "conference_publications": 4,
     "first_author_publications": 4,
     "lead_author_publications": 7,
-    "unique_coauthors": 107,
+    "unique_coauthors": 95,
     "first_author_share_percent": 19.05,
     "lead_author_share_percent": 33.33,
     "coauthored_share_percent": 80.95,
@@ -131,34 +131,38 @@
     "unknown": 0
   },
   "collaboration": {
-    "unique_collaborators": 107,
+    "unique_collaborators": 95,
     "total_collaboration_links": 178,
     "avg_coauthors_per_paper": 8.48,
-    "repeat_collaborators": 29,
-    "repeat_collaborator_share_percent": 27.1,
+    "repeat_collaborators": 32,
+    "repeat_collaborator_share_percent": 33.68,
     "top_collaborators": [
       {
         "name": "Casassus, Simon",
-        "papers_together": 13
+        "papers_together": 15
       },
       {
-        "name": "Perez, Sebastian",
+        "name": "Pérez, Sebastián",
         "papers_together": 9
+      },
+      {
+        "name": "Cieza, Lucas A.",
+        "papers_together": 8
       },
       {
         "name": "Weber, Philipp",
         "papers_together": 7
       },
       {
-        "name": "Cieza, Lucas",
-        "papers_together": 6
-      },
-      {
-        "name": "Zurlo, Alice",
+        "name": "Rannou, Fernando R.",
         "papers_together": 5
       },
       {
         "name": "Hales, Antonio",
+        "papers_together": 5
+      },
+      {
+        "name": "Zurlo, Alice",
         "papers_together": 5
       },
       {
@@ -178,12 +182,8 @@
         "papers_together": 3
       },
       {
-        "name": "Rannou, Fernando R.",
+        "name": "Vidal, Matias",
         "papers_together": 3
-      },
-      {
-        "name": "Domínguez-Jamett, Oriana",
-        "papers_together": 2
       }
     ],
     "yearly_new_vs_returning": {
@@ -203,28 +203,28 @@
       "new_collaborators": [
         4,
         22,
-        10,
+        5,
         8,
         9,
         15,
-        10,
-        17,
+        9,
+        13,
         1,
         6,
-        5
+        3
       ],
       "returning_collaborators": [
         0,
         1,
-        7,
+        9,
         7,
         2,
         7,
-        8,
-        14,
+        9,
+        17,
         2,
         3,
-        7
+        8
       ]
     }
   },

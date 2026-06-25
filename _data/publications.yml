@@ -44,13 +44,13 @@ first_author:
     bibcode: 2023MNRAS.518.1955C
     author_group: first_author
     publication_bucket: journal
-  - authors: Cárcamo, M., Román, P. E., Casassus, S., Moral, V., Rannou, F. R.
+  - authors: Cárcamo, Miguel, Roman, Pablo E., Casassus, Simon, Moral, Victor, Rannou, Fernando R.
     authors_list:
-    - Cárcamo, M.
-    - Román, P. E.
-    - Casassus, S.
-    - Moral, V.
-    - Rannou, F. R.
+    - Cárcamo, Miguel
+    - Roman, Pablo E.
+    - Casassus, Simon
+    - Moral, Victor
+    - Rannou, Fernando R.
     affiliations_list:
     - Departamento de Ingeniería Informática, Universidad de Santiago de Chile, Av. Ecuador 3659, Santiago, Chile
     - Departamento de Ingeniería Informática, Universidad de Santiago de Chile, Av. Ecuador 3659, Santiago, Chile
@@ -74,11 +74,11 @@ first_author:
     author_group: first_author
     publication_bucket: journal
   conference:
-  - authors: Carcamo, Miguel, Scaife, Anna, Taylor, Russ, Jarvis, Matt, Bowles, Micah, Sekhar, Srikrishna, Heino, Lennart,
+  - authors: Cárcamo, Miguel, Scaife, Anna M. M., Taylor, Russ, Jarvis, Matt, Bowles, Micah, Sekhar, Srikrishna, Heino, Lennart,
       Stil, Jeroen
     authors_list:
-    - Carcamo, Miguel
-    - Scaife, Anna
+    - Cárcamo, Miguel
+    - Scaife, Anna M. M.
     - Taylor, Russ
     - Jarvis, Matt
     - Bowles, Micah
@@ -110,9 +110,9 @@ first_author:
     bibcode: 2022atap.conf..202C
     author_group: first_author
     publication_bucket: conference
-  - authors: Carcamo, Miguel, Rannou, Fernando R., Roman, Pablo E., Moral, Victor, Casassus, Simon
+  - authors: Cárcamo, Miguel, Rannou, Fernando R., Roman, Pablo E., Moral, Victor, Casassus, Simon
     authors_list:
-    - Carcamo, Miguel
+    - Cárcamo, Miguel
     - Rannou, Fernando R.
     - Roman, Pablo E.
     - Moral, Victor
@@ -142,14 +142,14 @@ first_author:
 coauthored:
   journal:
   - authors: Casassus, Simon, Cárcamo, Miguel, Domínguez-Jamett, Oriana, Aoyama, Yuhiko, Marleau, Gabriel-Dominique, Chrenko,
-      Ondřej, Baobab Liu, Hauyu, Ercolano, Barbara
+      Onďrej, Baobab Liu, Hauyu, Ercolano, Barbara
     authors_list:
     - Casassus, Simon
     - Cárcamo, Miguel
     - Domínguez-Jamett, Oriana
     - Aoyama, Yuhiko
     - Marleau, Gabriel-Dominique
-    - Chrenko, Ondřej
+    - Chrenko, Onďrej
     - Baobab Liu, Hauyu
     - Ercolano, Barbara
     affiliations_list:
@@ -181,11 +181,11 @@ coauthored:
     bibcode: 2026A&A...710L..10C
     author_group: coauthored
     publication_bucket: journal
-  - authors: Casassus, S., Vidal, M., Cárcamo, M., Verstraete, L., Ysard, N., Habart, E.
+  - authors: Casassus, Simon, Vidal, Matias, Cárcamo, Miguel, Verstraete, L., Ysard, N., Habart, E.
     authors_list:
-    - Casassus, S.
-    - Vidal, M.
-    - Cárcamo, M.
+    - Casassus, Simon
+    - Vidal, Matias
+    - Cárcamo, Miguel
     - Verstraete, L.
     - Ysard, N.
     - Habart, E.
@@ -267,15 +267,16 @@ coauthored:
     bibcode: 2025A&A...702A..18D
     author_group: coauthored
     publication_bucket: journal
-  - authors: Weber, Philipp, Pérez, Sebastián, Zurlo, Alice, Miley, James, Hales, Antonio, Cieza, Lucas, Principe, David,
+  - authors: Weber, Philipp, Pérez, Sebastián, Zurlo, Alice, Miley, James, Hales, Antonio, Cieza, Lucas A., Principe, David,
       Cárcamo, Miguel, Garufi, Antonio, Kóspál, Ágnes, Takami, Michihiro, Kastner, Joel, Zhu, Zhaohuan, Williams, Jonathan
+      P.
     authors_list:
     - Weber, Philipp
     - Pérez, Sebastián
     - Zurlo, Alice
     - Miley, James
     - Hales, Antonio
-    - Cieza, Lucas
+    - Cieza, Lucas A.
     - Principe, David
     - Cárcamo, Miguel
     - Garufi, Antonio
@@ -283,7 +284,7 @@ coauthored:
     - Takami, Michihiro
     - Kastner, Joel
     - Zhu, Zhaohuan
-    - Williams, Jonathan
+    - Williams, Jonathan P.
     affiliations_list:
     - Departamento de Física, Universidad de Santiago de Chile, Av. Victor Jara 3659, Santiago, Chile; Millennium Nucleus
       on Young Exoplanets and their Moons (YEMS), Chile; Center for Interdisciplinary Research in Astrophysics and Space Exploration
@@ -386,11 +387,11 @@ coauthored:
     bibcode: 2023MNRAS.526.2077A
     author_group: coauthored
     publication_bucket: journal
-  - authors: Casassus, Simon, Cieza, Lucas, Cárcamo, Miguel, Ribas, Álvaro, Christiaens, Valentin, Rodríguez-Jiménez, Abigali,
+  - authors: Casassus, Simon, Cieza, Lucas A., Cárcamo, Miguel, Ribas, Álvaro, Christiaens, Valentin, Rodríguez-Jiménez, Abigali,
       Arce-Tord, Carla, Bhowmik, Trisha, Chavan, Prachi, González-Ruilova, Camilo, Martínez-Brunner, Rafael
     authors_list:
     - Casassus, Simon
-    - Cieza, Lucas
+    - Cieza, Lucas A.
     - Cárcamo, Miguel
     - Ribas, Álvaro
     - Christiaens, Valentin
@@ -508,19 +509,19 @@ coauthored:
     bibcode: 2022ApJ...933L...4C
     author_group: coauthored
     publication_bucket: journal
-  - authors: Martinez-Brunner, Rafael, Casassus, Simon, Pérez, Sebastián, Hales, Antonio, Weber, Philipp, Cárcamo, Miguel,
-      Arce-Tord, Carla, Cieza, Lucas, Garufi, Antonio, Marino, Sebastián, Zurlo, Alice
+  - authors: Martínez-Brunner, Rafael, Casassus, Simon, Pérez, Sebastián, Hales, Antonio, Weber, Philipp, Cárcamo, Miguel,
+      Arce-Tord, Carla, Cieza, Lucas A., Garufi, Antonio, Marino, Sebastian, Zurlo, Alice
     authors_list:
-    - Martinez-Brunner, Rafael
+    - Martínez-Brunner, Rafael
     - Casassus, Simon
     - Pérez, Sebastián
     - Hales, Antonio
     - Weber, Philipp
     - Cárcamo, Miguel
     - Arce-Tord, Carla
-    - Cieza, Lucas
+    - Cieza, Lucas A.
     - Garufi, Antonio
-    - Marino, Sebastián
+    - Marino, Sebastian
     - Zurlo, Alice
     affiliations_list:
     - Departamento de Astronomía, Universidad de Chile, Casilla 36-D, Santiago, Chile
@@ -560,12 +561,12 @@ coauthored:
     bibcode: 2022MNRAS.510.1248M
     author_group: coauthored
     publication_bucket: journal
-  - authors: Ndiritu, S. W., Scaife, A. M. M., Tabb, D. L., Cárcamo, M., Hanson, J.
+  - authors: Ndiritu, S. W., Scaife, Anna M. M., Tabb, D. L., Cárcamo, Miguel, Hanson, J.
     authors_list:
     - Ndiritu, S. W.
-    - Scaife, A. M. M.
+    - Scaife, Anna M. M.
     - Tabb, D. L.
-    - Cárcamo, M.
+    - Cárcamo, Miguel
     - Hanson, J.
     affiliations_list:
     - Max Planck Institute for Astrophysics, Karl-Schwarzschildstraße 1, D-85748 Garching, Germany; Jodrell Bank Centre for
@@ -597,8 +598,9 @@ coauthored:
     author_group: coauthored
     publication_bucket: journal
   - authors: Casassus, Simon, Christiaens, Valentin, Cárcamo, Miguel, Pérez, Sebastián, Weber, Philipp, Ercolano, Barbara,
-      van der Marel, Nienke, Pinte, Christophe, Dong, Ruobing, Baruteau, Clément, Cieza, Lucas, van Dishoeck, Ewine F., Jordan,
-      Andrés, Price, Daniel J., Absil, Olivier, Arce-Tord, Carla, Faramaz, Virginie, Flores, Christian, Reggiani, Maddalena
+      van der Marel, Nienke, Pinte, Christophe, Dong, Ruobing, Baruteau, Clément, Cieza, Lucas A., van Dishoeck, Ewine F.,
+      Jordan, Andrés, Price, Daniel J., Absil, Olivier, Arce-Tord, Carla, Faramaz, Virginie, Flores, Christian, Reggiani,
+      Maddalena
     authors_list:
     - Casassus, Simon
     - Christiaens, Valentin
@@ -610,7 +612,7 @@ coauthored:
     - Pinte, Christophe
     - Dong, Ruobing
     - Baruteau, Clément
-    - Cieza, Lucas
+    - Cieza, Lucas A.
     - van Dishoeck, Ewine F.
     - Jordan, Andrés
     - Price, Daniel J.
@@ -712,15 +714,15 @@ coauthored:
     bibcode: 2020MNRAS.495.3482A
     author_group: coauthored
     publication_bucket: journal
-  - authors: Casassus, Simon, Marino, Sebastián, Lyra, Wladimir, Baruteau, Clément, Vidal, Matías, Wootten, Alwyn, Pérez,
+  - authors: Casassus, Simon, Marino, Sebastian, Lyra, Wladimir, Baruteau, Clément, Vidal, Matias, Wootten, Alwyn, Pérez,
       Sebastián, Alarcon, Felipe, Barraza, Marcelo, Cárcamo, Miguel, Dong, Ruobing, Sierra, Anibal, Zhu, Zhaohuan, Ricci,
-      Luca, Christiaens, Valentin, Cieza, Lucas
+      Luca, Christiaens, Valentin, Cieza, Lucas A.
     authors_list:
     - Casassus, Simon
-    - Marino, Sebastián
+    - Marino, Sebastian
     - Lyra, Wladimir
     - Baruteau, Clément
-    - Vidal, Matías
+    - Vidal, Matias
     - Wootten, Alwyn
     - Pérez, Sebastián
     - Alarcon, Felipe
@@ -731,7 +733,7 @@ coauthored:
     - Zhu, Zhaohuan
     - Ricci, Luca
     - Christiaens, Valentin
-    - Cieza, Lucas
+    - Cieza, Lucas A.
     affiliations_list:
     - Departamento de Astronomía, Universidad de Chile, Casilla 36-D Santiago, Chile; Millennium Nucleus `Protoplanetary Disks',
       Departamento de Astronomía, Universidad de Chile, Casilla 36-D Santiago, Chile
@@ -768,8 +770,8 @@ coauthored:
     bibcode: 2019MNRAS.483.3278C
     author_group: coauthored
     publication_bucket: journal
-  - authors: Casassus, Simon, Avenhaus, Henning, Pérez, Sebastián, Navarro, Víctor, Cárcamo, Miguel, Marino, Sebastián, Cieza,
-      Lucas, Quanz, Sascha P., Alarcón, Felipe, Zurlo, Alice, Osses, Axel, Rannou, Fernando R., Román, Pablo E., Barraza,
+  - authors: Casassus, Simon, Avenhaus, Henning, Pérez, Sebastián, Navarro, Víctor, Cárcamo, Miguel, Marino, Sebastian, Cieza,
+      Lucas A., Quanz, Sascha P., Alarcon, Felipe, Zurlo, Alice, Osses, Axel, Rannou, Fernando R., Roman, Pablo E., Barraza,
       Marcelo
     authors_list:
     - Casassus, Simon
@@ -777,14 +779,14 @@ coauthored:
     - Pérez, Sebastián
     - Navarro, Víctor
     - Cárcamo, Miguel
-    - Marino, Sebastián
-    - Cieza, Lucas
+    - Marino, Sebastian
+    - Cieza, Lucas A.
     - Quanz, Sascha P.
-    - Alarcón, Felipe
+    - Alarcon, Felipe
     - Zurlo, Alice
     - Osses, Axel
     - Rannou, Fernando R.
-    - Román, Pablo E.
+    - Roman, Pablo E.
     - Barraza, Marcelo
     affiliations_list:
     - Departamento de Astronomía, Universidad de Chile, Casilla 36-D, Santiago, Chile; Millennium Nucleus "Protoplanetary
@@ -827,14 +829,14 @@ coauthored:
     bibcode: 2018MNRAS.477.5104C
     author_group: coauthored
     publication_bucket: journal
-  - authors: Cieza, Lucas A., Casassus, Simon, Pérez, Sebastian, Hales, Antonio, Cárcamo, Miguel, Ansdell, Megan, Avenhaus,
-      Henning, Bayo, Amelia, Bertrang, Gesa H.-M., Cánovas, Hector, Christiaens, Valentin, Dent, William, Ferrero, Gabriel,
+  - authors: Cieza, Lucas A., Casassus, Simon, Pérez, Sebastián, Hales, Antonio, Cárcamo, Miguel, Ansdell, Megan, Avenhaus,
+      Henning, Bayo, Amelia, Bertrang, Gesa H.-M., Cánovas, Hector, Christiaens, Valentin, Dent, William R. F., Ferrero, Gabriel,
       Gamen, Roberto, Olofsson, Johan, Orcajo, Santiago, Osses, Axel, Peña-Ramirez, Karla, Principe, David, Ruíz-Rodríguez,
       Dary, Schreiber, Matthias R., van der Plas, Gerrit, Williams, Jonathan P., Zurlo, Alice
     authors_list:
     - Cieza, Lucas A.
     - Casassus, Simon
-    - Pérez, Sebastian
+    - Pérez, Sebastián
     - Hales, Antonio
     - Cárcamo, Miguel
     - Ansdell, Megan
@@ -843,7 +845,7 @@ coauthored:
     - Bertrang, Gesa H.-M.
     - Cánovas, Hector
     - Christiaens, Valentin
-    - Dent, William
+    - Dent, William R. F.
     - Ferrero, Gabriel
     - Gamen, Roberto
     - Olofsson, Johan
@@ -915,12 +917,12 @@ coauthored:
     author_group: coauthored
     publication_bucket: journal
   conference:
-  - authors: Rannou, Fernando R., Guzman, Damian, Carcamo, Miguel, Perez, Sebastian
+  - authors: Rannou, Fernando R., Guzman, Damian, Cárcamo, Miguel, Pérez, Sebastián
     authors_list:
     - Rannou, Fernando R.
     - Guzman, Damian
-    - Carcamo, Miguel
-    - Perez, Sebastian
+    - Cárcamo, Miguel
+    - Pérez, Sebastián
     affiliations_list:
     - Universidad de Santiago de Chile,Departamento Ingeniería Informática
     - Universidad de Santiago de Chile,Departamento Ingeniería Informática
@@ -942,10 +944,10 @@ coauthored:
     bibcode: 2024atra.conf..151R
     author_group: coauthored
     publication_bucket: conference
-  - authors: Rickmers Blamey, Belén, Rannou, Fernando, Weber, Philipp, Cárcamo, Miguel, Pérez, Sebastián
+  - authors: Rickmers Blamey, Belén, Rannou, Fernando R., Weber, Philipp, Cárcamo, Miguel, Pérez, Sebastián
     authors_list:
     - Rickmers Blamey, Belén
-    - Rannou, Fernando
+    - Rannou, Fernando R.
     - Weber, Philipp
     - Cárcamo, Miguel
     - Pérez, Sebastián

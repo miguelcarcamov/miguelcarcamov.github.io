@@ -33,7 +33,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install Python dependencies
-        run: pip install requests pyyaml
+        run: pip install requests pyyaml feedparser
 
       - name: Sync publications from NASA ADS
         env:
@@ -44,6 +44,18 @@ jobs:
             --orcid "$ADS_ORCID" \
             --author "Carcamo, Miguel" \
             --author "Cárcamo, Miguel"
+
+      - name: Sync Substack feed
+        run: python scripts/sync_substack_feed.py
+        continue-on-error: true
+
+      - name: Mirror Substack posts to _posts
+        run: python scripts/mirror_substack_posts.py
+        continue-on-error: true
+
+      - name: Sync software releases
+        run: python scripts/sync_software_releases.py
+        continue-on-error: true
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1

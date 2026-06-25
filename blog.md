@@ -1,6 +1,16 @@
 ---
-layout: one-page-site
-title: "Research Blog on Radio Astronomy and HPC | Miguel Cárcamo"
-description: "Research updates, technical notes, and announcements by Miguel Cárcamo on radio astronomy, interferometry, and high-performance computing."
+layout: null
 permalink: /blog/
 ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="refresh" content="0; url=/writing/">
+  <link rel="canonical" href="https://miguelcarcamov.github.io/writing/">
+  <title>Redirecting to Writing</title>
+</head>
+<body>
+  <p>Moved to <a href="/writing/">The Faint Signal / Writing</a>.</p>
+</body>
+</html>

@@ -1,0 +1,111 @@
+featured:
+  - id: pyralysis
+    name: Pyralysis
+    tagline: PYthon Radio Astronomy anaLYSis and Image Synthesis
+    description: >-
+      A Python object-oriented framework for big-data radio astronomy processing
+      and image synthesis, designed for SKA-era data volumes and high-performance computing.
+    repo: https://gitlab.com/clirai/pyralysis
+    platform: gitlab
+    areas:
+      - imaging
+      - hpc
+    status: active
+    paper_bibcodes:
+      - 2026A&A...707A.255C
+    citation:
+      title: Pyralysis
+      version: ""
+      year: 2024
+      url: https://gitlab.com/clirai/pyralysis
+      publisher: GitLab
+
+  - id: csromer
+    name: CS-ROMER
+    tagline: Compressed sensing for Faraday depth reconstruction
+    description: >-
+      A compressed sensing framework for Faraday depth reconstruction in polarimetric
+      radio surveys, developed for next-generation telescopes including the SKA pathfinder era.
+    repo: https://github.com/miguelcarcamov/csromer
+    platform: github
+    areas:
+      - compressed-sensing
+      - magnetism
+    status: active
+    paper_bibcodes:
+      - 2023MNRAS.518.1955C
+      - 2022atap.conf..202C
+    citation:
+      title: CS-ROMER
+      version: ""
+      year: 2023
+      url: https://github.com/miguelcarcamov/csromer
+      publisher: GitHub
+
+  - id: gpuvmem
+    name: GPUVMEM
+    tagline: GPU-accelerated maximum entropy imaging
+    description: >-
+      GPU-accelerated maximum entropy method (MEM) for radio interferometric image synthesis,
+      enabling efficient imaging on large visibility datasets.
+    repo: https://github.com/miguelcarcamov/gpuvmem
+    platform: github
+    areas:
+      - imaging
+      - hpc
+    status: active
+    paper_bibcodes:
+      - 2018A&C....22...16C
+    citation:
+      title: GPUVMEM
+      version: ""
+      year: 2018
+      url: https://github.com/miguelcarcamov/gpuvmem
+      publisher: GitHub
+
+secondary:
+  - id: snow
+    name: SNOW
+    tagline: caSa pythoN self-calibratiOn frameWork
+    description: >-
+      Python framework for radio astronomy self-calibration workflows with a unified
+      interface to imagers and calibration algorithms.
+    repo: https://github.com/miguelcarcamov/snow
+    platform: github
+    areas:
+      - imaging
+    status: active
+
+  - id: ocarina
+    name: OCARINA
+    tagline: Interferometric data processing utilities
+    description: >-
+      Tools and utilities for radio interferometric data processing, analysis, and image synthesis.
+    repo: https://github.com/miguelcarcamov/ocarina
+    platform: github
+    areas:
+      - imaging
+    status: maintained
+
+  - id: simulate-interferometer
+    name: Simulating Radio Interferometric Visibilities
+    tagline: Synthetic visibility generation
+    description: >-
+      Software for generating synthetic interferometric visibilities to test and validate
+      imaging algorithms and pipelines.
+    repo: https://github.com/miguelcarcamov/simulate_interferometer
+    platform: github
+    areas:
+      - imaging
+    status: maintained
+
+area_labels:
+  imaging: Radio interferometric imaging
+  hpc: High-performance computing
+  compressed-sensing: Compressed sensing
+  magnetism: Cosmic magnetism
+
+status_labels:
+  active: Active development
+  maintained: Maintained
+  archived: Archived

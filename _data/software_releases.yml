@@ -1,0 +1,91 @@
+fetched_at_utc: '2026-06-25T20:23:24Z'
+projects:
+  pyralysis:
+  - name: v2.2.0 — Pipeline GPU backend selection and CUDA device CLI
+    tag: v2.2.0
+    published_at: '2026-06-04T19:29:45.223Z'
+    url: https://gitlab.com/clirai/pyralysis/-/releases/v2.2.0
+    description: '# Pyralysis 2.2.0
+
+
+      **Release date:** 2026-06-04\
+
+      **Tag:** `v2.2.0`
+
+
+      ## Summary
+
+
+      Pyralysis **2.2.0** improves **CPU/GPU backend selection** for example scripts
+      and imager pipelines. Pipeline and component scripts can use `--array-backend
+      cupy` end-to-end, pick a GPU with `--cuda-device` or `CUDA_VISIBLE_DEVICES`,
+      and rely on consistent Dask `array.backend` scope for the full run.
+
+
+      This release buil'
+  - name: Pyralysis 2.1.0 — GPU array backend
+    tag: v2.1.0
+    published_at: '2026-06-03T22:52:46.593Z'
+    url: https://gitlab.com/clirai/pyralysis/-/releases/v2.1.0
+    description: "# Pyralysis 2.1.0 — GPU array backend\n\n**Release date:** 2026-06-03\
+      \  \n**Tag:** `v2.1.0`\n\nFirst release with **end-to-end GPU imaging** on CuPy-backed\
+      \ visibilities: read an MS on GPU, run the same Dask imaging code as on CPU,\
+      \ and optimize with masks, χ², regularizers, and LBFGS/CG/FISTA/SDMM.\n\n##\
+      \ Highlights\n\n- **CuPy / Dask array backend** — `DaskMS.read(array_backend=\"\
+      cupy\")`, `with_array_backend("
+  - name: v1.1.0
+    tag: v1.1.0
+    published_at: '2026-04-16T15:47:48.942Z'
+    url: https://gitlab.com/clirai/pyralysis/-/releases/v1.1.0
+    description: '### **Highlights**
+
+
+      * **Grid API** — Improvements to the `Grid` class (including clearer control
+      over the gridded array via the new `grid` setter), so workflows that need to
+      inject or replace the grid are easier to support.
+
+      * **L-BFGS** — Substantial fixes and hardening: safer handling of small denominators,
+      corrected behavior in the optimizer and its history, and explicit use of **`max_correction'
+  - name: v1.0.0
+    tag: v1.0.0
+    published_at: '2026-04-09T21:14:29.000Z'
+    url: https://gitlab.com/clirai/pyralysis/-/releases/v1.0.0
+    description: 'Stable version published to the Python Package Index.
+
+
+      \- **PyPI:** https://pypi.org/project/pyralysis/1.0.0/
+
+
+      \- **Install:** `pip install pyralysis==1.0.0`'
+  csromer: []
+  gpuvmem:
+  - name: v7.0.0
+    tag: v7.0.0
+    published_at: '2024-05-08T20:25:37Z'
+    url: https://github.com/miguelcarcamov/gpuvmem/releases/tag/v7.0.0
+    description: "## What's Changed\r\n* MERGE: merge from DEVELOPMENT by @miguelcarcamov\
+      \ in https://github.com/miguelcarcamov/gpuvmem/pull/4\r\n* FIX: erasing round\
+      \ on griddedTogrid function by @miguelcarcamov in https://github.com/miguelcarcamov/gpuvmem/pull/5\r\
+      \n* MERGE from Development by @miguelcarcamov in https://github.com/miguelcarcamov/gpuvmem/pull/6\r\
+      \n* CHG: formatting files by @miguelcarcamov in https://github."
+  - name: c++ vectors and diameters of antennas read from MS
+    tag: 6.2.0
+    published_at: '2020-06-10T17:15:52Z'
+    url: https://github.com/miguelcarcamov/gpuvmem/releases/tag/6.2.0
+    description: "- Antennas diameter are read directly from the MS using casacore\r\
+      \n- Data structures are c++ vectors which are easier to handle\r\n- Host memory\
+      \ optimization when gridding\r\n- Minor bug fixes"
+  - name: New features and important bug fixes
+    tag: 6.1.0
+    published_at: '2019-07-09T15:31:05Z'
+    url: https://github.com/miguelcarcamov/gpuvmem/releases/tag/6.1.0
+    description: "- Robust weighting for gridding.\r\n- Bilinear interpolation function\
+      \ to degrid gridded visibilities.\r\n- Fix of important bugs concerning pointing\
+      \ and cuFFT2D.\r\n- Stokes visibilities have been added as a data structure.\
+      \ \r\n- writeMS function has been speeded up"
+  - name: Object oriented version of GPUVMEM and new features
+    tag: 6.0.1
+    published_at: '2019-03-15T00:57:08Z'
+    url: https://github.com/miguelcarcamov/gpuvmem/releases/tag/6.0.1
+    description: "* Object oriented version\r\n* New attenuation (Airy disk) for ALMA\r\
+      \n* MFS Errors Approximation\r\n* LBFGS Minimizator"

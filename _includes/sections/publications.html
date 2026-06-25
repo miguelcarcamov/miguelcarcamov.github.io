@@ -1,23 +1,95 @@
 <section id="publications" class="publications single_page">
-<!-- publications_area -->
 <div class="publications_area section_padding">
-<!-- container -->
 <div class="container">
-<!-- row -->
 <div class="row">
 <div class="col-md-12">
 <div class="section_title">
-<h2>PUBLICATIONS</h2>
-<p class="sub_title">Research articles and conference proceedings (auto-synced from NASA ADS)</p>
+<h2 data-i18n="publications.title">PUBLICATIONS</h2>
+<p class="sub_title" data-i18n="publications.subtitle">Research articles and conference proceedings (auto-synced from NASA ADS)</p>
 </div>
-</div><!-- .col-md-12 -->
-</div><!-- end .row -->
+</div>
+</div>
+
 {% assign pubs = site.data.publications %}
+<script type="application/json" id="publications-index-data">{{ site.data.publications_index | jsonify }}</script>
+
+<div id="publication-explorer" class="publication-explorer" hidden>
+<div class="pub-explorer-toolbar" role="search" aria-label="Publication filters">
+<div class="pub-explorer-search-wrap">
+<label class="sr-only" for="pub-explorer-search" data-i18n="publications.search_label">Search publications</label>
+<input type="search" id="pub-explorer-search" class="pub-explorer-search" data-i18n-placeholder="publications.search_placeholder" placeholder="Search title, authors, journal, DOI…" autocomplete="off" spellcheck="false">
+</div>
+<div class="pub-explorer-filters">
+<label class="pub-explorer-filter">
+<span data-i18n="publications.filter_year">Year</span>
+<select id="pub-filter-year" class="pub-explorer-select">
+<option value="" data-i18n="publications.filter_all">All</option>
+</select>
+</label>
+<label class="pub-explorer-filter">
+<span data-i18n="publications.filter_role">Role</span>
+<select id="pub-filter-role" class="pub-explorer-select">
+<option value="" data-i18n="publications.filter_all">All</option>
+<option value="first" data-i18n="publications.filter_first_author">First author</option>
+<option value="lead" data-i18n="publications.filter_lead_author">Lead author (1–2)</option>
+<option value="coauthored" data-i18n="publications.filter_coauthored">Co-authored</option>
+</select>
+</label>
+<label class="pub-explorer-filter">
+<span data-i18n="publications.filter_type">Type</span>
+<select id="pub-filter-type" class="pub-explorer-select">
+<option value="" data-i18n="publications.filter_all">All</option>
+<option value="journal" data-i18n="publications.filter_journal">Journal</option>
+<option value="conference" data-i18n="publications.filter_conference">Conference</option>
+</select>
+</label>
+<label class="pub-explorer-filter">
+<span data-i18n="publications.filter_sort">Sort</span>
+<select id="pub-filter-sort" class="pub-explorer-select">
+<option value="year-desc" data-i18n="publications.sort_year_desc">Newest first</option>
+<option value="year-asc" data-i18n="publications.sort_year_asc">Oldest first</option>
+<option value="citations-desc" data-i18n="publications.sort_citations">Most cited</option>
+</select>
+</label>
+<label class="pub-explorer-filter pub-explorer-filter--checkbox">
+<input type="checkbox" id="pub-filter-oa">
+<span data-i18n="publications.filter_open_access">Open access only</span>
+</label>
+</div>
+</div>
+
+<p id="pub-explorer-count" class="pub-explorer-count" aria-live="polite"></p>
+<ol id="publication-explorer-results" class="pub-explorer-list"></ol>
+<p id="pub-explorer-empty" class="pub-explorer-empty" hidden data-i18n="publications.no_results">No publications match your filters.</p>
+</div>
+
+<noscript>
 {% assign first_journal = pubs.first_author.journal %}
 {% assign first_conference = pubs.first_author.conference %}
 {% assign co_journal = pubs.coauthored.journal %}
 {% assign co_conference = pubs.coauthored.conference %}
-<!-- First Author Publications -->
+<div class="publication-explorer-fallback">
+<div class="row">
+<div class="col-md-12">
+<h3 class="pub-fallback-heading">First Author Publications</h3>
+<div class="publication_list">
+<h4>Journal Articles</h4>
+<ol>
+{% for item in first_journal %}
+<li>{{ item.authors }}, "{{ item.title }}," <em>{{ item.publication }}</em>, {{ item.date_label }}.{% if item.doi %} <a href="{{ item.url }}">DOI: {{ item.doi }}</a>{% endif %}</li>
+{% endfor %}
+</ol>
+</div>
+</div>
+</div>
+</div>
+</noscript>
+
+<div id="publication-explorer-fallback" class="publication-explorer-fallback" aria-hidden="true">
+{% assign first_journal = pubs.first_author.journal %}
+{% assign first_conference = pubs.first_author.conference %}
+{% assign co_journal = pubs.coauthored.journal %}
+{% assign co_conference = pubs.coauthored.conference %}
 <div class="row">
 <div class="col-md-12">
 <h3 style="margin-bottom: 30px; color: #35373e; font-size: 20px; font-weight: 400; padding-bottom: 15px; border-bottom: 2px solid #372db4;">First Author Publications</h3>
@@ -44,8 +116,7 @@
 </ol>
 </div>
 </div>
-</div><!-- end row -->
-<!-- Co-authored Publications -->
+</div>
 <div class="row">
 <div class="col-md-12">
 <h3 style="margin-bottom: 30px; color: #35373e; font-size: 20px; font-weight: 400; padding-bottom: 15px; border-bottom: 2px solid #372db4; margin-top: 40px;">Co-authored Publications</h3>
@@ -72,19 +143,19 @@
 </ol>
 </div>
 </div>
-</div><!-- end row -->
+</div>
+</div>
+
 {% if pubs.generated_at_utc %}
 <div class="row">
 <div class="col-md-12">
 <p style="color: #999; font-size: 12px; margin-top: 5px;">
-Last synchronized from NASA ADS:
+<span data-i18n="publications.sync_label">Last synchronized from NASA ADS:</span>
 <span id="ads-sync-time" data-utc="{{ pubs.generated_at_utc }}">{{ pubs.generated_at_utc }}</span>
 </p>
 </div>
 </div>
 {% endif %}
 </div>
-</div><!-- end row -->
-</div><!-- end container -->
-</div><!-- end publications_area -->
-</section><!-- end #publications -->
+</div>
+</section>

@@ -36,6 +36,9 @@ layout: default
 </ul>
 
 <div class="post_content">
+{% if page.canonical_url %}
+<p class="substack-canonical-note"><a href="{{ page.canonical_url }}" rel="canonical">Read on Substack</a> (canonical source).</p>
+{% endif %}
 {{ content }}
 </div>
 </div>

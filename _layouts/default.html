@@ -3,7 +3,11 @@
 <head>
     {% assign meta_title = page.title | default: site.title %}
     {% assign meta_description = page.description | default: site.description %}
+    {% if page.canonical_url %}
+    {% assign canonical_url = page.canonical_url %}
+    {% else %}
     {% assign canonical_url = site.url | append: site.baseurl | append: page.url | replace:'index.html','' %}
+    {% endif %}
     <meta charset="UTF-8">
 
     <!-- viewport meta -->
@@ -135,20 +139,16 @@
                 </div>
 
                 <div class="main_menu">
-                    <ul>
-                        <li class="active"><a href="{{ '/' | relative_url }}" data-home-hash="#home"><span class="lnr lnr-home"></span><p>Home</p></a></li>
-                        <li><a href="{{ '/about/' | relative_url }}" data-home-hash="#about"><span class="lnr lnr-user"></span><p>about me</p></a></li>
-                        <li><a href="{{ '/resume/' | relative_url }}" data-home-hash="#resume"><span class="lnr lnr-book"></span><p>resume</p></a></li>
-                        <li><a href="{{ '/research/' | relative_url }}" data-home-hash="#research"><span class="lnr lnr-magnifier"></span><p>research</p></a></li>
-                        <li><a href="{{ '/publications/' | relative_url }}" data-home-hash="#publications"><span class="lnr lnr-file-empty"></span><p>publications</p></a></li>
-                        <li><a href="{{ '/stats/' | relative_url }}" data-home-hash="#publication-stats"><span class="lnr lnr-chart-bars"></span><p>stats</p></a></li>
-                        <li><a href="{{ '/teaching/' | relative_url }}" data-home-hash="#teaching"><span class="lnr lnr-graduation-hat"></span><p>teaching</p></a></li>
-                        <li><a href="{{ '/collaborators/' | relative_url }}" data-home-hash="#collaborators"><span class="lnr lnr-users"></span><p>collaborators</p></a></li>
-                        <li><a href="{{ '/students/' | relative_url }}" data-home-hash="#students"><span class="lnr lnr-user"></span><p>students</p></a></li>
-                        <li><a href="{{ '/service/' | relative_url }}" data-home-hash="#service"><span class="lnr lnr-briefcase"></span><p>service</p></a></li>
-                        <li><a href="{{ '/blog/' | relative_url }}" data-home-hash="#blog"><span class="lnr lnr-leaf"></span><p>blog</p></a></li>
-                        <li><a href="{{ '/contact/' | relative_url }}" data-home-hash="#contact"><span class="lnr lnr-envelope"></span><p>contact</p></a></li>
-                    </ul>
+                    {% include nav-menu.html %}
+
+                    <div class="sidebar-utilities">
+                        <button type="button" id="site-search-open" class="sidebar-utility-btn" data-i18n-aria="search.open" aria-label="Open site search">
+                            <span class="lnr lnr-magnifier" aria-hidden="true"></span>
+                            <span class="sidebar-utility-label">Search</span>
+                        </button>
+                        <button type="button" id="lang-toggle" class="sidebar-utility-btn sidebar-utility-btn--lang" data-i18n="lang_toggle">Español</button>
+                        <a href="{{ site.substack_url }}subscribe" class="sidebar-utility-btn sidebar-utility-btn--link" target="_blank" rel="noopener noreferrer" data-i18n="writing.subscribe_short">Subscribe</a>
+                    </div>
 
                     <div class="social">
                         <ul>
@@ -162,6 +162,21 @@
             </div>
 
         </aside><!-- end header -->
+
+        <div id="site-search-modal" class="site-search-modal" hidden aria-hidden="true" role="dialog" aria-labelledby="site-search-title">
+            <div id="site-search-backdrop" class="site-search-backdrop"></div>
+            <div class="site-search-panel">
+                <div class="site-search-panel-header">
+                    <h2 id="site-search-title" class="site-search-title">Search</h2>
+                    <button type="button" id="site-search-close" class="site-search-close" aria-label="Close search">&times;</button>
+                </div>
+                <input type="search" id="site-search-input" class="site-search-input" data-i18n-placeholder="search.placeholder" placeholder="Search publications, software, courses…" autocomplete="off" spellcheck="false">
+                <ul id="site-search-results" class="site-search-results" aria-live="polite"></ul>
+                <p class="site-search-hint"><kbd>Ctrl</kbd>+<kbd>K</kbd></p>
+            </div>
+        </div>
+
+        <script id="i18n-data" type="application/json">{{ site.data.i18n | jsonify }}</script>
 
         <!-- menu toggler -->
         <div class="menu_toggler" role="button" aria-label="Toggle navigation menu" tabindex="0">
@@ -212,7 +227,12 @@
     <script src="{{ '/js/typed.min.js' | relative_url }}"></script>
 
     <!-- Main js - No longer needs section-loader.js since sections are included directly -->
+    <script src="{{ '/js/i18n.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
+    <script src="{{ '/js/site-search.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
+    <script src="{{ '/js/software.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
+    <script src="{{ '/js/publication-explorer.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
     <script src="{{ '/js/main.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
+    <script src="{{ '/js/collaboration-network.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
     <script src="{{ '/js/research-areas.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js" integrity="sha384-JUh163oCRItcbPme8pYnROHQMC6fNKTBWtRG3I3I0erJkzNgL7uxKlNwcrcFKeqF" crossorigin="anonymous"></script>
     <script src="{{ '/js/publication-stats.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>

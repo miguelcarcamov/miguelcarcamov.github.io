@@ -1,0 +1,14 @@
+# Links publications (bibcode) to software ids defined in software.yml
+links:
+  - bibcode: 2026A&A...707A.255C
+    software:
+      - pyralysis
+  - bibcode: 2023MNRAS.518.1955C
+    software:
+      - csromer
+  - bibcode: 2022atap.conf..202C
+    software:
+      - csromer
+  - bibcode: 2018A&C....22...16C
+    software:
+      - gpuvmem

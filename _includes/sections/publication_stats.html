@@ -4,8 +4,8 @@
 <div class="row">
 <div class="col-md-12">
 <div class="section_title">
-<h2>PUBLICATION STATISTICS</h2>
-<p class="sub_title">Scholarly metrics from NASA ADS</p>
+<h2 data-i18n="stats.title">PUBLICATION STATISTICS</h2>
+<p class="sub_title" data-i18n="stats.subtitle">Scholarly metrics from NASA ADS</p>
 </div>
 </div>
 </div>
@@ -33,16 +33,16 @@
 </div>
 <div class="row" style="margin-top: -8px; margin-bottom: 20px;">
 <div class="col-md-12">
-<p class="stats-map-note" style="margin-top: 0;">In the last 5 years, recent work contributes {{ stats.momentum.recent_citation_share_percent | default: "N/A" }}{% if stats.momentum.recent_citation_share_percent != nil %}%{% endif %} of total citation impact.</p>
+<p class="stats-map-note" style="margin-top: 0;" id="stats-momentum-note" data-percent="{{ stats.momentum.recent_citation_share_percent | default: 'N/A' }}">In the last 5 years, recent work contributes {{ stats.momentum.recent_citation_share_percent | default: "N/A" }}{% if stats.momentum.recent_citation_share_percent != nil %}%{% endif %} of total citation impact.</p>
 </div>
 </div>
 
 <div class="row stats-row">
 <div class="col-md-12">
 <div class="stats-chart-card">
-<h4 class="stats-chart-title">Methodology (Transparency)</h4>
+<h4 class="stats-chart-title" data-i18n="stats.methodology_title">Methodology (Transparency)</h4>
 <details class="stats-methodology-details">
-<summary><strong>Metric definitions and formulas</strong> <span class="stats-details-arrow" aria-hidden="true">▼</span></summary>
+<summary><strong data-i18n="stats.methodology_summary">Metric definitions and formulas</strong> <span class="stats-details-arrow" aria-hidden="true">▼</span></summary>
 <ul class="stats-method-list">
 <li><code>total_publications</code> = journal papers + conference papers.</li>
 <li><code>lead_author_publications</code> = papers with author position 1 or 2.</li>
@@ -77,13 +77,13 @@
 <div class="row stats-row">
 <div class="col-md-6">
 <div class="stats-chart-card">
-<h4 class="stats-chart-title">Papers per Year</h4>
+<h4 class="stats-chart-title" data-i18n="stats.chart_papers_per_year">Papers per Year</h4>
 <canvas id="papers-per-year-chart" role="img" aria-label="Bar chart of papers per year"></canvas>
 </div>
 </div>
 <div class="col-md-6">
 <div class="stats-chart-card">
-<h4 class="stats-chart-title">Annual and Cumulative Citations</h4>
+<h4 class="stats-chart-title" data-i18n="stats.chart_citations_combo">Annual and Cumulative Citations</h4>
 <canvas id="citations-combo-chart" role="img" aria-label="Annual citations bars with cumulative citations line"></canvas>
 </div>
 </div>
@@ -92,13 +92,13 @@
 <div class="row stats-row">
 <div class="col-md-6">
 <div class="stats-chart-card">
-<h4 class="stats-chart-title">Citation Distribution</h4>
+<h4 class="stats-chart-title" data-i18n="stats.chart_citation_distribution">Citation Distribution</h4>
 <canvas id="citation-histogram-chart" role="img" aria-label="Histogram of citations per paper"></canvas>
 </div>
 </div>
 <div class="col-md-6">
 <div class="stats-chart-card">
-<h4 class="stats-chart-title">Top 10 Most Cited Papers</h4>
+<h4 class="stats-chart-title" data-i18n="stats.chart_top_cited">Top 10 Most Cited Papers</h4>
 <canvas id="top-cited-chart" role="img" aria-label="Horizontal bar chart of top 10 most cited papers"></canvas>
 </div>
 </div>
@@ -107,7 +107,7 @@
 <div class="row stats-row">
 <div class="col-md-12">
 <div class="stats-chart-card">
-<h4 class="stats-chart-title">Top Collaborators (by shared papers)</h4>
+<h4 class="stats-chart-title" data-i18n="stats.chart_top_collaborators">Top Collaborators (by shared papers)</h4>
 <canvas id="top-collaborators-chart" role="img" aria-label="Horizontal bar chart of top collaborators"></canvas>
 </div>
 </div>
@@ -116,7 +116,32 @@
 <div class="row stats-row">
 <div class="col-md-12">
 <div class="stats-chart-card">
-<h4 class="stats-chart-title">Collaboration Map (Inferred Affiliation Countries)</h4>
+<h4 class="stats-chart-title" data-i18n="stats.chart_collab_network">Collaboration Network</h4>
+<div class="collab-network-filters" id="collab-network-filters" aria-label="Collaboration network filters">
+<span class="collab-network-filters-label" data-i18n="stats.collab_filters_label">Filter network</span>
+<label class="collab-filter-field">
+<span data-i18n="stats.collab_year_from">From year</span>
+<input type="number" id="collab-filter-year-from" class="collab-filter-input" min="1990" max="2030">
+</label>
+<label class="collab-filter-field">
+<span data-i18n="stats.collab_year_to">To year</span>
+<input type="number" id="collab-filter-year-to" class="collab-filter-input" min="1990" max="2030">
+</label>
+<label class="collab-filter-checkbox">
+<input type="checkbox" id="collab-filter-first-author">
+<span data-i18n="stats.collab_first_author_only">First-author papers only</span>
+</label>
+</div>
+<div id="collab-network" class="collab-network-wrap"></div>
+<p class="stats-map-note" data-i18n="stats.collab_hint">Top coauthors by shared papers. Node size reflects collaboration frequency. Hover or click for details — Miguel is at the center.</p>
+</div>
+</div>
+</div>
+
+<div class="row stats-row">
+<div class="col-md-12">
+<div class="stats-chart-card">
+<h4 class="stats-chart-title" data-i18n="stats.chart_collab_map">Collaboration Map (Inferred Affiliation Countries)</h4>
 <div class="stats-geo-map-wrap">
 <div id="country-collab-map" class="stats-geo-map" role="img" aria-label="World map of inferred collaboration country share"></div>
 <div class="stats-colorbar" aria-hidden="true">
@@ -125,7 +150,7 @@
 <span id="country-colorbar-min" class="stats-colorbar-label stats-colorbar-label--bottom">0%</span>
 </div>
 </div>
-<p class="stats-map-note">Country is inferred from affiliation text in ADS metadata, not author nationality.</p>
+<p class="stats-map-note" data-i18n="stats.map_note">Country is inferred from affiliation text in ADS metadata, not author nationality.</p>
 </div>
 </div>
 </div>
@@ -133,7 +158,7 @@
 <div class="row stats-row">
 <div class="col-md-12">
 <div class="stats-chart-card">
-<h4 class="stats-chart-title">FONDECYT NP Top-10 Contributors</h4>
+<h4 class="stats-chart-title" data-i18n="stats.chart_fondecyt">FONDECYT NP Top-10 Contributors</h4>
 <canvas id="fondecyt-top-chart" role="img" aria-label="Horizontal bar chart of top 10 FONDECYT NP contributors by score"></canvas>
 </div>
 </div>
@@ -142,17 +167,18 @@
 <div class="row">
 <div class="col-md-12">
 <p class="stats-footer-note">
-Data source: NASA ADS. Last updated: <span id="stats-last-updated" data-utc="{{ stats.generated_at_utc }}">{{ stats.generated_at_utc }}</span>.
-<a href="{{ '/_data/publication_stats.json' | relative_url }}" target="_blank" rel="noopener noreferrer" class="stats-export-link">Export stats JSON</a>
+<span data-i18n="stats.footer_source">Data source: NASA ADS. Last updated:</span> <span id="stats-last-updated" data-utc="{{ stats.generated_at_utc }}">{{ stats.generated_at_utc }}</span>.
+<a href="{{ '/_data/publication_stats.json' | relative_url }}" target="_blank" rel="noopener noreferrer" class="stats-export-link" data-i18n="stats.footer_export">Export stats JSON</a>
 </p>
 </div>
 </div>
 
 <script id="publication-stats-data" type="application/json">{{ stats | jsonify }}</script>
+<script id="collaboration-network-data" type="application/json">{{ site.data.collaboration_network | jsonify }}</script>
 {% else %}
 <div class="row">
 <div class="col-md-12">
-<p style="text-align: center; color: #999;">Publication statistics are not available yet. Run the NASA ADS sync workflow first.</p>
+<p style="text-align: center; color: #999;" data-i18n="stats.unavailable">Publication statistics are not available yet. Run the NASA ADS sync workflow first.</p>
 </div>
 </div>
 {% endif %}

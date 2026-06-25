@@ -57,13 +57,15 @@
             var routeMap = {
                 'about': '#about',
                 'resume': '#resume',
+                'software': '#software',
                 'publications': '#publications',
                 'stats': '#publication-stats',
                 'teaching': '#teaching',
                 'collaborators': '#collaborators',
                 'students': '#students',
+                'join': '#join',
                 'service': '#service',
-                'blog': '#blog',
+                'writing': '#writing',
                 'contact': '#contact',
                 'research': '#research'
             };
@@ -91,6 +93,11 @@
             $hashLink.filter('[data-home-hash="' + selHash + '"]').parent('li').addClass('active');
         }
 
+        function setMenuActiveForStandalonePath() {
+            /* Nav items use data-home-hash; this fallback only helps legacy bookmarks. */
+            return;
+        }
+
         function activateDefaultSection() {
             var $homeSection = $('#home');
             var $fallbackSection = $pages.first();
@@ -109,9 +116,20 @@
         
         if (hash && hash.indexOf('#') > -1) {
             var $targetSection = $(hash);
+            if ($targetSection.length && !$targetSection.hasClass('single_page')) {
+                $targetSection = $targetSection.closest('.single_page');
+            }
             if ($targetSection.length && $targetSection.hasClass('single_page')) {
                 activateSection($targetSection);
-                setMenuActiveForHash(hash);
+                setMenuActiveForHash('#' + $targetSection.attr('id'));
+                if (hash !== '#' + $targetSection.attr('id')) {
+                    window.setTimeout(function () {
+                        var $anchor = $(hash);
+                        if ($anchor.length) {
+                            $anchor[0].scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }, 120);
+                }
             } else {
                 activateDefaultSection();
             }
@@ -129,6 +147,7 @@
                 activateDefaultSection();
             }
         }
+        setMenuActiveForStandalonePath();
 
         $hashLink.on('click',function (e) {
             // Keep href as SEO-friendly real URL; use data-home-hash for home animations.

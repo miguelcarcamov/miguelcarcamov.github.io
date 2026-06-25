@@ -247,60 +247,29 @@
 <div class="row">
 <div class="col-md-12">
 <div class="projects_wrapper">
-<!-- Project Items -->
-<div class="project_item" style="margin-bottom: 30px;">
-<h4 style="margin-bottom: 10px; color: #35373e;">
-<a href="https://gitlab.com/clirai/pyralysis" target="_blank" rel="noopener noreferrer" style="color: #35373e; text-decoration: none;">
-Pyralysis <span class="fa fa-gitlab" style="font-size: 14px; margin-left: 5px;" aria-hidden="true"></span><span class="sr-only">(GitLab)</span>
+<!-- Featured software teaser -->
+<p class="software-resume-teaser" data-i18n="resume.projects_teaser" style="color: #676767; line-height: 1.8; margin-bottom: 28px;">
+Pyralysis, CS-ROMER, and GPUVMEM are the main open-source projects from my group.
+Additional tools are listed on the software page.
+</p>
+{% assign featured_sw = site.data.software.featured %}
+{% for tool in featured_sw %}
+<div class="project_item software-resume-item" style="margin-bottom: 24px;">
+<h4 style="margin-bottom: 8px; color: #35373e;">
+<a href="{{ '/software/' | relative_url }}#software-{{ tool.id }}" style="color: #35373e; text-decoration: none;">
+{{ tool.name }}
+{% if tool.platform == 'gitlab' %}
+<span class="fa fa-gitlab" style="font-size: 14px; margin-left: 5px;" aria-hidden="true"></span>
+{% else %}
+<span class="fa fa-github" style="font-size: 14px; margin-left: 5px;" aria-hidden="true"></span>
+{% endif %}
 </a>
 </h4>
-<p style="color: #676767; margin-bottom: 5px;">PYthon Radio Astronomy anaLYSis and Image Synthesis. A Python object-oriented framework designed for big data processing and high-performance computing applications targeting SKA-era data volumes.</p>
-<a href="https://gitlab.com/clirai/pyralysis" target="_blank" rel="noopener noreferrer" style="color: #362cb1; font-size: 12px;"><span class="fa fa-gitlab" style="margin-right: 6px;" aria-hidden="true"></span>GitLab<span class="sr-only"> repository</span> →</a>
+<p style="color: #676767; margin-bottom: 5px;">{{ tool.tagline }}</p>
 </div>
-<div class="project_item" style="margin-bottom: 30px;">
-<h4 style="margin-bottom: 10px; color: #35373e;">
-<a href="https://github.com/miguelcarcamov/snow" target="_blank" rel="noopener noreferrer" style="color: #35373e; text-decoration: none;">
-SNOW <span class="fa fa-github" style="font-size: 14px; margin-left: 5px;" aria-hidden="true"></span><span class="sr-only">(GitHub)</span>
-</a>
-</h4>
-<p style="color: #676767; margin-bottom: 5px;">caSa pythoN self-calibratiOn frameWork. A Python framework for radio astronomy self-calibration workflows, providing a unified interface to run imagers (tclean, wsclean, gpuvmem, rascil) and self-calibration algorithms in a streamlined workflow.</p>
-<a href="https://github.com/miguelcarcamov/snow" target="_blank" rel="noopener noreferrer" style="color: #362cb1; font-size: 12px;"><span class="fa fa-github" style="margin-right: 6px;" aria-hidden="true"></span>GitHub<span class="sr-only"> repository</span> →</a>
-</div>
-<div class="project_item" style="margin-bottom: 30px;">
-<h4 style="margin-bottom: 10px; color: #35373e;">
-<a href="https://github.com/miguelcarcamov/gpuvmem" target="_blank" rel="noopener noreferrer" style="color: #35373e; text-decoration: none;">
-GPUVMEM <span class="fa fa-github" style="font-size: 14px; margin-left: 5px;" aria-hidden="true"></span><span class="sr-only">(GitHub)</span>
-</a>
-</h4>
-<p style="color: #676767; margin-bottom: 5px;">GPU-accelerated maximum entropy method for radio interferometric image synthesis. High-performance imaging software leveraging GPU computing for efficient radio astronomy data processing.</p>
-<a href="https://github.com/miguelcarcamov/gpuvmem" target="_blank" rel="noopener noreferrer" style="color: #362cb1; font-size: 12px;"><span class="fa fa-github" style="margin-right: 6px;" aria-hidden="true"></span>GitHub<span class="sr-only"> repository</span> →</a>
-</div>
-<div class="project_item" style="margin-bottom: 30px;">
-<h4 style="margin-bottom: 10px; color: #35373e;">
-<a href="https://github.com/miguelcarcamov/csromer" target="_blank" rel="noopener noreferrer" style="color: #35373e; text-decoration: none;">
-CS-ROMER <span class="fa fa-github" style="font-size: 14px; margin-left: 5px;" aria-hidden="true"></span><span class="sr-only">(GitHub)</span>
-</a>
-</h4>
-<p style="color: #676767; margin-bottom: 5px;">A novel compressed sensing framework for Faraday depth reconstruction. Developed for next-generation radio telescopes to analyze extragalactic magnetic fields using Rotation Measure Synthesis and advanced signal reconstruction techniques.</p>
-<a href="https://github.com/miguelcarcamov/csromer" target="_blank" rel="noopener noreferrer" style="color: #362cb1; font-size: 12px;"><span class="fa fa-github" style="margin-right: 6px;" aria-hidden="true"></span>GitHub<span class="sr-only"> repository</span> →</a>
-</div>
-<div class="project_item" style="margin-bottom: 30px;">
-<h4 style="margin-bottom: 10px; color: #35373e;">
-<a href="https://github.com/miguelcarcamov/ocarina" target="_blank" rel="noopener noreferrer" style="color: #35373e; text-decoration: none;">
-OCARINA <span class="fa fa-github" style="font-size: 14px; margin-left: 5px;" aria-hidden="true"></span><span class="sr-only">(GitHub)</span>
-</a>
-</h4>
-<p style="color: #676767; margin-bottom: 5px;">Radio astronomy software for interferometric data processing and analysis. Tools and utilities for working with radio interferometric observations and image synthesis.</p>
-<a href="https://github.com/miguelcarcamov/ocarina" target="_blank" rel="noopener noreferrer" style="color: #362cb1; font-size: 12px;"><span class="fa fa-github" style="margin-right: 6px;" aria-hidden="true"></span>GitHub<span class="sr-only"> repository</span> →</a>
-</div>
-<div class="project_item" style="margin-bottom: 30px;">
-<h4 style="margin-bottom: 10px; color: #35373e;">
-<a href="https://github.com/miguelcarcamov/simulate_interferometer" target="_blank" rel="noopener noreferrer" style="color: #35373e; text-decoration: none;">
-Simulating Radio Interferometric Visibilities <span class="fa fa-github" style="font-size: 14px; margin-left: 5px;" aria-hidden="true"></span><span class="sr-only">(GitHub)</span>
-</a>
-</h4>
-<p style="color: #676767; margin-bottom: 5px;">Software for simulating radio interferometric visibilities. Tools for generating synthetic interferometric data for testing and validation of radio astronomy imaging algorithms and pipelines.</p>
-<a href="https://github.com/miguelcarcamov/simulate_interferometer" target="_blank" rel="noopener noreferrer" style="color: #362cb1; font-size: 12px;"><span class="fa fa-github" style="margin-right: 6px;" aria-hidden="true"></span>GitHub<span class="sr-only"> repository</span> →</a>
+{% endfor %}
+<div class="about_btn" style="padding-top: 8px;">
+<a href="{{ '/software/' | relative_url }}" class="btn" data-i18n="resume.view_software">view all software →</a>
 </div>
 </div>
 </div>

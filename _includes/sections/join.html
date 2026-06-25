@@ -1,0 +1,253 @@
+<section id="join" class="about single_page standalone-join">
+<div class="about_area section_padding">
+<div class="container">
+{% assign data = site.data.students %}
+{% assign sw = site.data.software %}
+
+<div class="row">
+<div class="col-md-12">
+<div class="section_title">
+<h2 data-i18n="join.title">JOIN THE GROUP</h2>
+<p class="sub_title" data-i18n="join.subtitle">Research opportunities for students at USACH</p>
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-12">
+<div class="join-intro-card">
+<div data-i18n-block="en">{{ data.intro.en }}</div>
+<div data-i18n-block="es" hidden>{{ data.intro.es }}</div>
+</div>
+</div>
+</div>
+
+<div class="row" style="margin-top: 36px;">
+<div class="col-md-12">
+<h3 class="join-section-heading" data-i18n="join.grants_heading">Funded projects accepting students</h3>
+</div>
+</div>
+
+<div class="row join-grant-grid">
+{% for grant in data.grants %}
+<div class="col-md-6 col-sm-12">
+<article class="join-grant-card">
+<p class="join-grant-program">{{ grant.program }}</p>
+<h4 class="join-grant-role">
+<span data-i18n-block="en">{{ grant.role.en }}</span>
+<span data-i18n-block="es" hidden>{{ grant.role.es }}</span>
+</h4>
+<p class="join-grant-title">
+<span data-i18n-block="en"><em>{{ grant.title.en }}</em></span>
+<span data-i18n-block="es" hidden><em>{{ grant.title.es }}</em></span>
+</p>
+{% if grant.areas %}
+<ul class="join-area-tags">
+{% for area in grant.areas %}
+<li>
+<span data-i18n-block="en">{{ data.area_labels[area].en }}</span>
+<span data-i18n-block="es" hidden>{{ data.area_labels[area].es }}</span>
+</li>
+{% endfor %}
+</ul>
+{% endif %}
+</article>
+</div>
+{% endfor %}
+</div>
+
+<div class="row" style="margin-top: 40px;">
+<div class="col-md-12">
+<h3 class="join-section-heading" data-i18n="join.positions_heading">Open positions</h3>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-12">
+{% for pos in data.positions %}
+<article class="join-position-card join-position-card--{{ pos.status }}">
+<div class="join-position-header">
+<h4 class="join-position-title">
+<span data-i18n-block="en">{{ pos.title.en }}</span>
+<span data-i18n-block="es" hidden>{{ pos.title.es }}</span>
+</h4>
+<span class="join-status join-status--{{ pos.status }}">
+<span data-i18n-block="en">{{ data.status_labels[pos.status].en }}</span>
+<span data-i18n-block="es" hidden>{{ data.status_labels[pos.status].es }}</span>
+</span>
+</div>
+<p class="join-position-desc">
+<span data-i18n-block="en">{{ pos.description.en }}</span>
+<span data-i18n-block="es" hidden>{{ pos.description.es }}</span>
+</p>
+{% if pos.levels %}
+<ul class="join-level-tags">
+{% for level in pos.levels %}
+<li>
+<span data-i18n-block="en">{{ data.level_labels[level].en }}</span>
+<span data-i18n-block="es" hidden>{{ data.level_labels[level].es }}</span>
+</li>
+{% endfor %}
+</ul>
+{% endif %}
+</article>
+{% endfor %}
+</div>
+</div>
+
+<div class="row" style="margin-top: 40px;">
+<div class="col-md-12">
+<h3 class="join-section-heading" data-i18n="join.projects_heading">Example project ideas</h3>
+<p class="join-section-note" data-i18n="join.projects_note">Concrete topics vary — these illustrate the kind of work we do.</p>
+</div>
+</div>
+
+<div class="row join-project-grid">
+{% for project in data.projects %}
+<div class="col-md-6 col-sm-12">
+<article class="join-project-card">
+<h4 class="join-project-title">
+<span data-i18n-block="en">{{ project.title.en }}</span>
+<span data-i18n-block="es" hidden>{{ project.title.es }}</span>
+</h4>
+<p class="join-project-desc">
+<span data-i18n-block="en">{{ project.description.en }}</span>
+<span data-i18n-block="es" hidden>{{ project.description.es }}</span>
+</p>
+{% if project.areas %}
+<ul class="join-area-tags join-area-tags--compact">
+{% for area in project.areas %}
+<li>
+<span data-i18n-block="en">{{ data.area_labels[area].en }}</span>
+<span data-i18n-block="es" hidden>{{ data.area_labels[area].es }}</span>
+</li>
+{% endfor %}
+</ul>
+{% endif %}
+{% if project.software %}
+<div class="join-project-software">
+<span class="join-meta-label" data-i18n="join.related_software">Related software</span>
+{% for sw_id in project.software %}
+{% assign tool = nil %}
+{% for featured in sw.featured %}{% if featured.id == sw_id %}{% assign tool = featured %}{% endif %}{% endfor %}
+{% if tool %}
+<a class="join-software-link" href="{{ '/software/' | relative_url }}#software-{{ tool.id }}">{{ tool.name }}</a>
+{% endif %}
+{% endfor %}
+</div>
+{% endif %}
+{% if project.levels %}
+<ul class="join-level-tags join-level-tags--inline">
+{% for level in project.levels %}
+<li>
+<span data-i18n-block="en">{{ data.level_labels[level].en }}</span>
+<span data-i18n-block="es" hidden>{{ data.level_labels[level].es }}</span>
+</li>
+{% endfor %}
+</ul>
+{% endif %}
+</article>
+</div>
+{% endfor %}
+</div>
+
+<div class="row" style="margin-top: 40px;">
+<div class="col-md-12">
+<h3 class="join-section-heading" data-i18n="join.skills_heading">What helps</h3>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-12">
+<ul class="join-skills-list">
+{% for skill in data.skills %}
+<li class="join-skill-item{% if skill.required %} join-skill-item--required{% endif %}">
+<span data-i18n-block="en">{{ skill.label.en }}</span>
+<span data-i18n-block="es" hidden>{{ skill.label.es }}</span>
+{% if skill.required %}
+<span class="join-skill-badge" data-i18n="join.skill_required">Expected</span>
+{% else %}
+<span class="join-skill-badge join-skill-badge--optional" data-i18n="join.skill_optional">Plus</span>
+{% endif %}
+</li>
+{% endfor %}
+</ul>
+</div>
+</div>
+
+<div class="row" style="margin-top: 40px;">
+<div class="col-md-12">
+<article class="join-contributing-card">
+<h3 class="join-contributing-title">
+<span data-i18n-block="en">Contribute through Pyralysis issues</span>
+<span data-i18n-block="es" hidden>Contribuye mediante issues de Pyralysis</span>
+</h3>
+<p class="join-contributing-desc">
+<span data-i18n-block="en">Open work items on GitLab are a good way to find a scoped project — pick an issue that matches your skills and mention it when you get in touch.</span>
+<span data-i18n-block="es" hidden>Los work items abiertos en GitLab son una buena forma de encontrar un proyecto acotado: elige un issue acorde a tu nivel y menciónalo al contactarme.</span>
+</p>
+<a href="https://gitlab.com/clirai/pyralysis/-/work_items" class="btn join-contributing-btn" target="_blank" rel="noopener noreferrer">
+<span class="fa fa-gitlab" aria-hidden="true"></span>
+<span data-i18n-block="en">Browse Pyralysis work items</span>
+<span data-i18n-block="es" hidden>Ver work items de Pyralysis</span>
+</a>
+</article>
+</div>
+</div>
+
+<div class="row" style="margin-top: 40px;">
+<div class="col-md-12">
+<h3 class="join-section-heading" data-i18n="join.apply_heading">How to apply</h3>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-12">
+<ol class="join-apply-steps">
+{% for step in data.apply_steps %}
+<li class="join-apply-step">
+<h4 class="join-step-title">
+<span data-i18n-block="en">{{ step.title.en }}</span>
+<span data-i18n-block="es" hidden>{{ step.title.es }}</span>
+</h4>
+<p class="join-step-desc">
+<span data-i18n-block="en">{{ step.description.en }}</span>
+<span data-i18n-block="es" hidden>{{ step.description.es }}</span>
+</p>
+{% if step.links %}
+<ul class="join-step-links">
+{% for link in step.links %}
+<li>
+{% if link.external %}
+<a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">
+{% else %}
+<a href="{{ link.url | relative_url }}">
+{% endif %}
+<span data-i18n-block="en">{{ link.label.en }}</span>
+<span data-i18n-block="es" hidden>{{ link.label.es }}</span>
+</a>
+</li>
+{% endfor %}
+</ul>
+{% endif %}
+</li>
+{% endfor %}
+</ol>
+</div>
+</div>
+
+<div class="row join-cta-row">
+<div class="col-md-12 about_btn">
+{% if site.office_hours_url != "" %}
+<a href="{{ site.office_hours_url }}" class="btn" target="_blank" rel="noopener noreferrer" data-i18n="join.cta_office_hours">Book office hours</a>
+{% else %}
+<a href="{{ '/contact/' | relative_url }}" class="btn" data-i18n="join.cta_contact">Get in touch</a>
+{% endif %}
+<a href="mailto:{{ site.author.email }}?subject={{ 'Student research inquiry' | uri_escape }}" class="btn" data-i18n="join.cta_email">Email me</a>
+<a href="{{ '/students/' | relative_url }}" class="btn" data-i18n="join.cta_current_students">Current students</a>
+</div>
+</div>
+
+</div>
+</div>
+</section>

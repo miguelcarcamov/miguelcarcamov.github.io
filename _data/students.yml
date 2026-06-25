@@ -1,0 +1,320 @@
+# Recruitment data for /join/ — bilingual content (en / es)
+
+intro:
+  en: >-
+    I supervise PhD, master's, and undergraduate students at the Universidad de Santiago de Chile
+    (Departamento de Ingeniería Informática) on projects in radio astronomy, scientific computing,
+    and data-intensive research. If you are curious about interferometry, cosmic magnetism,
+    planet-forming discs, or building research software, read on.
+  es: >-
+    Superviso estudiantes de doctorado, magíster y pregrado en la Universidad de Santiago de Chile
+    (Departamento de Ingeniería Informática) en proyectos de radioastronomía, computación científica
+    e investigación con datos a gran escala. Si te interesan la interferometría, el magnetismo cósmico,
+    los discos planetarios o el desarrollo de software de investigación, sigue leyendo.
+
+grants:
+  - id: dicyt-pyralysis-2026
+    role:
+      en: Principal Investigator
+      es: Investigador responsable
+    program: DICYT Regular 2026 · USACH
+    title:
+      en: "Pyralysis: Desentrañando los Campos Magnéticos del Cosmos con Big Data y Supercómputo"
+      es: "Pyralysis: Desentrañando los Campos Magnéticos del Cosmos con Big Data y Supercómputo"
+    areas:
+      - magnetism
+      - imaging
+      - hpc
+
+  - id: fondecyt-discs-2025
+    role:
+      en: Co-Principal Investigator
+      es: Co-investigador responsable
+    program: FONDECYT Regular 2025
+    title:
+      en: Physical conditions and kinematics in planet-forming systems
+      es: Condiciones físicas y cinemática en sistemas formadores de planetas
+    areas:
+      - planet-formation
+      - imaging
+
+positions:
+  - id: phd-research-open
+    status: open
+    levels:
+      - phd
+    title:
+      en: PhD research — radio astronomy & scientific computing
+      es: Investigación doctoral — radioastronomía y computación científica
+    description:
+      en: >-
+        Doctoral topics tied to funded projects: large-scale interferometric imaging, compressed
+        sensing for polarimetry, cosmic magnetism, GPU/HPC pipelines, and open research software
+        (Pyralysis). Co-supervision with astronomy or physics programmes is possible depending on
+        the topic and degree requirements.
+      es: >-
+        Temas doctorales ligados a proyectos financiados: imagen interferométrica a gran escala,
+        detección comprimida para polarimetría, magnetismo cósmico, pipelines GPU/HPC y software de
+        investigación abierto (Pyralysis). La co-supervisión con programas de astronomía o física
+        es posible según el tema y los requisitos del grado.
+
+  - id: master-thesis-open
+    status: open
+    levels:
+      - master
+      - undergrad
+    title:
+      en: Master's thesis — radio astronomy & scientific computing
+      es: Tesis de magíster — radioastronomía y computación científica
+    description:
+      en: >-
+        Topics include interferometric imaging, GPU computing, compressed sensing for polarimetric
+        data, and contributions to the Pyralysis framework. Suitable for students in computer
+        engineering, astronomy, physics, or related fields with strong programming skills.
+      es: >-
+        Temas incluyen imagen interferométrica, computación en GPU, detección comprimida para datos
+        polarimétricos y aportes al framework Pyralysis. Adecuado para estudiantes de ingeniería
+        informática, astronomía, física o áreas afines con buena base en programación.
+
+  - id: undergrad-research-open
+    status: open
+    levels:
+      - undergrad
+    title:
+      en: Undergraduate research assistantships
+      es: Ayudantías de investigación de pregrado
+    description:
+      en: >-
+        Short- and medium-term projects for DIINF students: software development, data pipelines,
+        algorithm prototyping, and validation on radio astronomy datasets. Prior coursework in
+        Python and algorithms is expected.
+      es: >-
+        Proyectos de corto y mediano plazo para estudiantes DIINF: desarrollo de software,
+        pipelines de datos, prototipado de algoritmos y validación con datos de radioastronomía.
+        Se espera haber cursado Python y algoritmos.
+
+projects:
+  - id: pyralysis-pipeline
+    grant: dicyt-pyralysis-2026
+    areas:
+      - imaging
+      - hpc
+    software:
+      - pyralysis
+    levels:
+      - phd
+      - master
+      - undergrad
+    title:
+      en: Pyralysis pipelines for SKA-era polarimetry
+      es: Pipelines Pyralysis para polarimetría en la era SKA
+    description:
+      en: >-
+        Build and benchmark high-performance processing workflows for large radio surveys, with
+        emphasis on reproducibility and GPU acceleration.
+      es: >-
+        Construir y evaluar flujos de procesamiento de alto rendimiento para grandes surveys de
+        radio, con énfasis en reproducibilidad y aceleración en GPU.
+
+  - id: csromer-surveys
+    grant: dicyt-pyralysis-2026
+    areas:
+      - compressed-sensing
+      - magnetism
+    software:
+      - csromer
+    levels:
+      - phd
+      - master
+    title:
+      en: Compressed sensing for Faraday tomography
+      es: Detección comprimida para tomografía de Faraday
+    description:
+      en: >-
+        Extend and validate CS-ROMER on survey-scale polarimetric data; compare reconstruction
+        quality and uncertainty quantification against classical methods.
+      es: >-
+        Extender y validar CS-ROMER en datos polarimétricos a escala de survey; comparar calidad
+        de reconstrucción y cuantificación de incertidumbre con métodos clásicos.
+
+  - id: gpu-imaging
+    areas:
+      - imaging
+      - hpc
+    software:
+      - gpuvmem
+    levels:
+      - phd
+      - master
+      - undergrad
+    title:
+      en: GPU-accelerated interferometric imaging
+      es: Imagen interferométrica acelerada en GPU
+    description:
+      en: >-
+        Prototype and profile imaging algorithms (MEM, convex optimisation) on multi-GPU systems
+        for realistic array configurations.
+      es: >-
+        Prototipar y perfilar algoritmos de imagen (MEM, optimización convexa) en sistemas
+        multi-GPU para configuraciones realistas de arreglos.
+
+  - id: disc-kinematics
+    grant: fondecyt-discs-2025
+    areas:
+      - planet-formation
+      - imaging
+    levels:
+      - phd
+      - master
+    title:
+      en: Disc structure and variability in radio interferometry
+      es: Estructura y variabilidad de discos en interferometría de radio
+    description:
+      en: >-
+        Co-supervised projects connected to planet-forming systems: imaging systematics, variability,
+        and linking observations to physical models. In collaboration with Prof. Simon Casassus.
+      es: >-
+        Proyectos co-supervisados ligados a sistemas formadores de planetas: sistemáticas de imagen,
+        variabilidad y conexión entre observaciones y modelos físicos. En colaboración con el
+        Prof. Simon Casassus.
+
+skills:
+  - id: python
+    label:
+      en: Python programming
+      es: Programación en Python
+    required: true
+  - id: linux
+    label:
+      en: Comfortable with Linux / command line
+      es: Manejo de Linux / línea de comandos
+    required: true
+  - id: linear-algebra
+    label:
+      en: Linear algebra & basic numerical methods
+      es: Álgebra lineal y métodos numéricos básicos
+    required: true
+  - id: interest-astro
+    label:
+      en: Genuine interest in astronomy or signal processing
+      es: Interés genuino en astronomía o procesamiento de señales
+    required: true
+  - id: gpu
+    label:
+      en: CUDA / GPU computing (nice to have)
+      es: CUDA / computación en GPU (deseable)
+    required: false
+  - id: git
+    label:
+      en: Version control (git) and reproducible workflows
+      es: Control de versiones (git) y flujos reproducibles
+    required: false
+
+apply_steps:
+  - id: explore
+    title:
+      en: Explore the research areas
+      es: Revisa las áreas de investigación
+    description:
+      en: >-
+        Read the research pages and software hub to see which topics fit your background and interests.
+      es: >-
+        Lee las páginas de investigación y el hub de software para ver qué temas se ajustan a tu
+        formación e intereses.
+    links:
+      - label:
+          en: Research areas
+          es: Áreas de investigación
+        url: /research/
+      - label:
+          en: Software
+          es: Software
+        url: /software/
+      - label:
+          en: Pyralysis work items (GitLab)
+          es: Work items de Pyralysis (GitLab)
+        url: https://gitlab.com/clirai/pyralysis/-/work_items
+        external: true
+
+  - id: pyralysis-issues
+    title:
+      en: Pick a Pyralysis issue (optional)
+      es: Elige un issue de Pyralysis (opcional)
+    description:
+      en: >-
+        Many thesis and RA projects start from a concrete task. Browse the Pyralysis work items on
+        GitLab, find an open issue that fits your level, and tell me which one you'd like to work on.
+      es: >-
+        Muchos proyectos de tesis y ayudantía parten de una tarea concreta. Revisa los work items de
+        Pyralysis en GitLab, elige un issue abierto acorde a tu nivel e indícame cuál te gustaría abordar.
+    links:
+      - label:
+          en: Open Pyralysis work items
+          es: Ver work items de Pyralysis
+        url: https://gitlab.com/clirai/pyralysis/-/work_items
+        external: true
+
+  - id: email
+    title:
+      en: Send an introductory email
+      es: Envía un correo de presentación
+    description:
+      en: >-
+        Include a short CV, transcript (or GPA summary), relevant coursework, and a brief statement
+        (½ page) on why the project interests you and what you hope to learn. If you picked a
+        Pyralysis issue, mention it in the email.
+      es: >-
+        Incluye un CV breve, certificado de notas (o resumen de promedio), cursos relevantes y una
+        declaración corta (½ página) sobre por qué te interesa el proyecto y qué esperas aprender.
+        Si elegiste un issue de Pyralysis, menciónalo en el correo.
+
+  - id: meet
+    title:
+      en: Meet to discuss fit
+      es: Reunión para evaluar encaje
+    description:
+      en: >-
+        We schedule a conversation (in person or online) to align expectations, timeline, and
+        supervision arrangements with USACH degree requirements.
+      es: >-
+        Coordinamos una conversación (presencial u online) para alinear expectativas, plazos y
+        modalidad de supervisión con los requisitos de tu programa en la USACH.
+
+area_labels:
+  magnetism:
+    en: Cosmic magnetism
+    es: Magnetismo cósmico
+  planet-formation:
+    en: Planet formation & discs
+    es: Formación planetaria y discos
+  imaging:
+    en: Radio interferometric imaging
+    es: Imagen interferométrica
+  compressed-sensing:
+    en: Compressed sensing
+    es: Detección comprimida
+  hpc:
+    en: High-performance computing
+    es: Computación de alto rendimiento
+
+level_labels:
+  phd:
+    en: PhD
+    es: Doctorado
+  master:
+    en: Master's
+    es: Magíster
+  undergrad:
+    en: Undergraduate
+    es: Pregrado
+
+status_labels:
+  open:
+    en: Open
+    es: Abierto
+  filled:
+    en: Filled
+    es: Cubierto
+  paused:
+    en: Paused
+    es: Pausado
