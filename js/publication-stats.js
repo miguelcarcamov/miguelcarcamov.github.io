@@ -154,14 +154,26 @@
         mapNode.textContent = t("stats.map_no_data", "No affiliation-country signal available yet.");
         if (colorbarMinNode) colorbarMinNode.textContent = "0%";
         if (colorbarMaxNode) colorbarMaxNode.textContent = "0%";
+        var emptyGradient = document.querySelector(".stats-colorbar-gradient");
+        if (emptyGradient) {
+          emptyGradient.style.background = "linear-gradient(to top, #e8e4fa 0%, #362cb1 100%)";
+        }
         return;
       }
 
       var shares = countryRows.map(function (item) { return Number(item.share_percent || 0); });
       var minShare = Math.min.apply(null, shares);
       var maxShare = Math.max.apply(null, shares);
+      var colorbarGradientNode = document.querySelector(".stats-colorbar-gradient");
+      var mapLowColor = darkMode ? "#c8c0f0" : "#e8e4fa";
+      var mapHighColor = darkMode ? "#493fc8" : "#362cb1";
+
       if (colorbarMinNode) colorbarMinNode.textContent = minShare.toFixed(1) + "%";
       if (colorbarMaxNode) colorbarMaxNode.textContent = maxShare.toFixed(1) + "%";
+      if (colorbarGradientNode) {
+        colorbarGradientNode.style.background =
+          "linear-gradient(to top, " + mapLowColor + " 0%, " + mapHighColor + " 100%)";
+      }
 
       ensureGoogleCharts().then(function () {
         var dataArray = [["Country", "Paper share (%)", "Papers"]];
@@ -174,7 +186,11 @@
           backgroundColor: "transparent",
           datalessRegionColor: darkMode ? "#2c2d33" : "#f3f3f8",
           defaultColor: darkMode ? "#434556" : "#e3e4f2",
-          colorAxis: { colors: [colors.accent, colors.primary] },
+          colorAxis: {
+            colors: [mapLowColor, mapHighColor],
+            minValue: minShare,
+            maxValue: maxShare
+          },
           legend: "none",
           tooltip: { textStyle: { color: "#222" } }
         });
@@ -376,6 +392,80 @@
         }
       )
     );
+
+    var roleChartColors = darkMode
+      ? { first: "#6b5ce7", lead: "#4a3fd4", supporting: "#b8b0ef" }
+      : { first: "#6b5ce7", lead: "#362cb1", supporting: "#d4cff5" };
+
+    charts.push(
+      createChart(
+        document.getElementById("papers-by-role-chart"),
+        {
+          type: "bar",
+          data: {
+            labels: ((stats.leadership && stats.leadership.yearly_by_role) || {}).years || [],
+            datasets: [
+              {
+                label: t("stats.chart_label_first_author", "First author"),
+                data: ((stats.leadership && stats.leadership.yearly_by_role) || {}).first_author || [],
+                backgroundColor: roleChartColors.first,
+                stack: "role"
+              },
+              {
+                label: t("stats.chart_label_lead_coauthor", "Lead co-author (pos. 2)"),
+                data: ((stats.leadership && stats.leadership.yearly_by_role) || {}).lead_coauthor || [],
+                backgroundColor: roleChartColors.lead,
+                stack: "role"
+              },
+              {
+                label: t("stats.chart_label_supporting", "Supporting (pos. 3+)"),
+                data: ((stats.leadership && stats.leadership.yearly_by_role) || {}).supporting || [],
+                backgroundColor: roleChartColors.supporting,
+                stack: "role"
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+              x: { stacked: true, ticks: { color: colors.text }, grid: { color: colors.grid } },
+              y: { stacked: true, ticks: { color: colors.text }, grid: { color: colors.grid }, beginAtZero: true }
+            },
+            plugins: { legend: { labels: { color: colors.text } } }
+          }
+        }
+      )
+    );
+
+    (function () {
+      var positionKeys = ["1", "2", "3", "4", "5", "6", "7+", "unknown"];
+      var distribution = stats.author_position_distribution || {};
+      charts.push(
+        createChart(
+          document.getElementById("author-position-chart"),
+          {
+            type: "bar",
+            data: {
+              labels: positionKeys.map(function (key) {
+                return key === "unknown" ? "?" : key;
+              }),
+              datasets: [{
+                label: t("stats.chart_label_papers", "Papers"),
+                data: positionKeys.map(function (key) { return distribution[key] || 0; }),
+                backgroundColor: colors.accent
+              }]
+            },
+            options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              scales: commonScales,
+              plugins: { legend: { labels: { color: colors.text } } }
+            }
+          }
+        )
+      );
+    })();
 
     charts.push(
       createChart(

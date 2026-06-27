@@ -98,6 +98,20 @@
             return;
         }
 
+        function spaHistoryUrl(path) {
+            var url = path || '/';
+            if (window.SiteI18n && typeof window.SiteI18n.getLang === 'function' && window.SiteI18n.getLang() === 'es') {
+                try {
+                    var parsed = new URL(url, window.location.origin);
+                    parsed.searchParams.set('lang', 'es');
+                    return parsed.pathname + parsed.search + parsed.hash;
+                } catch (err) {
+                    return url.indexOf('?') >= 0 ? url + '&lang=es' : url + '?lang=es';
+                }
+            }
+            return url;
+        }
+
         function activateDefaultSection() {
             var $homeSection = $('#home');
             var $fallbackSection = $pages.first();
@@ -221,9 +235,9 @@
             
             // Keep the visible URL SEO-friendly while preserving one-page transitions.
             if (history.pushState) {
-                history.pushState(null, null, targetUrl || '/');
+                history.pushState(null, null, spaHistoryUrl(targetUrl));
             } else {
-                window.location.href = targetUrl || '/';
+                window.location.href = spaHistoryUrl(targetUrl);
             }
             
             // update state
@@ -231,11 +245,12 @@
             currentActivePage = $toBeActivated[0];
         });
 
-        // Remove Class after page Transition
+        // Remove transition classes after the section animation finishes (ignore child animations).
         $pages.on('animationend', function(e){
-            // Only remove classes from the element that finished animating
-            var $animatingElement = $(e.target);
-            $animatingElement.removeClass('translateToLeft translateToRight translateFromLeft translateFromRight');
+            if (e.target !== e.currentTarget) {
+                return;
+            }
+            $(e.currentTarget).removeClass('translateToLeft translateToRight translateFromLeft translateFromRight');
         });
         
         // Handle browser back/forward buttons

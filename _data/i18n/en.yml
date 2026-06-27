@@ -98,6 +98,12 @@ join:
   skill_required: Expected
   skill_optional: Plus
   apply_heading: How to apply
+  apply_subtitle: Already in a USACH programme or preparing your application? Steps to discuss supervision with me.
+  admission_heading: USACH programme admission
+  admission_intro: >-
+    Joining the research group requires being admitted to — or already enrolled in — a USACH degree programme.
+    University admissions are handled by USACH and DIINF; the path depends on your level.
+  admission_choose_level: Where are you in your academic journey?
   related_software: Related software
   cta_office_hours: Book office hours
   cta_contact: Get in touch
@@ -157,6 +163,55 @@ stats:
   chart_label_score: s_i score
   map_no_data: No affiliation-country signal available yet.
   map_load_error: Could not load map renderer. Check browser console for CSP details.
+  leadership_heading: Research leadership
+  leadership_subtitle: "First-author and lead-author roles (positions 1–2): volume, citation share, and how they evolve over time."
+  overall_heading: Overall research impact
+  overall_subtitle: Portfolio-wide volume, citations, and recent trajectory across all included papers.
+  collaboration_heading: Collaboration
+  collaboration_subtitle: Co-author networks, repeat collaborators, and inferred international reach from ADS affiliation metadata.
+  card_lead_share: Lead-author Share
+  card_lead_citation_share: Lead-author Citation Share
+  card_recent_lead: Recent Lead Papers (5y)
+  card_lead_cpp: Lead Citations per Paper
+  card_unique_coauthors: Unique Co-authors
+  card_avg_coauthors: Avg. Co-authors per Paper
+  card_repeat_collab: Repeat Collaborators
+  chart_papers_by_role: Papers by Author Role
+  chart_author_position: Author Position Distribution
+  chart_label_first_author: First author
+  chart_label_lead_coauthor: Lead co-author (pos. 2)
+  chart_label_supporting: Supporting (pos. 3+)
+  chart_label_position: Author position
+  info_total_papers: All journal + conference papers included after filtering and deduplication.
+  info_total_citations: Sum of citation counts across all included papers.
+  info_h_index: Largest h such that at least h papers have at least h citations.
+  info_m_index: h-index divided by years since first publication.
+  info_citation_velocity: Citations per effective paper-year over papers published in the last 5 years.
+  info_momentum: Average of recent paper-share and recent citation-share over the last 5 years.
+  info_flagship: Percent of total citations contributed by the five most-cited papers.
+  info_open_access: Percent of included papers tagged as open access in ADS properties.
+  info_first_author: Papers where Miguel Cárcamo is listed in author position 1.
+  info_lead_author: Papers where Miguel is author position 1 or 2.
+  info_lead_share: Percent of included papers where Miguel is author position 1 or 2.
+  info_lead_citation_share: Percent of total citations attributed to papers where Miguel is author position 1 or 2.
+  info_recent_lead: Lead-author papers published in the last 5 years, out of all lead-author papers.
+  info_lead_cpp: Average citations per paper where Miguel is author position 1 or 2.
+  info_leadership_ratio: Lead-role citations per paper divided by supporting-role citations per paper.
+  info_fondecyt: Calculated from top-10 journal papers in the last 5 years using the ANID GE Astronomía y Astrofísica formula.
+  info_intl_collab: Papers with two or more inferred affiliation countries among those with country signal.
+  info_unique_coauthors: Distinct co-authors across all included papers, excluding Miguel (canonicalized names).
+  info_avg_coauthors: Mean number of distinct co-authors per paper, excluding Miguel.
+  info_repeat_collab: Co-authors who appear on more than one included paper, and their share of all unique co-authors.
+  info_chart_papers_per_year: Annual count of included journal and conference papers.
+  info_chart_citations_combo: Annual citations received per publication year, with cumulative total over time.
+  info_chart_citation_distribution: Histogram of how many papers fall into each citation-count bin.
+  info_chart_top_cited: Highest-cited papers in the included portfolio (ADS citation counts).
+  info_chart_papers_by_role: Stacked annual counts — first author, lead co-author (position 2), and supporting (position 3+).
+  info_chart_author_position: How often Miguel appears in each author position across included papers.
+  info_chart_fondecyt: Top journal papers in the last 5 years ranked by s_i score in the ANID GE Astronomía y Astrofísica NP formula.
+  info_chart_top_collaborators: Co-authors ranked by number of shared papers in the included portfolio.
+  info_chart_collab_network: Interactive graph of top co-authors by shared papers. Filter by year or first-author papers; click a node for joint publications.
+  info_chart_collab_map: Share of papers with inferred affiliation signal per country. Reflects collaboration geography, not author nationality.
 collaborators:
   title: COLLABORATORS & PARTNERS
   subtitle: Research institutions and key collaborators

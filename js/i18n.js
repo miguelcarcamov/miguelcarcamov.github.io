@@ -130,6 +130,8 @@
       if (!href || href.charAt(0) === "#") return;
       if (/^(https?:|mailto:|tel:)/i.test(href)) return;
       if (anchor.hasAttribute("data-i18n-skip")) return;
+      /* In-page section nav — main.js handles transitions and keeps ?lang= in the URL. */
+      if (anchor.hasAttribute("data-home-hash")) return;
       if (anchor.dataset.i18nBound === "1") return;
       anchor.dataset.i18nBound = "1";
       anchor.addEventListener("click", function (e) {

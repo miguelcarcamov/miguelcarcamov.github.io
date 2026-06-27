@@ -197,7 +197,66 @@
 
 <div class="row" style="margin-top: 40px;">
 <div class="col-md-12">
+<section class="join-admission-panel" aria-labelledby="join-admission-heading">
+<header class="join-admission-header">
+<h3 class="join-admission-heading" id="join-admission-heading" data-i18n="join.admission_heading">USACH programme admission</h3>
+<p class="join-admission-intro" data-i18n="join.admission_intro">Joining the research group requires being admitted to — or already enrolled in — a USACH degree programme. University admissions are handled by USACH and DIINF; the path depends on your level.</p>
+<p class="join-admission-prompt" data-i18n="join.admission_choose_level">Where are you in your academic journey?</p>
+</header>
+
+<div class="join-admission-paths">
+{% for path in data.admission.paths %}
+{% case path.id %}
+{% when 'phd' %}{% assign path_icon = 'fa-graduation-cap' %}
+{% when 'master' %}{% assign path_icon = 'fa-book' %}
+{% when 'undergrad' %}{% assign path_icon = 'fa-university' %}
+{% else %}{% assign path_icon = 'fa-arrow-right' %}
+{% endcase %}
+<article class="join-admission-path join-admission-path--{{ path.id }}">
+<div class="join-admission-path-icon" aria-hidden="true">
+<span class="fa {{ path_icon }}"></span>
+</div>
+<div class="join-admission-path-body">
+{% if path.levels %}
+<p class="join-admission-path-label">
+{% for level in path.levels %}
+<span data-i18n-block="en">{{ data.level_labels[level].en }}</span>
+<span data-i18n-block="es" hidden>{{ data.level_labels[level].es }}</span>
+{% unless forloop.last %} · {% endunless %}
+{% endfor %}
+</p>
+{% endif %}
+<h4 class="join-admission-path-title">
+<span data-i18n-block="en">{{ path.title.en }}</span>
+<span data-i18n-block="es" hidden>{{ path.title.es }}</span>
+</h4>
+<p class="join-admission-path-desc">
+<span data-i18n-block="en">{{ path.description.en }}</span>
+<span data-i18n-block="es" hidden>{{ path.description.es }}</span>
+</p>
+{% if path.links %}
+<div class="join-admission-ctas{% if path.links.size > 1 %} join-admission-ctas--multi{% endif %}">
+{% for link in path.links %}
+<a class="join-admission-btn" href="{{ link.url }}" target="_blank" rel="noopener noreferrer">
+<span data-i18n-block="en">{{ link.label.en }}</span>
+<span data-i18n-block="es" hidden>{{ link.label.es }}</span>
+<span class="fa fa-external-link join-admission-btn-icon" aria-hidden="true"></span>
+</a>
+{% endfor %}
+</div>
+{% endif %}
+</div>
+</article>
+{% endfor %}
+</div>
+</section>
+</div>
+</div>
+
+<div class="row" style="margin-top: 40px;">
+<div class="col-md-12">
 <h3 class="join-section-heading" data-i18n="join.apply_heading">How to apply</h3>
+<p class="join-section-note" data-i18n="join.apply_subtitle">Already in a USACH programme or preparing your application? Steps to discuss supervision with me.</p>
 </div>
 </div>
 

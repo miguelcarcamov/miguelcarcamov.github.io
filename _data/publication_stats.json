@@ -178,11 +178,11 @@
         "papers_together": 4
       },
       {
-        "name": "Ercolano, Barbara",
+        "name": "Scaife, Anna M. M.",
         "papers_together": 3
       },
       {
-        "name": "Vidal, Matias",
+        "name": "Roman, Pablo E.",
         "papers_together": 3
       }
     ],
@@ -283,12 +283,12 @@
         "share_percent": 33.33
       },
       {
-        "country": "France",
+        "country": "Canada",
         "papers": 5,
         "share_percent": 23.81
       },
       {
-        "country": "Canada",
+        "country": "France",
         "papers": 5,
         "share_percent": 23.81
       },
@@ -323,12 +323,12 @@
         "share_percent": 4.76
       },
       {
-        "country": "Australia",
+        "country": "Netherlands",
         "papers": 1,
         "share_percent": 4.76
       },
       {
-        "country": "Netherlands",
+        "country": "Australia",
         "papers": 1,
         "share_percent": 4.76
       },
@@ -365,12 +365,12 @@
         "share_percent": 33.33
       },
       {
-        "country": "France",
+        "country": "Canada",
         "papers": 5,
         "share_percent": 23.81
       },
       {
-        "country": "Canada",
+        "country": "France",
         "papers": 5,
         "share_percent": 23.81
       },
@@ -405,12 +405,12 @@
         "share_percent": 4.76
       },
       {
-        "country": "Australia",
+        "country": "Netherlands",
         "papers": 1,
         "share_percent": 4.76
       },
       {
-        "country": "Netherlands",
+        "country": "Australia",
         "papers": 1,
         "share_percent": 4.76
       },
@@ -429,9 +429,70 @@
   "leadership": {
     "lead_papers": 7,
     "supporting_papers": 14,
+    "lead_citations": 100,
+    "lead_citation_share_percent": 24.69,
     "lead_citations_per_paper": 14.29,
     "supporting_citations_per_paper": 21.79,
-    "leadership_impact_ratio": 0.656
+    "leadership_impact_ratio": 0.656,
+    "window_years": 5,
+    "window_start_year": 2022,
+    "window_end_year": 2026,
+    "recent_lead_papers": 5,
+    "recent_lead_share_percent": 71.43,
+    "yearly_by_role": {
+      "years": [
+        2015,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "first_author": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "lead_coauthor": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        1
+      ],
+      "supporting": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        4,
+        1,
+        1,
+        1
+      ]
+    }
   },
   "momentum": {
     "window_years": 5,

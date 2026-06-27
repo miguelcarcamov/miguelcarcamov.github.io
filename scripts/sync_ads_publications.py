@@ -557,6 +557,33 @@ def _citation_histogram(citations: list[int]) -> dict[str, int]:
     return bins
 
 
+def _author_role_category(entry: dict[str, Any]) -> str:
+    position = entry.get("author_position")
+    if position == 1:
+        return "first_author"
+    if position == 2:
+        return "lead_coauthor"
+    return "supporting"
+
+
+def _yearly_by_role(entries: list[dict[str, Any]]) -> dict[str, Any]:
+    yearly: dict[int, dict[str, int]] = {}
+    for entry in entries:
+        year = _safe_int(entry.get("year"))
+        if year <= 0:
+            continue
+        bucket = yearly.setdefault(year, {"first_author": 0, "lead_coauthor": 0, "supporting": 0})
+        bucket[_author_role_category(entry)] += 1
+
+    years = sorted(yearly.keys())
+    return {
+        "years": years,
+        "first_author": [yearly[year]["first_author"] for year in years],
+        "lead_coauthor": [yearly[year]["lead_coauthor"] for year in years],
+        "supporting": [yearly[year]["supporting"] for year in years],
+    }
+
+
 def _author_position_distribution(entries: list[dict[str, Any]]) -> dict[str, int]:
     result = {
         "1": 0,
@@ -839,7 +866,7 @@ def _citation_velocity(entries: list[dict[str, Any]], current_year: int, window_
     }
 
 
-def _leadership_impact(entries: list[dict[str, Any]]) -> dict[str, Any]:
+def _leadership_impact(entries: list[dict[str, Any]], current_year: int, window_years: int = 5) -> dict[str, Any]:
     lead_entries = [entry for entry in entries if entry.get("author_position") is not None and int(entry.get("author_position")) <= 2]
     supporting_entries = [
         entry for entry in entries if entry.get("author_position") is None or int(entry.get("author_position")) > 2
@@ -854,12 +881,29 @@ def _leadership_impact(entries: list[dict[str, Any]]) -> dict[str, Any]:
     supporting_cpp = _citations_per_paper(supporting_entries)
     ratio = round((lead_cpp / supporting_cpp), 3) if supporting_cpp > 0 else 0.0
 
+    total_citations = sum(int(entry.get("citation_count", 0)) for entry in entries)
+    lead_citations = sum(int(entry.get("citation_count", 0)) for entry in lead_entries)
+    lead_citation_share = round((lead_citations / total_citations) * 100.0, 2) if total_citations else 0.0
+
+    window_start = current_year - window_years + 1
+    recent_lead_entries = [entry for entry in lead_entries if _safe_int(entry.get("year")) >= window_start]
+    recent_lead_count = len(recent_lead_entries)
+    recent_lead_share = round((recent_lead_count / len(lead_entries)) * 100.0, 2) if lead_entries else 0.0
+
     return {
         "lead_papers": len(lead_entries),
         "supporting_papers": len(supporting_entries),
+        "lead_citations": lead_citations,
+        "lead_citation_share_percent": lead_citation_share,
         "lead_citations_per_paper": lead_cpp,
         "supporting_citations_per_paper": supporting_cpp,
         "leadership_impact_ratio": ratio,
+        "window_years": window_years,
+        "window_start_year": window_start,
+        "window_end_year": current_year,
+        "recent_lead_papers": recent_lead_count,
+        "recent_lead_share_percent": recent_lead_share,
+        "yearly_by_role": _yearly_by_role(entries),
     }
 
 
@@ -949,7 +993,7 @@ def build_publication_stats(entries: list[dict[str, Any]], generated_at_utc: str
     collaboration = _collaboration_metrics(entries)
     country_collaboration = _country_collaboration_metrics(entries)
     citation_velocity = _citation_velocity(entries, current_year=current_year, window_years=5)
-    leadership = _leadership_impact(entries)
+    leadership = _leadership_impact(entries, current_year=current_year, window_years=5)
     momentum = _momentum_metrics(entries, current_year=current_year, window_years=5)
     impact_concentration = _impact_concentration(entries)
     fondecyt = _fondecyt_np(entries, current_year=current_year)

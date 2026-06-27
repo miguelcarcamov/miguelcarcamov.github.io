@@ -98,6 +98,12 @@ join:
   skill_required: Esperado
   skill_optional: Deseable
   apply_heading: Cómo postular
+  apply_subtitle: ¿Ya estás en un programa USACH o preparando tu postulación? Pasos para conversar sobre supervisión conmigo.
+  admission_heading: Admisión a programas USACH
+  admission_intro: >-
+    Para unirte al grupo de investigación debes estar admitido/a — o ya matriculado/a — en un programa de grado de la USACH.
+    La admisión universitaria la gestionan la USACH y el DIINF; el camino depende de tu nivel.
+  admission_choose_level: ¿En qué etapa de tu formación estás?
   related_software: Software relacionado
   cta_office_hours: Reservar hora de oficina
   cta_contact: Contactar
@@ -157,6 +163,55 @@ stats:
   chart_label_score: puntuación s_i
   map_no_data: Aún no hay señal de país por afiliación.
   map_load_error: No se pudo cargar el mapa. Revisa la consola del navegador por detalles de CSP.
+  leadership_heading: Liderazgo en investigación
+  leadership_subtitle: "Roles de primer autor y autor principal (posiciones 1–2): volumen, participación en citas y evolución en el tiempo."
+  overall_heading: Impacto general de la investigación
+  overall_subtitle: Volumen del portafolio, citas y trayectoria reciente en todas las publicaciones incluidas.
+  collaboration_heading: Colaboración
+  collaboration_subtitle: Redes de coautores, colaboradores recurrentes y alcance internacional inferido desde metadatos de afiliación en ADS.
+  card_lead_share: Porcentaje como autor principal
+  card_lead_citation_share: Porcentaje de citas en rol principal
+  card_recent_lead: Artículos recientes en rol principal (5 años)
+  card_lead_cpp: Citas por artículo en rol principal
+  card_unique_coauthors: Coautores únicos
+  card_avg_coauthors: Prom. coautores por artículo
+  card_repeat_collab: Colaboradores recurrentes
+  chart_papers_by_role: Artículos por rol de autoría
+  chart_author_position: Distribución de posición de autor
+  chart_label_first_author: Primer autor
+  chart_label_lead_coauthor: Coautor principal (pos. 2)
+  chart_label_supporting: Coautoría (pos. 3+)
+  chart_label_position: Posición de autor
+  info_total_papers: Todos los artículos de revista y congreso incluidos tras filtrado y deduplicación.
+  info_total_citations: Suma de citas en todas las publicaciones incluidas.
+  info_h_index: Mayor h tal que al menos h artículos tienen al menos h citas.
+  info_m_index: índice h dividido por años desde la primera publicación.
+  info_citation_velocity: Citas por año-papel efectivo en publicaciones de los últimos 5 años.
+  info_momentum: Promedio de la participación reciente en artículos y en citas durante los últimos 5 años.
+  info_flagship: Porcentaje del total de citas aportado por los cinco artículos más citados.
+  info_open_access: Porcentaje de artículos marcados como acceso abierto en las propiedades de ADS.
+  info_first_author: Artículos donde Miguel Cárcamo aparece en la posición de autor 1.
+  info_lead_author: Artículos donde Miguel aparece en la posición de autor 1 o 2.
+  info_lead_share: Porcentaje de artículos incluidos donde Miguel está en posición 1 o 2.
+  info_lead_citation_share: Porcentaje del total de citas atribuido a artículos donde Miguel está en posición 1 o 2.
+  info_recent_lead: Artículos en rol principal publicados en los últimos 5 años, del total en rol principal.
+  info_lead_cpp: Promedio de citas por artículo donde Miguel está en posición 1 o 2.
+  info_leadership_ratio: Citas por artículo en rol principal dividido por citas por artículo en rol de apoyo.
+  info_fondecyt: Calculado con los 10 mejores artículos de revista de los últimos 5 años según la fórmula ANID GE Astronomía y Astrofísica.
+  info_intl_collab: Artículos con dos o más países de afiliación inferidos entre los que tienen señal de país.
+  info_unique_coauthors: Coautores distintos en todas las publicaciones incluidas, excluyendo a Miguel (nombres canónicos).
+  info_avg_coauthors: Número medio de coautores distintos por artículo, excluyendo a Miguel.
+  info_repeat_collab: Coautores que aparecen en más de un artículo incluido, y su porcentaje sobre todos los coautores únicos.
+  info_chart_papers_per_year: Recuento anual de artículos de revista y congreso incluidos.
+  info_chart_citations_combo: Citas anuales recibidas por año de publicación, con total acumulado en el tiempo.
+  info_chart_citation_distribution: Histograma de cuántos artículos caen en cada rango de citas.
+  info_chart_top_cited: Artículos más citados del portafolio incluido (conteos de ADS).
+  info_chart_papers_by_role: Recuentos anuales apilados — primer autor, coautor principal (posición 2) y apoyo (posición 3+).
+  info_chart_author_position: Frecuencia con la que Miguel aparece en cada posición de autor.
+  info_chart_fondecyt: Mejores artículos de revista de los últimos 5 años según puntuación s_i de la fórmula NP ANID GE Astronomía y Astrofísica.
+  info_chart_top_collaborators: Coautores ordenados por número de artículos compartidos en el portafolio incluido.
+  info_chart_collab_network: Gráfico interactivo de principales coautores por artículos compartidos. Filtra por año o primer autor; haz clic en un nodo para ver publicaciones conjuntas.
+  info_chart_collab_map: Participación de artículos con señal de afiliación inferida por país. Refleja geografía de colaboración, no nacionalidad del autor.
 collaborators:
   title: COLABORADORES Y SOCIOS
   subtitle: Instituciones de investigación y colaboradores clave

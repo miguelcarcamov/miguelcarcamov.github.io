@@ -210,6 +210,83 @@ skills:
       es: Control de versiones (git) y flujos reproducibles
     required: false
 
+admission:
+  paths:
+    - id: phd
+      levels:
+        - phd
+      title:
+        en: Doctoral students
+        es: Estudiantes de doctorado
+      description:
+        en: >-
+          Apply to the PhD in Engineering Sciences with a mention in Computer Science (Doctorado en
+          Ciencias de la Ingeniería con mención en Informática), run by DIINF. Deadlines, entry
+          requirements, and the online application are published on the official programme page.
+        es: >-
+          Postula al Doctorado en Ciencias de la Ingeniería con mención en Informática, administrado
+          por el DIINF. Plazos, requisitos de ingreso y la postulación en línea están en la página
+          oficial del programa.
+      links:
+        - label:
+            en: PhD programme — DIINF / USACH
+            es: Programa de doctorado — DIINF / USACH
+          url: https://informatica.usach.cl/postgrado/doctorado-en-ciencias-de-la-ingenieria-con-mencion-en-informatica/
+          external: true
+
+    - id: master
+      levels:
+        - master
+      title:
+        en: Master's students
+        es: Estudiantes de magíster
+      description:
+        en: >-
+          Apply to the Master's in Computer Engineering (Magíster en Ingeniería Informática). Admission
+          criteria, curriculum, tuition, and application forms are on the programme page.
+        es: >-
+          Postula al Magíster en Ingeniería Informática. Criterios de admisión, malla curricular,
+          aranceles y formularios de postulación están en la página del programa.
+      links:
+        - label:
+            en: Master's programme — DIINF / USACH
+            es: Programa de magíster — DIINF / USACH
+          url: https://informatica.usach.cl/postgrado/magister-ingenieria-informatica/
+          external: true
+
+    - id: undergrad
+      levels:
+        - undergrad
+      title:
+        en: Undergraduate students
+        es: Estudiantes de pregrado
+      description:
+        en: >-
+          In Chile, admission to undergraduate programmes at state universities is mainly through
+          the PAES (Prueba de Acceso a la Educación Superior), the national university entrance exam.
+          With your PAES scores you apply to USACH during the regular admission period (admisión
+          regular). DIINF offers two degrees: Civil Engineering in Computer Science (professional
+          degree) and Computer and Information Engineering (execution degree). Once enrolled, you
+          can pursue research assistantships or thesis topics with the group.
+        es: >-
+          En Chile, el ingreso a carreras de pregrado en universidades estatales se realiza
+          principalmente mediante la PAES (Prueba de Acceso a la Educación Superior). Con tus
+          puntajes postulas a la USACH en el periodo de admisión regular. El DIINF ofrece
+          Ingeniería Civil en Informática (carrera profesional) e Ingeniería de Ejecución en
+          Computación e Informática. Una vez matriculado/a, puedes postular a ayudantías de
+          investigación o temas de tesis con el grupo.
+      links:
+        - label:
+            en: Civil Engineering in Computer Science
+            es: Ingeniería Civil en Informática
+          url: https://informatica.usach.cl/pregrado/ingenieria-civil-en-informatica/
+          external: true
+        - label:
+            en: Computer & Information Engineering (execution degree)
+            es: Ingeniería de Ejecución en Computación e Informática
+          url: https://informatica.usach.cl/pregrado/ingenieria-de-ejecucion-en-computacion-e-informatica/
+          external: true
+
 apply_steps:
   - id: explore
     title:
