@@ -1,0 +1,99 @@
+# Research & career timeline (oldest → newest). Append new milestones at the END.
+
+milestones:
+  - id: msc-usach
+    year: 2016
+    kind: education
+    title:
+      en: M.Sc. Computer Engineering — USACH
+      es: Magíster en Ingeniería Informática — USACH
+    description:
+      en: Thesis on multi-GPU interferometric image synthesis with Prof. Fernando Rannou.
+      es: Tesis sobre síntesis de imágenes interferométricas multi-GPU con el Prof. Fernando Rannou.
+
+  - id: gpuvmem-paper
+    year: 2018
+    kind: publication
+    title:
+      en: "GPUVMEM — Multi-GPU maximum entropy imaging"
+      es: "GPUVMEM — Imagen de máxima entropía multi-GPU"
+    description:
+      en: First-author journal paper in Astronomy and Computing; foundation for GPUVMEM software.
+      es: Artículo de primer autor en Astronomy and Computing; base del software GPUVMEM.
+    link: /publications/#pub-2018A&C....22...16C
+
+  - id: phd-manchester
+    year: 2023
+    kind: education
+    title:
+      en: Ph.D. Astronomy & Astrophysics — Manchester
+      es: Doctorado en Astronomía y Astrofísica — Manchester
+    description:
+      en: Compressive Faraday imaging for next-generation radio telescopes (Prof. Anna Scaife).
+      es: Imagen compresiva de Faraday para radiotelescopios de próxima generación (Prof. Anna Scaife).
+
+  - id: csromer-paper
+    year: 2023
+    kind: publication
+    title:
+      en: "CS-ROMER — compressed sensing for Faraday depth"
+      es: "CS-ROMER — detección comprimida para profundidad de Faraday"
+    description:
+      en: First-author MNRAS paper and open-source CS-ROMER framework.
+      es: Artículo de primer autor en MNRAS y framework CS-ROMER de código abierto.
+    link: /publications/#pub-2023MNRAS.518.1955C
+
+  - id: usach-faculty
+    year: 2024
+    kind: role
+    title:
+      en: Assistant Professor — DIINF, USACH
+      es: Profesor asistente — DIINF, USACH
+    description:
+      en: Faculty position combining radio astronomy, scientific computing, and student supervision.
+      es: Cargo académico combinando radioastronomía, computación científica y supervisión de estudiantes.
+
+  - id: fondecyt-2025
+    year: 2025
+    kind: grant
+    title:
+      en: FONDECYT Regular — planet-forming systems
+      es: FONDECYT Regular — sistemas formadores de planetas
+    description:
+      en: Co-PI project on physical conditions and kinematics in planet-forming environments.
+      es: Proyecto co-PI sobre condiciones físicas y cinemática en entornos formadores de planetas.
+
+  - id: pyralysis-paper
+    year: 2026
+    kind: publication
+    title:
+      en: Pyralysis — SKA-era radio astronomy framework
+      es: Pyralysis — framework de radioastronomía para la era SKA
+    description:
+      en: Manuscript in preparation on the Pyralysis object-oriented processing and imaging framework (journal TBD).
+      es: Manuscrito en preparación sobre el framework orientado a objetos Pyralysis (revista por definir).
+    link: /software/#software-pyralysis
+
+  - id: dicyt-pyralysis-2026
+    year: 2026
+    kind: grant
+    title:
+      en: DICYT Regular — Pyralysis & cosmic magnetism
+      es: DICYT Regular — Pyralysis y magnetismo cósmico
+    description:
+      en: PI project on extragalactic magnetic fields with big-data pipelines and supercomputing.
+      es: Proyecto PI sobre campos magnéticos extragalácticos con pipelines de big data y supercomputación.
+
+kind_labels:
+  education:
+    en: Education
+    es: Formación
+  publication:
+    en: Publication
+    es: Publicación
+  role:
+    en: Role
+    es: Rol
+  grant:
+    en: Grant
+    es: Proyecto

@@ -77,7 +77,7 @@
       ]
     }
     </script>
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://www.gstatic.com https://www.google.com https://maps.googleapis.com https://maps.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://www.gstatic.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com https://www.gstatic.com data:; img-src 'self' data: https: https://www.google.com https://maps.gstatic.com; connect-src 'self' https: https://www.google.com https://maps.googleapis.com https://maps.gstatic.com; frame-src https://www.google.com; object-src 'none'; base-uri 'self'; form-action 'self' mailto:; upgrade-insecure-requests">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://www.gstatic.com https://www.google.com https://maps.googleapis.com https://maps.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://www.gstatic.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com https://www.gstatic.com data:; img-src 'self' data: https: https://www.google.com https://maps.gstatic.com https://i.ytimg.com; connect-src 'self' https: https://www.google.com https://maps.googleapis.com https://maps.gstatic.com; frame-src https://www.google.com https://www.youtube-nocookie.com https://www.youtube.com; object-src 'none'; base-uri 'self'; form-action 'self' mailto:; upgrade-insecure-requests">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
 
@@ -113,6 +113,8 @@
     <!-- style css -->
     <link rel="stylesheet" href="{{ '/style.css' | relative_url }}?v={{ site.time | date: '%s' }}"/>
 
+    <script src="{{ '/js/theme.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
+
     <!-- responsive css -->
     <link rel="stylesheet" href="{{ '/css/responsive.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 
@@ -147,6 +149,9 @@
                             <span class="sidebar-utility-label">Search</span>
                         </button>
                         <button type="button" id="lang-toggle" class="sidebar-utility-btn sidebar-utility-btn--lang" data-i18n="lang_toggle">Español</button>
+                        <button type="button" id="theme-toggle" class="sidebar-utility-btn sidebar-utility-btn--theme" aria-pressed="false" data-i18n-title="theme_toggle" title="Dark mode" aria-label="Toggle dark mode">
+                            <span class="lnr lnr-sun" aria-hidden="true"></span>
+                        </button>
                         <a href="{{ site.substack_url }}subscribe" class="sidebar-utility-btn sidebar-utility-btn--link" target="_blank" rel="noopener noreferrer" data-i18n="writing.subscribe_short">Subscribe</a>
                     </div>
 
@@ -230,7 +235,9 @@
     <script src="{{ '/js/i18n.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
     <script src="{{ '/js/site-search.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
     <script src="{{ '/js/software.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
+    <script src="{{ '/js/thesis-gallery.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
     <script src="{{ '/js/publication-explorer.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
+    <script src="{{ '/js/join-matcher.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
     <script src="{{ '/js/main.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
     <script src="{{ '/js/collaboration-network.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
     <script src="{{ '/js/research-areas.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>

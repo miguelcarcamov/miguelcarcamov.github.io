@@ -19,6 +19,8 @@
   var indexData = null;
   var publications = [];
   var expanded = {};
+  var relatedByBibcode = {};
+  var pubByBibcode = {};
 
   function t(key) {
     if (window.SiteI18n && typeof window.SiteI18n.t === "function") {
@@ -191,6 +193,63 @@
     return '<div class="pub-asset-row"><span class="pub-asset-label">' + escapeHtml(label) + "</span>" + badges + "</div>";
   }
 
+  function buildRelatedMap(pubs) {
+    var bySoftware = {};
+    pubs.forEach(function (pub) {
+      (pub.software || []).forEach(function (sw) {
+        var id = sw.id || sw.name;
+        if (!bySoftware[id]) bySoftware[id] = [];
+        bySoftware[id].push(pub.bibcode);
+      });
+    });
+
+    relatedByBibcode = {};
+    pubByBibcode = {};
+    pubs.forEach(function (pub) {
+      pubByBibcode[pub.bibcode] = pub;
+      var related = {};
+      (pub.software || []).forEach(function (sw) {
+        var id = sw.id || sw.name;
+        (bySoftware[id] || []).forEach(function (bibcode) {
+          if (bibcode !== pub.bibcode) related[bibcode] = true;
+        });
+      });
+      relatedByBibcode[pub.bibcode] = Object.keys(related).slice(0, 6);
+    });
+  }
+
+  function renderImpactChain(pub) {
+    var related = relatedByBibcode[pub.bibcode] || [];
+    var hasSoftware = pub.software && pub.software.length;
+    if (!hasSoftware && !related.length) return "";
+
+    var heading = t("publications.impact_heading") || "Research impact chain";
+    var relatedLabel = t("publications.related_papers") || "Related papers (shared software)";
+    var statsLabel = t("publications.view_stats") || "Publication stats";
+    var joinLabel = t("publications.join_link") || "Join the group";
+
+    var parts = ['<div class="pub-impact-chain"><strong class="pub-impact-heading">' + escapeHtml(heading) + "</strong>"];
+
+    if (related.length) {
+      var links = related.map(function (bibcode) {
+        var other = pubByBibcode[bibcode];
+        if (!other) return "";
+        var href = withLang(baseUrl() + "/publications/#pub-" + encodeURIComponent(bibcode));
+        var title = other.title.length > 80 ? other.title.slice(0, 77) + "…" : other.title;
+        return '<li><a href="' + escapeHtml(href) + '">' + escapeHtml(title) + " (" + escapeHtml(other.year) + ")</a></li>";
+      }).join("");
+      parts.push('<div class="pub-impact-block"><span class="pub-asset-label">' + escapeHtml(relatedLabel) + "</span><ul class="pub-impact-list">" + links + "</ul></div>");
+    }
+
+    parts.push(
+      '<div class="pub-impact-links">' +
+        '<a href="' + escapeHtml(withLang(baseUrl() + "/stats/")) + '">' + escapeHtml(statsLabel) + "</a>" +
+        '<a href="' + escapeHtml(withLang(baseUrl() + "/join/")) + '">' + escapeHtml(joinLabel) + "</a>" +
+      "</div></div>"
+    );
+    return parts.join("");
+  }
+
   function renderDetails(pub) {
     var bibtex = toBibTeX(pub);
     var repro = "";
@@ -203,6 +262,7 @@
     return (
       '<div class="pub-explorer-details">' +
         renderSoftwareBadges(pub) +
+        renderImpactChain(pub) +
         repro +
         '<div class="pub-explorer-actions">' +
           '<button type="button" class="btn pub-copy-btn" data-copy-citation="' + escapeHtml(pub.bibcode) + '">' + escapeHtml(t("publications.copy_citation") || "Copy citation") + "</button>" +
@@ -335,6 +395,7 @@
     if (!indexData || !Array.isArray(indexData.publications)) return;
 
     publications = indexData.publications;
+    buildRelatedMap(publications);
     populateYears();
     bindEvents();
     handleHash();

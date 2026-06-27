@@ -1,0 +1,54 @@
+{% assign media = site.data.media %}
+{% if media.featured_videos %}
+<div class="row" style="margin-top: 40px;">
+<div class="col-md-12">
+<h3 class="join-section-heading" id="talks-media" data-i18n="media.heading">Talks &amp; media</h3>
+<p class="join-section-note" data-i18n="media.subtitle">Recorded presentations, invited talks, and conference posters. Press play below — videos stream here without leaving the site.</p>
+</div>
+</div>
+
+<div class="media-video-grid">
+{% for video in media.featured_videos %}
+<article class="media-video-card">
+<div class="media-video-embed">
+<iframe
+  src="https://www.youtube-nocookie.com/embed/{{ video.youtube_id }}?rel=0&modestbranding=1"
+  title="{{ video.title.en | escape }}"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+  allowfullscreen
+  referrerpolicy="strict-origin-when-cross-origin"></iframe>
+</div>
+<div class="media-video-body">
+{% if video.kind or video.year %}
+<p class="media-video-meta">
+{% if video.kind %}
+<span class="media-video-kind">
+<span data-i18n-block="en">{{ media.kind_labels[video.kind].en }}</span>
+<span data-i18n-block="es" hidden>{{ media.kind_labels[video.kind].es }}</span>
+</span>
+{% endif %}
+{% if video.year %}<span class="media-video-year">{{ video.year }}</span>{% endif %}
+</p>
+{% endif %}
+<h4 class="media-video-title">
+<span data-i18n-block="en">{{ video.title.en }}</span>
+<span data-i18n-block="es" hidden>{{ video.title.es }}</span>
+</h4>
+{% if video.description %}
+<p class="media-video-desc">
+<span data-i18n-block="en">{{ video.description.en }}</span>
+<span data-i18n-block="es" hidden>{{ video.description.es }}</span>
+</p>
+{% endif %}
+<p class="media-video-fallback">
+<span data-i18n="media.fallback_note">Having trouble? </span>
+<a href="https://www.youtube.com/watch?v={{ video.youtube_id }}" class="media-video-link" target="_blank" rel="noopener noreferrer">
+<span data-i18n="media.watch_youtube">Open on YouTube</span>
+<span class="fa fa-external-link" aria-hidden="true"></span>
+</a>
+</p>
+</div>
+</article>
+{% endfor %}
+</div>
+{% endif %}

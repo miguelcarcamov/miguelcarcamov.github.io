@@ -1,0 +1,79 @@
+{% assign overlap = site.data.teaching_overlap %}
+{% assign students = site.data.students %}
+{% assign sw = site.data.software %}
+{% assign theses = site.data.theses.entries %}
+{% if overlap.courses %}
+<section class="teaching-overlap-panel" aria-labelledby="teaching-overlap-heading">
+<h3 class="teaching-overlap-heading" id="teaching-overlap-heading" data-i18n="teaching.overlap_heading">Teaching × research overlap</h3>
+<p class="teaching-overlap-note" data-i18n="teaching.overlap_subtitle">How courses connect to active research areas, software, and supervised student work.</p>
+
+<div class="teaching-overlap-grid">
+{% for course in overlap.courses %}
+<article class="teaching-overlap-card teaching-overlap-card--{{ course.status }}">
+<header class="teaching-overlap-card-header">
+<h4 class="teaching-overlap-title">
+{% if course.syllabus_path %}
+<a href="{{ course.syllabus_path | relative_url }}">
+<span data-i18n-block="en">{{ course.title.en }}</span>
+<span data-i18n-block="es" hidden>{{ course.title.es }}</span>
+</a>
+{% else %}
+<span data-i18n-block="en">{{ course.title.en }}</span>
+<span data-i18n-block="es" hidden>{{ course.title.es }}</span>
+{% endif %}
+</h4>
+<p class="teaching-overlap-periods">{{ course.periods | join: ", " }}</p>
+</header>
+
+{% if course.areas %}
+<ul class="teaching-overlap-tags">
+{% for area in course.areas %}
+<li>
+<span data-i18n-block="en">{{ students.area_labels[area].en }}</span>
+<span data-i18n-block="es" hidden>{{ students.area_labels[area].es }}</span>
+</li>
+{% endfor %}
+</ul>
+{% endif %}
+
+{% if course.software %}
+<p class="teaching-overlap-meta-label" data-i18n="teaching.overlap_software">Related software</p>
+<div class="teaching-overlap-links">
+{% for sw_id in course.software %}
+{% assign tool = nil %}
+{% for featured in sw.featured %}{% if featured.id == sw_id %}{% assign tool = featured %}{% endif %}{% endfor %}
+{% unless tool %}{% for secondary in sw.secondary %}{% if secondary.id == sw_id %}{% assign tool = secondary %}{% endif %}{% endfor %}{% endunless %}
+{% if tool %}
+<a href="{{ '/software/' | relative_url }}#software-{{ tool.id }}" data-home-hash="#software">{{ tool.name }}</a>
+{% endif %}
+{% endfor %}
+</div>
+{% endif %}
+
+{% if course.thesis_ids.size > 0 %}
+<p class="teaching-overlap-meta-label" data-i18n="teaching.overlap_theses">Supervised theses</p>
+<ul class="teaching-overlap-theses">
+{% for thesis_id in course.thesis_ids %}
+{% assign thesis = nil %}
+{% for entry in theses %}{% if entry.id == thesis_id %}{% assign thesis = entry %}{% endif %}{% endfor %}
+{% if thesis %}
+<li>
+<a href="{{ thesis.url }}" target="_blank" rel="noopener noreferrer">
+<span data-i18n-block="en">{{ thesis.student }} — {{ thesis.title.en | truncate: 58 }}</span>
+<span data-i18n-block="es" hidden>{{ thesis.student }} — {{ thesis.title.es | truncate: 58 }}</span>
+</a>
+</li>
+{% endif %}
+{% endfor %}
+</ul>
+{% endif %}
+
+<p class="teaching-overlap-note-card">
+<span data-i18n-block="en">{{ course.note.en }}</span>
+<span data-i18n-block="es" hidden>{{ course.note.es }}</span>
+</p>
+</article>
+{% endfor %}
+</div>
+</section>
+{% endif %}

@@ -8,6 +8,10 @@ search:
   section_courses: Courses
   section_join: Join
   section_writing: Writing
+  section_media: Talks & media
+  section_theses: Theses
+  filter_all: All sections
+  filter_label: Filter
 nav:
   home: Home
   about: about me
@@ -46,6 +50,12 @@ software:
   status_maintained: Maintained
   status_archived: Archived
   releases_heading: Recent releases
+  latest_release: Latest Pyralysis release
+  try_binder: Try on Binder
+  stat_stars: stars
+  stat_forks: forks
+  copy_cite_stack: Copy cite stack (software + papers)
+  copied_stack: Stack copied!
 resume:
   projects_teaser: >-
     Pyralysis, CS-ROMER, and GPUVMEM are the main open-source projects from my group.
@@ -87,6 +97,10 @@ publications:
   copy_citation: Copy citation
   copy_bibtex: Copy BibTeX
   copied: Copied!
+  impact_heading: Research impact chain
+  related_papers: Related papers (shared software)
+  view_stats: Publication stats
+  join_link: Join the group
 join:
   title: JOIN THE GROUP
   subtitle: Research opportunities for students at USACH
@@ -105,6 +119,18 @@ join:
     University admissions are handled by USACH and DIINF; the path depends on your level.
   admission_choose_level: Where are you in your academic journey?
   related_software: Related software
+  matcher_heading: Find a project that fits
+  matcher_subtitle: Pick your degree level and the skills you already have — we'll suggest example topics.
+  matcher_step_level: 1. Your level
+  matcher_step_skills: 2. Skills you have
+  matcher_results: Suggested projects
+  matcher_no_results: No exact match — try another level or check more skills, then email me anyway.
+  matcher_email: Draft email →
+  matcher_email_subject: Student research inquiry
+  matcher_email_intro: Hello Miguel,
+  matcher_email_level: Level
+  matcher_email_skills: Skills
+  matcher_email_projects: Projects of interest
   cta_office_hours: Book office hours
   cta_contact: Get in touch
   cta_email: Email me
@@ -142,6 +168,10 @@ stats:
   map_note: Country is inferred from affiliation text in ADS metadata, not author nationality.
   footer_source: "Data source: NASA ADS. Last updated:"
   footer_export: Export stats JSON
+  year_filter_label: Chart period
+  year_filter_all: All years
+  year_filter_10y: Last 10y
+  year_filter_5y: Last 5y
   card_total_papers: Total Papers
   card_total_citations: Total Citations
   card_h_index: h-index
@@ -151,6 +181,8 @@ stats:
   card_fondecyt: FONDECYT NP
   card_citation_velocity: Citation Velocity (5y)
   card_open_access: Open Access Share
+  card_code_linked: Papers with Code / Data
+  card_venue_mix: Journal / Conference Papers
   card_leadership_ratio: Leadership Citation Ratio
   card_intl_collab: International Collaboration Share
   card_momentum: Recent Momentum (5y)
@@ -190,6 +222,8 @@ stats:
   info_momentum: Average of recent paper-share and recent citation-share over the last 5 years.
   info_flagship: Percent of total citations contributed by the five most-cited papers.
   info_open_access: Percent of included papers tagged as open access in ADS properties.
+  info_code_linked: Included papers with linked research software or data assets on this site.
+  info_venue_mix: Count of journal articles versus conference proceedings in the portfolio.
   info_first_author: Papers where Miguel Cárcamo is listed in author position 1.
   info_lead_author: Papers where Miguel is author position 1 or 2.
   info_lead_share: Percent of included papers where Miguel is author position 1 or 2.
@@ -224,14 +258,62 @@ teaching:
   title: TEACHING
   subtitle: Courses and academic instruction
   current_heading: Current Courses
+  overlap_heading: Teaching × research overlap
+  overlap_subtitle: How courses connect to active research areas, software, and supervised student work.
+  overlap_software: Related software
+  overlap_theses: Supervised theses
 service:
   title: services
   subtitle: academic service and recognition
+  highlights_heading: ACADEMIC HIGHLIGHTS
+  highlights_subtitle: funding, invitations, service, and awards
+  funded_projects: Funded Projects
+  academic_service: Academic Service
+  talks_posters: Invitations, Talks, and Posters
+  awards: Awards & Honors
+media:
+  heading: Talks & media
+  subtitle: Recorded presentations, invited talks, and conference posters. Press play below — videos stream here without leaving the site.
+  watch_youtube: Open on YouTube
+  fallback_note: Having trouble?
+home:
+  chip_release: Pyralysis release
+  chip_binder: Try Pyralysis on Binder
+  chip_positions: open positions
+  chip_stats: Publication stats
+lab_now:
+  heading: What we're working on now
+  subtitle: Active grants, open roles, software releases, and recent outputs — updated at build time.
+  grants: Active grants
+  positions: Open positions
+  join_link: Join the group →
+  software: Software
+  all_software: All research software →
+  recent: Recent highlights
+  stats_line: Portfolio
+  papers: papers
+  stats_link: stats →
+timeline:
+  heading: Research timeline
+  subtitle: Key milestones in education, publications, grants, and roles.
+theme_toggle: Dark mode
 students:
   recruitment_cta: prospective students →
   title: STUDENT SUPERVISION
   subtitle: Current and former students
   current_heading: Current Students
+  theses_heading: Thesis & memoria archive
+  theses_note: Searchable supervised work — filter by topic or level.
+  theses_filter_topic: Topic
+  theses_filter_level: Level
+  theses_filter_all: All
+  theses_filter_all_topics: All topics
+  theses_level_undergrad: Undergraduate
+  theses_level_master: Master's
+  theses_level_phd: PhD
+  theses_cosupervisor: Co-supervised ·
+  theses_repository: USACH repository
+  theses_no_results: No theses match your filters.
 writing:
   title: THE FAINT SIGNAL
   subtitle: Essays on radio astronomy, computing, and everything in between

@@ -1,0 +1,74 @@
+{% assign students = site.data.students %}
+{% assign releases = site.data.software_releases.projects.pyralysis %}
+{% assign latest_release = releases | first %}
+{% assign open_positions = students.positions | where: "status", "open" %}
+{% assign stats = site.data.publication_stats %}
+{% assign journal_pubs = site.data.publications.first_author.journal | default: [] %}
+{% assign conf_pubs = site.data.publications.first_author.conference | default: [] %}
+{% assign recent_pub = journal_pubs | concat: conf_pubs | sort: "year" | reverse | first %}
+
+<section class="lab-now-panel" aria-labelledby="lab-now-heading">
+<h3 class="lab-now-heading" id="lab-now-heading" data-i18n="lab_now.heading">What we're working on now</h3>
+<p class="lab-now-note" data-i18n="lab_now.subtitle">Active grants, open roles, software releases, and recent outputs — updated at build time.</p>
+
+<div class="lab-now-grid">
+<div class="lab-now-card">
+<h4 class="lab-now-card-title" data-i18n="lab_now.grants">Active grants</h4>
+<ul class="lab-now-list">
+{% for grant in students.grants limit:3 %}
+<li>
+<strong>{{ grant.program }}</strong>
+<span data-i18n-block="en">{{ grant.title.en }}</span>
+<span data-i18n-block="es" hidden>{{ grant.title.es }}</span>
+</li>
+{% endfor %}
+</ul>
+</div>
+
+<div class="lab-now-card">
+<h4 class="lab-now-card-title" data-i18n="lab_now.positions">Open positions</h4>
+<ul class="lab-now-list">
+{% for pos in open_positions limit:3 %}
+<li>
+<span data-i18n-block="en">{{ pos.title.en }}</span>
+<span data-i18n-block="es" hidden>{{ pos.title.es }}</span>
+</li>
+{% endfor %}
+</ul>
+<a href="{{ '/join/' | relative_url }}" class="lab-now-link" data-home-hash="#join" data-i18n="lab_now.join_link">Join the group →</a>
+</div>
+
+<div class="lab-now-card">
+<h4 class="lab-now-card-title" data-i18n="lab_now.software">Software</h4>
+<ul class="lab-now-list">
+{% if latest_release %}
+<li>
+<a href="{{ latest_release.url }}" target="_blank" rel="noopener noreferrer">Pyralysis {{ latest_release.tag }}</a>
+<span class="lab-now-meta">{{ latest_release.published_at | slice: 0, 10 }}</span>
+</li>
+{% endif %}
+<li><a href="{{ '/software/' | relative_url }}" data-home-hash="#software" data-i18n="lab_now.all_software">All research software →</a></li>
+</ul>
+</div>
+
+<div class="lab-now-card">
+<h4 class="lab-now-card-title" data-i18n="lab_now.recent">Recent highlights</h4>
+<ul class="lab-now-list">
+{% if recent_pub %}
+<li>
+<a href="{{ '/publications/' | relative_url }}#pub-{{ recent_pub.bibcode }}" data-home-hash="#publications">{{ recent_pub.title | truncate: 72 }}</a>
+<span class="lab-now-meta">{{ recent_pub.year }}</span>
+</li>
+{% endif %}
+{% if stats %}
+<li>
+<span data-i18n="lab_now.stats_line">Portfolio:</span>
+{{ stats.volume.total_publications }} <span data-i18n="lab_now.papers">papers</span>,
+h-index {{ stats.citations.h_index }}
+<a href="{{ '/stats/' | relative_url }}" class="lab-now-link" data-home-hash="#publication-stats" data-i18n="lab_now.stats_link">stats →</a>
+</li>
+{% endif %}
+</ul>
+</div>
+</div>
+</section>

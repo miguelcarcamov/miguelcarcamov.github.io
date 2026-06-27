@@ -105,6 +105,12 @@ projects:
       - phd
       - master
       - undergrad
+    matcher_skills:
+      - python
+      - gpu
+      - git
+      - interest-astro
+      - linux
     title:
       en: Pyralysis pipelines for SKA-era polarimetry
       es: Pipelines Pyralysis para polarimetría en la era SKA
@@ -126,6 +132,11 @@ projects:
     levels:
       - phd
       - master
+    matcher_skills:
+      - python
+      - linear-algebra
+      - interest-astro
+      - linux
     title:
       en: Compressed sensing for Faraday tomography
       es: Detección comprimida para tomografía de Faraday
@@ -147,6 +158,11 @@ projects:
       - phd
       - master
       - undergrad
+    matcher_skills:
+      - python
+      - gpu
+      - linear-algebra
+      - linux
     title:
       en: GPU-accelerated interferometric imaging
       es: Imagen interferométrica acelerada en GPU
@@ -166,6 +182,11 @@ projects:
     levels:
       - phd
       - master
+    matcher_skills:
+      - python
+      - interest-astro
+      - linear-algebra
+      - linux
     title:
       en: Disc structure and variability in radio interferometry
       es: Estructura y variabilidad de discos en interferometría de radio

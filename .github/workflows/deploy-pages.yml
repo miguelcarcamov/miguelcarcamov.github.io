@@ -57,6 +57,10 @@ jobs:
         run: python scripts/sync_software_releases.py
         continue-on-error: true
 
+      - name: Sync software repository stats
+        run: python scripts/sync_software_stats.py
+        continue-on-error: true
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:

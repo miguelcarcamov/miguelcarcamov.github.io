@@ -6,6 +6,7 @@ featured:
       A Python object-oriented framework for big-data radio astronomy processing
       and image synthesis, designed for SKA-era data volumes and high-performance computing.
     repo: https://gitlab.com/clirai/pyralysis
+    binder_url: https://mybinder.org/v2/gl/clirai%2Fpyralysis/release?urlpath=lab%2Ftree%2Fexamples%2Fnotebooks
     platform: gitlab
     areas:
       - imaging

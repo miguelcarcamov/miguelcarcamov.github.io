@@ -1,10 +1,32 @@
 <section id="home" class="home single_page">
+<div class="hero-sky-overlay" aria-hidden="true"></div>
 <!-- DIINF watermark (readable on hero background — white variant) -->
 <a href="https://informatica.usach.cl/" target="_blank" rel="noopener noreferrer" class="hero-diinf-corner" title="Departamento de Ingeniería Informática, USACH" aria-label="DIINF — Departamento de Ingeniería Informática, Universidad de Santiago de Chile">
 <img src="{{ '/images/logos/logos_diinf/DIINF-opc.white.png' | relative_url }}" alt="" decoding="async" loading="eager">
 </a>
 <!-- hero_content  -->
 <div class="hero_content">
+{% assign pyralysis_releases = site.data.software_releases.projects.pyralysis %}
+{% assign latest_release = pyralysis_releases | first %}
+{% assign open_positions = site.data.students.positions | where: "status", "open" %}
+<div class="hero-lab-strip" aria-label="Research group highlights">
+{% if latest_release %}
+<a href="{{ latest_release.url }}" class="hero-lab-chip" target="_blank" rel="noopener noreferrer">
+<span data-i18n="home.chip_release">Pyralysis {{ latest_release.tag }}</span>
+</a>
+{% endif %}
+<a href="https://mybinder.org/v2/gl/clirai%2Fpyralysis/release?urlpath=lab%2Ftree%2Fexamples%2Fnotebooks" class="hero-lab-chip hero-lab-chip--accent" target="_blank" rel="noopener noreferrer">
+<span data-i18n="home.chip_binder">Try Pyralysis on Binder</span>
+</a>
+{% if open_positions.size > 0 %}
+<a href="{{ '/join/' | relative_url }}" class="hero-lab-chip" data-home-hash="#join">
+<span data-i18n="home.chip_positions">{{ open_positions.size }} open positions</span>
+</a>
+{% endif %}
+<a href="{{ '/stats/' | relative_url }}" class="hero-lab-chip" data-home-hash="#publication-stats">
+<span data-i18n="home.chip_stats">Publication stats</span>
+</a>
+</div>
 <div class="big_title typed">
 <h1><span class="typed-text"></span></h1>
 </div>

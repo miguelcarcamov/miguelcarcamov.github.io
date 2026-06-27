@@ -109,25 +109,29 @@ All sections are in `_includes/sections/`. Edit the HTML files directly:
 - `blog.html` - Blog listing (auto-generated from `_posts/`)
 - `contact.html` - Contact form
 
-## Publications Automation (NASA ADS)
+## External Data Automation (NASA ADS, GitHub, GitLab)
 
-Publications are now rendered from `_data/publications.yml`, which is synchronized from NASA ADS.
-Publication metrics/statistics are rendered from `_data/publication_stats.json`.
+Publications are rendered from `_data/publications.yml`, synchronized from NASA ADS.
+Publication metrics/statistics come from `_data/publication_stats.json`.
+Software release banners use `_data/software_releases.yml` (GitHub/GitLab releases).
+Repository stars and forks use `_data/software_stats.yml` (GitHub/GitLab API).
 
 ### One-time setup in GitHub
 
 1. In your GitHub repository settings, add secret:
    - `ADS_API_TOKEN` = your NASA ADS API token
 2. Go to **Actions** and run workflow:
-   - `Sync NASA ADS Publications`
+   - `Sync Publications and Software Data`
 
 The workflow also runs:
-- weekly on schedule
+- weekly on schedule (Mondays 09:20 UTC)
 - manually from Actions
 
-For push deployments, use the `Build and Deploy Pages` workflow, which runs ADS sync first and only then deploys the site. This workflow does not commit `_data/publications.yml`, so your branch is not mutated during deploy.
+It commits updates to `_data/publications.yml`, `_data/publication_stats.json`, `_data/software_releases.yml`, and `_data/software_stats.yml` when any of them change.
 
-Use `Sync NASA ADS Publications` when you want to persist synchronized data back into the repository (manual or weekly run).
+For push deployments, use the `Build and Deploy Pages` workflow, which re-runs the same sync scripts at build time but does not commit data files, so your branch is not mutated during deploy.
+
+Use `Sync Publications and Software Data` when you want to persist synchronized data back into the repository (manual or weekly run).
 
 The statistics section uses Chart.js from CDN (`chart.umd.min.js`) as a lightweight runtime-only dependency (no npm/build step added).
 

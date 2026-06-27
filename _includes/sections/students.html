@@ -63,6 +63,74 @@
 </div>
 </div>
 </div><!-- end row -->
+<!-- Thesis gallery -->
+<div class="row">
+<div class="col-md-12">
+<h3 style="margin-bottom: 12px; color: #35373e; font-size: 20px; font-weight: 400; padding-bottom: 15px; border-bottom: 2px solid #372db4; margin-top: 40px;" data-i18n="students.theses_heading">Thesis &amp; memoria archive</h3>
+<p class="join-section-note" style="margin-bottom: 18px;" data-i18n="students.theses_note">Searchable supervised work — filter by topic or level.</p>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<div class="thesis-gallery-toolbar">
+<label class="thesis-filter-field">
+<span data-i18n="students.theses_filter_topic">Topic</span>
+<select id="thesis-filter-topic" class="thesis-filter-select">
+<option value="" data-i18n="students.theses_filter_all_topics">All topics</option>
+{% assign thesis_data = site.data.theses %}
+{% assign all_topics = thesis_data.entries | map: "topics" | flatten | uniq | sort %}
+{% for topic in all_topics %}
+<option value="{{ topic }}">{{ thesis_data.topic_labels[topic].en }}</option>
+{% endfor %}
+</select>
+</label>
+<label class="thesis-filter-field">
+<span data-i18n="students.theses_filter_level">Level</span>
+<select id="thesis-filter-level" class="thesis-filter-select">
+<option value="" data-i18n="students.theses_filter_all">All</option>
+<option value="undergrad" data-i18n="students.theses_level_undergrad">Undergraduate</option>
+<option value="master" data-i18n="students.theses_level_master">Master's</option>
+<option value="phd" data-i18n="students.theses_level_phd">PhD</option>
+</select>
+</label>
+</div>
+<div class="thesis-gallery-grid" id="thesis-gallery">
+{% for thesis in thesis_data.entries %}
+<article class="thesis-card" data-level="{{ thesis.level }}" data-topics="{{ thesis.topics | join: ' ' }}">
+<div class="thesis-card-header">
+<h4 class="thesis-card-student">{{ thesis.student }}</h4>
+<span class="thesis-card-level">
+<span data-i18n-block="en">{{ thesis_data.level_labels[thesis.level].en }}</span>
+<span data-i18n-block="es" hidden>{{ thesis_data.level_labels[thesis.level].es }}</span>
+</span>
+</div>
+<p class="thesis-card-title">
+<span data-i18n-block="en">{{ thesis.title.en }}</span>
+<span data-i18n-block="es" hidden>{{ thesis.title.es }}</span>
+</p>
+{% if thesis.cosupervised and thesis.supervisor %}
+<p class="thesis-card-supervisor"><span data-i18n="students.theses_cosupervisor">Co-supervised ·</span> {{ thesis.supervisor }}</p>
+{% endif %}
+{% if thesis.topics %}
+<ul class="join-area-tags join-area-tags--compact">
+{% for topic in thesis.topics %}
+<li>
+<span data-i18n-block="en">{{ thesis_data.topic_labels[topic].en }}</span>
+<span data-i18n-block="es" hidden>{{ thesis_data.topic_labels[topic].es }}</span>
+</li>
+{% endfor %}
+</ul>
+{% endif %}
+<a href="{{ thesis.url }}" class="thesis-card-link" target="_blank" rel="noopener noreferrer">
+<span data-i18n="students.theses_repository">USACH repository</span>
+<span class="fa fa-external-link" aria-hidden="true"></span>
+</a>
+</article>
+{% endfor %}
+</div>
+<p id="thesis-gallery-empty" class="thesis-gallery-empty" hidden data-i18n="students.theses_no_results">No theses match your filters.</p>
+</div>
+</div>
 <div class="row">
 <div class="col-md-12 about_btn" style="padding-top: 8px;">
 <a href="{{ '/join/' | relative_url }}" class="btn" data-i18n="students.recruitment_cta">prospective students →</a>

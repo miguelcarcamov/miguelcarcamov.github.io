@@ -1,0 +1,41 @@
+{% assign timeline = site.data.timeline %}
+{% if timeline.milestones %}
+<section class="research-timeline-panel" aria-labelledby="research-timeline-heading">
+<h3 class="join-section-heading" id="research-timeline-heading" data-i18n="timeline.heading">Research timeline</h3>
+<p class="join-section-note" data-i18n="timeline.subtitle">Key milestones in education, publications, grants, and roles.</p>
+
+<ol class="research-timeline">
+{% for item in timeline.milestones %}
+<li class="research-timeline-item research-timeline-item--{{ item.kind }}">
+<div class="research-timeline-marker" aria-hidden="true"></div>
+<div class="research-timeline-body">
+<p class="research-timeline-meta">
+<span class="research-timeline-year">{{ item.year }}</span>
+<span class="research-timeline-kind">
+<span data-i18n-block="en">{{ timeline.kind_labels[item.kind].en }}</span>
+<span data-i18n-block="es" hidden>{{ timeline.kind_labels[item.kind].es }}</span>
+</span>
+</p>
+<h4 class="research-timeline-title">
+{% if item.link %}
+{% assign link_path = item.link | split: '#' | first %}
+{% assign link_hash = item.link | split: '#' | last %}
+<a href="{{ link_path | relative_url }}" data-home-hash="#{{ link_hash }}">
+<span data-i18n-block="en">{{ item.title.en }}</span>
+<span data-i18n-block="es" hidden>{{ item.title.es }}</span>
+</a>
+{% else %}
+<span data-i18n-block="en">{{ item.title.en }}</span>
+<span data-i18n-block="es" hidden>{{ item.title.es }}</span>
+{% endif %}
+</h4>
+<p class="research-timeline-desc">
+<span data-i18n-block="en">{{ item.description.en }}</span>
+<span data-i18n-block="es" hidden>{{ item.description.es }}</span>
+</p>
+</div>
+</li>
+{% endfor %}
+</ol>
+</section>
+{% endif %}

@@ -11,7 +11,33 @@
 </div>
 
 {% assign stats = site.data.publication_stats %}
+{% assign pub_index = site.data.publications_index.publications | default: [] %}
+{% assign code_linked_count = 0 %}
+{% for pub in pub_index %}{% if pub.has_assets %}{% assign code_linked_count = code_linked_count | plus: 1 %}{% endif %}{% endfor %}
 {% if stats %}
+
+<div class="row">
+<div class="col-md-12">
+<aside class="stats-narrative-strip" aria-label="Portfolio summary">
+<p class="stats-narrative-text" data-i18n-block="en">
+Since <strong>{{ stats.citations.first_publication_year }}</strong>:
+<strong>{{ stats.volume.total_publications }}</strong> included papers ·
+<strong>{{ stats.citations.total_citations }}</strong> citations ·
+h-index <strong>{{ stats.citations.h_index }}</strong> ·
+<strong>{{ stats.volume.open_access_share_percent }}%</strong> open access ·
+<strong>{{ code_linked_count }}</strong> with linked code or data.
+</p>
+<p class="stats-narrative-text" data-i18n-block="es" hidden>
+Desde <strong>{{ stats.citations.first_publication_year }}</strong>:
+<strong>{{ stats.volume.total_publications }}</strong> artículos incluidos ·
+<strong>{{ stats.citations.total_citations }}</strong> citas ·
+h-index <strong>{{ stats.citations.h_index }}</strong> ·
+<strong>{{ stats.volume.open_access_share_percent }}%</strong> acceso abierto ·
+<strong>{{ code_linked_count }}</strong> con código o datos vinculados.
+</p>
+</aside>
+</div>
+</div>
 
 <section class="stats-section-block" aria-labelledby="stats-leadership-heading">
 <div class="row stats-row">
@@ -63,6 +89,12 @@
 <div class="col-md-12">
 <h3 class="stats-subsection-title" id="stats-overall-heading" data-i18n="stats.overall_heading">Overall research impact</h3>
 <p class="stats-subsection-note" data-i18n="stats.overall_subtitle">Portfolio-wide volume, citations, and recent trajectory across all included papers.</p>
+<div class="stats-year-filter" id="stats-year-filter" role="group" aria-label="Chart time range">
+<span class="stats-year-filter-label" data-i18n="stats.year_filter_label">Chart period</span>
+<button type="button" class="stats-year-filter-btn is-active" data-years="all" data-i18n="stats.year_filter_all">All years</button>
+<button type="button" class="stats-year-filter-btn" data-years="10" data-i18n="stats.year_filter_10y">Last 10y</button>
+<button type="button" class="stats-year-filter-btn" data-years="5" data-i18n="stats.year_filter_5y">Last 5y</button>
+</div>
 </div>
 </div>
 <div class="row" style="margin-bottom: 20px;">
@@ -76,6 +108,8 @@
 <article class="stats-card" tabindex="0"><p class="stats-card-label"><span data-i18n="stats.card_momentum">Recent Momentum (5y)</span> <span class="stats-info-marker" data-i18n-title="stats.info_momentum" data-i18n-aria="stats.info_momentum" title="Average of recent paper-share and recent citation-share over the last 5 years." aria-label="Average of recent paper-share and recent citation-share over the last 5 years.">i</span></p><p class="stats-card-value">{{ stats.momentum.momentum_score | default: "N/A" }}</p></article>
 <article class="stats-card" tabindex="0"><p class="stats-card-label"><span data-i18n="stats.card_flagship">Flagship Impact Share</span> <span class="stats-info-marker" data-i18n-title="stats.info_flagship" data-i18n-aria="stats.info_flagship" title="Percent of total citations contributed by the five most-cited papers." aria-label="Percent of total citations contributed by the five most-cited papers.">i</span></p><p class="stats-card-value">{{ stats.impact_concentration.top5_citation_share_percent | default: "N/A" }}{% if stats.impact_concentration.top5_citation_share_percent != nil %}%{% endif %}</p></article>
 <article class="stats-card" tabindex="0"><p class="stats-card-label"><span data-i18n="stats.card_open_access">Open Access Share</span> <span class="stats-info-marker" data-i18n-title="stats.info_open_access" data-i18n-aria="stats.info_open_access" title="Percent of included papers tagged as open access in ADS properties." aria-label="Percent of included papers tagged as open access in ADS properties.">i</span></p><p class="stats-card-value">{{ stats.volume.open_access_share_percent | default: "N/A" }}{% if stats.volume.open_access_share_percent != nil %}%{% endif %}</p></article>
+<article class="stats-card" tabindex="0"><p class="stats-card-label"><span data-i18n="stats.card_code_linked">Papers with Code / Data</span> <span class="stats-info-marker" data-i18n-title="stats.info_code_linked" data-i18n-aria="stats.info_code_linked" title="Included papers linked to research software or data assets on this site." aria-label="Papers linked to research software or data.">i</span></p><p class="stats-card-value">{{ code_linked_count }}<span class="stats-card-value-suffix"> / {{ stats.volume.total_publications }}</span></p></article>
+<article class="stats-card" tabindex="0"><p class="stats-card-label"><span data-i18n="stats.card_venue_mix">Journal vs Conference</span> <span class="stats-info-marker" data-i18n-title="stats.info_venue_mix" data-i18n-aria="stats.info_venue_mix" title="Split of included papers between journal articles and conference proceedings." aria-label="Journal versus conference paper counts.">i</span></p><p class="stats-card-value">{{ stats.volume.journal_publications }}<span class="stats-card-value-suffix"> / {{ stats.volume.conference_publications }}</span></p></article>
 </div>
 </div>
 </div>

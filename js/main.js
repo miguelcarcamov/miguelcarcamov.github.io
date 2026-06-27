@@ -11,7 +11,7 @@
         -------------*/
         var windowWidth = $(window).width(),
             windowHeight = $(window).height(),
-            $hashLink = $('.main_menu  > ul li a');
+            $hashLink = $('a[data-home-hash]');
 
 
 
@@ -89,8 +89,8 @@
             if (!selHash || selHash.charAt(0) !== '#') {
                 return;
             }
-            $hashLink.parent('li').removeClass('active');
-            $hashLink.filter('[data-home-hash="' + selHash + '"]').parent('li').addClass('active');
+            $('.main_menu > ul li').removeClass('active');
+            $('.main_menu > ul li a[data-home-hash="' + selHash + '"]').parent('li').addClass('active');
         }
 
         function setMenuActiveForStandalonePath() {
@@ -231,7 +231,8 @@
             $toBeActivated.addClass('active').addClass(enterClass);
 
             //active current menu item
-            $(this).parent('li').addClass('active').siblings().removeClass('active');
+            $('.main_menu > ul li').removeClass('active');
+            $('.main_menu > ul li a[data-home-hash="' + targetHash + '"]').parent('li').addClass('active');
             
             // Keep the visible URL SEO-friendly while preserving one-page transitions.
             if (history.pushState) {

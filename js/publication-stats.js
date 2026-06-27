@@ -32,8 +32,83 @@
   }
 
   function createChart(ctx, config) {
-    if (!ctx || typeof Chart === "undefined") return;
-    return new Chart(ctx, config);
+    if (!ctx || typeof Chart === "undefined") return null;
+    var chart = new Chart(ctx, config);
+    if (ctx.id) {
+      chartRegistry[ctx.id] = chart;
+    }
+    return chart;
+  }
+
+  function isDarkTheme() {
+    if (window.SiteTheme && typeof window.SiteTheme.get === "function") {
+      return window.SiteTheme.get() === "dark";
+    }
+    return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+  }
+
+  function filterYearIndices(years, range) {
+    if (!years || !years.length) return [];
+    if (range === "all") {
+      return years.map(function (_, index) { return index; });
+    }
+    var cutoff = new Date().getFullYear() - parseInt(range, 10);
+    return years.map(function (year, index) {
+      return year >= cutoff ? index : -1;
+    }).filter(function (index) { return index >= 0; });
+  }
+
+  function pickByIndices(values, indices) {
+    return indices.map(function (index) { return values[index]; });
+  }
+
+  function applyYearRangeToCharts(range) {
+    activeYearRange = range || "all";
+    if (!stats || !stats.yearly) return;
+
+    var years = stats.yearly.years || [];
+    var indices = filterYearIndices(years, activeYearRange);
+
+    var papersChart = chartRegistry["papers-per-year-chart"];
+    if (papersChart) {
+      papersChart.data.labels = pickByIndices(years, indices);
+      papersChart.data.datasets[0].data = pickByIndices(stats.yearly.papers_per_year || [], indices);
+      papersChart.update("active");
+    }
+
+    var comboChart = chartRegistry["citations-combo-chart"];
+    if (comboChart) {
+      comboChart.data.labels = pickByIndices(years, indices);
+      comboChart.data.datasets[0].data = pickByIndices(stats.yearly.citations_per_year || [], indices);
+      comboChart.data.datasets[1].data = pickByIndices(stats.yearly.cumulative_citations || [], indices);
+      comboChart.update("active");
+    }
+
+    var roleData = (stats.leadership && stats.leadership.yearly_by_role) || {};
+    var roleYears = roleData.years || [];
+    var roleIndices = filterYearIndices(roleYears, activeYearRange);
+    var roleChart = chartRegistry["papers-by-role-chart"];
+    if (roleChart) {
+      roleChart.data.labels = pickByIndices(roleYears, roleIndices);
+      roleChart.data.datasets[0].data = pickByIndices(roleData.first_author || [], roleIndices);
+      roleChart.data.datasets[1].data = pickByIndices(roleData.lead_coauthor || [], roleIndices);
+      roleChart.data.datasets[2].data = pickByIndices(roleData.supporting || [], roleIndices);
+      roleChart.update("active");
+    }
+  }
+
+  function bindYearRangeFilters() {
+    var bar = document.getElementById("stats-year-filter");
+    if (!bar) return;
+    bar.querySelectorAll(".stats-year-filter-btn").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        bar.querySelectorAll(".stats-year-filter-btn").forEach(function (item) {
+          item.classList.remove("is-active");
+        });
+        btn.classList.add("is-active");
+        applyYearRangeToCharts(btn.getAttribute("data-years") || "all");
+      });
+    });
   }
 
   function wrapLabel(text, maxCharsPerLine) {
@@ -104,6 +179,8 @@
   }
 
   var charts = [];
+  var chartRegistry = {};
+  var activeYearRange = "all";
   var initialized = false;
   var redrawCountryMap = null;
 
@@ -132,7 +209,7 @@
       text: "#4d4f57"
     };
 
-    var darkMode = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+    var darkMode = isDarkTheme();
     if (darkMode) {
       colors.grid = "#3f3f46";
       colors.text = "#f0f0f3";
@@ -533,6 +610,8 @@
     }
 
     updateMomentumNote();
+    bindYearRangeFilters();
+    applyYearRangeToCharts(activeYearRange);
 
     initialized = true;
   }
@@ -544,6 +623,7 @@
       }
     });
     charts = [];
+    chartRegistry = {};
     initialized = false;
     redrawCountryMap = null;
   }
@@ -576,6 +656,15 @@
 
   document.addEventListener("site:langchange", function () {
     updateMomentumNote();
+    if (!isStatsSectionActive()) return;
+    destroyCharts();
+    renderStatsCharts();
+    if (typeof window.renderCollaborationNetwork === "function") {
+      window.renderCollaborationNetwork();
+    }
+  });
+
+  document.addEventListener("site:themechange", function () {
     if (!isStatsSectionActive()) return;
     destroyCharts();
     renderStatsCharts();

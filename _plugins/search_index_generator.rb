@@ -23,14 +23,9 @@ module Jekyll
       append_publications(docs, site.data.fetch("publications", {}))
       append_software(docs, site.data.fetch("software", {}))
       append_syllabi(docs, site.collections["syllabi"]&.docs || [])
-      docs << {
-        "id" => "join-page",
-        "title" => "Join the research group",
-        "url" => "/join/",
-        "section" => "Join",
-        "body" => "student research opportunities USACH PhD doctoral master undergraduate thesis recruitment",
-        "meta" => "Recruitment"
-      }
+      append_media(docs, site.data.fetch("media", {}))
+      append_theses(docs, site.data.fetch("theses", {}))
+      append_join_content(docs, site.data.fetch("students", {}))
       docs << {
         "id" => "writing-page",
         "title" => "The Faint Signal — Writing",
@@ -105,6 +100,101 @@ module Jekyll
             doc.data["description"]
           ].compact.join(" "),
           "meta" => doc.data["semester"].to_s
+        }
+      end
+    end
+
+    def append_media(docs, media)
+      Array(media["featured_videos"]).each do |video|
+        id = video["id"]
+        next if id.nil? || id.empty?
+
+        title = video.dig("title", "en") || video["youtube_id"].to_s
+        docs << {
+          "id" => "media-#{id}",
+          "title" => title,
+          "url" => "/service/#talks-media",
+          "section" => "Media",
+          "body" => [
+            video.dig("description", "en"),
+            video["youtube_id"],
+            "talk video presentation YouTube"
+          ].compact.join(" "),
+          "meta" => "Video"
+        }
+      end
+    end
+
+    def append_theses(docs, theses)
+      Array(theses["entries"]).each do |entry|
+        id = entry["id"]
+        next if id.nil? || id.empty?
+
+        docs << {
+          "id" => "thesis-#{id}",
+          "title" => "#{entry['student']} — #{entry.dig('title', 'en')}",
+          "url" => "/students/",
+          "section" => "Theses",
+          "body" => [
+            entry["student"],
+            entry.dig("title", "en"),
+            entry.dig("title", "es"),
+            entry["supervisor"],
+            Array(entry["topics"]).join(" "),
+            entry["level"]
+          ].compact.join(" "),
+          "meta" => "#{entry['level']} · #{entry['year']}"
+        }
+      end
+    end
+
+    def append_join_content(docs, students)
+      docs << {
+        "id" => "join-page",
+        "title" => "Join the research group",
+        "url" => "/join/",
+        "section" => "Join",
+        "body" => [
+          students.dig("intro", "en"),
+          "student research opportunities USACH PhD doctoral master undergraduate thesis recruitment"
+        ].compact.join(" "),
+        "meta" => "Recruitment"
+      }
+
+      Array(students["positions"]).each do |pos|
+        id = pos["id"]
+        next if id.nil? || id.empty?
+
+        docs << {
+          "id" => "join-pos-#{id}",
+          "title" => pos.dig("title", "en").to_s,
+          "url" => "/join/",
+          "section" => "Join",
+          "body" => [
+            pos.dig("description", "en"),
+            pos.dig("description", "es"),
+            Array(pos["levels"]).join(" "),
+            pos["status"]
+          ].compact.join(" "),
+          "meta" => pos["status"].to_s
+        }
+      end
+
+      Array(students["projects"]).each do |project|
+        id = project["id"]
+        next if id.nil? || id.empty?
+
+        docs << {
+          "id" => "join-proj-#{id}",
+          "title" => project.dig("title", "en").to_s,
+          "url" => "/join/",
+          "section" => "Join",
+          "body" => [
+            project.dig("description", "en"),
+            project.dig("description", "es"),
+            Array(project["areas"]).join(" ")
+          ].compact.join(" "),
+          "meta" => "Project idea"
         }
       end
     end

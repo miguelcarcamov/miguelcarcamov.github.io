@@ -1,0 +1,138 @@
+# Supervised theses and memorias — searchable gallery data
+
+entries:
+  - id: leo-vergara-2024
+    student: Leo Vergara
+    level: undergrad
+    type: memoria
+    year: 2024
+    cosupervised: false
+    topics:
+      - imaging
+      - polarimetry
+    title:
+      en: Interferometric image reconstruction with polarized data via Regularized Maximum Likelihood algorithms
+      es: Reconstrucción de imágenes interferométricas con datos polarizados mediante algoritmos de Regularized Maximum Likelihood
+    url: https://repositorio.usach.cl/permalink/56USACH_INST/avqbj0/alma992164035806116
+
+  - id: matias-colil-2023
+    student: Matías Colil
+    level: undergrad
+    type: memoria
+    year: 2023
+    cosupervised: false
+    topics:
+      - outreach
+      - interferometry
+    title:
+      en: Interferometer simulation through a mobile app for science outreach
+      es: Simulación de un interferómetro a través de una aplicación móvil para divulgación científica
+    url: https://repositorio.usach.cl/permalink/56USACH_INST/avqbj0/alma992124237006116
+
+  - id: marcela-rivera-2022
+    student: Marcela Rivera
+    level: undergrad
+    type: memoria
+    year: 2022
+    cosupervised: true
+    supervisor: Prof. Fernando Rannou
+    topics:
+      - imaging
+      - compressed-sensing
+    title:
+      en: Dictionary learning in interferometric image synthesis
+      es: Aprendizaje de diccionarios en síntesis de imágenes interferométricas
+    url: https://repositorio.usach.cl/permalink/56USACH_INST/avqbj0/alma992132539906116
+
+  - id: vicente-vega-2021
+    student: Vicente Vega
+    level: undergrad
+    type: memoria
+    year: 2021
+    cosupervised: true
+    supervisor: Prof. Pablo Roman
+    topics:
+      - calibration
+      - interferometry
+    title:
+      en: Study and development of bispectrum calibration in radio interferometry
+      es: Estudio y desarrollo de calibración utilizando bispectrum en radio-interferometría
+    url: https://repositorio.usach.cl/permalink/56USACH_INST/avqbj0/alma992099039706116
+
+  - id: damian-guzman-2020
+    student: Damián Guzmán
+    level: undergrad
+    type: memoria
+    year: 2020
+    cosupervised: true
+    supervisor: Prof. Fernando Rannou
+    topics:
+      - imaging
+      - hpc
+    title:
+      en: Object-oriented design and modelling of the Split Bregman algorithm for interferometry
+      es: Diseño y modelamiento orientado a objetos del algoritmo Split Bregman para interferometría
+    url: https://repositorio.usach.cl/permalink/56USACH_INST/avqbj0/alma992072641006116
+
+  - id: sebastian-lopez-2019
+    student: Sebastián López
+    level: undergrad
+    type: memoria
+    year: 2019
+    cosupervised: true
+    supervisor: Prof. Fernando Rannou
+    topics:
+      - simulation
+      - radio-astronomy
+    title:
+      en: Simulation of radio astronomy data generation
+      es: Simulación de generación de datos radioastronómicos
+    url: https://repositorio.usach.cl/permalink/56USACH_INST/avqbj0/alma991986835906116
+
+level_labels:
+  undergrad:
+    en: Undergraduate
+    es: Pregrado
+  master:
+    en: Master's
+    es: Magíster
+  phd:
+    en: PhD
+    es: Doctorado
+
+type_labels:
+  memoria:
+    en: Memoria
+    es: Memoria
+  thesis:
+    en: Thesis
+    es: Tesis
+
+topic_labels:
+  imaging:
+    en: Imaging
+    es: Imagen
+  polarimetry:
+    en: Polarimetry
+    es: Polarimetría
+  compressed-sensing:
+    en: Compressed sensing
+    es: Detección comprimida
+  calibration:
+    en: Calibration
+    es: Calibración
+  interferometry:
+    en: Interferometry
+    es: Interferometría
+  hpc:
+    en: HPC / GPU
+    es: HPC / GPU
+  outreach:
+    en: Outreach
+    es: Divulgación
+  simulation:
+    en: Simulation
+    es: Simulación
+  radio-astronomy:
+    en: Radio astronomy
+    es: Radioastronomía

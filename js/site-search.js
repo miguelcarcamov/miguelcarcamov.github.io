@@ -4,6 +4,7 @@
   var indexPromise = null;
   var lunrIndex = null;
   var documents = [];
+  var activeSectionFilter = "";
 
   function baseUrl() {
     var base = document.body && document.body.getAttribute("data-baseurl");
@@ -23,7 +24,9 @@
       Software: "search.section_software",
       Courses: "search.section_courses",
       Join: "search.section_join",
-      Writing: "search.section_writing"
+      Writing: "search.section_writing",
+      Media: "search.section_media",
+      Theses: "search.section_theses"
     };
     var label = t(map[section] || "");
     return label || section;
@@ -120,9 +123,63 @@
       if (!results.length) {
         results = lunrIndex.search(query.trim());
       }
+      if (activeSectionFilter) {
+        results = results.filter(function (result) {
+          var doc = getDocument(result.ref);
+          return doc && doc.section === activeSectionFilter;
+        });
+      }
       renderResults(results);
     } catch (err) {
       renderResults([]);
+    }
+  }
+
+  function ensureSectionFilter() {
+    var panel = document.querySelector(".site-search-panel");
+    if (!panel || document.getElementById("site-search-section-filter")) return;
+
+    var wrap = document.createElement("div");
+    wrap.className = "site-search-filter-wrap";
+    wrap.innerHTML =
+      '<label class="site-search-filter-label" for="site-search-section-filter">' +
+      (t("search.filter_label") || "Filter") +
+      "</label>";
+
+    var select = document.createElement("select");
+    select.id = "site-search-section-filter";
+    select.className = "site-search-section-filter";
+
+    var sections = [];
+    documents.forEach(function (doc) {
+      if (doc.section && sections.indexOf(doc.section) < 0) {
+        sections.push(doc.section);
+      }
+    });
+    sections.sort();
+
+    var allOption = document.createElement("option");
+    allOption.value = "";
+    allOption.textContent = t("search.filter_all") || "All sections";
+    select.appendChild(allOption);
+
+    sections.forEach(function (section) {
+      var option = document.createElement("option");
+      option.value = section;
+      option.textContent = sectionLabel(section);
+      select.appendChild(option);
+    });
+
+    select.addEventListener("change", function () {
+      activeSectionFilter = select.value;
+      var input = document.getElementById("site-search-input");
+      if (input && input.value) runSearch(input.value);
+    });
+
+    wrap.appendChild(select);
+    var input = document.getElementById("site-search-input");
+    if (input && input.parentNode) {
+      input.parentNode.insertBefore(wrap, input.nextSibling);
     }
   }
 
@@ -176,7 +233,9 @@
     bindModal();
     Promise.all([loadDocuments(), ensureLunr()])
       .then(function (parts) {
-        lunrIndex = buildIndex(parts[0]);
+        documents = parts[0];
+        lunrIndex = buildIndex(documents);
+        ensureSectionFilter();
       })
       .catch(function (err) {
         console.warn("Site search unavailable:", err);
@@ -184,6 +243,16 @@
 
     document.addEventListener("site:langchange", function () {
       var input = document.getElementById("site-search-input");
+      var select = document.getElementById("site-search-section-filter");
+      if (select) {
+        Array.prototype.forEach.call(select.options, function (opt) {
+          if (!opt.value) {
+            opt.textContent = t("search.filter_all") || "All sections";
+          } else {
+            opt.textContent = sectionLabel(opt.value);
+          }
+        });
+      }
       if (input && input.value) runSearch(input.value);
     });
   }

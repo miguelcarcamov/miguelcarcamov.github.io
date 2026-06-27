@@ -25,15 +25,20 @@
   }
 
   function initCopyButtons() {
-    document.querySelectorAll(".software-copy-bibtex").forEach(function (btn) {
+    document.querySelectorAll(".software-copy-bibtex, .software-copy-cite-stack").forEach(function (btn) {
       btn.addEventListener("click", function () {
         var targetId = btn.getAttribute("data-bibtex-target");
         var pre = targetId ? document.getElementById(targetId) : null;
         if (!pre) return;
+        var originalKey = btn.classList.contains("software-copy-cite-stack")
+          ? "software.copied_stack"
+          : "software.copied";
         var original = btn.textContent;
         copyText(pre.textContent || "")
           .then(function () {
-            var copied = (window.SiteI18n && window.SiteI18n.t("software.copied")) || "Copied!";
+            var copied = (window.SiteI18n && window.SiteI18n.t(originalKey))
+              || (window.SiteI18n && window.SiteI18n.t("software.copied"))
+              || "Copied!";
             btn.textContent = copied;
             setTimeout(function () {
               if (window.SiteI18n && typeof window.SiteI18n.apply === "function") {

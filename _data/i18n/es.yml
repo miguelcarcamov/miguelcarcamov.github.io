@@ -8,6 +8,10 @@ search:
   section_courses: Cursos
   section_join: Únete
   section_writing: Escritos
+  section_media: Charlas y medios
+  section_theses: Tesis
+  filter_all: Todas las secciones
+  filter_label: Filtrar
 nav:
   home: Inicio
   about: sobre mí
@@ -46,6 +50,12 @@ software:
   status_maintained: Mantenido
   status_archived: Archivado
   releases_heading: Lanzamientos recientes
+  latest_release: Último lanzamiento de Pyralysis
+  try_binder: Probar en Binder
+  stat_stars: estrellas
+  stat_forks: forks
+  copy_cite_stack: Copiar stack de citas (software + artículos)
+  copied_stack: ¡Stack copiado!
 resume:
   projects_teaser: >-
     Pyralysis, CS-ROMER y GPUVMEM son los principales proyectos de código abierto de mi grupo.
@@ -87,6 +97,10 @@ publications:
   copy_citation: Copiar cita
   copy_bibtex: Copiar BibTeX
   copied: ¡Copiado!
+  impact_heading: Cadena de impacto investigación
+  related_papers: Artículos relacionados (software compartido)
+  view_stats: Estadísticas de publicaciones
+  join_link: Únete al grupo
 join:
   title: ÚNETE AL GRUPO
   subtitle: Oportunidades de investigación para estudiantes en la USACH
@@ -105,6 +119,18 @@ join:
     La admisión universitaria la gestionan la USACH y el DIINF; el camino depende de tu nivel.
   admission_choose_level: ¿En qué etapa de tu formación estás?
   related_software: Software relacionado
+  matcher_heading: Encuentra un proyecto que encaje
+  matcher_subtitle: Elige tu nivel de grado y las habilidades que ya tienes — sugeriremos temas ejemplo.
+  matcher_step_level: 1. Tu nivel
+  matcher_step_skills: 2. Habilidades que tienes
+  matcher_results: Proyectos sugeridos
+  matcher_no_results: Sin coincidencia exacta — prueba otro nivel o marca más habilidades, e igual escríbeme.
+  matcher_email: Borrador de correo →
+  matcher_email_subject: Consulta investigación estudiantil
+  matcher_email_intro: Hola Miguel,
+  matcher_email_level: Nivel
+  matcher_email_skills: Habilidades
+  matcher_email_projects: Proyectos de interés
   cta_office_hours: Reservar hora de oficina
   cta_contact: Contactar
   cta_email: Escríbeme
@@ -142,6 +168,10 @@ stats:
   map_note: El país se infiere del texto de afiliación en los metadatos de ADS, no de la nacionalidad del autor.
   footer_source: "Fuente: NASA ADS. Última actualización:"
   footer_export: Exportar JSON de estadísticas
+  year_filter_label: Periodo de gráficos
+  year_filter_all: Todos los años
+  year_filter_10y: Últimos 10 años
+  year_filter_5y: Últimos 5 años
   card_total_papers: Total de artículos
   card_total_citations: Total de citas
   card_h_index: índice h
@@ -151,6 +181,8 @@ stats:
   card_fondecyt: FONDECYT NP
   card_citation_velocity: Velocidad de citas (5 años)
   card_open_access: Porcentaje de acceso abierto
+  card_code_linked: Artículos con código / datos
+  card_venue_mix: Artículos revista / congreso
   card_leadership_ratio: Ratio de citas en rol principal
   card_intl_collab: Porcentaje de colaboración internacional
   card_momentum: Momento reciente (5 años)
@@ -190,6 +222,8 @@ stats:
   info_momentum: Promedio de la participación reciente en artículos y en citas durante los últimos 5 años.
   info_flagship: Porcentaje del total de citas aportado por los cinco artículos más citados.
   info_open_access: Porcentaje de artículos marcados como acceso abierto en las propiedades de ADS.
+  info_code_linked: Artículos incluidos con software de investigación o datos vinculados en este sitio.
+  info_venue_mix: Cantidad de artículos de revista frente a actas de congreso en el portafolio.
   info_first_author: Artículos donde Miguel Cárcamo aparece en la posición de autor 1.
   info_lead_author: Artículos donde Miguel aparece en la posición de autor 1 o 2.
   info_lead_share: Porcentaje de artículos incluidos donde Miguel está en posición 1 o 2.
@@ -224,14 +258,62 @@ teaching:
   title: DOCENCIA
   subtitle: Cursos e instrucción académica
   current_heading: Cursos actuales
+  overlap_heading: Enseñanza × investigación
+  overlap_subtitle: Cómo los cursos se conectan con áreas de investigación, software y tesis supervisadas.
+  overlap_software: Software relacionado
+  overlap_theses: Tesis supervisadas
 service:
   title: servicio
   subtitle: servicio académico y reconocimientos
+  highlights_heading: DESTACADOS ACADÉMICOS
+  highlights_subtitle: financiamiento, invitaciones, servicio y premios
+  funded_projects: Proyectos financiados
+  academic_service: Servicio académico
+  talks_posters: Invitaciones, charlas y pósters
+  awards: Premios y distinciones
+media:
+  heading: Charlas y medios
+  subtitle: Presentaciones grabadas, charlas invitadas y pósters de congresos. Pulsa play abajo — los videos se reproducen aquí sin salir del sitio.
+  watch_youtube: Abrir en YouTube
+  fallback_note: "¿Problemas para reproducir? "
+home:
+  chip_release: Lanzamiento Pyralysis
+  chip_binder: Probar Pyralysis en Binder
+  chip_positions: posiciones abiertas
+  chip_stats: Estadísticas de publicaciones
+lab_now:
+  heading: En qué estamos trabajando ahora
+  subtitle: Proyectos activos, cupos abiertos, lanzamientos de software y resultados recientes — actualizado en cada build.
+  grants: Proyectos activos
+  positions: Posiciones abiertas
+  join_link: Únete al grupo →
+  software: Software
+  all_software: Todo el software de investigación →
+  recent: Destacados recientes
+  stats_line: Portafolio
+  papers: artículos
+  stats_link: estadísticas →
+timeline:
+  heading: Línea de tiempo investigación
+  subtitle: Hitos en formación, publicaciones, proyectos y roles.
+theme_toggle: Modo oscuro
 students:
   recruitment_cta: estudiantes interesados →
   title: SUPERVISIÓN DE ESTUDIANTES
   subtitle: Estudiantes actuales y anteriores
   current_heading: Estudiantes actuales
+  theses_heading: Archivo de tesis y memorias
+  theses_note: Trabajos supervisados — filtra por tema o nivel.
+  theses_filter_topic: Tema
+  theses_filter_level: Nivel
+  theses_filter_all: Todos
+  theses_filter_all_topics: Todos los temas
+  theses_level_undergrad: Pregrado
+  theses_level_master: Magíster
+  theses_level_phd: Doctorado
+  theses_cosupervisor: Co-supervisión ·
+  theses_repository: Repositorio USACH
+  theses_no_results: Ninguna tesis coincide con los filtros.
 writing:
   title: THE FAINT SIGNAL
   subtitle: Ensayos sobre radioastronomía, computación y todo lo demás

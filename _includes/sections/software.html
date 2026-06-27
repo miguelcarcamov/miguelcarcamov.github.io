@@ -11,6 +11,25 @@
 </div>
 
 {% assign sw = site.data.software %}
+{% assign lookup = site.data.publication_lookup %}
+{% assign pyralysis_releases = site.data.software_releases.projects.pyralysis %}
+{% assign latest_release = pyralysis_releases | first %}
+
+<div class="row">
+<div class="col-md-12">
+<div class="software-release-banner" aria-live="polite">
+{% if latest_release %}
+<p class="software-release-banner-text">
+<span class="software-release-banner-label" data-i18n="software.latest_release">Latest Pyralysis release</span>
+<a href="{{ latest_release.url }}" target="_blank" rel="noopener noreferrer" class="software-release-banner-link">{{ latest_release.tag | default: latest_release.name }}</a>
+{% if latest_release.published_at %}
+<span class="software-release-banner-date">{{ latest_release.published_at | slice: 0, 10 }}</span>
+{% endif %}
+</p>
+{% endif %}
+</div>
+</div>
+</div>
 
 <div class="row">
 <div class="col-md-12">
@@ -39,6 +58,14 @@
 
 <p class="software-card-description">{{ tool.description }}</p>
 
+{% assign repo_stats = site.data.software_stats.projects[tool.id] %}
+{% if repo_stats %}
+<p class="software-repo-stats" aria-label="Repository statistics">
+<span class="software-stat"><span class="fa fa-star" aria-hidden="true"></span> {{ repo_stats.stars }} <span data-i18n="software.stat_stars">stars</span></span>
+<span class="software-stat"><span class="fa fa-code-fork" aria-hidden="true"></span> {{ repo_stats.forks }} <span data-i18n="software.stat_forks">forks</span></span>
+</p>
+{% endif %}
+
 {% if tool.areas %}
 <div class="software-card-meta">
 <span class="software-meta-label" data-i18n="software.areas_label">Research areas</span>
@@ -54,6 +81,12 @@
 <a href="{{ tool.repo }}" class="btn software-repo-btn" target="_blank" rel="noopener noreferrer">
 <span data-i18n="software.repository">Repository</span> →
 </a>
+{% if tool.binder_url %}
+<a href="{{ tool.binder_url }}" class="btn software-binder-btn" target="_blank" rel="noopener noreferrer">
+<span class="fa fa-play-circle" aria-hidden="true"></span>
+<span data-i18n="software.try_binder">Try on Binder</span>
+</a>
+{% endif %}
 </div>
 
 {% if tool.paper_bibcodes %}
@@ -86,6 +119,31 @@
   publisher = {{ tool.citation.publisher | jsonify }}
 }</pre>
 <button type="button" class="btn software-copy-bibtex" data-bibtex-target="bibtex-{{ tool.id }}" data-i18n="software.copy_bibtex">Copy BibTeX</button>
+{% if tool.paper_bibcodes %}
+{% capture cite_stack %}
+@software{ {{ cite_key }}{{ tool.citation.year }},
+  author = {Cárcamo, Miguel},
+  title = {{ tool.citation.title | jsonify }},
+  year = {{ tool.citation.year }},
+  url = {{ tool.citation.url | jsonify }},
+  publisher = {{ tool.citation.publisher | jsonify }}
+}
+{% for bibcode in tool.paper_bibcodes %}
+{% assign paper = lookup[bibcode] %}
+{% if paper %}
+@article{ {{ bibcode | replace: '.', '' | replace: '&', '' | truncate: 40, '' }},
+  author = {{ paper.authors | jsonify }},
+  title = {{ paper.title | jsonify }},
+  journal = {{ paper.publication | jsonify }},
+  year = {{ paper.year }},
+  doi = {{ paper.doi | jsonify }}
+}
+{% endif %}
+{% endfor %}
+{% endcapture %}
+<pre class="software-bibtex software-bibtex--stack" id="citestack-{{ tool.id }}" hidden>{{ cite_stack | strip }}</pre>
+<button type="button" class="btn software-copy-cite-stack" data-bibtex-target="citestack-{{ tool.id }}" data-i18n="software.copy_cite_stack">Copy cite stack (software + papers)</button>
+{% endif %}
 </div>
 {% endif %}
 
@@ -129,6 +187,13 @@
 </h4>
 <p class="software-card-tagline">{{ tool.tagline }}</p>
 <p class="software-card-description">{{ tool.description }}</p>
+{% assign repo_stats = site.data.software_stats.projects[tool.id] %}
+{% if repo_stats %}
+<p class="software-repo-stats" aria-label="Repository statistics">
+<span class="software-stat"><span class="fa fa-star" aria-hidden="true"></span> {{ repo_stats.stars }}</span>
+<span class="software-stat"><span class="fa fa-code-fork" aria-hidden="true"></span> {{ repo_stats.forks }}</span>
+</p>
+{% endif %}
 <a href="{{ tool.repo }}" class="software-inline-link" target="_blank" rel="noopener noreferrer">
 <span data-i18n="software.repository">Repository</span> →
 </a>

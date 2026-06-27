@@ -1,0 +1,85 @@
+# Talks, videos, and media appearances
+#
+# List oldest → newest. Grid fills row-major: (1,1) (1,2) (1,3), then (2,1) (2,2) …
+# Append new videos at the END.
+
+featured_videos:
+  - id: diinf-universo-en-bits
+    youtube_id: v_KopoMu94o
+    kind: talk
+    year: 2021
+    title:
+      en: "Astroinformática: El Universo en Bits"
+      es: "Astroinformática: El Universo en Bits"
+    description:
+      en: >-
+        DIINF astroinformatics talk opening the 2021 academic semester (14 April 2021).
+        Speakers: Sebastián Pérez (CIRAS / USACH), Miguel Cárcamo (PhD student, University
+        of Manchester), and Pablo Roman (DIINF).
+      es: >-
+        Charla de astroinformática del DIINF por el inicio del semestre académico 2021
+        (14 de abril de 2021). Expositores: Sebastián Pérez (CIRAS / USACH), Miguel Cárcamo
+        (doctorado, University of Manchester) y Pablo Roman (DIINF).
+
+  - id: radio-usach-frecuencia-publica
+    youtube_id: qax480rw5zk
+    kind: interview
+    year: 2021
+    title:
+      en: "Frecuencia Pública — Radio USACH interview"
+      es: "Frecuencia Pública — entrevista Radio USACH"
+    description:
+      en: >-
+        Interview on Radio USACH's Frecuencia Pública about cosmic magnetic fields,
+        planet formation, and how big computing and big data help unravel open questions
+        in the Universe — ahead of the DIINF double-format talk on the same themes.
+      es: >-
+        Entrevista en Frecuencia Pública de Radio USACH sobre campos magnéticos cósmicos,
+        formación de planetas y cómo el big computing y el big data ayudan a desentrañar
+        preguntas abiertas del Universo — previo a la charla doble formato del DIINF sobre
+        los mismos temas.
+
+  - id: diinf-campos-magneticos-planetas
+    youtube_id: GO-BdnoxnZc
+    kind: talk
+    year: 2021
+    title:
+      en: "From magnetic fields to planet formation: Big Computing & Big Data"
+      es: "Desde los campos magnéticos hasta la formación de planetas: Big Computing y Big Data"
+    description:
+      en: >-
+        DIINF double-format talk on cosmic magnetism, planet-forming environments, and
+        radio-astronomy data pipelines — connecting astronomy and computer engineering at USACH.
+      es: >-
+        Charla doble formato del DIINF sobre magnetismo cósmico, entornos de formación
+        planetaria y pipelines de datos en radioastronomía — conectando astronomía e
+        ingeniería informática en la USACH.
+
+  - id: txplus-talk-magnetismo
+    youtube_id: aZyXY5SMB_E
+    kind: outreach
+    year: null
+    title:
+      en: "Talk (TX Plus) — Magnetism and the magnetic field"
+      es: "Talk (TX Plus) — Magnetismo y el campo magnético"
+    description:
+      en: >-
+        Episode of Talk on TX Plus, hosted by science communicator Gabriel León — a journey
+        through everyday magnets, Earth's magnetic field, and how magnetic forces shape
+        technology and our planet, with captivating demos and experiments.
+      es: >-
+        Episodio de Talk en TX Plus, conducido por el divulgador Gabriel León — un viaje
+        desde los imanes cotidianos y el campo magnético terrestre hasta cómo la fuerza
+        magnética impregna la tecnología y nuestro planeta, con demostraciones y experimentos
+        que acercan la ciencia del magnetismo.
+
+kind_labels:
+  interview:
+    en: Interview
+    es: Entrevista
+  talk:
+    en: Talk
+    es: Charla
+  outreach:
+    en: Science outreach
+    es: Divulgación científica
