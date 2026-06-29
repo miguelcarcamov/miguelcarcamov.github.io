@@ -1,28 +1,28 @@
 {
-  "generated_at_utc": "2026-06-22T14:50:26Z",
+  "generated_at_utc": "2026-06-29T13:15:47Z",
   "source": "NASA ADS API",
   "volume": {
-    "total_publications": 21,
-    "journal_publications": 17,
+    "total_publications": 23,
+    "journal_publications": 19,
     "conference_publications": 4,
-    "first_author_publications": 4,
-    "lead_author_publications": 7,
-    "unique_coauthors": 95,
-    "first_author_share_percent": 19.05,
-    "lead_author_share_percent": 33.33,
-    "coauthored_share_percent": 80.95,
-    "open_access_publications": 17,
-    "open_access_share_percent": 80.95
+    "first_author_publications": 5,
+    "lead_author_publications": 8,
+    "unique_coauthors": 109,
+    "first_author_share_percent": 21.74,
+    "lead_author_share_percent": 34.78,
+    "coauthored_share_percent": 78.26,
+    "open_access_publications": 19,
+    "open_access_share_percent": 82.61
   },
   "citations": {
-    "total_citations": 405,
-    "average_citations_per_paper": 19.29,
+    "total_citations": 407,
+    "average_citations_per_paper": 17.7,
     "median_citations_per_paper": 9.0,
     "h_index": 10,
     "h_index_h_paper_citations": 13,
     "h_index_next_paper_citations": 9,
     "citations_sorted_desc": [
-      93,
+      94,
       51,
       49,
       37,
@@ -37,6 +37,8 @@
       9,
       4,
       4,
+      1,
+      0,
       0,
       0,
       0,
@@ -53,10 +55,10 @@
     "window_years": 5,
     "window_start_year": 2022,
     "window_end_year": 2026,
-    "papers_in_window": 13,
-    "citations_in_window": 125,
-    "effective_paper_age_years": 36,
-    "citations_per_effective_year": 3.4722
+    "papers_in_window": 15,
+    "citations_in_window": 126,
+    "effective_paper_age_years": 38,
+    "citations_per_effective_year": 3.3158
   },
   "yearly": {
     "years": [
@@ -83,12 +85,12 @@
       5,
       1,
       1,
-      2
+      4
     ],
     "citations_per_year": [
       0,
       49,
-      127,
+      128,
       36,
       13,
       55,
@@ -96,53 +98,53 @@
       39,
       0,
       9,
-      0
+      1
     ],
     "cumulative_citations": [
       0,
       49,
-      176,
-      212,
-      225,
-      280,
-      357,
-      396,
-      396,
-      405,
-      405
+      177,
+      213,
+      226,
+      281,
+      358,
+      397,
+      397,
+      406,
+      407
     ]
   },
   "histogram": {
-    "0": 6,
-    "1-4": 2,
+    "0": 7,
+    "1-4": 3,
     "5-9": 3,
     "10-19": 3,
     "20-49": 5,
     "50+": 2
   },
   "author_position_distribution": {
-    "1": 4,
+    "1": 5,
     "2": 3,
     "3": 4,
-    "4": 3,
+    "4": 4,
     "5": 4,
     "6": 1,
     "7+": 2,
     "unknown": 0
   },
   "collaboration": {
-    "unique_collaborators": 95,
-    "total_collaboration_links": 178,
-    "avg_coauthors_per_paper": 8.48,
-    "repeat_collaborators": 32,
-    "repeat_collaborator_share_percent": 33.68,
+    "unique_collaborators": 109,
+    "total_collaboration_links": 200,
+    "avg_coauthors_per_paper": 8.7,
+    "repeat_collaborators": 37,
+    "repeat_collaborator_share_percent": 33.94,
     "top_collaborators": [
       {
-        "name": "Casassus, Simon",
-        "papers_together": 15
+        "name": "Casassus, Simón",
+        "papers_together": 16
       },
       {
-        "name": "Pérez, Sebastián",
+        "name": "Perez, Sebastian",
         "papers_together": 9
       },
       {
@@ -158,16 +160,24 @@
         "papers_together": 5
       },
       {
-        "name": "Hales, Antonio",
+        "name": "Zurlo, Alice",
         "papers_together": 5
       },
       {
-        "name": "Zurlo, Alice",
+        "name": "Hales, Antonio",
         "papers_together": 5
       },
       {
         "name": "Arce-Tord, Carla",
         "papers_together": 5
+      },
+      {
+        "name": "Vidal, Matías",
+        "papers_together": 4
+      },
+      {
+        "name": "Scaife, Anna M. M.",
+        "papers_together": 4
       },
       {
         "name": "Marino, Sebastian",
@@ -176,14 +186,6 @@
       {
         "name": "Christiaens, Valentin",
         "papers_together": 4
-      },
-      {
-        "name": "Scaife, Anna M. M.",
-        "papers_together": 3
-      },
-      {
-        "name": "Roman, Pablo E.",
-        "papers_together": 3
       }
     ],
     "yearly_new_vs_returning": {
@@ -211,7 +213,7 @@
         13,
         1,
         6,
-        3
+        17
       ],
       "returning_collaborators": [
         0,
@@ -224,7 +226,7 @@
         17,
         2,
         3,
-        8
+        13
       ]
     }
   },
@@ -283,12 +285,12 @@
         "share_percent": 33.33
       },
       {
-        "country": "Canada",
+        "country": "France",
         "papers": 5,
         "share_percent": 23.81
       },
       {
-        "country": "France",
+        "country": "Canada",
         "papers": 5,
         "share_percent": 23.81
       },
@@ -323,12 +325,12 @@
         "share_percent": 4.76
       },
       {
-        "country": "Netherlands",
+        "country": "Australia",
         "papers": 1,
         "share_percent": 4.76
       },
       {
-        "country": "Australia",
+        "country": "Netherlands",
         "papers": 1,
         "share_percent": 4.76
       },
@@ -365,12 +367,12 @@
         "share_percent": 33.33
       },
       {
-        "country": "Canada",
+        "country": "France",
         "papers": 5,
         "share_percent": 23.81
       },
       {
-        "country": "France",
+        "country": "Canada",
         "papers": 5,
         "share_percent": 23.81
       },
@@ -405,12 +407,12 @@
         "share_percent": 4.76
       },
       {
-        "country": "Netherlands",
+        "country": "Australia",
         "papers": 1,
         "share_percent": 4.76
       },
       {
-        "country": "Australia",
+        "country": "Netherlands",
         "papers": 1,
         "share_percent": 4.76
       },
@@ -427,18 +429,18 @@
     ]
   },
   "leadership": {
-    "lead_papers": 7,
-    "supporting_papers": 14,
-    "lead_citations": 100,
-    "lead_citation_share_percent": 24.69,
-    "lead_citations_per_paper": 14.29,
-    "supporting_citations_per_paper": 21.79,
-    "leadership_impact_ratio": 0.656,
+    "lead_papers": 8,
+    "supporting_papers": 15,
+    "lead_citations": 101,
+    "lead_citation_share_percent": 24.82,
+    "lead_citations_per_paper": 12.62,
+    "supporting_citations_per_paper": 20.4,
+    "leadership_impact_ratio": 0.619,
     "window_years": 5,
     "window_start_year": 2022,
     "window_end_year": 2026,
-    "recent_lead_papers": 5,
-    "recent_lead_share_percent": 71.43,
+    "recent_lead_papers": 6,
+    "recent_lead_share_percent": 75.0,
     "yearly_by_role": {
       "years": [
         2015,
@@ -464,7 +466,7 @@
         1,
         0,
         0,
-        0
+        1
       ],
       "lead_coauthor": [
         0,
@@ -490,7 +492,7 @@
         4,
         1,
         1,
-        1
+        2
       ]
     }
   },
@@ -498,22 +500,22 @@
     "window_years": 5,
     "window_start_year": 2022,
     "window_end_year": 2026,
-    "recent_papers": 13,
-    "recent_citations": 125,
-    "recent_paper_share_percent": 61.9,
-    "recent_citation_share_percent": 30.86,
-    "momentum_score": 46.38
+    "recent_papers": 15,
+    "recent_citations": 126,
+    "recent_paper_share_percent": 65.22,
+    "recent_citation_share_percent": 30.96,
+    "momentum_score": 48.09
   },
   "impact_concentration": {
-    "top3_citation_share_percent": 47.65,
-    "top5_citation_share_percent": 65.68
+    "top3_citation_share_percent": 47.67,
+    "top5_citation_share_percent": 65.6
   },
   "top_cited": [
     {
       "title": "An inner warp in the DoAr 44 T Tauri transition disc",
       "year": 2018,
       "publication": "Monthly Notices of the Royal Astronomical Society",
-      "citation_count": 93,
+      "citation_count": 94,
       "url": "https://doi.org/10.1093/mnras/sty894",
       "doi": "10.1093/mnras/sty894"
     },
@@ -665,12 +667,23 @@
         "title": "Hourly radio variability of PDS 70c from time-differential photometry",
         "year": 2026,
         "publication": "Astronomy and Astrophysics",
-        "citations": 0,
+        "citations": 1,
         "author_position": 2,
+        "leadership_factor": 1.0,
+        "c_i": 1.0,
+        "s_i": 1.4142,
+        "url": "https://doi.org/10.1051/0004-6361/202659553"
+      },
+      {
+        "title": "Faraday Tomography with the SKA: A New Era of Cosmic Magnetism Studies",
+        "year": 2026,
+        "publication": "arXiv e-prints",
+        "citations": 0,
+        "author_position": 1,
         "leadership_factor": 1.0,
         "c_i": 0.0,
         "s_i": 1.0,
-        "url": "https://doi.org/10.1051/0004-6361/202659553"
+        "url": "https://ui.adsabs.harvard.edu/abs/2026arXiv260628221C"
       },
       {
         "title": "Radio-continuum decrements associated to shadowing from the central warp in transition disc DoAr 44",
@@ -693,21 +706,10 @@
         "c_i": 0.8,
         "s_i": 0.9391,
         "url": "https://doi.org/10.1093/mnras/stab379"
-      },
-      {
-        "title": "ALMA Band 1 observations of the ρ Oph W filament: I. Enhanced power from excess microwave emission at high spatial frequencies",
-        "year": 2026,
-        "publication": "Astronomy and Astrophysics",
-        "citations": 0,
-        "author_position": 3,
-        "leadership_factor": 0.9,
-        "c_i": 0.0,
-        "s_i": 0.9,
-        "url": "https://doi.org/10.1051/0004-6361/202557944"
       }
     ],
-    "p_sum": 17.6539,
-    "np_score": 4.4846
+    "p_sum": 18.1681,
+    "np_score": 4.5098
   },
   "chart_palette": {
     "primary": "#362cb1",
