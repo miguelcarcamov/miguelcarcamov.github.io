@@ -254,6 +254,9 @@ collaborators:
 about:
   title: ABOUT ME
   subtitle: I AM MIGUEL CÁRCAMO
+  whats_new: WHAT'S NEW
+  whats_new_note: Latest papers — auto-synced from NASA ADS at build time.
+  view_all_publications: View all publications →
 teaching:
   title: TEACHING
   subtitle: Courses and academic instruction

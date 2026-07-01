@@ -1168,6 +1168,25 @@ HOME AREA CSS
 	a.selected-contrib-link:focus{
 		color: #2a2290;
 	}
+	.whats-new-note{
+		margin: -6px 0 14px 0;
+		font-size: 13px;
+		color: #999;
+		line-height: 1.5;
+	}
+	.whats-new-list li{
+		margin-bottom: 14px;
+	}
+	.whats-new-meta{
+		display: block;
+		font-size: 12px;
+		color: #999;
+		margin-bottom: 3px;
+	}
+	.whats-new-footer{
+		margin: 4px 0 0 0;
+		font-size: 14px;
+	}
 
 	/* research areas */
 	.research-intro{

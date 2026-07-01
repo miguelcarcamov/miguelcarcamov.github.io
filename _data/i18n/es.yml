@@ -254,6 +254,9 @@ collaborators:
 about:
   title: SOBRE MÍ
   subtitle: SOY MIGUEL CÁRCAMO
+  whats_new: NOVEDADES
+  whats_new_note: Artículos más recientes — sincronizados desde NASA ADS al compilar el sitio.
+  view_all_publications: Ver todas las publicaciones →
 teaching:
   title: DOCENCIA
   subtitle: Cursos e instrucción académica

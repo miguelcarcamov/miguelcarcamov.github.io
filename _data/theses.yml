@@ -1,6 +1,35 @@
 # Supervised theses and memorias — searchable gallery data
 
 entries:
+  - id: nicolas-gajardo-2025
+    student: Nicolás Gajardo
+    level: undergrad
+    type: memoria
+    year: 2025
+    cosupervised: false
+    topics:
+      - imaging
+      - interferometry
+    title:
+      en: Adaptive step-size initialization to improve the efficiency of line searches in interferometric image reconstruction
+      es: Inicialización adaptativa del tamaño de paso para mejorar la eficiencia de búsquedas lineales en la reconstrucción interferométrica de imágenes
+    url: https://usach.primo.exlibrisgroup.com/permalink/56USACH_INST/r14o49/alma992274446906116
+
+  - id: yuyunisse-carreno-2025
+    student: Yuyunisse Carreño
+    level: undergrad
+    type: memoria
+    year: 2025
+    cosupervised: false
+    topics:
+      - outreach
+      - interferometry
+      - simulation
+    title:
+      en: Refactoring and production deployment of an educational radio-interferometry simulator
+      es: Refactorización y puesta en producción de simulador radiointerferométrico educativo
+    url: https://usach.primo.exlibrisgroup.com/permalink/56USACH_INST/r14o49/alma992274448806116
+
   - id: leo-vergara-2024
     student: Leo Vergara
     level: undergrad

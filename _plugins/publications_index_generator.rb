@@ -59,10 +59,15 @@ module Jekyll
         end
       end
 
+      recent_publications = publications
+        .sort_by { |p| [-p["year"].to_i, p["author_position"].to_i] }
+        .first(3)
+
       {
         "generated_at_utc" => pubs["generated_at_utc"],
         "software_catalog" => software_catalog,
-        "publications" => publications
+        "publications" => publications,
+        "recent_publications" => recent_publications
       }
     end
 
