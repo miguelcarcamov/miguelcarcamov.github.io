@@ -1,0 +1,43 @@
+{% assign pub_index = site.data.publications_index %}
+{% assign newest_pubs = pub_index.recent_publications | default: empty %}
+{% if newest_pubs == empty or newest_pubs.size == 0 %}
+  {% assign all_pubs = pub_index.publications | default: empty %}
+  {% if all_pubs == empty or all_pubs.size == 0 %}
+    {% assign fa_j = site.data.publications.first_author.journal | default: empty %}
+    {% assign fa_c = site.data.publications.first_author.conference | default: empty %}
+    {% assign co_j = site.data.publications.coauthored.journal | default: empty %}
+    {% assign co_c = site.data.publications.coauthored.conference | default: empty %}
+    {% assign all_pubs = fa_j | concat: fa_c | concat: co_j | concat: co_c %}
+  {% endif %}
+  {% assign newest_pubs = all_pubs | sort: "year" | reverse | slice: 0, 3 %}
+{% endif %}
+
+<div class="selected-contrib whats-new">
+<h4 class="selected-contrib-title" data-i18n="about.whats_new">WHAT'S NEW</h4>
+<p class="whats-new-note" data-i18n="about.whats_new_note">Latest papers — auto-synced from NASA ADS at build time.</p>
+<ul class="selected-contrib-list whats-new-list">
+{% for pub in newest_pubs %}
+<li>
+<span class="whats-new-meta">
+{{ pub.year }}
+{% if pub.publication_bucket == "conference" %}
+· <span data-i18n="publications.badge_conference">Conference</span>
+{% else %}
+· <span data-i18n="publications.badge_journal">Journal</span>
+{% endif %}
+{% if pub.is_first_author %}
+· <span data-i18n="publications.badge_first_author">First author</span>
+{% elsif pub.is_lead_author %}
+· <span data-i18n="publications.badge_lead_author">Lead author</span>
+{% else %}
+· <span data-i18n="publications.badge_coauthored">Co-authored</span>
+{% endif %}
+</span>
+<a class="selected-contrib-link" href="{{ pub.url | default: '/publications/' | relative_url }}"{% if pub.url %} target="_blank" rel="noopener noreferrer"{% else %} data-home-hash="#publications"{% endif %}>{{ pub.title }}</a>
+</li>
+{% endfor %}
+</ul>
+<p class="whats-new-footer">
+<a class="selected-contrib-link" href="{{ '/publications/' | relative_url }}" data-home-hash="#publications" data-i18n="about.view_all_publications">View all publications →</a>
+</p>
+</div>
