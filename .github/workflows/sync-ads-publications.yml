@@ -42,14 +42,24 @@ jobs:
         run: python scripts/sync_software_stats.py
         continue-on-error: true
 
+      - name: Sync Substack feed
+        run: python scripts/sync_substack_feed.py
+        continue-on-error: true
+
+      - name: Mirror Substack posts to _posts
+        run: python scripts/mirror_substack_posts.py
+        continue-on-error: true
+
       - name: Commit updated data files
         run: |
           if git diff --quiet -- \
             _data/publications.yml \
             _data/publication_stats.json \
             _data/software_releases.yml \
-            _data/software_stats.yml; then
-            echo "No publication, statistics, or software data updates."
+            _data/software_stats.yml \
+            _data/substack_feed.yml \
+            _posts; then
+            echo "No publication, statistics, software, or Substack updates."
             exit 0
           fi
           git config user.name "github-actions[bot]"
@@ -58,6 +68,8 @@ jobs:
             _data/publications.yml \
             _data/publication_stats.json \
             _data/software_releases.yml \
-            _data/software_stats.yml
-          git commit -m "chore: sync publications, software releases, and repo stats"
+            _data/software_stats.yml \
+            _data/substack_feed.yml \
+            _posts
+          git commit -m "chore: sync publications, software releases, repo stats, and Substack feed"
           git push
