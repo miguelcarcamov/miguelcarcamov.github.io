@@ -1,4 +1,4 @@
-generated_at_utc: '2026-06-29T13:15:47Z'
+generated_at_utc: '2026-07-06T12:58:53Z'
 source: NASA ADS API + Crossref
 orcid: 0000-0003-0564-8167
 query_authors:
@@ -33,8 +33,8 @@ first_author:
     volume: ''
     issue: ''
     pages: arXiv:2606.28221
-    doi: ''
-    url: https://ui.adsabs.harvard.edu/abs/2026arXiv260628221C
+    doi: 10.48550/arXiv.2606.28221
+    url: https://doi.org/10.48550/arXiv.2606.28221
     citation_count: 0
     author_position: 1
     publication_type: journal
@@ -68,7 +68,7 @@ first_author:
     pages: '1955'
     doi: 10.1093/mnras/stac3031
     url: https://doi.org/10.1093/mnras/stac3031
-    citation_count: 4
+    citation_count: 5
     author_position: 1
     publication_type: journal
     is_open_access: true
@@ -678,7 +678,7 @@ coauthored:
     pages: '5839'
     doi: 10.1093/mnras/stab379
     url: https://doi.org/10.1093/mnras/stab379
-    citation_count: 4
+    citation_count: 5
     author_position: 4
     publication_type: journal
     is_open_access: true
