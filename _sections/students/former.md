@@ -3,6 +3,18 @@ slug: students-former
 ---
 
 <li style="margin-bottom: 20px;">
+<strong>Maximiliano Ahumada</strong><br>
+<span style="font-size: 13px; color: #999;">Memoria (2025): <a href="https://repositorio.usach.cl/permalink/56USACH_INST/p6m9oe/alma992278533906116" target="_blank" rel="noopener noreferrer" style="color: #362cb1;">Incorporación de Closure Phase, Closure Amplitude y otras funciones de error en Pyralysis para la síntesis de imágenes en interferometría</a></span>
+</li>
+<li style="margin-bottom: 20px;">
+<strong>Javiera Pezoa</strong><br>
+<span style="font-size: 13px; color: #999;">Memoria (2025): <a href="https://repositorio.usach.cl/permalink/56USACH_INST/p6m9oe/alma992278533806116" target="_blank" rel="noopener noreferrer" style="color: #362cb1;">Análisis e integración de la componente tridimensional, el término w, en Pyralysis</a></span>
+</li>
+<li style="margin-bottom: 20px;">
+<strong>Esteban Arenas</strong><br>
+<span style="font-size: 13px; color: #999;">Memoria (2025): <a href="https://repositorio.usach.cl/permalink/56USACH_INST/p6m9oe/alma992278536606116" target="_blank" rel="noopener noreferrer" style="color: #362cb1;">Procesamiento distribuido para la reducción temprana de visibilidades interferométricas</a></span>
+</li>
+<li style="margin-bottom: 20px;">
 <strong>Nicolás Gajardo</strong><br>
 <span style="font-size: 13px; color: #999;">Memoria (2025): <a href="https://usach.primo.exlibrisgroup.com/permalink/56USACH_INST/r14o49/alma992274446906116" target="_blank" rel="noopener noreferrer" style="color: #362cb1;">Inicialización adaptativa del tamaño de paso para mejorar la eficiencia de búsquedas lineales en la reconstrucción interferométrica de imágenes</a></span>
 </li>

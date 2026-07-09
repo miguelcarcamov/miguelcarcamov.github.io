@@ -1,6 +1,50 @@
 # Supervised theses and memorias — searchable gallery data
 
 entries:
+  - id: maximiliano-ahumada-2025
+    student: Maximiliano Ahumada
+    level: undergrad
+    type: memoria
+    year: 2025
+    cosupervised: false
+    topics:
+      - imaging
+      - interferometry
+      - calibration
+    title:
+      en: Incorporation of Closure Phase, Closure Amplitude, and other error functions in Pyralysis for interferometric image synthesis
+      es: Incorporación de Closure Phase, Closure Amplitude y otras funciones de error en Pyralysis para la síntesis de imágenes en interferometría
+    url: https://repositorio.usach.cl/permalink/56USACH_INST/p6m9oe/alma992278533906116
+
+  - id: javiera-pezoa-2025
+    student: Javiera Pezoa
+    level: undergrad
+    type: memoria
+    year: 2025
+    cosupervised: false
+    topics:
+      - imaging
+      - interferometry
+      - hpc
+    title:
+      en: Analysis and integration of the three-dimensional component, the w-term, in Pyralysis
+      es: Análisis e integración de la componente tridimensional, el término w, en Pyralysis
+    url: https://repositorio.usach.cl/permalink/56USACH_INST/p6m9oe/alma992278533806116
+
+  - id: esteban-arenas-2025
+    student: Esteban Arenas
+    level: undergrad
+    type: memoria
+    year: 2025
+    cosupervised: false
+    topics:
+      - interferometry
+      - hpc
+    title:
+      en: Distributed processing for early reduction of interferometric visibilities
+      es: Procesamiento distribuido para la reducción temprana de visibilidades interferométricas
+    url: https://repositorio.usach.cl/permalink/56USACH_INST/p6m9oe/alma992278536606116
+
   - id: nicolas-gajardo-2025
     student: Nicolás Gajardo
     level: undergrad
