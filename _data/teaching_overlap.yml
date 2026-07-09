@@ -16,6 +16,8 @@ courses:
       - pyralysis
       - gpuvmem
     thesis_ids:
+      - esteban-arenas-2025
+      - javiera-jorquera-2025
       - damian-guzman-2020
       - sebastian-lopez-2019
     note:
@@ -39,10 +41,15 @@ courses:
       - gpuvmem
       - simulate-interferometer
     thesis_ids:
+      - maximiliano-ahumada-2025
+      - javiera-jorquera-2025
+      - esteban-arenas-2025
+      - nicolas-gajardo-2025
+      - yuyunisse-carreno-2025
       - leo-vergara-2024
+      - matias-colil-2023
       - marcela-rivera-2022
       - vicente-vega-2021
-      - matias-colil-2023
     note:
       en: Bridge course between DIINF and radio astronomy — feeds imaging, polarimetry, and outreach theses.
       es: Curso puente entre DIINF y radioastronomía — alimenta tesis de imagen, polarimetría y divulgación.
@@ -60,6 +67,8 @@ courses:
     software:
       - pyralysis
     thesis_ids:
+      - maximiliano-ahumada-2025
+      - javiera-jorquera-2025
       - damian-guzman-2020
     note:
       en: Python, OOP, git, and CI skills used across open research software in the group.
@@ -76,7 +85,8 @@ courses:
       - hpc
     software:
       - pyralysis
-    thesis_ids: []
+    thesis_ids:
+      - esteban-arenas-2025
     note:
       en: Foundations for large-scale data pipelines used in survey-scale radio astronomy.
       es: Bases para pipelines de datos a gran escala en radioastronomía tipo survey.
@@ -107,7 +117,8 @@ courses:
       - imaging
     software:
       - pyralysis
-    thesis_ids: []
+    thesis_ids:
+      - yuyunisse-carreno-2025
     note:
       en: Scrum, testing, and CI practices mirror how Pyralysis is developed on GitLab.
       es: Scrum, testing e integración continua reflejan el desarrollo de Pyralysis en GitLab.
@@ -124,6 +135,7 @@ courses:
     software:
       - simulate-interferometer
     thesis_ids:
+      - yuyunisse-carreno-2025
       - sebastian-lopez-2019
     note:
       en: Monte Carlo and discrete-event methods connect to interferometric simulation and uncertainty.
