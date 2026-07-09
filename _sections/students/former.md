@@ -7,7 +7,7 @@ slug: students-former
 <span style="font-size: 13px; color: #999;">Memoria (2025): <a href="https://repositorio.usach.cl/permalink/56USACH_INST/p6m9oe/alma992278533906116" target="_blank" rel="noopener noreferrer" style="color: #362cb1;">Incorporación de Closure Phase, Closure Amplitude y otras funciones de error en Pyralysis para la síntesis de imágenes en interferometría</a></span>
 </li>
 <li style="margin-bottom: 20px;">
-<strong>Javiera Pezoa</strong><br>
+<strong>Javiera Jorquera</strong><br>
 <span style="font-size: 13px; color: #999;">Memoria (2025): <a href="https://repositorio.usach.cl/permalink/56USACH_INST/p6m9oe/alma992278533806116" target="_blank" rel="noopener noreferrer" style="color: #362cb1;">Análisis e integración de la componente tridimensional, el término w, en Pyralysis</a></span>
 </li>
 <li style="margin-bottom: 20px;">
