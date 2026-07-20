@@ -1,4 +1,4 @@
-fetched_at_utc: '2026-07-13T12:17:01Z'
+fetched_at_utc: '2026-07-20T11:58:35Z'
 projects:
   pyralysis:
   - name: v2.2.0 — Pipeline GPU backend selection and CUDA device CLI
