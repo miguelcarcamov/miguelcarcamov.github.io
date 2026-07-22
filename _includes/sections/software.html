@@ -14,16 +14,25 @@
 {% assign lookup = site.data.publication_lookup %}
 {% assign pyralysis_releases = site.data.software_releases.projects.pyralysis %}
 {% assign latest_release = pyralysis_releases | first %}
+{% assign pyralysis_pypi = site.data.software_releases.pypi.pyralysis %}
 
 <div class="row">
 <div class="col-md-12">
 <div class="software-release-banner" aria-live="polite">
-{% if latest_release %}
+{% if latest_release or pyralysis_pypi %}
 <p class="software-release-banner-text">
 <span class="software-release-banner-label" data-i18n="software.latest_release">Latest Pyralysis release</span>
+{% if latest_release %}
 <a href="{{ latest_release.url }}" target="_blank" rel="noopener noreferrer" class="software-release-banner-link">{{ latest_release.tag | default: latest_release.name }}</a>
 {% if latest_release.published_at %}
 <span class="software-release-banner-date">{{ latest_release.published_at | slice: 0, 10 }}</span>
+{% endif %}
+{% endif %}
+{% if pyralysis_pypi %}
+<span class="software-release-banner-sep" aria-hidden="true">·</span>
+<span class="software-release-banner-label" data-i18n="software.latest_pypi">PyPI</span>
+<a href="{{ pyralysis_pypi.url }}" target="_blank" rel="noopener noreferrer" class="software-release-banner-link">{{ pyralysis_pypi.version }}</a>
+<code class="software-release-banner-install">{{ pyralysis_pypi.install }}</code>
 {% endif %}
 </p>
 {% endif %}
@@ -87,6 +96,12 @@
 <span data-i18n="software.try_binder">Try on Binder</span>
 </a>
 {% endif %}
+{% assign tool_pypi = site.data.software_releases.pypi[tool.id] %}
+{% if tool_pypi %}
+<a href="{{ tool_pypi.url }}" class="btn software-pypi-btn" target="_blank" rel="noopener noreferrer">
+PyPI {{ tool_pypi.version }} →
+</a>
+{% endif %}
 </div>
 
 {% if tool.paper_bibcodes %}
@@ -111,10 +126,12 @@
 <div class="software-cite-block">
 <h5 data-i18n="software.cite_heading">Cite this software</h5>
 {% assign cite_key = tool.id | replace: '-', '' %}
+{% assign cite_version = tool_pypi.version | default: tool.citation.version %}
 <pre class="software-bibtex" id="bibtex-{{ tool.id }}">@software{ {{ cite_key }}{{ tool.citation.year }},
   author = {Cárcamo, Miguel},
   title = {{ tool.citation.title | jsonify }},
-  year = {{ tool.citation.year }},
+  year = {{ tool.citation.year }},{% if cite_version != blank %}
+  version = {{ cite_version | jsonify }},{% endif %}
   url = {{ tool.citation.url | jsonify }},
   publisher = {{ tool.citation.publisher | jsonify }}
 }</pre>
@@ -124,7 +141,8 @@
 @software{ {{ cite_key }}{{ tool.citation.year }},
   author = {Cárcamo, Miguel},
   title = {{ tool.citation.title | jsonify }},
-  year = {{ tool.citation.year }},
+  year = {{ tool.citation.year }},{% if cite_version != blank %}
+  version = {{ cite_version | jsonify }},{% endif %}
   url = {{ tool.citation.url | jsonify }},
   publisher = {{ tool.citation.publisher | jsonify }}
 }

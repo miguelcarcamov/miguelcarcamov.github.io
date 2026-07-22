@@ -1,6 +1,26 @@
-fetched_at_utc: '2026-07-20T11:58:35Z'
+fetched_at_utc: '2026-07-22T21:01:40Z'
 projects:
   pyralysis:
+  - name: v2.3.0 - Optimization CLI, disk models, and Stokes/mask correctness
+    tag: v2.3.0
+    published_at: '2026-07-20T15:02:40.902Z'
+    url: https://gitlab.com/clirai/pyralysis/-/releases/v2.3.0
+    description: '# Pyralysis 2.3.0
+
+
+      **Release date:** 2026-07-20\
+
+      **Tag:** `v2.3.0`
+
+
+      ## Summary
+
+
+      Pyralysis **2.3.0** ships a large post-2.2.0 batch: a more capable **optimization
+      CLI** (dual imaging vs restore weighting, masks, auto grid), **DiskSource**
+      protoplanetary-disk models, **visibility data weights**, **GPU transient-state
+      lifecycle**, **lazy Dask restore**, and **Dask optimizer iterate bounds**, plus
+      Sto'
   - name: v2.2.0 — Pipeline GPU backend selection and CUDA device CLI
     tag: v2.2.0
     published_at: '2026-06-04T19:29:45.223Z'
@@ -46,17 +66,6 @@ projects:
 
       * **L-BFGS** — Substantial fixes and hardening: safer handling of small denominators,
       corrected behavior in the optimizer and its history, and explicit use of **`max_correction'
-  - name: v1.0.0
-    tag: v1.0.0
-    published_at: '2026-04-09T21:14:29.000Z'
-    url: https://gitlab.com/clirai/pyralysis/-/releases/v1.0.0
-    description: 'Stable version published to the Python Package Index.
-
-
-      \- **PyPI:** https://pypi.org/project/pyralysis/1.0.0/
-
-
-      \- **Install:** `pip install pyralysis==1.0.0`'
   csromer: []
   gpuvmem:
   - name: v7.0.0
@@ -89,3 +98,11 @@ projects:
     url: https://github.com/miguelcarcamov/gpuvmem/releases/tag/6.0.1
     description: "* Object oriented version\r\n* New attenuation (Airy disk) for ALMA\r\
       \n* MFS Errors Approximation\r\n* LBFGS Minimizator"
+pypi:
+  pyralysis:
+    package: pyralysis
+    version: 2.3.0
+    url: https://pypi.org/project/pyralysis/2.3.0/
+    project_url: https://pypi.org/project/pyralysis/
+    published_at: '2026-07-20T14:49:04.857487Z'
+    install: pip install pyralysis==2.3.0

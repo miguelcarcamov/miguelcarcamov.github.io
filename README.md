@@ -113,7 +113,7 @@ All sections are in `_includes/sections/`. Edit the HTML files directly:
 
 Publications are rendered from `_data/publications.yml`, synchronized from NASA ADS.
 Publication metrics/statistics come from `_data/publication_stats.json`.
-Software release banners use `_data/software_releases.yml` (GitHub/GitLab releases).
+Software release banners use `_data/software_releases.yml` (GitHub/GitLab releases and PyPI package versions).
 Repository stars and forks use `_data/software_stats.yml` (GitHub/GitLab API).
 
 ### One-time setup in GitHub
@@ -124,14 +124,15 @@ Repository stars and forks use `_data/software_stats.yml` (GitHub/GitLab API).
    - `Sync Publications and Software Data`
 
 The workflow also runs:
-- weekly on schedule (Mondays 09:20 UTC)
+- daily at 08:15 UTC (software releases / PyPI / Substack / publications)
+- weekly on Mondays 09:20 UTC
 - manually from Actions
 
 It commits updates to `_data/publications.yml`, `_data/publication_stats.json`, `_data/software_releases.yml`, and `_data/software_stats.yml` when any of them change.
 
 For push deployments, use the `Build and Deploy Pages` workflow, which re-runs the same sync scripts at build time but does not commit data files, so your branch is not mutated during deploy.
 
-Use `Sync Publications and Software Data` when you want to persist synchronized data back into the repository (manual or weekly run).
+Use `Sync Publications and Software Data` when you want to persist synchronized data back into the repository (manual or scheduled run).
 
 The statistics section uses Chart.js from CDN (`chart.umd.min.js`) as a lightweight runtime-only dependency (no npm/build step added).
 
@@ -150,6 +151,13 @@ ADS_API_TOKEN=your_token_here python scripts/sync_ads_publications.py \
   --orcid 0000-0003-0564-8167 \
   --author "Carcamo, Miguel" \
   --author "Cárcamo, Miguel"
+```
+
+Software releases and PyPI versions:
+
+```bash
+python scripts/sync_software_releases.py
+python scripts/sync_software_stats.py
 ```
 
 ### Main Page

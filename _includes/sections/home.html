@@ -8,11 +8,17 @@
 <div class="hero_content">
 {% assign pyralysis_releases = site.data.software_releases.projects.pyralysis %}
 {% assign latest_release = pyralysis_releases | first %}
+{% assign pyralysis_pypi = site.data.software_releases.pypi.pyralysis %}
 {% assign open_positions = site.data.students.positions | where: "status", "open" %}
 <div class="hero-lab-strip" aria-label="Research group highlights">
 {% if latest_release %}
 <a href="{{ latest_release.url }}" class="hero-lab-chip" target="_blank" rel="noopener noreferrer">
-<span data-i18n="home.chip_release">Pyralysis {{ latest_release.tag }}</span>
+<span>Pyralysis {{ latest_release.tag }}</span>
+</a>
+{% endif %}
+{% if pyralysis_pypi %}
+<a href="{{ pyralysis_pypi.url }}" class="hero-lab-chip" target="_blank" rel="noopener noreferrer">
+<span>PyPI {{ pyralysis_pypi.version }}</span>
 </a>
 {% endif %}
 <a href="https://mybinder.org/v2/gl/clirai%2Fpyralysis/release?urlpath=lab%2Ftree%2Fexamples%2Fnotebooks" class="hero-lab-chip hero-lab-chip--accent" target="_blank" rel="noopener noreferrer">

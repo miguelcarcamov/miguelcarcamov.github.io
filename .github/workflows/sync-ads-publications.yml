@@ -3,6 +3,9 @@ name: Sync Publications and Software Data
 on:
   workflow_dispatch:
   schedule:
+    # Daily: keep GitLab/PyPI software releases fresh without waiting for a push.
+    - cron: "15 8 * * *"
+    # Weekly ADS-oriented pass (kept for historical cadence; same job).
     - cron: "20 9 * * 1"
 
 permissions:

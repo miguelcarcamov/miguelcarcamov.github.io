@@ -4875,7 +4875,19 @@ SINGLE PORTFOLIO PAGE ENDS
 		font-size: 12px;
 		color: #8a8a96;
 	}
-	.software-binder-btn{
+	.software-release-banner-sep{
+		color: #c5c4d6;
+	}
+	.software-release-banner-install{
+		font-size: 12px;
+		font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+		background: rgba(54, 44, 177, 0.08);
+		color: #35373e;
+		padding: 3px 8px;
+		border-radius: 4px;
+	}
+	.software-binder-btn,
+	.software-pypi-btn{
 		margin-left: 8px;
 	}
 	.software-copy-cite-stack{
@@ -5184,6 +5196,10 @@ SINGLE PORTFOLIO PAGE ENDS
 	[data-theme="dark"] .stats-data-table th{
 		background: #22232c;
 		border-color: #343546;
+	}
+	[data-theme="dark"] .software-release-banner-install{
+		background: rgba(216, 212, 242, 0.12);
+		color: #e8e8ed;
 	}
 	[data-theme="dark"] .lab-now-heading,
 	[data-theme="dark"] .research-timeline-title,

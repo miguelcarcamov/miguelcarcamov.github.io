@@ -1,6 +1,7 @@
 {% assign students = site.data.students %}
 {% assign releases = site.data.software_releases.projects.pyralysis %}
 {% assign latest_release = releases | first %}
+{% assign pyralysis_pypi = site.data.software_releases.pypi.pyralysis %}
 {% assign open_positions = students.positions | where: "status", "open" %}
 {% assign stats = site.data.publication_stats %}
 {% assign journal_pubs = site.data.publications.first_author.journal | default: [] %}
@@ -45,6 +46,12 @@
 <li>
 <a href="{{ latest_release.url }}" target="_blank" rel="noopener noreferrer">Pyralysis {{ latest_release.tag }}</a>
 <span class="lab-now-meta">{{ latest_release.published_at | slice: 0, 10 }}</span>
+</li>
+{% endif %}
+{% if pyralysis_pypi %}
+<li>
+<a href="{{ pyralysis_pypi.url }}" target="_blank" rel="noopener noreferrer">PyPI {{ pyralysis_pypi.version }}</a>
+{% if pyralysis_pypi.published_at %}<span class="lab-now-meta">{{ pyralysis_pypi.published_at | slice: 0, 10 }}</span>{% endif %}
 </li>
 {% endif %}
 <li><a href="{{ '/software/' | relative_url }}" data-home-hash="#software" data-i18n="lab_now.all_software">All research software →</a></li>

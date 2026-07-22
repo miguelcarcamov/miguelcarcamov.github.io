@@ -51,6 +51,8 @@ software:
   status_archived: Archived
   releases_heading: Recent releases
   latest_release: Latest Pyralysis release
+  latest_pypi: PyPI
+  view_pypi: PyPI
   try_binder: Try on Binder
   stat_stars: stars
   stat_forks: forks
@@ -280,7 +282,6 @@ media:
   watch_youtube: Open on YouTube
   fallback_note: Having trouble?
 home:
-  chip_release: Pyralysis release
   chip_binder: Try Pyralysis on Binder
   chip_positions: open positions
   chip_stats: Publication stats
