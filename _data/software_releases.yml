@@ -1,4 +1,4 @@
-fetched_at_utc: '2026-07-23T10:35:32Z'
+fetched_at_utc: '2026-07-24T10:28:57Z'
 projects:
   pyralysis:
   - name: v2.3.0 - Optimization CLI, disk models, and Stokes/mask correctness
