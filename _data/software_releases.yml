@@ -1,6 +1,25 @@
-fetched_at_utc: '2026-07-24T10:28:57Z'
+fetched_at_utc: '2026-07-25T10:02:18Z'
 projects:
   pyralysis:
+  - name: v2.4.0 - Correct Stokes Imaging and Expanded Optimization Controls
+    tag: v2.4.0
+    published_at: '2026-07-25T01:05:17.220Z'
+    url: https://gitlab.com/clirai/pyralysis/-/releases/v2.4.0
+    description: 'Pyralysis v2.4.0 improves polarization imaging correctness and expands
+      optimization controls.
+
+
+      ## Highlights
+
+
+      - Fixes DirtyMapper Stokes Q residual/restore amplitude blow-up (#111).
+
+      - Converts correlations to Stokes before Hermitian duplication, restoring correct
+      signed circular U and linear V imaging (#112).
+
+      - Simplifies DirtyMapper to use one error-propagated Stokes weight stream.
+
+      - Prevents NaN'
   - name: v2.3.0 - Optimization CLI, disk models, and Stokes/mask correctness
     tag: v2.3.0
     published_at: '2026-07-20T15:02:40.902Z'
@@ -53,19 +72,6 @@ projects:
       \ and optimize with masks, χ², regularizers, and LBFGS/CG/FISTA/SDMM.\n\n##\
       \ Highlights\n\n- **CuPy / Dask array backend** — `DaskMS.read(array_backend=\"\
       cupy\")`, `with_array_backend("
-  - name: v1.1.0
-    tag: v1.1.0
-    published_at: '2026-04-16T15:47:48.942Z'
-    url: https://gitlab.com/clirai/pyralysis/-/releases/v1.1.0
-    description: '### **Highlights**
-
-
-      * **Grid API** — Improvements to the `Grid` class (including clearer control
-      over the gridded array via the new `grid` setter), so workflows that need to
-      inject or replace the grid are easier to support.
-
-      * **L-BFGS** — Substantial fixes and hardening: safer handling of small denominators,
-      corrected behavior in the optimizer and its history, and explicit use of **`max_correction'
   csromer: []
   gpuvmem:
   - name: v7.0.0
@@ -101,8 +107,8 @@ projects:
 pypi:
   pyralysis:
     package: pyralysis
-    version: 2.3.0
-    url: https://pypi.org/project/pyralysis/2.3.0/
+    version: 2.4.0
+    url: https://pypi.org/project/pyralysis/2.4.0/
     project_url: https://pypi.org/project/pyralysis/
-    published_at: '2026-07-20T14:49:04.857487Z'
-    install: pip install pyralysis==2.3.0
+    published_at: '2026-07-25T00:54:03.601295Z'
+    install: pip install pyralysis==2.4.0
