@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-25T10:02:17Z",
+  "generated_at_utc": "2026-07-26T10:13:06Z",
   "source": "NASA ADS API",
   "volume": {
     "total_publications": 23,
@@ -15,12 +15,12 @@
     "open_access_share_percent": 82.61
   },
   "citations": {
-    "total_citations": 411,
-    "average_citations_per_paper": 17.87,
+    "total_citations": 412,
+    "average_citations_per_paper": 17.91,
     "median_citations_per_paper": 9.0,
-    "h_index": 10,
-    "h_index_h_paper_citations": 13,
-    "h_index_next_paper_citations": 10,
+    "h_index": 11,
+    "h_index_h_paper_citations": 11,
+    "h_index_next_paper_citations": 9,
     "citations_sorted_desc": [
       95,
       51,
@@ -32,7 +32,7 @@
       17,
       15,
       13,
-      10,
+      11,
       9,
       9,
       5,
@@ -47,7 +47,7 @@
       0
     ],
     "i10_index": 11,
-    "m_index": 0.8333,
+    "m_index": 0.9167,
     "first_publication_year": 2015,
     "career_years": 12
   },
@@ -56,9 +56,9 @@
     "window_start_year": 2022,
     "window_end_year": 2026,
     "papers_in_window": 15,
-    "citations_in_window": 128,
+    "citations_in_window": 129,
     "effective_paper_age_years": 38,
-    "citations_per_effective_year": 3.3684
+    "citations_per_effective_year": 3.3947
   },
   "yearly": {
     "years": [
@@ -97,7 +97,7 @@
       77,
       40,
       0,
-      10,
+      11,
       1
     ],
     "cumulative_citations": [
@@ -110,8 +110,8 @@
       360,
       400,
       400,
-      410,
-      411
+      411,
+      412
     ]
   },
   "histogram": {
@@ -160,11 +160,11 @@
         "papers_together": 5
       },
       {
-        "name": "Hales, Antonio",
+        "name": "Zurlo, Alice",
         "papers_together": 5
       },
       {
-        "name": "Zurlo, Alice",
+        "name": "Hales, Antonio",
         "papers_together": 5
       },
       {
@@ -432,10 +432,10 @@
     "lead_papers": 8,
     "supporting_papers": 15,
     "lead_citations": 102,
-    "lead_citation_share_percent": 24.82,
+    "lead_citation_share_percent": 24.76,
     "lead_citations_per_paper": 12.75,
-    "supporting_citations_per_paper": 20.6,
-    "leadership_impact_ratio": 0.619,
+    "supporting_citations_per_paper": 20.67,
+    "leadership_impact_ratio": 0.617,
     "window_years": 5,
     "window_start_year": 2022,
     "window_end_year": 2026,
@@ -501,14 +501,14 @@
     "window_start_year": 2022,
     "window_end_year": 2026,
     "recent_papers": 15,
-    "recent_citations": 128,
+    "recent_citations": 129,
     "recent_paper_share_percent": 65.22,
-    "recent_citation_share_percent": 31.14,
-    "momentum_score": 48.18
+    "recent_citation_share_percent": 31.31,
+    "momentum_score": 48.27
   },
   "impact_concentration": {
-    "top3_citation_share_percent": 47.45,
-    "top5_citation_share_percent": 65.21
+    "top3_citation_share_percent": 47.33,
+    "top5_citation_share_percent": 65.05
   },
   "top_cited": [
     {
@@ -645,11 +645,11 @@
         "title": "Multi-frequency observations of PDS70c: Radio emission mechanisms in the circumplanetary environment",
         "year": 2025,
         "publication": "Astronomy and Astrophysics",
-        "citations": 10,
+        "citations": 11,
         "author_position": 5,
         "leadership_factor": 0.5,
-        "c_i": 10.0,
-        "s_i": 1.6583,
+        "c_i": 11.0,
+        "s_i": 1.7321,
         "url": "https://doi.org/10.1051/0004-6361/202554485"
       },
       {
@@ -708,8 +708,8 @@
         "url": "https://doi.org/10.1093/mnras/stab379"
       }
     ],
-    "p_sum": 18.4016,
-    "np_score": 4.521
+    "p_sum": 18.4754,
+    "np_score": 4.5245
   },
   "chart_palette": {
     "primary": "#362cb1",
