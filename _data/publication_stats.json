@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-28T10:45:33Z",
+  "generated_at_utc": "2026-07-29T10:49:08Z",
   "source": "NASA ADS API",
   "volume": {
     "total_publications": 23,
@@ -15,29 +15,29 @@
     "open_access_share_percent": 82.61
   },
   "citations": {
-    "total_citations": 412,
-    "average_citations_per_paper": 17.91,
+    "total_citations": 415,
+    "average_citations_per_paper": 18.04,
     "median_citations_per_paper": 9.0,
     "h_index": 11,
-    "h_index_h_paper_citations": 11,
+    "h_index_h_paper_citations": 12,
     "h_index_next_paper_citations": 9,
     "citations_sorted_desc": [
       95,
       51,
       49,
-      37,
+      38,
       36,
       34,
       25,
       17,
       15,
       13,
-      11,
+      12,
       9,
       9,
       5,
       5,
-      1,
+      2,
       0,
       0,
       0,
@@ -56,9 +56,9 @@
     "window_start_year": 2022,
     "window_end_year": 2026,
     "papers_in_window": 15,
-    "citations_in_window": 129,
+    "citations_in_window": 132,
     "effective_paper_age_years": 38,
-    "citations_per_effective_year": 3.3947
+    "citations_per_effective_year": 3.4737
   },
   "yearly": {
     "years": [
@@ -94,11 +94,11 @@
       36,
       13,
       56,
-      77,
+      78,
       40,
       0,
-      11,
-      1
+      12,
+      2
     ],
     "cumulative_citations": [
       0,
@@ -107,11 +107,11 @@
       214,
       227,
       283,
-      360,
-      400,
-      400,
-      411,
-      412
+      361,
+      401,
+      401,
+      413,
+      415
     ]
   },
   "histogram": {
@@ -325,12 +325,12 @@
         "share_percent": 4.76
       },
       {
-        "country": "Netherlands",
+        "country": "Australia",
         "papers": 1,
         "share_percent": 4.76
       },
       {
-        "country": "Australia",
+        "country": "Netherlands",
         "papers": 1,
         "share_percent": 4.76
       },
@@ -407,12 +407,12 @@
         "share_percent": 4.76
       },
       {
-        "country": "Netherlands",
+        "country": "Australia",
         "papers": 1,
         "share_percent": 4.76
       },
       {
-        "country": "Australia",
+        "country": "Netherlands",
         "papers": 1,
         "share_percent": 4.76
       },
@@ -431,11 +431,11 @@
   "leadership": {
     "lead_papers": 8,
     "supporting_papers": 15,
-    "lead_citations": 102,
-    "lead_citation_share_percent": 24.76,
-    "lead_citations_per_paper": 12.75,
-    "supporting_citations_per_paper": 20.67,
-    "leadership_impact_ratio": 0.617,
+    "lead_citations": 104,
+    "lead_citation_share_percent": 25.06,
+    "lead_citations_per_paper": 13.0,
+    "supporting_citations_per_paper": 20.73,
+    "leadership_impact_ratio": 0.627,
     "window_years": 5,
     "window_start_year": 2022,
     "window_end_year": 2026,
@@ -501,14 +501,14 @@
     "window_start_year": 2022,
     "window_end_year": 2026,
     "recent_papers": 15,
-    "recent_citations": 129,
+    "recent_citations": 132,
     "recent_paper_share_percent": 65.22,
-    "recent_citation_share_percent": 31.31,
-    "momentum_score": 48.27
+    "recent_citation_share_percent": 31.81,
+    "momentum_score": 48.52
   },
   "impact_concentration": {
-    "top3_citation_share_percent": 47.33,
-    "top5_citation_share_percent": 65.05
+    "top3_citation_share_percent": 46.99,
+    "top5_citation_share_percent": 64.82
   },
   "top_cited": [
     {
@@ -539,7 +539,7 @@
       "title": "Variable structure in the PDS 70 disc and uncertainties in radio-interferometric image restoration",
       "year": 2022,
       "publication": "Monthly Notices of the Royal Astronomical Society",
-      "citation_count": 37,
+      "citation_count": 38,
       "url": "https://doi.org/10.1093/mnras/stac1285",
       "doi": "10.1093/mnras/stac1285"
     },
@@ -601,11 +601,11 @@
         "title": "Variable structure in the PDS 70 disc and uncertainties in radio-interferometric image restoration",
         "year": 2022,
         "publication": "Monthly Notices of the Royal Astronomical Society",
-        "citations": 37,
+        "citations": 38,
         "author_position": 2,
         "leadership_factor": 1.0,
-        "c_i": 9.25,
-        "s_i": 3.2016,
+        "c_i": 9.5,
+        "s_i": 3.2404,
         "url": "https://doi.org/10.1093/mnras/stac1285"
       },
       {
@@ -631,6 +631,17 @@
         "url": "https://doi.org/10.3847/2041-8213/ac75e8"
       },
       {
+        "title": "Multi-frequency observations of PDS70c: Radio emission mechanisms in the circumplanetary environment",
+        "year": 2025,
+        "publication": "Astronomy and Astrophysics",
+        "citations": 12,
+        "author_position": 5,
+        "leadership_factor": 0.5,
+        "c_i": 12.0,
+        "s_i": 1.8028,
+        "url": "https://doi.org/10.1051/0004-6361/202554485"
+      },
+      {
         "title": "Azimuthal temperature variations in ISO-Oph 2 from multifrequency ALMA observations",
         "year": 2023,
         "publication": "Monthly Notices of the Royal Astronomical Society",
@@ -642,15 +653,15 @@
         "url": "https://doi.org/10.1093/mnras/stad1981"
       },
       {
-        "title": "Multi-frequency observations of PDS70c: Radio emission mechanisms in the circumplanetary environment",
-        "year": 2025,
+        "title": "Hourly radio variability of PDS 70c from time-differential photometry",
+        "year": 2026,
         "publication": "Astronomy and Astrophysics",
-        "citations": 11,
-        "author_position": 5,
-        "leadership_factor": 0.5,
-        "c_i": 11.0,
+        "citations": 2,
+        "author_position": 2,
+        "leadership_factor": 1.0,
+        "c_i": 2.0,
         "s_i": 1.7321,
-        "url": "https://doi.org/10.1051/0004-6361/202554485"
+        "url": "https://doi.org/10.1051/0004-6361/202659553"
       },
       {
         "title": "CS-ROMER: a novel compressed sensing framework for Faraday depth reconstruction",
@@ -662,17 +673,6 @@
         "c_i": 1.6667,
         "s_i": 1.633,
         "url": "https://doi.org/10.1093/mnras/stac3031"
-      },
-      {
-        "title": "Hourly radio variability of PDS 70c from time-differential photometry",
-        "year": 2026,
-        "publication": "Astronomy and Astrophysics",
-        "citations": 1,
-        "author_position": 2,
-        "leadership_factor": 1.0,
-        "c_i": 1.0,
-        "s_i": 1.4142,
-        "url": "https://doi.org/10.1051/0004-6361/202659553"
       },
       {
         "title": "Faraday Tomography with the SKA: A New Era of Cosmic Magnetism Studies",
@@ -708,8 +708,8 @@
         "url": "https://doi.org/10.1093/mnras/stab379"
       }
     ],
-    "p_sum": 18.4754,
-    "np_score": 4.5245
+    "p_sum": 18.9028,
+    "np_score": 4.5447
   },
   "chart_palette": {
     "primary": "#362cb1",

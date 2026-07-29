@@ -1,4 +1,4 @@
-fetched_at_utc: '2026-07-28T10:45:33Z'
+fetched_at_utc: '2026-07-29T10:49:09Z'
 projects:
   pyralysis:
   - name: v2.4.0 - Correct Stokes Imaging and Expanded Optimization Controls
@@ -107,8 +107,8 @@ projects:
 pypi:
   pyralysis:
     package: pyralysis
-    version: 2.4.0
-    url: https://pypi.org/project/pyralysis/2.4.0/
+    version: 2.4.1
+    url: https://pypi.org/project/pyralysis/2.4.1/
     project_url: https://pypi.org/project/pyralysis/
-    published_at: '2026-07-25T00:54:03.601295Z'
-    install: pip install pyralysis==2.4.0
+    published_at: '2026-07-28T22:06:20.448571Z'
+    install: pip install pyralysis==2.4.1
