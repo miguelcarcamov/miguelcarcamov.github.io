@@ -1,6 +1,24 @@
-fetched_at_utc: '2026-07-29T10:49:09Z'
+fetched_at_utc: '2026-07-30T10:34:16Z'
 projects:
   pyralysis:
+  - name: v2.4.1 - Pyralysis patch release with read the docs documentation fixed.
+    tag: v2.4.1
+    published_at: '2026-07-29T16:25:12.343Z'
+    url: https://gitlab.com/clirai/pyralysis/-/releases/v2.4.1
+    description: '
+
+
+      ### Tag message
+
+
+      Release v2.4.1
+
+
+      Patch release so Read the Docs stable/latest pick up the Sphinx
+
+      version-title fix from #113.
+
+      '
   - name: v2.4.0 - Correct Stokes Imaging and Expanded Optimization Controls
     tag: v2.4.0
     published_at: '2026-07-25T01:05:17.220Z'
@@ -62,16 +80,6 @@ projects:
 
 
       This release buil'
-  - name: Pyralysis 2.1.0 — GPU array backend
-    tag: v2.1.0
-    published_at: '2026-06-03T22:52:46.593Z'
-    url: https://gitlab.com/clirai/pyralysis/-/releases/v2.1.0
-    description: "# Pyralysis 2.1.0 — GPU array backend\n\n**Release date:** 2026-06-03\
-      \  \n**Tag:** `v2.1.0`\n\nFirst release with **end-to-end GPU imaging** on CuPy-backed\
-      \ visibilities: read an MS on GPU, run the same Dask imaging code as on CPU,\
-      \ and optimize with masks, χ², regularizers, and LBFGS/CG/FISTA/SDMM.\n\n##\
-      \ Highlights\n\n- **CuPy / Dask array backend** — `DaskMS.read(array_backend=\"\
-      cupy\")`, `with_array_backend("
   csromer: []
   gpuvmem:
   - name: v7.0.0
