@@ -1,6 +1,24 @@
-fetched_at_utc: '2026-08-05T10:46:48Z'
+fetched_at_utc: '2026-08-06T10:49:14Z'
 projects:
   pyralysis:
+  - name: v2.5.0 - Masked TSV prox, linear CG, CLI split, and example image zoo
+    tag: v2.5.0
+    published_at: '2026-08-05T14:02:55.990Z'
+    url: https://gitlab.com/clirai/pyralysis/-/releases/v2.5.0
+    description: '## Pyralysis 2.5.0
+
+
+      Masked TSV proximal with matrix-free linear CG (#36 / #120), SDMM progress UX
+      (#118), CLI optimization submodule split (#67), example sky-model zoo (#115),
+      and documentation / CI robustness fixes since v2.4.1.
+
+
+      ### Added
+
+      - **SDMM verbose UX (#118):** outer `[SDMM] Outer iteration N` progress; `verbose_inner=False`
+      by default
+
+      - **Linear matrix-free CG (#36):** `pyralysis.optimiz'
   - name: v2.4.1 - Pyralysis patch release with read the docs documentation fixed.
     tag: v2.4.1
     published_at: '2026-07-29T16:25:12.343Z'
@@ -58,28 +76,6 @@ projects:
       protoplanetary-disk models, **visibility data weights**, **GPU transient-state
       lifecycle**, **lazy Dask restore**, and **Dask optimizer iterate bounds**, plus
       Sto'
-  - name: v2.2.0 — Pipeline GPU backend selection and CUDA device CLI
-    tag: v2.2.0
-    published_at: '2026-06-04T19:29:45.223Z'
-    url: https://gitlab.com/clirai/pyralysis/-/releases/v2.2.0
-    description: '# Pyralysis 2.2.0
-
-
-      **Release date:** 2026-06-04\
-
-      **Tag:** `v2.2.0`
-
-
-      ## Summary
-
-
-      Pyralysis **2.2.0** improves **CPU/GPU backend selection** for example scripts
-      and imager pipelines. Pipeline and component scripts can use `--array-backend
-      cupy` end-to-end, pick a GPU with `--cuda-device` or `CUDA_VISIBLE_DEVICES`,
-      and rely on consistent Dask `array.backend` scope for the full run.
-
-
-      This release buil'
   csromer: []
   gpuvmem:
   - name: v7.0.0
@@ -115,8 +111,8 @@ projects:
 pypi:
   pyralysis:
     package: pyralysis
-    version: 2.4.1
-    url: https://pypi.org/project/pyralysis/2.4.1/
+    version: 2.5.1
+    url: https://pypi.org/project/pyralysis/2.5.1/
     project_url: https://pypi.org/project/pyralysis/
-    published_at: '2026-07-28T22:06:20.448571Z'
-    install: pip install pyralysis==2.4.1
+    published_at: '2026-08-05T22:42:10.789301Z'
+    install: pip install pyralysis==2.5.1
