@@ -1,4 +1,4 @@
-fetched_at_utc: '2026-08-06T10:49:14Z'
+fetched_at_utc: '2026-08-07T09:15:55Z'
 projects:
   pyralysis:
   - name: v2.5.0 - Masked TSV prox, linear CG, CLI split, and example image zoo
@@ -19,6 +19,18 @@ projects:
       by default
 
       - **Linear matrix-free CG (#36):** `pyralysis.optimiz'
+  - name: v2.5.1 - Small fixes
+    tag: v2.5.1
+    published_at: '2026-08-05T00:00:00.000Z'
+    url: https://gitlab.com/clirai/pyralysis/-/releases/v2.5.1
+    description: '### v2.5.1
+
+
+      Release v2.5.1
+
+
+      Patch release for comparable optimizer iteration timing diagnostics (#83). See
+      CHANGELOG for more information.'
   - name: v2.4.1 - Pyralysis patch release with read the docs documentation fixed.
     tag: v2.4.1
     published_at: '2026-07-29T16:25:12.343Z'
@@ -56,26 +68,6 @@ projects:
       - Simplifies DirtyMapper to use one error-propagated Stokes weight stream.
 
       - Prevents NaN'
-  - name: v2.3.0 - Optimization CLI, disk models, and Stokes/mask correctness
-    tag: v2.3.0
-    published_at: '2026-07-20T15:02:40.902Z'
-    url: https://gitlab.com/clirai/pyralysis/-/releases/v2.3.0
-    description: '# Pyralysis 2.3.0
-
-
-      **Release date:** 2026-07-20\
-
-      **Tag:** `v2.3.0`
-
-
-      ## Summary
-
-
-      Pyralysis **2.3.0** ships a large post-2.2.0 batch: a more capable **optimization
-      CLI** (dual imaging vs restore weighting, masks, auto grid), **DiskSource**
-      protoplanetary-disk models, **visibility data weights**, **GPU transient-state
-      lifecycle**, **lazy Dask restore**, and **Dask optimizer iterate bounds**, plus
-      Sto'
   csromer: []
   gpuvmem:
   - name: v7.0.0

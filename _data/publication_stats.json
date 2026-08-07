@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-08-06T10:49:14Z",
+  "generated_at_utc": "2026-08-07T09:15:55Z",
   "source": "NASA ADS API",
   "volume": {
     "total_publications": 23,
@@ -530,7 +530,7 @@
     {
       "title": "ALMA Observations of Elias 2-24: A Protoplanetary Disk with Multiple Gaps in the Ophiuchus Molecular Cloud",
       "year": 2017,
-      "publication": "The Astrophysical Journal",
+      "publication": "The Astrophysical Journal Letters",
       "citation_count": 49,
       "url": "https://doi.org/10.3847/2041-8213/aa9b7b",
       "doi": "10.3847/2041-8213/aa9b7b"
@@ -562,7 +562,7 @@
     {
       "title": "The Doppler Flip in HD 100546 as a Disk Eruption: The Elephant in the Room of Kinematic Protoplanet Searches",
       "year": 2022,
-      "publication": "The Astrophysical Journal",
+      "publication": "The Astrophysical Journal Letters",
       "citation_count": 25,
       "url": "https://doi.org/10.3847/2041-8213/ac75e8",
       "doi": "10.3847/2041-8213/ac75e8"
@@ -570,7 +570,7 @@
     {
       "title": "Spirals and Clumps in V960 Mon: Signs of Planet Formation via Gravitational Instability around an FU Ori Star?",
       "year": 2023,
-      "publication": "The Astrophysical Journal",
+      "publication": "The Astrophysical Journal Letters",
       "citation_count": 17,
       "url": "https://doi.org/10.3847/2041-8213/ace186",
       "doi": "10.3847/2041-8213/ace186"
@@ -622,7 +622,7 @@
       {
         "title": "The Doppler Flip in HD 100546 as a Disk Eruption: The Elephant in the Room of Kinematic Protoplanet Searches",
         "year": 2022,
-        "publication": "The Astrophysical Journal",
+        "publication": "The Astrophysical Journal Letters",
         "citations": 25,
         "author_position": 2,
         "leadership_factor": 1.0,
