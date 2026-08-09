@@ -1,6 +1,26 @@
-fetched_at_utc: '2026-08-08T09:01:33Z'
+fetched_at_utc: '2026-08-09T09:03:16Z'
 projects:
   pyralysis:
+  - name: v2.6.0 - Optimizers, seeders, Armijo fix
+    tag: v2.6.0
+    published_at: '2026-08-09T00:34:11.847Z'
+    url: https://gitlab.com/clirai/pyralysis/-/releases/v2.6.0
+    description: '### v2.6.0
+
+
+      Minor release: scalar step-size seeders (#32, #55), CG/L-BFGS Armijo line-search
+      correctness (#174), and README/quickstart example fixes.
+
+
+      ## Upgrade notes (important)
+
+
+      ### Optimizer / line search (#174)
+
+
+      CG, L-BFGS, and Armijo-family line searches now use the correct directional
+      derivative \(g^\top d\) with an explicit `search_direction`. Failed Armijo steps
+      are rejected (`α = 0`). L-'
   - name: v2.5.0 - Masked TSV prox, linear CG, CLI split, and example image zoo
     tag: v2.5.0
     published_at: '2026-08-05T14:02:55.990Z'
@@ -49,25 +69,6 @@ projects:
       version-title fix from #113.
 
       '
-  - name: v2.4.0 - Correct Stokes Imaging and Expanded Optimization Controls
-    tag: v2.4.0
-    published_at: '2026-07-25T01:05:17.220Z'
-    url: https://gitlab.com/clirai/pyralysis/-/releases/v2.4.0
-    description: 'Pyralysis v2.4.0 improves polarization imaging correctness and expands
-      optimization controls.
-
-
-      ## Highlights
-
-
-      - Fixes DirtyMapper Stokes Q residual/restore amplitude blow-up (#111).
-
-      - Converts correlations to Stokes before Hermitian duplication, restoring correct
-      signed circular U and linear V imaging (#112).
-
-      - Simplifies DirtyMapper to use one error-propagated Stokes weight stream.
-
-      - Prevents NaN'
   csromer: []
   gpuvmem:
   - name: v7.0.0
@@ -103,8 +104,8 @@ projects:
 pypi:
   pyralysis:
     package: pyralysis
-    version: 2.5.1
-    url: https://pypi.org/project/pyralysis/2.5.1/
+    version: 2.6.0
+    url: https://pypi.org/project/pyralysis/2.6.0/
     project_url: https://pypi.org/project/pyralysis/
-    published_at: '2026-08-05T22:42:10.789301Z'
-    install: pip install pyralysis==2.5.1
+    published_at: '2026-08-08T23:56:27.160388Z'
+    install: pip install pyralysis==2.6.0
