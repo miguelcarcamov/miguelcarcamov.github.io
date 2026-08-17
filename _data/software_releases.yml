@@ -1,6 +1,26 @@
-fetched_at_utc: '2026-08-16T08:47:59Z'
+fetched_at_utc: '2026-08-17T09:01:33Z'
 projects:
   pyralysis:
+  - name: v2.7.1
+    tag: v2.7.1
+    published_at: '2026-08-16T16:28:53.484Z'
+    url: https://gitlab.com/clirai/pyralysis/-/releases/v2.7.1
+    description: '## \[2.7.1\] - 2026-08-16
+
+
+      Patch release: Spline/Bicubic kernel width scaling fix, Graphviz UML docs, and
+      M87\* degridding×CKernel gallery.
+
+
+      ### Added
+
+
+      - _Docs: M87 degridding×CKernel gallery_\* — static model and restored matrices
+      under `docs/source/_static/m87/`, documented with the CKernel types in gridding
+      docs (rows = CKernels, columns = CG + L-BFGS-B + MFISTA; always degridding).
+
+
+      ### Change'
   - name: v2.6.0 - Optimizers, seeders, Armijo fix
     tag: v2.6.0
     published_at: '2026-08-09T00:34:11.847Z'
@@ -51,24 +71,6 @@ projects:
 
       Patch release for comparable optimizer iteration timing diagnostics (#83). See
       CHANGELOG for more information.'
-  - name: v2.4.1 - Pyralysis patch release with read the docs documentation fixed.
-    tag: v2.4.1
-    published_at: '2026-07-29T16:25:12.343Z'
-    url: https://gitlab.com/clirai/pyralysis/-/releases/v2.4.1
-    description: '
-
-
-      ### Tag message
-
-
-      Release v2.4.1
-
-
-      Patch release so Read the Docs stable/latest pick up the Sphinx
-
-      version-title fix from #113.
-
-      '
   csromer: []
   gpuvmem:
   - name: v7.0.0
@@ -104,8 +106,8 @@ projects:
 pypi:
   pyralysis:
     package: pyralysis
-    version: 2.6.0
-    url: https://pypi.org/project/pyralysis/2.6.0/
+    version: 2.7.1
+    url: https://pypi.org/project/pyralysis/2.7.1/
     project_url: https://pypi.org/project/pyralysis/
-    published_at: '2026-08-08T23:56:27.160388Z'
-    install: pip install pyralysis==2.6.0
+    published_at: '2026-08-16T16:21:00.941246Z'
+    install: pip install pyralysis==2.7.1
