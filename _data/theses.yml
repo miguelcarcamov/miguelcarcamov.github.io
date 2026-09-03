@@ -104,6 +104,21 @@ entries:
       es: Refactorización y puesta en producción de simulador radiointerferométrico educativo
     url: https://usach.primo.exlibrisgroup.com/permalink/56USACH_INST/r14o49/alma992274448806116
 
+  - id: ricardo-hasbun-2025
+    student: Ricardo Hasbún
+    level: undergrad
+    type: memoria
+    year: 2025
+    cosupervised: true
+    supervisor: Prof. Pablo Román
+    topics:
+      - imaging
+      - interferometry
+    title:
+      en: Error estimation in radio interferometric image synthesis using Bayesian Hamiltonian Monte Carlo with gridded data
+      es: Estimación de errores en síntesis de imágenes radio interferométricas mediante método Bayesiano Hamiltoniano Monte Carlo con datos grillados
+    url: https://repositorio.usach.cl/permalink/56USACH_INST/p6m9oe/alma992285839006116
+
   - id: leo-vergara-2024
     student: Leo Vergara
     level: undergrad

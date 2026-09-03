@@ -2,6 +2,6 @@
 slug: students-cosupervised-current
 ---
 
-<li style="margin-bottom: 12px;">
-<strong>Ricardo Hasbún</strong>
+<li style="margin-bottom: 12px; color: #999;">
+None at this time.
 </li>

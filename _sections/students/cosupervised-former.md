@@ -3,6 +3,11 @@ slug: students-cosupervised-former
 ---
 
 <li style="margin-bottom: 20px;">
+<strong>Ricardo Hasbún</strong><br>
+<span style="font-size: 13px; color: #999;">Supervisor: <em>Prof. Pablo Román</em></span><br>
+<span style="font-size: 13px; color: #999;">Memoria (2025): <a href="https://repositorio.usach.cl/permalink/56USACH_INST/p6m9oe/alma992285839006116" target="_blank" rel="noopener noreferrer" style="color: #362cb1;">Estimación de errores en síntesis de imágenes radio interferométricas mediante método Bayesiano Hamiltoniano Monte Carlo con datos grillados</a></span>
+</li>
+<li style="margin-bottom: 20px;">
 <strong>Marcela Rivera</strong><br>
 <span style="font-size: 13px; color: #999;">Supervisor: <em>Prof. Fernando Rannou</em></span><br>
 <span style="font-size: 13px; color: #999;">Memoria: <a href="https://repositorio.usach.cl/permalink/56USACH_INST/avqbj0/alma992132539906116" target="_blank" rel="noopener noreferrer" style="color: #362cb1;">Aprendizaje de diccionarios en síntesis de imágenes interferométricas</a></span>
