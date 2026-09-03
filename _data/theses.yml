@@ -1,6 +1,36 @@
 # Supervised theses and memorias — searchable gallery data
 
 entries:
+  - id: renato-gomez-2026
+    student: Renato Gomez
+    level: master
+    type: thesis
+    year: 2026
+    cosupervised: false
+    topics:
+      - polarimetry
+      - compressed-sensing
+      - radio-astronomy
+    title:
+      en: Faraday depth cubes for next-generation radio telescopes using 3D Faraday tomography
+      es: Cubos de profundidad de Faraday para nuevas generaciones de radiotelescopios usando Tomografía de Faraday 3D
+    url: https://repositorio.usach.cl/permalink/56USACH_INST/p6m9oe/alma992285838906116
+
+  - id: estefania-alvarez-2026
+    student: Estefanía Álvarez
+    level: master
+    type: thesis
+    year: 2026
+    cosupervised: false
+    topics:
+      - interferometry
+      - imaging
+      - hpc
+    title:
+      en: Efficient preprocessing of interferometric data with Baseline Dependent Averaging — resource optimization in image synthesis
+      es: Pre-procesamiento eficiente de datos interferométricos con Baseline Dependent Averaging : optimización de recursos en la síntesis de imágenes
+    url: https://repositorio.usach.cl/permalink/56USACH_INST/p6m9oe/alma992284537006116
+
   - id: maximiliano-ahumada-2025
     student: Maximiliano Ahumada
     level: undergrad

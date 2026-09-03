@@ -104,6 +104,13 @@
 <span data-i18n-block="es" hidden>{{ thesis_data.level_labels[thesis.level].es }}</span>
 </span>
 </div>
+<p class="thesis-card-meta">
+{% if thesis.type %}
+<span data-i18n-block="en">{{ thesis_data.type_labels[thesis.type].en }}</span>
+<span data-i18n-block="es" hidden>{{ thesis_data.type_labels[thesis.type].es }}</span>
+{% endif %}
+{% if thesis.year %} · {{ thesis.year }}{% endif %}
+</p>
 <p class="thesis-card-title">
 <span data-i18n-block="en">{{ thesis.title.en }}</span>
 <span data-i18n-block="es" hidden>{{ thesis.title.es }}</span>

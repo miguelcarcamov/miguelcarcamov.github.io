@@ -141,9 +141,10 @@ module Jekyll
             entry.dig("title", "es"),
             entry["supervisor"],
             Array(entry["topics"]).join(" "),
-            entry["level"]
+            entry["level"],
+            entry["type"]
           ].compact.join(" "),
-          "meta" => "#{entry['level']} · #{entry['year']}"
+          "meta" => "#{entry['type']} · #{entry['level']} · #{entry['year']}"
         }
       end
     end
