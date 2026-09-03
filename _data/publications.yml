@@ -1,4 +1,4 @@
-generated_at_utc: '2026-07-20T11:58:35Z'
+generated_at_utc: '2026-09-03T12:49:57Z'
 source: NASA ADS API + Crossref
 orcid: 0000-0003-0564-8167
 query_authors:
@@ -262,7 +262,7 @@ coauthored:
     pages: L10
     doi: 10.1051/0004-6361/202659553
     url: https://doi.org/10.1051/0004-6361/202659553
-    citation_count: 1
+    citation_count: 2
     author_position: 2
     publication_type: journal
     is_open_access: true
@@ -348,7 +348,7 @@ coauthored:
     pages: A18
     doi: 10.1051/0004-6361/202554485
     url: https://doi.org/10.1051/0004-6361/202554485
-    citation_count: 10
+    citation_count: 13
     author_position: 5
     publication_type: journal
     is_open_access: true
@@ -404,7 +404,7 @@ coauthored:
       Nevada Center for Astrophysics, University of Nevada, Las Vegas, Las Vegas, NV 89154, USA
     - Institute for Astronomy, University of Hawai'i at Manoa, Honolulu, HI 96822, USA
     title: 'Spirals and Clumps in V960 Mon: Signs of Planet Formation via Gravitational Instability around an FU Ori Star?'
-    publication: The Astrophysical Journal
+    publication: The Astrophysical Journal Letters
     year: 2023
     date_label: '2023'
     volume: '952'
@@ -552,7 +552,7 @@ coauthored:
     pages: '5790'
     doi: 10.1093/mnras/stac1285
     url: https://doi.org/10.1093/mnras/stac1285
-    citation_count: 37
+    citation_count: 38
     author_position: 2
     publication_type: journal
     is_open_access: true
@@ -582,7 +582,7 @@ coauthored:
     - Joint ALMA Observatory, Avenida Alonso de Córdova 3107, Vitacura 7630355, Santiago, Chile; European Southern Observatory,
       Avenida Alonso de Córdova 3107, Vitacura 7630355, Santiago, Chile
     title: 'The Doppler Flip in HD 100546 as a Disk Eruption: The Elephant in the Room of Kinematic Protoplanet Searches'
-    publication: The Astrophysical Journal
+    publication: The Astrophysical Journal Letters
     year: 2022
     date_label: '2022'
     volume: '933'
@@ -746,7 +746,7 @@ coauthored:
     pages: '3789'
     doi: 10.1093/mnras/stab2359
     url: https://doi.org/10.1093/mnras/stab2359
-    citation_count: 51
+    citation_count: 52
     author_position: 3
     publication_type: journal
     is_open_access: true
@@ -910,7 +910,7 @@ coauthored:
     pages: '5104'
     doi: 10.1093/mnras/sty894
     url: https://doi.org/10.1093/mnras/sty894
-    citation_count: 94
+    citation_count: 96
     author_position: 5
     publication_type: journal
     is_open_access: true
@@ -989,7 +989,7 @@ coauthored:
     - Facultad de Ingeniería y Ciencias, Núcleo de Astronomía, Universidad Diego Portales, Av. Ejercito 441, Santiago, Chile
       ; Millennium Nucleus “Protoplanetary Disks in ALMA Early Science,” Av. Ejercito 441, Santiago, Chile
     title: 'ALMA Observations of Elias 2-24: A Protoplanetary Disk with Multiple Gaps in the Ophiuchus Molecular Cloud'
-    publication: The Astrophysical Journal
+    publication: The Astrophysical Journal Letters
     year: 2017
     date_label: '2017'
     volume: '851'

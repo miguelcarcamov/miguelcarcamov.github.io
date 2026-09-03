@@ -1,71 +1,74 @@
-fetched_at_utc: '2026-07-22T21:01:40Z'
+fetched_at_utc: '2026-09-03T12:49:57Z'
 projects:
   pyralysis:
-  - name: v2.3.0 - Optimization CLI, disk models, and Stokes/mask correctness
-    tag: v2.3.0
-    published_at: '2026-07-20T15:02:40.902Z'
-    url: https://gitlab.com/clirai/pyralysis/-/releases/v2.3.0
-    description: '# Pyralysis 2.3.0
+  - name: v2.8.0 - Python 3.13 support, uv/tox-uv workflow, and fixes
+    tag: v2.8.0
+    published_at: '2026-08-24T20:45:47.835Z'
+    url: https://gitlab.com/clirai/pyralysis/-/releases/v2.8.0
+    description: "\nMinor release: Python 3.13 support, uv/tox-uv workflow, FISTA/MFISTA\
+      \ Stokes\nfix, degridding kernel support fix, TV proximal memory blowup fix,\
+      \ M87*\ngalleries, and documentation API-drift cleanup.\n\n### Added\n\n- **Python\
+      \ 3.13 support:** `requires-python` is now `>=3.11,<3.14`; added\n  the `3.13`\
+      \ Trove classifier, a `py313` tox environment (same fast unit\n  gate as `py311`:\
+      \ `tests/unit/` with `-m \"n"
+  - name: v2.7.1
+    tag: v2.7.1
+    published_at: '2026-08-16T16:28:53.484Z'
+    url: https://gitlab.com/clirai/pyralysis/-/releases/v2.7.1
+    description: '## \[2.7.1\] - 2026-08-16
 
 
-      **Release date:** 2026-07-20\
-
-      **Tag:** `v2.3.0`
-
-
-      ## Summary
+      Patch release: Spline/Bicubic kernel width scaling fix, Graphviz UML docs, and
+      M87\* degridding×CKernel gallery.
 
 
-      Pyralysis **2.3.0** ships a large post-2.2.0 batch: a more capable **optimization
-      CLI** (dual imaging vs restore weighting, masks, auto grid), **DiskSource**
-      protoplanetary-disk models, **visibility data weights**, **GPU transient-state
-      lifecycle**, **lazy Dask restore**, and **Dask optimizer iterate bounds**, plus
-      Sto'
-  - name: v2.2.0 — Pipeline GPU backend selection and CUDA device CLI
-    tag: v2.2.0
-    published_at: '2026-06-04T19:29:45.223Z'
-    url: https://gitlab.com/clirai/pyralysis/-/releases/v2.2.0
-    description: '# Pyralysis 2.2.0
+      ### Added
 
 
-      **Release date:** 2026-06-04\
-
-      **Tag:** `v2.2.0`
-
-
-      ## Summary
+      - _Docs: M87 degridding×CKernel gallery_\* — static model and restored matrices
+      under `docs/source/_static/m87/`, documented with the CKernel types in gridding
+      docs (rows = CKernels, columns = CG + L-BFGS-B + MFISTA; always degridding).
 
 
-      Pyralysis **2.2.0** improves **CPU/GPU backend selection** for example scripts
-      and imager pipelines. Pipeline and component scripts can use `--array-backend
-      cupy` end-to-end, pick a GPU with `--cuda-device` or `CUDA_VISIBLE_DEVICES`,
-      and rely on consistent Dask `array.backend` scope for the full run.
+      ### Change'
+  - name: v2.6.0 - Optimizers, seeders, Armijo fix
+    tag: v2.6.0
+    published_at: '2026-08-09T00:34:11.847Z'
+    url: https://gitlab.com/clirai/pyralysis/-/releases/v2.6.0
+    description: '### v2.6.0
 
 
-      This release buil'
-  - name: Pyralysis 2.1.0 — GPU array backend
-    tag: v2.1.0
-    published_at: '2026-06-03T22:52:46.593Z'
-    url: https://gitlab.com/clirai/pyralysis/-/releases/v2.1.0
-    description: "# Pyralysis 2.1.0 — GPU array backend\n\n**Release date:** 2026-06-03\
-      \  \n**Tag:** `v2.1.0`\n\nFirst release with **end-to-end GPU imaging** on CuPy-backed\
-      \ visibilities: read an MS on GPU, run the same Dask imaging code as on CPU,\
-      \ and optimize with masks, χ², regularizers, and LBFGS/CG/FISTA/SDMM.\n\n##\
-      \ Highlights\n\n- **CuPy / Dask array backend** — `DaskMS.read(array_backend=\"\
-      cupy\")`, `with_array_backend("
-  - name: v1.1.0
-    tag: v1.1.0
-    published_at: '2026-04-16T15:47:48.942Z'
-    url: https://gitlab.com/clirai/pyralysis/-/releases/v1.1.0
-    description: '### **Highlights**
+      Minor release: scalar step-size seeders (#32, #55), CG/L-BFGS Armijo line-search
+      correctness (#174), and README/quickstart example fixes.
 
 
-      * **Grid API** — Improvements to the `Grid` class (including clearer control
-      over the gridded array via the new `grid` setter), so workflows that need to
-      inject or replace the grid are easier to support.
+      ## Upgrade notes (important)
 
-      * **L-BFGS** — Substantial fixes and hardening: safer handling of small denominators,
-      corrected behavior in the optimizer and its history, and explicit use of **`max_correction'
+
+      ### Optimizer / line search (#174)
+
+
+      CG, L-BFGS, and Armijo-family line searches now use the correct directional
+      derivative \(g^\top d\) with an explicit `search_direction`. Failed Armijo steps
+      are rejected (`α = 0`). L-'
+  - name: v2.5.0 - Masked TSV prox, linear CG, CLI split, and example image zoo
+    tag: v2.5.0
+    published_at: '2026-08-05T14:02:55.990Z'
+    url: https://gitlab.com/clirai/pyralysis/-/releases/v2.5.0
+    description: '## Pyralysis 2.5.0
+
+
+      Masked TSV proximal with matrix-free linear CG (#36 / #120), SDMM progress UX
+      (#118), CLI optimization submodule split (#67), example sky-model zoo (#115),
+      and documentation / CI robustness fixes since v2.4.1.
+
+
+      ### Added
+
+      - **SDMM verbose UX (#118):** outer `[SDMM] Outer iteration N` progress; `verbose_inner=False`
+      by default
+
+      - **Linear matrix-free CG (#36):** `pyralysis.optimiz'
   csromer: []
   gpuvmem:
   - name: v7.0.0
@@ -101,8 +104,8 @@ projects:
 pypi:
   pyralysis:
     package: pyralysis
-    version: 2.3.0
-    url: https://pypi.org/project/pyralysis/2.3.0/
+    version: 2.8.0
+    url: https://pypi.org/project/pyralysis/2.8.0/
     project_url: https://pypi.org/project/pyralysis/
-    published_at: '2026-07-20T14:49:04.857487Z'
-    install: pip install pyralysis==2.3.0
+    published_at: '2026-08-24T15:34:30.076198Z'
+    install: pip install pyralysis==2.8.0

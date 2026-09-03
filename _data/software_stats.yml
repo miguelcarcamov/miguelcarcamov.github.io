@@ -1,15 +1,15 @@
-fetched_at_utc: '2026-07-20T11:58:37Z'
+fetched_at_utc: '2026-09-03T12:49:59Z'
 projects:
   pyralysis:
-    stars: 3
+    stars: 4
     forks: 13
     open_issues: 0
   csromer:
     stars: 6
     forks: 2
-    open_issues: 1
+    open_issues: 17
   gpuvmem:
-    stars: 28
+    stars: 29
     forks: 3
     open_issues: 0
   snow:
