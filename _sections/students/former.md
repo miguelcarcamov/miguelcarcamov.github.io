@@ -4,11 +4,11 @@ slug: students-former
 
 <li style="margin-bottom: 20px;">
 <strong>Renato Gomez</strong><br>
-<span style="font-size: 13px; color: #999;">Magíster (2026): <a href="https://repositorio.usach.cl/permalink/56USACH_INST/p6m9oe/alma992285838906116" target="_blank" rel="noopener noreferrer" style="color: #362cb1;">Cubos de profundidad de Faraday para nuevas generaciones de radiotelescopios usando Tomografía de Faraday 3D</a></span>
+<span style="font-size: 13px; color: #999;">Magíster (2025): <a href="https://repositorio.usach.cl/permalink/56USACH_INST/p6m9oe/alma992285838906116" target="_blank" rel="noopener noreferrer" style="color: #362cb1;">Cubos de profundidad de Faraday para nuevas generaciones de radiotelescopios usando Tomografía de Faraday 3D</a></span>
 </li>
 <li style="margin-bottom: 20px;">
 <strong>Estefanía Álvarez</strong><br>
-<span style="font-size: 13px; color: #999;">Magíster (2026): <a href="https://repositorio.usach.cl/permalink/56USACH_INST/p6m9oe/alma992284537006116" target="_blank" rel="noopener noreferrer" style="color: #362cb1;">Pre-procesamiento eficiente de datos interferométricos con Baseline Dependent Averaging : optimización de recursos en la síntesis de imágenes</a></span>
+<span style="font-size: 13px; color: #999;">Magíster (2025): <a href="https://repositorio.usach.cl/permalink/56USACH_INST/p6m9oe/alma992284537006116" target="_blank" rel="noopener noreferrer" style="color: #362cb1;">Pre-procesamiento eficiente de datos interferométricos con Baseline Dependent Averaging : optimización de recursos en la síntesis de imágenes</a></span>
 </li>
 <li style="margin-bottom: 20px;">
 <strong>Maximiliano Ahumada</strong><br>

@@ -1,11 +1,11 @@
 # Supervised theses and memorias — searchable gallery data
 
 entries:
-  - id: renato-gomez-2026
+  - id: renato-gomez-2025
     student: Renato Gomez
     level: master
     type: thesis
-    year: 2026
+    year: 2025
     cosupervised: false
     topics:
       - polarimetry
@@ -16,11 +16,11 @@ entries:
       es: Cubos de profundidad de Faraday para nuevas generaciones de radiotelescopios usando Tomografía de Faraday 3D
     url: https://repositorio.usach.cl/permalink/56USACH_INST/p6m9oe/alma992285838906116
 
-  - id: estefania-alvarez-2026
+  - id: estefania-alvarez-2025
     student: Estefanía Álvarez
     level: master
     type: thesis
-    year: 2026
+    year: 2025
     cosupervised: false
     topics:
       - interferometry
