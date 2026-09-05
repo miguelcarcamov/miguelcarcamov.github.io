@@ -1,4 +1,4 @@
-fetched_at_utc: '2026-09-04T12:43:55Z'
+fetched_at_utc: '2026-09-05T11:50:27Z'
 projects:
   pyralysis:
   - name: v2.8.0 - Python 3.13 support, uv/tox-uv workflow, and fixes
