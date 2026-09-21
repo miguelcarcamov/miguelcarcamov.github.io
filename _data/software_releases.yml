@@ -1,4 +1,4 @@
-fetched_at_utc: '2026-09-21T15:06:59Z'
+fetched_at_utc: '2026-09-21T15:54:24Z'
 projects:
   pyralysis:
   - name: v2.9.0 - W-Stacking NUFFT, Distributed MS I/O, Zarr-Python 3 (breaking)
