@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-27T13:59:40Z",
+  "generated_at_utc": "2026-09-28T16:45:40Z",
   "source": "NASA ADS API",
   "volume": {
     "total_publications": 23,
@@ -11,8 +11,8 @@
     "first_author_share_percent": 21.74,
     "lead_author_share_percent": 34.78,
     "coauthored_share_percent": 78.26,
-    "open_access_publications": 19,
-    "open_access_share_percent": 82.61
+    "open_access_publications": 17,
+    "open_access_share_percent": 73.91
   },
   "citations": {
     "total_citations": 418,
@@ -140,7 +140,7 @@
     "repeat_collaborator_share_percent": 33.94,
     "top_collaborators": [
       {
-        "name": "Casassus, Simón",
+        "name": "Casassus, Simon",
         "papers_together": 16
       },
       {
@@ -160,11 +160,11 @@
         "papers_together": 5
       },
       {
-        "name": "Zurlo, Alice",
+        "name": "Hales, Antonio",
         "papers_together": 5
       },
       {
-        "name": "Hales, Antonio",
+        "name": "Zurlo, Alice",
         "papers_together": 5
       },
       {
@@ -172,7 +172,7 @@
         "papers_together": 5
       },
       {
-        "name": "Vidal, Matías",
+        "name": "Vidal, Matias",
         "papers_together": 4
       },
       {
@@ -677,13 +677,13 @@
       {
         "title": "Faraday Tomography with the SKA: A New Era of Cosmic Magnetism Studies",
         "year": 2026,
-        "publication": "arXiv e-prints",
+        "publication": "Advancing Astrophysics with the SKA II",
         "citations": 0,
         "author_position": 1,
         "leadership_factor": 1.0,
         "c_i": 0.0,
         "s_i": 1.0,
-        "url": "https://doi.org/10.48550/arXiv.2606.28221"
+        "url": "https://ui.adsabs.harvard.edu/abs/2026aask.bookE.204C"
       },
       {
         "title": "Radio-continuum decrements associated to shadowing from the central warp in transition disc DoAr 44",
