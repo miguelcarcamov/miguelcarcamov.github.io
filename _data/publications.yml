@@ -1,4 +1,4 @@
-generated_at_utc: '2026-09-29T14:51:20Z'
+generated_at_utc: '2026-09-30T14:56:23Z'
 source: NASA ADS API + Crossref
 orcid: 0000-0003-0564-8167
 query_authors:
@@ -33,12 +33,12 @@ first_author:
     volume: ''
     issue: ''
     pages: '204'
-    doi: ''
-    url: https://ui.adsabs.harvard.edu/abs/2026aask.bookE.204C
+    doi: 10.48550/arXiv.2606.28221
+    url: https://doi.org/10.48550/arXiv.2606.28221
     citation_count: 0
     author_position: 1
     publication_type: journal
-    is_open_access: false
+    is_open_access: true
     bibcode: 2026aask.bookE.204C
     author_group: first_author
     publication_bucket: journal
@@ -220,12 +220,12 @@ coauthored:
     volume: ''
     issue: ''
     pages: '58'
-    doi: ''
-    url: https://ui.adsabs.harvard.edu/abs/2026aask.bookE..58V
+    doi: 10.48550/arXiv.2606.27110
+    url: https://doi.org/10.48550/arXiv.2606.27110
     citation_count: 0
     author_position: 4
     publication_type: journal
-    is_open_access: false
+    is_open_access: true
     bibcode: 2026aask.bookE..58V
     author_group: coauthored
     publication_bucket: journal
@@ -348,7 +348,7 @@ coauthored:
     pages: A18
     doi: 10.1051/0004-6361/202554485
     url: https://doi.org/10.1051/0004-6361/202554485
-    citation_count: 13
+    citation_count: 14
     author_position: 5
     publication_type: journal
     is_open_access: true
@@ -642,7 +642,7 @@ coauthored:
     pages: '1248'
     doi: 10.1093/mnras/stab3440
     url: https://doi.org/10.1093/mnras/stab3440
-    citation_count: 15
+    citation_count: 16
     author_position: 6
     publication_type: journal
     is_open_access: true
@@ -997,7 +997,7 @@ coauthored:
     pages: L23
     doi: 10.3847/2041-8213/aa9b7b
     url: https://doi.org/10.3847/2041-8213/aa9b7b
-    citation_count: 49
+    citation_count: 50
     author_position: 5
     publication_type: journal
     is_open_access: true
