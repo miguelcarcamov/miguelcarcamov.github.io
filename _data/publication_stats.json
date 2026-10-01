@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-30T14:56:23Z",
+  "generated_at_utc": "2026-10-01T15:27:41Z",
   "source": "NASA ADS API",
   "volume": {
     "total_publications": 23,
@@ -15,8 +15,8 @@
     "open_access_share_percent": 82.61
   },
   "citations": {
-    "total_citations": 421,
-    "average_citations_per_paper": 18.3,
+    "total_citations": 422,
+    "average_citations_per_paper": 18.35,
     "median_citations_per_paper": 9.0,
     "h_index": 11,
     "h_index_h_paper_citations": 13,
@@ -28,7 +28,7 @@
       38,
       36,
       34,
-      25,
+      26,
       17,
       16,
       14,
@@ -56,9 +56,9 @@
     "window_start_year": 2022,
     "window_end_year": 2026,
     "papers_in_window": 15,
-    "citations_in_window": 135,
+    "citations_in_window": 136,
     "effective_paper_age_years": 38,
-    "citations_per_effective_year": 3.5526
+    "citations_per_effective_year": 3.5789
   },
   "yearly": {
     "years": [
@@ -94,7 +94,7 @@
       36,
       13,
       57,
-      79,
+      80,
       40,
       0,
       14,
@@ -107,11 +107,11 @@
       216,
       229,
       286,
-      365,
-      405,
-      405,
-      419,
-      421
+      366,
+      406,
+      406,
+      420,
+      422
     ]
   },
   "histogram": {
@@ -325,12 +325,12 @@
         "share_percent": 4.76
       },
       {
-        "country": "Netherlands",
+        "country": "Australia",
         "papers": 1,
         "share_percent": 4.76
       },
       {
-        "country": "Australia",
+        "country": "Netherlands",
         "papers": 1,
         "share_percent": 4.76
       },
@@ -407,12 +407,12 @@
         "share_percent": 4.76
       },
       {
-        "country": "Netherlands",
+        "country": "Australia",
         "papers": 1,
         "share_percent": 4.76
       },
       {
-        "country": "Australia",
+        "country": "Netherlands",
         "papers": 1,
         "share_percent": 4.76
       },
@@ -431,11 +431,11 @@
   "leadership": {
     "lead_papers": 8,
     "supporting_papers": 15,
-    "lead_citations": 104,
-    "lead_citation_share_percent": 24.7,
-    "lead_citations_per_paper": 13.0,
+    "lead_citations": 105,
+    "lead_citation_share_percent": 24.88,
+    "lead_citations_per_paper": 13.12,
     "supporting_citations_per_paper": 21.13,
-    "leadership_impact_ratio": 0.615,
+    "leadership_impact_ratio": 0.621,
     "window_years": 5,
     "window_start_year": 2022,
     "window_end_year": 2026,
@@ -501,14 +501,14 @@
     "window_start_year": 2022,
     "window_end_year": 2026,
     "recent_papers": 15,
-    "recent_citations": 135,
+    "recent_citations": 136,
     "recent_paper_share_percent": 65.22,
-    "recent_citation_share_percent": 32.07,
-    "momentum_score": 48.64
+    "recent_citation_share_percent": 32.23,
+    "momentum_score": 48.72
   },
   "impact_concentration": {
-    "top3_citation_share_percent": 47.03,
-    "top5_citation_share_percent": 64.61
+    "top3_citation_share_percent": 46.92,
+    "top5_citation_share_percent": 64.45
   },
   "top_cited": [
     {
@@ -563,7 +563,7 @@
       "title": "The Doppler Flip in HD 100546 as a Disk Eruption: The Elephant in the Room of Kinematic Protoplanet Searches",
       "year": 2022,
       "publication": "The Astrophysical Journal Letters",
-      "citation_count": 25,
+      "citation_count": 26,
       "url": "https://doi.org/10.3847/2041-8213/ac75e8",
       "doi": "10.3847/2041-8213/ac75e8"
     },
@@ -623,11 +623,11 @@
         "title": "The Doppler Flip in HD 100546 as a Disk Eruption: The Elephant in the Room of Kinematic Protoplanet Searches",
         "year": 2022,
         "publication": "The Astrophysical Journal Letters",
-        "citations": 25,
+        "citations": 26,
         "author_position": 2,
         "leadership_factor": 1.0,
-        "c_i": 6.25,
-        "s_i": 2.6926,
+        "c_i": 6.5,
+        "s_i": 2.7386,
         "url": "https://doi.org/10.3847/2041-8213/ac75e8"
       },
       {
@@ -708,8 +708,8 @@
         "url": "https://doi.org/10.1093/mnras/stab379"
       }
     ],
-    "p_sum": 19.0632,
-    "np_score": 4.5522
+    "p_sum": 19.1092,
+    "np_score": 4.5543
   },
   "chart_palette": {
     "primary": "#362cb1",
