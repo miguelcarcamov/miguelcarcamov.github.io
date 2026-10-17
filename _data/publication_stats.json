@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-16T13:15:56Z",
+  "generated_at_utc": "2026-10-17T12:12:24Z",
   "source": "NASA ADS API",
   "volume": {
     "total_publications": 23,
@@ -15,8 +15,8 @@
     "open_access_share_percent": 82.61
   },
   "citations": {
-    "total_citations": 426,
-    "average_citations_per_paper": 18.52,
+    "total_citations": 427,
+    "average_citations_per_paper": 18.57,
     "median_citations_per_paper": 9.0,
     "h_index": 11,
     "h_index_h_paper_citations": 13,
@@ -25,7 +25,7 @@
       96,
       53,
       50,
-      39,
+      40,
       36,
       34,
       26,
@@ -56,9 +56,9 @@
     "window_start_year": 2022,
     "window_end_year": 2026,
     "papers_in_window": 15,
-    "citations_in_window": 139,
+    "citations_in_window": 140,
     "effective_paper_age_years": 38,
-    "citations_per_effective_year": 3.6579
+    "citations_per_effective_year": 3.6842
   },
   "yearly": {
     "years": [
@@ -94,7 +94,7 @@
       36,
       13,
       58,
-      81,
+      82,
       40,
       0,
       16,
@@ -107,11 +107,11 @@
       216,
       229,
       287,
-      368,
-      408,
-      408,
-      424,
-      426
+      369,
+      409,
+      409,
+      425,
+      427
     ]
   },
   "histogram": {
@@ -160,11 +160,11 @@
         "papers_together": 5
       },
       {
-        "name": "Zurlo, Alice",
+        "name": "Hales, Antonio",
         "papers_together": 5
       },
       {
-        "name": "Hales, Antonio",
+        "name": "Zurlo, Alice",
         "papers_together": 5
       },
       {
@@ -431,11 +431,11 @@
   "leadership": {
     "lead_papers": 8,
     "supporting_papers": 15,
-    "lead_citations": 106,
-    "lead_citation_share_percent": 24.88,
-    "lead_citations_per_paper": 13.25,
+    "lead_citations": 107,
+    "lead_citation_share_percent": 25.06,
+    "lead_citations_per_paper": 13.38,
     "supporting_citations_per_paper": 21.33,
-    "leadership_impact_ratio": 0.621,
+    "leadership_impact_ratio": 0.627,
     "window_years": 5,
     "window_start_year": 2022,
     "window_end_year": 2026,
@@ -501,14 +501,14 @@
     "window_start_year": 2022,
     "window_end_year": 2026,
     "recent_papers": 15,
-    "recent_citations": 139,
+    "recent_citations": 140,
     "recent_paper_share_percent": 65.22,
-    "recent_citation_share_percent": 32.63,
-    "momentum_score": 48.92
+    "recent_citation_share_percent": 32.79,
+    "momentum_score": 49.0
   },
   "impact_concentration": {
-    "top3_citation_share_percent": 46.71,
-    "top5_citation_share_percent": 64.32
+    "top3_citation_share_percent": 46.6,
+    "top5_citation_share_percent": 64.4
   },
   "top_cited": [
     {
@@ -539,7 +539,7 @@
       "title": "Variable structure in the PDS 70 disc and uncertainties in radio-interferometric image restoration",
       "year": 2022,
       "publication": "Monthly Notices of the Royal Astronomical Society",
-      "citation_count": 39,
+      "citation_count": 40,
       "url": "https://doi.org/10.1093/mnras/stac1285",
       "doi": "10.1093/mnras/stac1285"
     },
@@ -601,11 +601,11 @@
         "title": "Variable structure in the PDS 70 disc and uncertainties in radio-interferometric image restoration",
         "year": 2022,
         "publication": "Monthly Notices of the Royal Astronomical Society",
-        "citations": 39,
+        "citations": 40,
         "author_position": 2,
         "leadership_factor": 1.0,
-        "c_i": 9.75,
-        "s_i": 3.2787,
+        "c_i": 10.0,
+        "s_i": 3.3166,
         "url": "https://doi.org/10.1093/mnras/stac1285"
       },
       {
@@ -708,8 +708,8 @@
         "url": "https://doi.org/10.1093/mnras/stab379"
       }
     ],
-    "p_sum": 19.2992,
-    "np_score": 4.5631
+    "p_sum": 19.3371,
+    "np_score": 4.5649
   },
   "chart_palette": {
     "primary": "#362cb1",
