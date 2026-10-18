@@ -1,4 +1,4 @@
-generated_at_utc: '2026-10-17T12:12:24Z'
+generated_at_utc: '2026-10-18T12:36:59Z'
 source: NASA ADS API + Crossref
 orcid: 0000-0003-0564-8167
 query_authors:
@@ -97,7 +97,7 @@ first_author:
     pages: '16'
     doi: 10.1016/j.ascom.2017.11.003
     url: https://doi.org/10.1016/j.ascom.2017.11.003
-    citation_count: 34
+    citation_count: 33
     author_position: 1
     publication_type: journal
     is_open_access: true

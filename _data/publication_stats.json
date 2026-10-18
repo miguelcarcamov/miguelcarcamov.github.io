@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-17T12:12:24Z",
+  "generated_at_utc": "2026-10-18T12:36:59Z",
   "source": "NASA ADS API",
   "volume": {
     "total_publications": 23,
@@ -15,8 +15,8 @@
     "open_access_share_percent": 82.61
   },
   "citations": {
-    "total_citations": 427,
-    "average_citations_per_paper": 18.57,
+    "total_citations": 426,
+    "average_citations_per_paper": 18.52,
     "median_citations_per_paper": 9.0,
     "h_index": 11,
     "h_index_h_paper_citations": 13,
@@ -27,7 +27,7 @@
       50,
       40,
       36,
-      34,
+      33,
       26,
       17,
       16,
@@ -90,7 +90,7 @@
     "citations_per_year": [
       0,
       50,
-      130,
+      129,
       36,
       13,
       58,
@@ -103,15 +103,15 @@
     "cumulative_citations": [
       0,
       50,
-      180,
-      216,
-      229,
-      287,
-      369,
-      409,
-      409,
-      425,
-      427
+      179,
+      215,
+      228,
+      286,
+      368,
+      408,
+      408,
+      424,
+      426
     ]
   },
   "histogram": {
@@ -160,11 +160,11 @@
         "papers_together": 5
       },
       {
-        "name": "Hales, Antonio",
+        "name": "Zurlo, Alice",
         "papers_together": 5
       },
       {
-        "name": "Zurlo, Alice",
+        "name": "Hales, Antonio",
         "papers_together": 5
       },
       {
@@ -431,11 +431,11 @@
   "leadership": {
     "lead_papers": 8,
     "supporting_papers": 15,
-    "lead_citations": 107,
-    "lead_citation_share_percent": 25.06,
-    "lead_citations_per_paper": 13.38,
+    "lead_citations": 106,
+    "lead_citation_share_percent": 24.88,
+    "lead_citations_per_paper": 13.25,
     "supporting_citations_per_paper": 21.33,
-    "leadership_impact_ratio": 0.627,
+    "leadership_impact_ratio": 0.621,
     "window_years": 5,
     "window_start_year": 2022,
     "window_end_year": 2026,
@@ -503,12 +503,12 @@
     "recent_papers": 15,
     "recent_citations": 140,
     "recent_paper_share_percent": 65.22,
-    "recent_citation_share_percent": 32.79,
-    "momentum_score": 49.0
+    "recent_citation_share_percent": 32.86,
+    "momentum_score": 49.04
   },
   "impact_concentration": {
-    "top3_citation_share_percent": 46.6,
-    "top5_citation_share_percent": 64.4
+    "top3_citation_share_percent": 46.71,
+    "top5_citation_share_percent": 64.55
   },
   "top_cited": [
     {
@@ -555,7 +555,7 @@
       "title": "Multi-GPU maximum entropy image synthesis for radio astronomy",
       "year": 2018,
       "publication": "Astronomy and Computing",
-      "citation_count": 34,
+      "citation_count": 33,
       "url": "https://doi.org/10.1016/j.ascom.2017.11.003",
       "doi": "10.1016/j.ascom.2017.11.003"
     },
