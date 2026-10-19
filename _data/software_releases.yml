@@ -1,4 +1,4 @@
-fetched_at_utc: '2026-10-19T15:37:24Z'
+fetched_at_utc: '2026-10-19T16:28:38Z'
 projects:
   pyralysis:
   - name: v3.0.0 - Measurement-operator and χ² gradient fixes
@@ -95,8 +95,8 @@ projects:
 pypi:
   pyralysis:
     package: pyralysis
-    version: 3.0.0
-    url: https://pypi.org/project/pyralysis/3.0.0/
+    version: 3.1.0
+    url: https://pypi.org/project/pyralysis/3.1.0/
     project_url: https://pypi.org/project/pyralysis/
-    published_at: '2026-10-04T19:37:41.896186Z'
-    install: pip install pyralysis==3.0.0
+    published_at: '2026-10-19T16:28:34.637341Z'
+    install: pip install pyralysis==3.1.0
