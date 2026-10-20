@@ -1,6 +1,21 @@
-fetched_at_utc: '2026-10-19T16:28:38Z'
+fetched_at_utc: '2026-10-20T13:33:50Z'
 projects:
   pyralysis:
+  - name: v3.1.0 - CORRECTED_DATA fits and kernel gridding corrections
+    tag: v3.1.0
+    published_at: '2026-10-19T16:52:27.265Z'
+    url: https://gitlab.com/clirai/pyralysis/-/releases/v3.1.0
+    description: 'The optimization CLI fits CORRECTED_DATA when that column is loaded,
+      and kernel-gridded dirty, residual and restored images use the GCF and table
+      of the padded grid.
+
+
+      ## Important changes
+
+
+      - The optimization CLI and the dirty-image CLI request CORRECTED_DATA on read
+      (#323, #242). When the table has that column, VisibilitySet.observed is the
+      calibrated visibilities, and the fit, the residual, and a'
   - name: v3.0.0 - Measurement-operator and χ² gradient fixes
     tag: v3.0.0
     published_at: '2026-10-04T19:10:54.162Z'
@@ -40,26 +55,6 @@ projects:
       \ 3.13 support:** `requires-python` is now `>=3.11,<3.14`; added\n  the `3.13`\
       \ Trove classifier, a `py313` tox environment (same fast unit\n  gate as `py311`:\
       \ `tests/unit/` with `-m \"n"
-  - name: v2.7.1
-    tag: v2.7.1
-    published_at: '2026-08-16T16:28:53.484Z'
-    url: https://gitlab.com/clirai/pyralysis/-/releases/v2.7.1
-    description: '## \[2.7.1\] - 2026-08-16
-
-
-      Patch release: Spline/Bicubic kernel width scaling fix, Graphviz UML docs, and
-      M87\* degridding×CKernel gallery.
-
-
-      ### Added
-
-
-      - _Docs: M87 degridding×CKernel gallery_\* — static model and restored matrices
-      under `docs/source/_static/m87/`, documented with the CKernel types in gridding
-      docs (rows = CKernels, columns = CG + L-BFGS-B + MFISTA; always degridding).
-
-
-      ### Change'
   csromer: []
   gpuvmem:
   - name: v7.0.0
