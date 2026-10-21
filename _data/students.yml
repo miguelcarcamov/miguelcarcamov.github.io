@@ -329,6 +329,16 @@ apply_steps:
           es: Software
         url: /software/
       - label:
+          en: Pyralysis website
+          es: Sitio de Pyralysis
+        url: https://clirai.gitlab.io/
+        external: true
+      - label:
+          en: Pyralysis docs
+          es: Docs de Pyralysis
+        url: https://pyralysis.readthedocs.io/
+        external: true
+      - label:
           en: Pyralysis work items (GitLab)
           es: Work items de Pyralysis (GitLab)
         url: https://gitlab.com/clirai/pyralysis/-/work_items

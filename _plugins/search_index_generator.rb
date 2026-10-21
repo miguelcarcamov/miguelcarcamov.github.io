@@ -26,6 +26,7 @@ module Jekyll
       append_media(docs, site.data.fetch("media", {}))
       append_theses(docs, site.data.fetch("theses", {}))
       append_join_content(docs, site.data.fetch("students", {}))
+      append_reading_paths(docs, site.data.fetch("reading_paths", {}))
       docs << {
         "id" => "writing-page",
         "title" => "The Faint Signal — Writing",
@@ -76,7 +77,10 @@ module Jekyll
             "body" => [
               item["tagline"],
               item["description"],
-              Array(item["areas"]).join(" ")
+              Array(item["areas"]).join(" "),
+              item["website_url"],
+              item["docs_url"],
+              item["repo"]
             ].compact.join(" "),
             "meta" => item["tagline"].to_s
           }
@@ -196,6 +200,35 @@ module Jekyll
             Array(project["areas"]).join(" ")
           ].compact.join(" "),
           "meta" => "Project idea"
+        }
+      end
+    end
+
+    def append_reading_paths(docs, reading)
+      Array(reading["paths"]).each do |path|
+        id = path["id"]
+        next if id.nil? || id.empty?
+
+        paper_notes = Array(path["papers"]).map { |p| p.dig("note", "en") }
+        book_bits = Array(path["books"]).flat_map do |b|
+          [b["title"], b["authors"], b.dig("note", "en")]
+        end
+        link_labels = Array(path["links"]).map { |l| l.dig("label", "en") }
+        docs << {
+          "id" => "reading-#{id}",
+          "title" => path.dig("title", "en").to_s,
+          "url" => "/join/",
+          "section" => "Join",
+          "body" => [
+            path.dig("blurb", "en"),
+            path.dig("blurb", "es"),
+            path["area"],
+            paper_notes.join(" "),
+            book_bits.compact.join(" "),
+            link_labels.join(" "),
+            "reading path books papers start here"
+          ].compact.join(" "),
+          "meta" => "Reading path"
         }
       end
     end

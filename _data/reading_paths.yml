@@ -1,0 +1,172 @@
+# Curated “start here” reading paths for prospective students.
+# Papers: bibcodes from publications.yml (resolved via publication_lookup).
+# Books: curated textbooks / monographs (optional url).
+# Order within each list is the suggested reading order.
+
+intro:
+  en: >-
+    Short paths into the group’s research. Start with the books for background,
+    then the papers (ordered easiest → more specialised), then the hands-on links.
+  es: >-
+    Rutas cortas hacia la investigación del grupo. Empieza por los libros para
+    el contexto, luego los artículos (de más accesibles a más especializados) y
+    los enlaces prácticos.
+
+paths:
+  - id: imaging-pyralysis
+    area: imaging
+    title:
+      en: Radio imaging & Pyralysis
+      es: Imagen de radio y Pyralysis
+    blurb:
+      en: Foundations of interferometric imaging, then our methods papers — and why reconstruction choices change the science.
+      es: Fundamentos de imagen interferométrica, luego nuestros artículos de métodos — y por qué la reconstrucción cambia la ciencia.
+    books:
+      - title: Essential Radio Astronomy
+        authors: Condon & Ransom
+        year: 2016
+        note:
+          en: Best gentle start — free NRAO online edition; read the interferometry and imaging chapters.
+          es: El arranque más amable — edición online gratuita del NRAO; lee interferometría e imagen.
+        url: https://www.cv.nrao.edu/~sransom/web/ERA.html
+      - title: Interferometry and Synthesis in Radio Astronomy
+        authors: Thompson, Moran & Swenson
+        year: 2017
+        note:
+          en: The classic reference (3rd ed.) — go deeper on imaging and deconvolution after ERA.
+          es: La referencia clásica (3ª ed.) — profundiza en imagen y deconvolución después de ERA.
+        url: https://link.springer.com/book/10.1007/978-3-319-44431-4
+    papers:
+      - bibcode: 2018A&C....22...16C
+        note:
+          en: GPUVMEM — our entry point for GPU imaging methods (first author)
+          es: GPUVMEM — punto de entrada a métodos de imagen en GPU (primer autor)
+      - bibcode: 2022MNRAS.513.5790C
+        note:
+          en: PDS 70 — how image restoration choices affect science conclusions (start here for “why imaging matters”)
+          es: PDS 70 — cómo la restauración de imagen afecta las conclusiones científicas (por qué importa la imagen)
+      - bibcode: 2024atra.conf..151R
+        note:
+          en: Split Bregman imaging — recent convex-optimisation line of work with students
+          es: Imagen Split Bregman — línea reciente de optimización convexa con estudiantes
+    links:
+      - label:
+          en: Pyralysis website
+          es: Sitio de Pyralysis
+        url: https://clirai.gitlab.io/
+        external: true
+      - label:
+          en: Docs & quickstart
+          es: Docs y quickstart
+        url: https://pyralysis.readthedocs.io/
+        external: true
+      - label:
+          en: Try on Binder
+          es: Probar en Binder
+        url: https://mybinder.org/v2/gl/clirai%2Fpyralysis/release?urlpath=lab%2Ftree%2Fexamples%2Fnotebooks
+        external: true
+
+  - id: magnetism-cs
+    area: magnetism
+    title:
+      en: Cosmic magnetism & compressed sensing
+      es: Magnetismo cósmico y detección comprimida
+    blurb:
+      en: Radiation and Faraday physics first, then an SKA-oriented overview paper, then CS-ROMER.
+      es: Primero radiación y física de Faraday, luego un overview orientado al SKA, después CS-ROMER.
+    books:
+      - title: Radiative Processes in Astrophysics
+        authors: Rybicki & Lightman
+        year: 1979
+        note:
+          en: Core physics — synchrotron, polarisation, and radiative transfer (the language behind Faraday work).
+          es: Física base — sincrotrón, polarización y transferencia radiativa (el lenguaje detrás de Faraday).
+        url: https://doi.org/10.1002/9783527618170
+      - title: Cosmic Magnetic Fields
+        authors: Klein & Fletcher
+        year: 2015
+        note:
+          en: Galactic and extragalactic magnetic fields and how we observe them.
+          es: Campos magnéticos galácticos y extragalácticos y cómo los observamos.
+        url: https://link.springer.com/book/10.1007/978-3-662-44625-6
+      - title: A Mathematical Introduction to Compressive Sensing
+        authors: Foucart & Rauhut
+        year: 2013
+        note:
+          en: Sparse recovery maths for when you are ready for the CS side of CS-ROMER.
+          es: Matemáticas de recuperación dispersa cuando quieras el lado CS de CS-ROMER.
+        url: https://link.springer.com/book/10.1007/978-0-8176-4948-7
+    papers:
+      - bibcode: 2026aask.bookE.204C
+        note:
+          en: Faraday tomography with the SKA — best overview paper to start with (first author)
+          es: Tomografía de Faraday con el SKA — el mejor overview para empezar (primer autor)
+      - bibcode: 2023MNRAS.518.1955C
+        note:
+          en: CS-ROMER — compressed sensing for Faraday depth (core methods paper)
+          es: CS-ROMER — detección comprimida para profundidad de Faraday (artículo central de métodos)
+      - bibcode: 2021MNRAS.502.5839N
+        note:
+          en: Gaussian-process Faraday reconstruction — complementary methods in the same problem family
+          es: Reconstrucción de Faraday con procesos gaussianos — métodos complementarios del mismo problema
+    links:
+      - label:
+          en: Ph.D. thesis (CS for Faraday tomography)
+          es: Tesis doctoral (CS para tomografía de Faraday)
+        url: https://research.manchester.ac.uk/files/270984923/FULL_TEXT.PDF
+        external: true
+      - label:
+          en: CS-ROMER on GitHub
+          es: CS-ROMER en GitHub
+        url: https://github.com/miguelcarcamov/csromer
+        external: true
+      - label:
+          en: Research — cosmic magnetism
+          es: Investigación — magnetismo cósmico
+        url: /research/
+
+  - id: planet-discs
+    area: planet-formation
+    title:
+      en: Planet-forming discs
+      es: Discos formadores de planetas
+    blurb:
+      en: Disc physics from textbooks, then ALMA papers from structure → kinematics → young planets.
+      es: Física de discos desde libros, luego artículos ALMA de estructura → cinemática → planetas jóvenes.
+    books:
+      - title: Astrophysics of Planet Formation
+        authors: Philip J. Armitage
+        year: 2020
+        note:
+          en: Standard graduate intro (2nd ed.) — discs, gaps, and planet–disc interaction.
+          es: Introducción estándar de posgrado (2ª ed.) — discos, gaps e interacción planeta–disco.
+        url: https://doi.org/10.1017/9781108344227
+      - title: Accretion Processes in Star Formation
+        authors: Lee Hartmann
+        year: 2009
+        note:
+          en: Broader YSO / disc context around the systems we observe with ALMA.
+          es: Contexto más amplio de YSOs / discos en torno a los sistemas que observamos con ALMA.
+        url: https://doi.org/10.1017/CBO9780511535765
+    papers:
+      - bibcode: 2017ApJ...851L..23C
+        note:
+          en: Elias 2-24 — multiple gaps in a young disc (clearest ALMA “structure” starter)
+          es: Elias 2-24 — múltiples gaps en un disco joven (el starter ALMA de “estructura” más claro)
+      - bibcode: 2018MNRAS.477.5104C
+        note:
+          en: DoAr 44 — inner warp in a transition disc (morphology before kinematics)
+          es: DoAr 44 — warp interno en un disco de transición (morfología antes de cinemática)
+      - bibcode: 2025A&A...702A..18D
+        note:
+          en: PDS 70c — multi-frequency radio emission around a forming planet (current group focus)
+          es: PDS 70c — emisión de radio multifrecuencia alrededor de un planeta en formación (foco actual del grupo)
+    links:
+      - label:
+          en: Research — planet formation
+          es: Investigación — formación planetaria
+        url: /research/
+      - label:
+          en: Join — disc projects
+          es: Únete — proyectos de discos
+        url: /join/

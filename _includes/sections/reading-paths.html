@@ -1,0 +1,86 @@
+{% assign paths = site.data.reading_paths %}
+{% assign lookup = site.data.publication_lookup %}
+{% if paths.paths %}
+<section class="reading-paths-panel" aria-labelledby="reading-paths-heading">
+<h3 class="join-section-heading" id="reading-paths-heading" data-i18n="join.reading_heading">Start here — reading paths</h3>
+<p class="join-section-note">
+<span data-i18n-block="en">{{ paths.intro.en }}</span>
+<span data-i18n-block="es" hidden>{{ paths.intro.es }}</span>
+</p>
+
+<div class="reading-paths-grid">
+{% for path in paths.paths %}
+<article class="reading-path-card">
+<h4 class="reading-path-title">
+<span data-i18n-block="en">{{ path.title.en }}</span>
+<span data-i18n-block="es" hidden>{{ path.title.es }}</span>
+</h4>
+<p class="reading-path-blurb">
+<span data-i18n-block="en">{{ path.blurb.en }}</span>
+<span data-i18n-block="es" hidden>{{ path.blurb.es }}</span>
+</p>
+
+{% if path.books and path.books.size > 0 %}
+<p class="reading-path-list-label" data-i18n="join.reading_books">Books</p>
+<ol class="reading-path-list reading-path-books">
+{% for book in path.books %}
+<li>
+{% if book.url %}
+<a href="{{ book.url }}" target="_blank" rel="noopener noreferrer" class="reading-path-book-title">{{ book.title }}</a>
+{% else %}
+<span class="reading-path-book-title">{{ book.title }}</span>
+{% endif %}
+<span class="reading-path-book-meta">{{ book.authors }}{% if book.year %} · {{ book.year }}{% endif %}</span>
+{% if book.note %}
+<p class="reading-path-book-note">
+<span data-i18n-block="en">{{ book.note.en }}</span>
+<span data-i18n-block="es" hidden>{{ book.note.es }}</span>
+</p>
+{% endif %}
+</li>
+{% endfor %}
+</ol>
+{% endif %}
+
+{% if path.papers and path.papers.size > 0 %}
+<p class="reading-path-list-label" data-i18n="join.reading_papers">Papers</p>
+<ol class="reading-path-list reading-path-papers">
+{% for item in path.papers %}
+{% assign paper = lookup[item.bibcode] %}
+<li>
+{% if paper %}
+<a href="{{ '/publications/' | relative_url }}#pub-{{ paper.bibcode }}" data-home-hash="#publications">
+<span data-i18n-block="en">{{ item.note.en }}</span>
+<span data-i18n-block="es" hidden>{{ item.note.es }}</span>
+</a>
+<span class="reading-path-year">{{ paper.year }}</span>
+{% else %}
+<span data-i18n-block="en">{{ item.note.en }}</span>
+<span data-i18n-block="es" hidden>{{ item.note.es }}</span>
+{% endif %}
+</li>
+{% endfor %}
+</ol>
+{% endif %}
+
+{% if path.links %}
+<ul class="reading-path-links">
+{% for link in path.links %}
+<li>
+{% if link.external %}
+<a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">
+{% else %}
+<a href="{{ link.url | relative_url }}">
+{% endif %}
+<span data-i18n-block="en">{{ link.label.en }}</span>
+<span data-i18n-block="es" hidden>{{ link.label.es }}</span>
+</a>
+</li>
+{% endfor %}
+</ul>
+{% endif %}
+</article>
+{% endfor %}
+</div>
+</section>
+{% endif %}

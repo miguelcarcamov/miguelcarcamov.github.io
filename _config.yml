@@ -13,6 +13,8 @@ author:
 substack_url: "https://thefaintsignal.substack.com/"
 substack_feed_url: "https://thefaintsignal.substack.com/feed"
 office_hours_url: ""
+# Booking button on Contact/Join appears when office_hours_url is set.
+# Schedule copy lives in i18n (contact.office_hours_schedule / join.office_hours_schedule).
 
 # Search Console (set this token after verification)
 google_site_verification: "2QPOvGRD33gpzUngOgVDygqfT-VQDeXQpka0c29d_PI"

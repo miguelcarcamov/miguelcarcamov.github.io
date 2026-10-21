@@ -70,9 +70,9 @@ milestones:
       en: Pyralysis — SKA-era radio astronomy framework
       es: Pyralysis — framework de radioastronomía para la era SKA
     description:
-      en: Manuscript in preparation on the Pyralysis object-oriented processing and imaging framework (journal TBD).
-      es: Manuscrito en preparación sobre el framework orientado a objetos Pyralysis (revista por definir).
-    link: /software/#software-pyralysis
+      en: Active open-source framework with public site, docs, PyPI releases, and Binder demos; methods manuscript in preparation.
+      es: Framework de código abierto activo con sitio público, documentación, lanzamientos en PyPI y demos en Binder; manuscrito metodológico en preparación.
+    link: https://clirai.gitlab.io/
 
   - id: dicyt-pyralysis-2026
     year: 2026

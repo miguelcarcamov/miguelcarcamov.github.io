@@ -36,6 +36,8 @@ software:
   status_label: Estado
   areas_label: Áreas de investigación
   repository: Repositorio
+  website: Sitio web
+  docs: Docs
   related_papers: Publicaciones relacionadas
   cite_heading: Citar este software
   copy_bibtex: Copiar BibTeX
@@ -54,6 +56,10 @@ software:
   latest_pypi: PyPI
   view_pypi: PyPI
   try_binder: Probar en Binder
+  start_here_heading: Empieza aquí — Pyralysis
+  start_here_text: >-
+    ¿Nuevo/a en el stack? Abre el sitio del proyecto para la visión general, revisa el
+    quickstart de la documentación y lanza Binder para probar notebooks sin instalar.
   stat_stars: estrellas
   stat_forks: forks
   copy_cite_stack: Copiar stack de citas (software + artículos)
@@ -133,6 +139,12 @@ join:
   matcher_email_level: Nivel
   matcher_email_skills: Habilidades
   matcher_email_projects: Proyectos de interés
+  reading_heading: Empieza aquí — rutas de lectura
+  reading_books: Libros
+  reading_papers: Artículos
+  office_hours_label: "Horario de atención:"
+  office_hours_schedule: 9:00–17:00, días hábiles
+  office_hours_hint: "— escribe para agendar una reunión."
   cta_office_hours: Reservar hora de oficina
   cta_contact: Contactar
   cta_email: Escríbeme
@@ -142,6 +154,11 @@ contact:
   subtitle: Ponte en contacto conmigo
   intro: Escríbeme cuando quieras, ya sea por trabajo o simplemente para saludar.
   office_hours: Reservar hora de oficina
+  office_hours_label: "Horario de atención:"
+  office_hours_schedule: 9:00–17:00, días hábiles
+  office_hours_hint: "(escribe primero para agendar)"
+  working_hours_title: HORARIO DE ATENCIÓN
+  working_hours_body: Días hábiles 9:00–17:00. No disponible fines de semana — escribe para coordinar una reunión.
 stats:
   title: ESTADÍSTICAS DE PUBLICACIONES
   subtitle: Métricas académicas desde NASA ADS
@@ -283,6 +300,7 @@ media:
   fallback_note: "¿Problemas para reproducir? "
 home:
   chip_binder: Probar Pyralysis en Binder
+  chip_pyralysis_site: Sitio de Pyralysis
   chip_positions: posiciones abiertas
   chip_stats: Estadísticas de publicaciones
 lab_now:
@@ -293,6 +311,8 @@ lab_now:
   join_link: Únete al grupo →
   software: Software
   all_software: Todo el software de investigación →
+  pyralysis_site: Sitio de Pyralysis →
+  pyralysis_docs: Documentación →
   recent: Destacados recientes
   stats_line: Portafolio
   papers: artículos

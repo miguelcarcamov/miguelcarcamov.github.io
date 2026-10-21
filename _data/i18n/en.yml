@@ -36,6 +36,8 @@ software:
   status_label: Status
   areas_label: Research areas
   repository: Repository
+  website: Website
+  docs: Docs
   related_papers: Related publications
   cite_heading: Cite this software
   copy_bibtex: Copy BibTeX
@@ -54,6 +56,10 @@ software:
   latest_pypi: PyPI
   view_pypi: PyPI
   try_binder: Try on Binder
+  start_here_heading: Start here — Pyralysis
+  start_here_text: >-
+    New to the stack? Open the project website for the big picture, skim the docs
+    quickstart, then launch Binder to try notebooks without installing.
   stat_stars: stars
   stat_forks: forks
   copy_cite_stack: Copy cite stack (software + papers)
@@ -133,6 +139,12 @@ join:
   matcher_email_level: Level
   matcher_email_skills: Skills
   matcher_email_projects: Projects of interest
+  reading_heading: Start here — reading paths
+  reading_books: Books
+  reading_papers: Papers
+  office_hours_label: "Office hours:"
+  office_hours_schedule: 9am–5pm, weekdays
+  office_hours_hint: "— email to schedule a meeting."
   cta_office_hours: Book office hours
   cta_contact: Get in touch
   cta_email: Email me
@@ -142,6 +154,11 @@ contact:
   subtitle: Get in touch with me
   intro: Please feel free to get in touch anytime, whether for work inquiries or to just say hello.
   office_hours: Book office hours
+  office_hours_label: "Office hours:"
+  office_hours_schedule: 9am–5pm, weekdays
+  office_hours_hint: "(email first to schedule)"
+  working_hours_title: OFFICE HOURS
+  working_hours_body: Weekdays 9am–5pm. Not available on weekends — please email to arrange a meeting.
 stats:
   title: PUBLICATION STATISTICS
   subtitle: Scholarly metrics from NASA ADS
@@ -283,6 +300,7 @@ media:
   fallback_note: Having trouble?
 home:
   chip_binder: Try Pyralysis on Binder
+  chip_pyralysis_site: Pyralysis website
   chip_positions: open positions
   chip_stats: Publication stats
 lab_now:
@@ -293,6 +311,8 @@ lab_now:
   join_link: Join the group →
   software: Software
   all_software: All research software →
+  pyralysis_site: Pyralysis website →
+  pyralysis_docs: Documentation →
   recent: Recent highlights
   stats_line: Portfolio
   papers: papers

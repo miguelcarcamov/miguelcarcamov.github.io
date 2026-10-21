@@ -40,6 +40,41 @@
 </div>
 </div>
 
+{% assign pyralysis = sw.featured | where: "id", "pyralysis" | first %}
+{% if pyralysis %}
+<div class="row">
+<div class="col-md-12">
+<aside class="software-start-here" aria-labelledby="software-start-here-heading">
+<h3 class="software-start-here-heading" id="software-start-here-heading" data-i18n="software.start_here_heading">Start here — Pyralysis</h3>
+<p class="software-start-here-text" data-i18n="software.start_here_text">New to the stack? Open the project website for the big picture, skim the docs quickstart, then launch Binder to try notebooks without installing.</p>
+<div class="software-start-here-actions">
+{% if pyralysis.website_url %}
+<a href="{{ pyralysis.website_url }}" class="btn software-website-btn" target="_blank" rel="noopener noreferrer">
+<span data-i18n="software.website">Website</span> →
+</a>
+{% endif %}
+{% if pyralysis.docs_url %}
+<a href="{{ pyralysis.docs_url }}" class="btn software-docs-btn" target="_blank" rel="noopener noreferrer">
+<span data-i18n="software.docs">Docs</span> →
+</a>
+{% endif %}
+{% if pyralysis.binder_url %}
+<a href="{{ pyralysis.binder_url }}" class="btn software-binder-btn" target="_blank" rel="noopener noreferrer">
+<span class="fa fa-play-circle" aria-hidden="true"></span>
+<span data-i18n="software.try_binder">Try on Binder</span>
+</a>
+{% endif %}
+{% if pyralysis_pypi %}
+<a href="{{ pyralysis_pypi.url }}" class="btn software-pypi-btn" target="_blank" rel="noopener noreferrer">
+PyPI {{ pyralysis_pypi.version }} →
+</a>
+{% endif %}
+</div>
+</aside>
+</div>
+</div>
+{% endif %}
+
 <div class="row">
 <div class="col-md-12">
 <h3 class="software-tier-heading" data-i18n="software.featured_heading">Featured projects</h3>
@@ -87,6 +122,16 @@
 {% endif %}
 
 <div class="software-card-actions">
+{% if tool.website_url %}
+<a href="{{ tool.website_url }}" class="btn software-website-btn" target="_blank" rel="noopener noreferrer">
+<span data-i18n="software.website">Website</span> →
+</a>
+{% endif %}
+{% if tool.docs_url %}
+<a href="{{ tool.docs_url }}" class="btn software-docs-btn" target="_blank" rel="noopener noreferrer">
+<span data-i18n="software.docs">Docs</span> →
+</a>
+{% endif %}
 <a href="{{ tool.repo }}" class="btn software-repo-btn" target="_blank" rel="noopener noreferrer">
 <span data-i18n="software.repository">Repository</span> →
 </a>

@@ -18,12 +18,19 @@
 </p>
 <h4 class="research-timeline-title">
 {% if item.link %}
-{% assign link_path = item.link | split: '#' | first %}
-{% assign link_hash = item.link | split: '#' | last %}
-<a href="{{ link_path | relative_url }}" data-home-hash="#{{ link_hash }}">
+{% if item.link contains '://' %}
+<a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">
 <span data-i18n-block="en">{{ item.title.en }}</span>
 <span data-i18n-block="es" hidden>{{ item.title.es }}</span>
 </a>
+{% else %}
+{% assign link_path = item.link | split: '#' | first %}
+{% assign link_hash = item.link | split: '#' | last %}
+<a href="{{ link_path | relative_url }}"{% if item.link contains '#' %} data-home-hash="#{{ link_hash }}"{% endif %}>
+<span data-i18n-block="en">{{ item.title.en }}</span>
+<span data-i18n-block="es" hidden>{{ item.title.es }}</span>
+</a>
+{% endif %}
 {% else %}
 <span data-i18n-block="en">{{ item.title.en }}</span>
 <span data-i18n-block="es" hidden>{{ item.title.es }}</span>
