@@ -1,4 +1,4 @@
-generated_at_utc: '2026-10-26T16:08:23Z'
+generated_at_utc: '2026-10-27T14:32:33Z'
 source: NASA ADS API + Crossref
 orcid: 0000-0003-0564-8167
 query_authors:
@@ -68,7 +68,7 @@ first_author:
     pages: '1955'
     doi: 10.1093/mnras/stac3031
     url: https://doi.org/10.1093/mnras/stac3031
-    citation_count: 5
+    citation_count: 6
     author_position: 1
     publication_type: journal
     is_open_access: true
@@ -222,7 +222,7 @@ coauthored:
     pages: '58'
     doi: 10.48550/arXiv.2606.27110
     url: https://doi.org/10.48550/arXiv.2606.27110
-    citation_count: 0
+    citation_count: 1
     author_position: 4
     publication_type: journal
     is_open_access: true
@@ -262,7 +262,7 @@ coauthored:
     pages: L10
     doi: 10.1051/0004-6361/202659553
     url: https://doi.org/10.1051/0004-6361/202659553
-    citation_count: 2
+    citation_count: 3
     author_position: 2
     publication_type: journal
     is_open_access: true
@@ -298,7 +298,7 @@ coauthored:
     pages: A255
     doi: 10.1051/0004-6361/202557944
     url: https://doi.org/10.1051/0004-6361/202557944
-    citation_count: 0
+    citation_count: 1
     author_position: 3
     publication_type: journal
     is_open_access: true
@@ -348,7 +348,7 @@ coauthored:
     pages: A18
     doi: 10.1051/0004-6361/202554485
     url: https://doi.org/10.1051/0004-6361/202554485
-    citation_count: 16
+    citation_count: 19
     author_position: 5
     publication_type: journal
     is_open_access: true
@@ -552,7 +552,7 @@ coauthored:
     pages: '5790'
     doi: 10.1093/mnras/stac1285
     url: https://doi.org/10.1093/mnras/stac1285
-    citation_count: 40
+    citation_count: 45
     author_position: 2
     publication_type: journal
     is_open_access: true
@@ -642,7 +642,7 @@ coauthored:
     pages: '1248'
     doi: 10.1093/mnras/stab3440
     url: https://doi.org/10.1093/mnras/stab3440
-    citation_count: 17
+    citation_count: 18
     author_position: 6
     publication_type: journal
     is_open_access: true
@@ -746,7 +746,7 @@ coauthored:
     pages: '3789'
     doi: 10.1093/mnras/stab2359
     url: https://doi.org/10.1093/mnras/stab2359
-    citation_count: 53
+    citation_count: 55
     author_position: 3
     publication_type: journal
     is_open_access: true
@@ -795,7 +795,7 @@ coauthored:
     pages: '3482'
     doi: 10.1093/mnras/staa1422
     url: https://doi.org/10.1093/mnras/staa1422
-    citation_count: 13
+    citation_count: 17
     author_position: 4
     publication_type: journal
     is_open_access: true
@@ -851,7 +851,7 @@ coauthored:
     pages: '3278'
     doi: 10.1093/mnras/sty3269
     url: https://doi.org/10.1093/mnras/sty3269
-    citation_count: 36
+    citation_count: 38
     author_position: 10
     publication_type: journal
     is_open_access: true
@@ -910,7 +910,7 @@ coauthored:
     pages: '5104'
     doi: 10.1093/mnras/sty894
     url: https://doi.org/10.1093/mnras/sty894
-    citation_count: 96
+    citation_count: 97
     author_position: 5
     publication_type: journal
     is_open_access: true

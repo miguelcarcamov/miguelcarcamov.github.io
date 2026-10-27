@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-26T16:08:23Z",
+  "generated_at_utc": "2026-10-27T14:32:33Z",
   "source": "NASA ADS API",
   "volume": {
     "total_publications": 23,
@@ -15,31 +15,31 @@
     "open_access_share_percent": 82.61
   },
   "citations": {
-    "total_citations": 427,
-    "average_citations_per_paper": 18.57,
+    "total_citations": 449,
+    "average_citations_per_paper": 19.52,
     "median_citations_per_paper": 9.0,
     "h_index": 11,
-    "h_index_h_paper_citations": 13,
+    "h_index_h_paper_citations": 17,
     "h_index_next_paper_citations": 9,
     "citations_sorted_desc": [
-      96,
-      53,
+      97,
+      55,
       50,
-      40,
-      36,
+      45,
+      38,
       33,
       26,
+      19,
+      18,
       17,
       17,
-      16,
-      13,
       9,
       9,
+      6,
       5,
-      5,
-      2,
-      0,
-      0,
+      3,
+      1,
+      1,
       0,
       0,
       0,
@@ -56,9 +56,9 @@
     "window_start_year": 2022,
     "window_end_year": 2026,
     "papers_in_window": 15,
-    "citations_in_window": 141,
+    "citations_in_window": 154,
     "effective_paper_age_years": 38,
-    "citations_per_effective_year": 3.7105
+    "citations_per_effective_year": 4.0526
   },
   "yearly": {
     "years": [
@@ -90,33 +90,33 @@
     "citations_per_year": [
       0,
       50,
-      129,
-      36,
-      13,
-      58,
-      83,
-      40,
+      130,
+      38,
+      17,
+      60,
+      89,
+      41,
       0,
-      16,
-      2
+      19,
+      5
     ],
     "cumulative_citations": [
       0,
       50,
-      179,
-      215,
-      228,
-      286,
-      369,
-      409,
-      409,
+      180,
+      218,
+      235,
+      295,
+      384,
       425,
-      427
+      425,
+      444,
+      449
     ]
   },
   "histogram": {
-    "0": 7,
-    "1-4": 1,
+    "0": 5,
+    "1-4": 3,
     "5-9": 4,
     "10-19": 4,
     "20-49": 4,
@@ -431,11 +431,11 @@
   "leadership": {
     "lead_papers": 8,
     "supporting_papers": 15,
-    "lead_citations": 106,
-    "lead_citation_share_percent": 24.82,
-    "lead_citations_per_paper": 13.25,
-    "supporting_citations_per_paper": 21.4,
-    "leadership_impact_ratio": 0.619,
+    "lead_citations": 113,
+    "lead_citation_share_percent": 25.17,
+    "lead_citations_per_paper": 14.12,
+    "supporting_citations_per_paper": 22.4,
+    "leadership_impact_ratio": 0.63,
     "window_years": 5,
     "window_start_year": 2022,
     "window_end_year": 2026,
@@ -501,21 +501,21 @@
     "window_start_year": 2022,
     "window_end_year": 2026,
     "recent_papers": 15,
-    "recent_citations": 141,
+    "recent_citations": 154,
     "recent_paper_share_percent": 65.22,
-    "recent_citation_share_percent": 33.02,
-    "momentum_score": 49.12
+    "recent_citation_share_percent": 34.3,
+    "momentum_score": 49.76
   },
   "impact_concentration": {
-    "top3_citation_share_percent": 46.6,
-    "top5_citation_share_percent": 64.4
+    "top3_citation_share_percent": 44.99,
+    "top5_citation_share_percent": 63.47
   },
   "top_cited": [
     {
       "title": "An inner warp in the DoAr 44 T Tauri transition disc",
       "year": 2018,
       "publication": "Monthly Notices of the Royal Astronomical Society",
-      "citation_count": 96,
+      "citation_count": 97,
       "url": "https://doi.org/10.1093/mnras/sty894",
       "doi": "10.1093/mnras/sty894"
     },
@@ -523,7 +523,7 @@
       "title": "A dusty filament and turbulent CO spirals in HD 135344B - SAO 206462",
       "year": 2021,
       "publication": "Monthly Notices of the Royal Astronomical Society",
-      "citation_count": 53,
+      "citation_count": 55,
       "url": "https://doi.org/10.1093/mnras/stab2359",
       "doi": "10.1093/mnras/stab2359"
     },
@@ -539,7 +539,7 @@
       "title": "Variable structure in the PDS 70 disc and uncertainties in radio-interferometric image restoration",
       "year": 2022,
       "publication": "Monthly Notices of the Royal Astronomical Society",
-      "citation_count": 40,
+      "citation_count": 45,
       "url": "https://doi.org/10.1093/mnras/stac1285",
       "doi": "10.1093/mnras/stac1285"
     },
@@ -547,7 +547,7 @@
       "title": "Cm-wavelength observations of MWC 758: resolved dust trapping in a vortex",
       "year": 2019,
       "publication": "Monthly Notices of the Royal Astronomical Society",
-      "citation_count": 36,
+      "citation_count": 38,
       "url": "https://doi.org/10.1093/mnras/sty3269",
       "doi": "10.1093/mnras/sty3269"
     },
@@ -568,28 +568,28 @@
       "doi": "10.3847/2041-8213/ac75e8"
     },
     {
+      "title": "Multi-frequency observations of PDS70c: Radio emission mechanisms in the circumplanetary environment",
+      "year": 2025,
+      "publication": "Astronomy and Astrophysics",
+      "citation_count": 19,
+      "url": "https://doi.org/10.1051/0004-6361/202554485",
+      "doi": "10.1051/0004-6361/202554485"
+    },
+    {
+      "title": "High-resolution ALMA observations of V4046 Sgr: a circumbinary disc with a thin ring",
+      "year": 2022,
+      "publication": "Monthly Notices of the Royal Astronomical Society",
+      "citation_count": 18,
+      "url": "https://doi.org/10.1093/mnras/stab3440",
+      "doi": "10.1093/mnras/stab3440"
+    },
+    {
       "title": "Spirals and Clumps in V960 Mon: Signs of Planet Formation via Gravitational Instability around an FU Ori Star?",
       "year": 2023,
       "publication": "The Astrophysical Journal Letters",
       "citation_count": 17,
       "url": "https://doi.org/10.3847/2041-8213/ace186",
       "doi": "10.3847/2041-8213/ace186"
-    },
-    {
-      "title": "High-resolution ALMA observations of V4046 Sgr: a circumbinary disc with a thin ring",
-      "year": 2022,
-      "publication": "Monthly Notices of the Royal Astronomical Society",
-      "citation_count": 17,
-      "url": "https://doi.org/10.1093/mnras/stab3440",
-      "doi": "10.1093/mnras/stab3440"
-    },
-    {
-      "title": "Multi-frequency observations of PDS70c: Radio emission mechanisms in the circumplanetary environment",
-      "year": 2025,
-      "publication": "Astronomy and Astrophysics",
-      "citation_count": 16,
-      "url": "https://doi.org/10.1051/0004-6361/202554485",
-      "doi": "10.1051/0004-6361/202554485"
     }
   ],
   "fondecyt": {
@@ -601,22 +601,22 @@
         "title": "Variable structure in the PDS 70 disc and uncertainties in radio-interferometric image restoration",
         "year": 2022,
         "publication": "Monthly Notices of the Royal Astronomical Society",
-        "citations": 40,
+        "citations": 45,
         "author_position": 2,
         "leadership_factor": 1.0,
-        "c_i": 10.0,
-        "s_i": 3.3166,
+        "c_i": 11.25,
+        "s_i": 3.5,
         "url": "https://doi.org/10.1093/mnras/stac1285"
       },
       {
         "title": "A dusty filament and turbulent CO spirals in HD 135344B - SAO 206462",
         "year": 2021,
         "publication": "Monthly Notices of the Royal Astronomical Society",
-        "citations": 53,
+        "citations": 55,
         "author_position": 3,
         "leadership_factor": 0.9,
-        "c_i": 10.6,
-        "s_i": 3.0653,
+        "c_i": 11.0,
+        "s_i": 3.1177,
         "url": "https://doi.org/10.1093/mnras/stab2359"
       },
       {
@@ -634,12 +634,23 @@
         "title": "Multi-frequency observations of PDS70c: Radio emission mechanisms in the circumplanetary environment",
         "year": 2025,
         "publication": "Astronomy and Astrophysics",
-        "citations": 16,
+        "citations": 19,
         "author_position": 5,
         "leadership_factor": 0.5,
-        "c_i": 16.0,
-        "s_i": 2.0616,
+        "c_i": 19.0,
+        "s_i": 2.2361,
         "url": "https://doi.org/10.1051/0004-6361/202554485"
+      },
+      {
+        "title": "Hourly radio variability of PDS 70c from time-differential photometry",
+        "year": 2026,
+        "publication": "Astronomy and Astrophysics",
+        "citations": 3,
+        "author_position": 2,
+        "leadership_factor": 1.0,
+        "c_i": 3.0,
+        "s_i": 2.0,
+        "url": "https://doi.org/10.1051/0004-6361/202659553"
       },
       {
         "title": "Azimuthal temperature variations in ISO-Oph 2 from multifrequency ALMA observations",
@@ -653,26 +664,26 @@
         "url": "https://doi.org/10.1093/mnras/stad1981"
       },
       {
-        "title": "Hourly radio variability of PDS 70c from time-differential photometry",
-        "year": 2026,
-        "publication": "Astronomy and Astrophysics",
-        "citations": 2,
-        "author_position": 2,
-        "leadership_factor": 1.0,
-        "c_i": 2.0,
-        "s_i": 1.7321,
-        "url": "https://doi.org/10.1051/0004-6361/202659553"
-      },
-      {
         "title": "CS-ROMER: a novel compressed sensing framework for Faraday depth reconstruction",
         "year": 2023,
         "publication": "Monthly Notices of the Royal Astronomical Society",
-        "citations": 5,
+        "citations": 6,
         "author_position": 1,
         "leadership_factor": 1.0,
-        "c_i": 1.6667,
-        "s_i": 1.633,
+        "c_i": 2.0,
+        "s_i": 1.7321,
         "url": "https://doi.org/10.1093/mnras/stac3031"
+      },
+      {
+        "title": "ALMA Band 1 observations of the ρ Oph W filament: I. Enhanced power from excess microwave emission at high spatial frequencies",
+        "year": 2026,
+        "publication": "Astronomy and Astrophysics",
+        "citations": 1,
+        "author_position": 3,
+        "leadership_factor": 0.9,
+        "c_i": 1.0,
+        "s_i": 1.2728,
+        "url": "https://doi.org/10.1051/0004-6361/202557944"
       },
       {
         "title": "Faraday Tomography with the SKA: A New Era of Cosmic Magnetism Studies",
@@ -695,21 +706,10 @@
         "c_i": 3.0,
         "s_i": 1.0,
         "url": "https://doi.org/10.1093/mnras/stad2885"
-      },
-      {
-        "title": "Gaussian process modelling for improved resolution in Faraday depth reconstruction",
-        "year": 2021,
-        "publication": "Monthly Notices of the Royal Astronomical Society",
-        "citations": 5,
-        "author_position": 4,
-        "leadership_factor": 0.7,
-        "c_i": 1.0,
-        "s_i": 0.9899,
-        "url": "https://doi.org/10.1093/mnras/stab379"
       }
     ],
-    "p_sum": 19.3371,
-    "np_score": 4.5649
+    "p_sum": 20.3973,
+    "np_score": 4.6128
   },
   "chart_palette": {
     "primary": "#362cb1",
