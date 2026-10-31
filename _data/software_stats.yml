@@ -1,4 +1,4 @@
-fetched_at_utc: '2026-10-30T15:03:26Z'
+fetched_at_utc: '2026-10-31T14:32:20Z'
 projects:
   pyralysis:
     stars: 4
@@ -15,7 +15,7 @@ projects:
   snow:
     stars: 7
     forks: 1
-    open_issues: 37
+    open_issues: 32
   ocarina:
     stars: 2
     forks: 0
