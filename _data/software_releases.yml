@@ -1,4 +1,4 @@
-fetched_at_utc: '2026-11-01T15:11:04Z'
+fetched_at_utc: '2026-11-02T18:23:13Z'
 projects:
   pyralysis:
   - name: v3.3.0 - simulations match CASA, primary beams at CASA's radius
