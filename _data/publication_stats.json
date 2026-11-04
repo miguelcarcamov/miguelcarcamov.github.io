@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-03T16:15:28Z",
+  "generated_at_utc": "2026-11-04T16:19:49Z",
   "source": "NASA ADS API",
   "volume": {
     "total_publications": 23,
@@ -15,8 +15,8 @@
     "open_access_share_percent": 82.61
   },
   "citations": {
-    "total_citations": 451,
-    "average_citations_per_paper": 19.61,
+    "total_citations": 452,
+    "average_citations_per_paper": 19.65,
     "median_citations_per_paper": 9.0,
     "h_index": 11,
     "h_index_h_paper_citations": 17,
@@ -29,7 +29,7 @@
       38,
       33,
       26,
-      19,
+      20,
       18,
       17,
       17,
@@ -56,9 +56,9 @@
     "window_start_year": 2022,
     "window_end_year": 2026,
     "papers_in_window": 15,
-    "citations_in_window": 155,
+    "citations_in_window": 156,
     "effective_paper_age_years": 38,
-    "citations_per_effective_year": 4.0789
+    "citations_per_effective_year": 4.1053
   },
   "yearly": {
     "years": [
@@ -97,7 +97,7 @@
       89,
       41,
       0,
-      19,
+      20,
       6
     ],
     "cumulative_citations": [
@@ -110,16 +110,16 @@
       385,
       426,
       426,
-      445,
-      451
+      446,
+      452
     ]
   },
   "histogram": {
     "0": 5,
     "1-4": 3,
     "5-9": 4,
-    "10-19": 4,
-    "20-49": 4,
+    "10-19": 3,
+    "20-49": 5,
     "50+": 3
   },
   "author_position_distribution": {
@@ -325,12 +325,12 @@
         "share_percent": 4.76
       },
       {
-        "country": "Australia",
+        "country": "Netherlands",
         "papers": 1,
         "share_percent": 4.76
       },
       {
-        "country": "Netherlands",
+        "country": "Australia",
         "papers": 1,
         "share_percent": 4.76
       },
@@ -407,12 +407,12 @@
         "share_percent": 4.76
       },
       {
-        "country": "Australia",
+        "country": "Netherlands",
         "papers": 1,
         "share_percent": 4.76
       },
       {
-        "country": "Netherlands",
+        "country": "Australia",
         "papers": 1,
         "share_percent": 4.76
       },
@@ -432,10 +432,10 @@
     "lead_papers": 8,
     "supporting_papers": 15,
     "lead_citations": 113,
-    "lead_citation_share_percent": 25.06,
+    "lead_citation_share_percent": 25.0,
     "lead_citations_per_paper": 14.12,
-    "supporting_citations_per_paper": 22.53,
-    "leadership_impact_ratio": 0.627,
+    "supporting_citations_per_paper": 22.6,
+    "leadership_impact_ratio": 0.625,
     "window_years": 5,
     "window_start_year": 2022,
     "window_end_year": 2026,
@@ -501,14 +501,14 @@
     "window_start_year": 2022,
     "window_end_year": 2026,
     "recent_papers": 15,
-    "recent_citations": 155,
+    "recent_citations": 156,
     "recent_paper_share_percent": 65.22,
-    "recent_citation_share_percent": 34.37,
-    "momentum_score": 49.8
+    "recent_citation_share_percent": 34.51,
+    "momentum_score": 49.86
   },
   "impact_concentration": {
-    "top3_citation_share_percent": 45.01,
-    "top5_citation_share_percent": 63.41
+    "top3_citation_share_percent": 44.91,
+    "top5_citation_share_percent": 63.27
   },
   "top_cited": [
     {
@@ -571,7 +571,7 @@
       "title": "Multi-frequency observations of PDS70c: Radio emission mechanisms in the circumplanetary environment",
       "year": 2025,
       "publication": "Astronomy and Astrophysics",
-      "citation_count": 19,
+      "citation_count": 20,
       "url": "https://doi.org/10.1051/0004-6361/202554485",
       "doi": "10.1051/0004-6361/202554485"
     },
@@ -634,11 +634,11 @@
         "title": "Multi-frequency observations of PDS70c: Radio emission mechanisms in the circumplanetary environment",
         "year": 2025,
         "publication": "Astronomy and Astrophysics",
-        "citations": 19,
+        "citations": 20,
         "author_position": 5,
         "leadership_factor": 0.5,
-        "c_i": 19.0,
-        "s_i": 2.2361,
+        "c_i": 20.0,
+        "s_i": 2.2913,
         "url": "https://doi.org/10.1051/0004-6361/202554485"
       },
       {
@@ -708,8 +708,8 @@
         "url": "https://doi.org/10.48550/arXiv.2606.28221"
       }
     ],
-    "p_sum": 20.6097,
-    "np_score": 4.6222
+    "p_sum": 20.6649,
+    "np_score": 4.6246
   },
   "chart_palette": {
     "primary": "#362cb1",
