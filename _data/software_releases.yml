@@ -1,6 +1,23 @@
-fetched_at_utc: '2026-11-09T19:50:37Z'
+fetched_at_utc: '2026-11-10T16:25:36Z'
 projects:
   pyralysis:
+  - name: v3.4.0 - FISTA accelerates, consistent ROW gradient, deprecated APIs removed
+    tag: v3.4.0
+    published_at: '2026-11-10T03:59:47.563Z'
+    url: https://gitlab.com/clirai/pyralysis/-/releases/v3.4.0
+    description: 'Minor release. The optimizers are right where it mattered most:
+      FISTA and MFISTA accelerate again
+
+      (they ran as ISTA, #400) on a current gradient (#401) and take only proximal
+      line searches (#179);
+
+      the ROW gradient follows the intensity model (#423); the regularizers keep the
+      parameter''s
+
+      precision (#431); the restoring beam''s position angle is no longer 90 degrees
+      off (#427). The
+
+      command-line scrip'
   - name: v3.3.0 - simulations match CASA, primary beams at CASA's radius
     tag: v3.3.0
     published_at: '2026-10-28T21:38:04.346Z'
@@ -41,21 +58,6 @@ projects:
       represents `|u| < 1/(2 Δl)`, `|v| < 1/(2 Δm)` (`Grid.contains_uv_pix`). Gridding
       (`DirtyMapper`), uniform and robust weighting and the fit leave out the same
       sample'
-  - name: v3.1.0 - CORRECTED_DATA fits and kernel gridding corrections
-    tag: v3.1.0
-    published_at: '2026-10-19T16:52:27.265Z'
-    url: https://gitlab.com/clirai/pyralysis/-/releases/v3.1.0
-    description: 'The optimization CLI fits CORRECTED_DATA when that column is loaded,
-      and kernel-gridded dirty, residual and restored images use the GCF and table
-      of the padded grid.
-
-
-      ## Important changes
-
-
-      - The optimization CLI and the dirty-image CLI request CORRECTED_DATA on read
-      (#323, #242). When the table has that column, VisibilitySet.observed is the
-      calibrated visibilities, and the fit, the residual, and a'
   csromer: []
   gpuvmem:
   - name: v7.0.0
@@ -91,8 +93,8 @@ projects:
 pypi:
   pyralysis:
     package: pyralysis
-    version: 3.3.0
-    url: https://pypi.org/project/pyralysis/3.3.0/
+    version: 3.4.0
+    url: https://pypi.org/project/pyralysis/3.4.0/
     project_url: https://pypi.org/project/pyralysis/
-    published_at: '2026-10-28T21:08:44.075050Z'
-    install: pip install pyralysis==3.3.0
+    published_at: '2026-11-10T02:29:05.358334Z'
+    install: pip install pyralysis==3.4.0
