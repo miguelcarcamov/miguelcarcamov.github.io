@@ -1,4 +1,4 @@
-generated_at_utc: '2026-11-11T16:11:48Z'
+generated_at_utc: '2026-11-12T16:49:06Z'
 source: NASA ADS API + Crossref
 orcid: 0000-0003-0564-8167
 query_authors:
@@ -851,7 +851,7 @@ coauthored:
     pages: '3278'
     doi: 10.1093/mnras/sty3269
     url: https://doi.org/10.1093/mnras/sty3269
-    citation_count: 39
+    citation_count: 38
     author_position: 10
     publication_type: journal
     is_open_access: true

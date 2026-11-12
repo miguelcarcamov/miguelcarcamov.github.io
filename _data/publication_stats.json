@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-11T16:11:48Z",
+  "generated_at_utc": "2026-11-12T16:49:06Z",
   "source": "NASA ADS API",
   "volume": {
     "total_publications": 23,
@@ -15,8 +15,8 @@
     "open_access_share_percent": 82.61
   },
   "citations": {
-    "total_citations": 445,
-    "average_citations_per_paper": 19.35,
+    "total_citations": 444,
+    "average_citations_per_paper": 19.3,
     "median_citations_per_paper": 9.0,
     "h_index": 11,
     "h_index_h_paper_citations": 17,
@@ -26,7 +26,7 @@
       54,
       50,
       42,
-      39,
+      38,
       32,
       26,
       18,
@@ -91,7 +91,7 @@
       0,
       50,
       130,
-      39,
+      38,
       17,
       59,
       85,
@@ -104,14 +104,14 @@
       0,
       50,
       180,
-      219,
-      236,
-      295,
-      380,
-      421,
-      421,
-      439,
-      445
+      218,
+      235,
+      294,
+      379,
+      420,
+      420,
+      438,
+      444
     ]
   },
   "histogram": {
@@ -160,11 +160,11 @@
         "papers_together": 5
       },
       {
-        "name": "Zurlo, Alice",
+        "name": "Hales, Antonio",
         "papers_together": 5
       },
       {
-        "name": "Hales, Antonio",
+        "name": "Zurlo, Alice",
         "papers_together": 5
       },
       {
@@ -325,12 +325,12 @@
         "share_percent": 4.76
       },
       {
-        "country": "Netherlands",
+        "country": "Australia",
         "papers": 1,
         "share_percent": 4.76
       },
       {
-        "country": "Australia",
+        "country": "Netherlands",
         "papers": 1,
         "share_percent": 4.76
       },
@@ -407,12 +407,12 @@
         "share_percent": 4.76
       },
       {
-        "country": "Netherlands",
+        "country": "Australia",
         "papers": 1,
         "share_percent": 4.76
       },
       {
-        "country": "Australia",
+        "country": "Netherlands",
         "papers": 1,
         "share_percent": 4.76
       },
@@ -432,10 +432,10 @@
     "lead_papers": 8,
     "supporting_papers": 15,
     "lead_citations": 110,
-    "lead_citation_share_percent": 24.72,
+    "lead_citation_share_percent": 24.77,
     "lead_citations_per_paper": 13.75,
-    "supporting_citations_per_paper": 22.33,
-    "leadership_impact_ratio": 0.616,
+    "supporting_citations_per_paper": 22.27,
+    "leadership_impact_ratio": 0.617,
     "window_years": 5,
     "window_start_year": 2022,
     "window_end_year": 2026,
@@ -503,12 +503,12 @@
     "recent_papers": 15,
     "recent_citations": 150,
     "recent_paper_share_percent": 65.22,
-    "recent_citation_share_percent": 33.71,
-    "momentum_score": 49.47
+    "recent_citation_share_percent": 33.78,
+    "momentum_score": 49.5
   },
   "impact_concentration": {
-    "top3_citation_share_percent": 45.39,
-    "top5_citation_share_percent": 63.6
+    "top3_citation_share_percent": 45.5,
+    "top5_citation_share_percent": 63.51
   },
   "top_cited": [
     {
@@ -547,7 +547,7 @@
       "title": "Cm-wavelength observations of MWC 758: resolved dust trapping in a vortex",
       "year": 2019,
       "publication": "Monthly Notices of the Royal Astronomical Society",
-      "citation_count": 39,
+      "citation_count": 38,
       "url": "https://doi.org/10.1093/mnras/sty3269",
       "doi": "10.1093/mnras/sty3269"
     },
