@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-13T16:26:25Z",
+  "generated_at_utc": "2026-11-14T15:06:09Z",
   "source": "NASA ADS API",
   "volume": {
     "total_publications": 23,
@@ -15,8 +15,8 @@
     "open_access_share_percent": 82.61
   },
   "citations": {
-    "total_citations": 444,
-    "average_citations_per_paper": 19.3,
+    "total_citations": 446,
+    "average_citations_per_paper": 19.39,
     "median_citations_per_paper": 9.0,
     "h_index": 11,
     "h_index_h_paper_citations": 17,
@@ -25,9 +25,9 @@
       98,
       54,
       50,
-      42,
+      43,
       38,
-      32,
+      33,
       26,
       18,
       17,
@@ -56,9 +56,9 @@
     "window_start_year": 2022,
     "window_end_year": 2026,
     "papers_in_window": 15,
-    "citations_in_window": 150,
+    "citations_in_window": 151,
     "effective_paper_age_years": 38,
-    "citations_per_effective_year": 3.9474
+    "citations_per_effective_year": 3.9737
   },
   "yearly": {
     "years": [
@@ -90,11 +90,11 @@
     "citations_per_year": [
       0,
       50,
-      130,
+      131,
       38,
       17,
       59,
-      85,
+      86,
       41,
       0,
       18,
@@ -103,15 +103,15 @@
     "cumulative_citations": [
       0,
       50,
-      180,
-      218,
-      235,
-      294,
-      379,
-      420,
-      420,
-      438,
-      444
+      181,
+      219,
+      236,
+      295,
+      381,
+      422,
+      422,
+      440,
+      446
     ]
   },
   "histogram": {
@@ -325,12 +325,12 @@
         "share_percent": 4.76
       },
       {
-        "country": "Australia",
+        "country": "Netherlands",
         "papers": 1,
         "share_percent": 4.76
       },
       {
-        "country": "Netherlands",
+        "country": "Australia",
         "papers": 1,
         "share_percent": 4.76
       },
@@ -407,12 +407,12 @@
         "share_percent": 4.76
       },
       {
-        "country": "Australia",
+        "country": "Netherlands",
         "papers": 1,
         "share_percent": 4.76
       },
       {
-        "country": "Netherlands",
+        "country": "Australia",
         "papers": 1,
         "share_percent": 4.76
       },
@@ -431,11 +431,11 @@
   "leadership": {
     "lead_papers": 8,
     "supporting_papers": 15,
-    "lead_citations": 110,
-    "lead_citation_share_percent": 24.77,
-    "lead_citations_per_paper": 13.75,
+    "lead_citations": 112,
+    "lead_citation_share_percent": 25.11,
+    "lead_citations_per_paper": 14.0,
     "supporting_citations_per_paper": 22.27,
-    "leadership_impact_ratio": 0.617,
+    "leadership_impact_ratio": 0.629,
     "window_years": 5,
     "window_start_year": 2022,
     "window_end_year": 2026,
@@ -501,14 +501,14 @@
     "window_start_year": 2022,
     "window_end_year": 2026,
     "recent_papers": 15,
-    "recent_citations": 150,
+    "recent_citations": 151,
     "recent_paper_share_percent": 65.22,
-    "recent_citation_share_percent": 33.78,
-    "momentum_score": 49.5
+    "recent_citation_share_percent": 33.86,
+    "momentum_score": 49.54
   },
   "impact_concentration": {
-    "top3_citation_share_percent": 45.5,
-    "top5_citation_share_percent": 63.51
+    "top3_citation_share_percent": 45.29,
+    "top5_citation_share_percent": 63.45
   },
   "top_cited": [
     {
@@ -539,7 +539,7 @@
       "title": "Variable structure in the PDS 70 disc and uncertainties in radio-interferometric image restoration",
       "year": 2022,
       "publication": "Monthly Notices of the Royal Astronomical Society",
-      "citation_count": 42,
+      "citation_count": 43,
       "url": "https://doi.org/10.1093/mnras/stac1285",
       "doi": "10.1093/mnras/stac1285"
     },
@@ -555,7 +555,7 @@
       "title": "Multi-GPU maximum entropy image synthesis for radio astronomy",
       "year": 2018,
       "publication": "Astronomy and Computing",
-      "citation_count": 32,
+      "citation_count": 33,
       "url": "https://doi.org/10.1016/j.ascom.2017.11.003",
       "doi": "10.1016/j.ascom.2017.11.003"
     },
@@ -601,11 +601,11 @@
         "title": "Variable structure in the PDS 70 disc and uncertainties in radio-interferometric image restoration",
         "year": 2022,
         "publication": "Monthly Notices of the Royal Astronomical Society",
-        "citations": 42,
+        "citations": 43,
         "author_position": 2,
         "leadership_factor": 1.0,
-        "c_i": 10.5,
-        "s_i": 3.3912,
+        "c_i": 10.75,
+        "s_i": 3.4278,
         "url": "https://doi.org/10.1093/mnras/stac1285"
       },
       {
@@ -708,8 +708,8 @@
         "url": "https://doi.org/10.48550/arXiv.2606.28221"
       }
     ],
-    "p_sum": 20.4351,
-    "np_score": 4.6145
+    "p_sum": 20.4717,
+    "np_score": 4.6161
   },
   "chart_palette": {
     "primary": "#362cb1",
