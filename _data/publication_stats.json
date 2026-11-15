@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-14T15:06:09Z",
+  "generated_at_utc": "2026-11-15T15:40:07Z",
   "source": "NASA ADS API",
   "volume": {
     "total_publications": 23,
@@ -15,8 +15,8 @@
     "open_access_share_percent": 82.61
   },
   "citations": {
-    "total_citations": 446,
-    "average_citations_per_paper": 19.39,
+    "total_citations": 449,
+    "average_citations_per_paper": 19.52,
     "median_citations_per_paper": 9.0,
     "h_index": 11,
     "h_index_h_paper_citations": 17,
@@ -25,10 +25,10 @@
       98,
       54,
       50,
-      43,
+      45,
       38,
       33,
-      26,
+      27,
       18,
       17,
       17,
@@ -56,9 +56,9 @@
     "window_start_year": 2022,
     "window_end_year": 2026,
     "papers_in_window": 15,
-    "citations_in_window": 151,
+    "citations_in_window": 154,
     "effective_paper_age_years": 38,
-    "citations_per_effective_year": 3.9737
+    "citations_per_effective_year": 4.0526
   },
   "yearly": {
     "years": [
@@ -94,7 +94,7 @@
       38,
       17,
       59,
-      86,
+      89,
       41,
       0,
       18,
@@ -107,11 +107,11 @@
       219,
       236,
       295,
-      381,
-      422,
-      422,
-      440,
-      446
+      384,
+      425,
+      425,
+      443,
+      449
     ]
   },
   "histogram": {
@@ -160,11 +160,11 @@
         "papers_together": 5
       },
       {
-        "name": "Zurlo, Alice",
+        "name": "Hales, Antonio",
         "papers_together": 5
       },
       {
-        "name": "Hales, Antonio",
+        "name": "Zurlo, Alice",
         "papers_together": 5
       },
       {
@@ -325,12 +325,12 @@
         "share_percent": 4.76
       },
       {
-        "country": "Netherlands",
+        "country": "Australia",
         "papers": 1,
         "share_percent": 4.76
       },
       {
-        "country": "Australia",
+        "country": "Netherlands",
         "papers": 1,
         "share_percent": 4.76
       },
@@ -407,12 +407,12 @@
         "share_percent": 4.76
       },
       {
-        "country": "Netherlands",
+        "country": "Australia",
         "papers": 1,
         "share_percent": 4.76
       },
       {
-        "country": "Australia",
+        "country": "Netherlands",
         "papers": 1,
         "share_percent": 4.76
       },
@@ -431,11 +431,11 @@
   "leadership": {
     "lead_papers": 8,
     "supporting_papers": 15,
-    "lead_citations": 112,
-    "lead_citation_share_percent": 25.11,
-    "lead_citations_per_paper": 14.0,
+    "lead_citations": 115,
+    "lead_citation_share_percent": 25.61,
+    "lead_citations_per_paper": 14.38,
     "supporting_citations_per_paper": 22.27,
-    "leadership_impact_ratio": 0.629,
+    "leadership_impact_ratio": 0.646,
     "window_years": 5,
     "window_start_year": 2022,
     "window_end_year": 2026,
@@ -501,14 +501,14 @@
     "window_start_year": 2022,
     "window_end_year": 2026,
     "recent_papers": 15,
-    "recent_citations": 151,
+    "recent_citations": 154,
     "recent_paper_share_percent": 65.22,
-    "recent_citation_share_percent": 33.86,
-    "momentum_score": 49.54
+    "recent_citation_share_percent": 34.3,
+    "momentum_score": 49.76
   },
   "impact_concentration": {
-    "top3_citation_share_percent": 45.29,
-    "top5_citation_share_percent": 63.45
+    "top3_citation_share_percent": 44.99,
+    "top5_citation_share_percent": 63.47
   },
   "top_cited": [
     {
@@ -539,7 +539,7 @@
       "title": "Variable structure in the PDS 70 disc and uncertainties in radio-interferometric image restoration",
       "year": 2022,
       "publication": "Monthly Notices of the Royal Astronomical Society",
-      "citation_count": 43,
+      "citation_count": 45,
       "url": "https://doi.org/10.1093/mnras/stac1285",
       "doi": "10.1093/mnras/stac1285"
     },
@@ -563,7 +563,7 @@
       "title": "The Doppler Flip in HD 100546 as a Disk Eruption: The Elephant in the Room of Kinematic Protoplanet Searches",
       "year": 2022,
       "publication": "The Astrophysical Journal Letters",
-      "citation_count": 26,
+      "citation_count": 27,
       "url": "https://doi.org/10.3847/2041-8213/ac75e8",
       "doi": "10.3847/2041-8213/ac75e8"
     },
@@ -601,11 +601,11 @@
         "title": "Variable structure in the PDS 70 disc and uncertainties in radio-interferometric image restoration",
         "year": 2022,
         "publication": "Monthly Notices of the Royal Astronomical Society",
-        "citations": 43,
+        "citations": 45,
         "author_position": 2,
         "leadership_factor": 1.0,
-        "c_i": 10.75,
-        "s_i": 3.4278,
+        "c_i": 11.25,
+        "s_i": 3.5,
         "url": "https://doi.org/10.1093/mnras/stac1285"
       },
       {
@@ -623,11 +623,11 @@
         "title": "The Doppler Flip in HD 100546 as a Disk Eruption: The Elephant in the Room of Kinematic Protoplanet Searches",
         "year": 2022,
         "publication": "The Astrophysical Journal Letters",
-        "citations": 26,
+        "citations": 27,
         "author_position": 2,
         "leadership_factor": 1.0,
-        "c_i": 6.5,
-        "s_i": 2.7386,
+        "c_i": 6.75,
+        "s_i": 2.7839,
         "url": "https://doi.org/10.3847/2041-8213/ac75e8"
       },
       {
@@ -708,8 +708,8 @@
         "url": "https://doi.org/10.48550/arXiv.2606.28221"
       }
     ],
-    "p_sum": 20.4717,
-    "np_score": 4.6161
+    "p_sum": 20.5892,
+    "np_score": 4.6213
   },
   "chart_palette": {
     "primary": "#362cb1",
