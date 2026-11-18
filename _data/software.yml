@@ -68,13 +68,13 @@ featured:
       publisher: GitHub
 
 secondary:
-  - id: snow
-    name: SNOW
-    tagline: caSa pythoN self-calibratiOn frameWork
+  - id: wenuray
+    name: Wenuray
+    tagline: Python framework for radio-interferometric self-calibration
     description: >-
-      Python framework for radio astronomy self-calibration workflows with a unified
-      interface to imagers and calibration algorithms.
-    repo: https://github.com/miguelcarcamov/snow
+      Python framework for radio-interferometric self-calibration workflows with a
+      unified interface to imagers and calibration algorithms.
+    repo: https://github.com/miguelcarcamov/wenuray
     platform: github
     areas:
       - imaging

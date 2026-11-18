@@ -11,13 +11,7 @@ slug: collaborators-institutions
 <span style="font-size: 13px; color: #999;">Inter-University Institute for Data Intensive Astronomy. Partnership supporting MeerKAT large survey science and SKA pathfinder telescope projects.</span>
 </li>
 <li style="margin-bottom: 12px;">
-<strong>Universidad de Santiago de Chile (USACH)</strong>
-</li>
-<li style="margin-bottom: 12px;">
-<strong>Data Observatory</strong>
-</li>
-<li style="margin-bottom: 12px;">
-<strong>Millennium Nucleus YEMS</strong> (Young Exoplanets and their MoonS)
+<strong>Universidad de Santiago de Chile (USACH)</strong> — Departamento de Ingeniería Informática (DIINF)
 </li>
 <li style="margin-bottom: 12px;">
 <strong>The University of Manchester</strong> - Interferometry Center of Excellence (ICE)

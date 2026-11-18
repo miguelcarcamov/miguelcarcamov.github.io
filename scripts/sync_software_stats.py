@@ -16,7 +16,7 @@ REPOS = [
     {"id": "pyralysis", "platform": "gitlab", "project": "clirai%2Fpyralysis"},
     {"id": "csromer", "platform": "github", "repo": "miguelcarcamov/csromer"},
     {"id": "gpuvmem", "platform": "github", "repo": "miguelcarcamov/gpuvmem"},
-    {"id": "snow", "platform": "github", "repo": "miguelcarcamov/snow"},
+    {"id": "wenuray", "platform": "github", "repo": "miguelcarcamov/wenuray"},
     {"id": "ocarina", "platform": "github", "repo": "miguelcarcamov/ocarina"},
     {"id": "simulate-interferometer", "platform": "github", "repo": "miguelcarcamov/simulate_interferometer"},
 ]

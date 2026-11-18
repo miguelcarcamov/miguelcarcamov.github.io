@@ -7,7 +7,7 @@ slug: research-area-planet-formation
 <p>Researchers also ask how growing planets interact with the disc, whether moons can form around them, and why some discs show gaps, spirals, or bright spots that change over time. Radio telescopes help by showing dust and gas, and sometimes the glow of material still falling onto a young planet.</p>
 
 <h5 class="research-area-subtitle">What I do</h5>
-<p>I analyse radio data from telescopes such as ALMA and the VLA on young discs and environments around forming planets, with emphasis on variability, what drives the radio emission, and how the way we build images affects the science. Much of this work is done with the Millennium Nucleus YEMS (Young Exoplanets and their Moons) and collaborators in Chile and abroad.</p>
+<p>I analyse radio data from telescopes such as ALMA and the VLA on young discs and environments around forming planets, with emphasis on variability, what drives the radio emission, and how the way we build images affects the science. This work is done with collaborators in Chile and abroad.</p>
 
 <h5 class="research-area-subtitle">Selected publications</h5>
 <ul class="research-area-papers">
