@@ -1,4 +1,4 @@
-generated_at_utc: '2026-11-18T17:16:17Z'
+generated_at_utc: '2026-11-19T17:23:21Z'
 source: NASA ADS API + Crossref
 orcid: 0000-0003-0564-8167
 query_authors:
@@ -348,7 +348,7 @@ coauthored:
     pages: A18
     doi: 10.1051/0004-6361/202554485
     url: https://doi.org/10.1051/0004-6361/202554485
-    citation_count: 18
+    citation_count: 19
     author_position: 5
     publication_type: journal
     is_open_access: true
@@ -590,7 +590,7 @@ coauthored:
     pages: L4
     doi: 10.3847/2041-8213/ac75e8
     url: https://doi.org/10.3847/2041-8213/ac75e8
-    citation_count: 27
+    citation_count: 28
     author_position: 2
     publication_type: journal
     is_open_access: true
