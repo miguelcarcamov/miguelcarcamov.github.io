@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-19T17:23:21Z",
+  "generated_at_utc": "2026-11-20T16:58:24Z",
   "source": "NASA ADS API",
   "volume": {
     "total_publications": 23,
@@ -15,8 +15,8 @@
     "open_access_share_percent": 82.61
   },
   "citations": {
-    "total_citations": 451,
-    "average_citations_per_paper": 19.61,
+    "total_citations": 447,
+    "average_citations_per_paper": 19.43,
     "median_citations_per_paper": 9.0,
     "h_index": 11,
     "h_index_h_paper_citations": 17,
@@ -25,11 +25,11 @@
       98,
       54,
       50,
-      45,
+      44,
       38,
       33,
-      28,
-      19,
+      26,
+      18,
       17,
       17,
       17,
@@ -56,9 +56,9 @@
     "window_start_year": 2022,
     "window_end_year": 2026,
     "papers_in_window": 15,
-    "citations_in_window": 156,
+    "citations_in_window": 152,
     "effective_paper_age_years": 38,
-    "citations_per_effective_year": 4.1053
+    "citations_per_effective_year": 4.0
   },
   "yearly": {
     "years": [
@@ -94,10 +94,10 @@
       38,
       17,
       59,
-      90,
+      87,
       41,
       0,
-      19,
+      18,
       6
     ],
     "cumulative_citations": [
@@ -107,11 +107,11 @@
       219,
       236,
       295,
-      385,
-      426,
-      426,
-      445,
-      451
+      382,
+      423,
+      423,
+      441,
+      447
     ]
   },
   "histogram": {
@@ -431,11 +431,11 @@
   "leadership": {
     "lead_papers": 8,
     "supporting_papers": 15,
-    "lead_citations": 116,
-    "lead_citation_share_percent": 25.72,
-    "lead_citations_per_paper": 14.5,
-    "supporting_citations_per_paper": 22.33,
-    "leadership_impact_ratio": 0.649,
+    "lead_citations": 113,
+    "lead_citation_share_percent": 25.28,
+    "lead_citations_per_paper": 14.12,
+    "supporting_citations_per_paper": 22.27,
+    "leadership_impact_ratio": 0.634,
     "window_years": 5,
     "window_start_year": 2022,
     "window_end_year": 2026,
@@ -501,14 +501,14 @@
     "window_start_year": 2022,
     "window_end_year": 2026,
     "recent_papers": 15,
-    "recent_citations": 156,
+    "recent_citations": 152,
     "recent_paper_share_percent": 65.22,
-    "recent_citation_share_percent": 34.59,
-    "momentum_score": 49.91
+    "recent_citation_share_percent": 34.0,
+    "momentum_score": 49.61
   },
   "impact_concentration": {
-    "top3_citation_share_percent": 44.79,
-    "top5_citation_share_percent": 63.19
+    "top3_citation_share_percent": 45.19,
+    "top5_citation_share_percent": 63.53
   },
   "top_cited": [
     {
@@ -539,7 +539,7 @@
       "title": "Variable structure in the PDS 70 disc and uncertainties in radio-interferometric image restoration",
       "year": 2022,
       "publication": "Monthly Notices of the Royal Astronomical Society",
-      "citation_count": 45,
+      "citation_count": 44,
       "url": "https://doi.org/10.1093/mnras/stac1285",
       "doi": "10.1093/mnras/stac1285"
     },
@@ -563,7 +563,7 @@
       "title": "The Doppler Flip in HD 100546 as a Disk Eruption: The Elephant in the Room of Kinematic Protoplanet Searches",
       "year": 2022,
       "publication": "The Astrophysical Journal Letters",
-      "citation_count": 28,
+      "citation_count": 26,
       "url": "https://doi.org/10.3847/2041-8213/ac75e8",
       "doi": "10.3847/2041-8213/ac75e8"
     },
@@ -571,7 +571,7 @@
       "title": "Multi-frequency observations of PDS70c: Radio emission mechanisms in the circumplanetary environment",
       "year": 2025,
       "publication": "Astronomy and Astrophysics",
-      "citation_count": 19,
+      "citation_count": 18,
       "url": "https://doi.org/10.1051/0004-6361/202554485",
       "doi": "10.1051/0004-6361/202554485"
     },
@@ -601,11 +601,11 @@
         "title": "Variable structure in the PDS 70 disc and uncertainties in radio-interferometric image restoration",
         "year": 2022,
         "publication": "Monthly Notices of the Royal Astronomical Society",
-        "citations": 45,
+        "citations": 44,
         "author_position": 2,
         "leadership_factor": 1.0,
-        "c_i": 11.25,
-        "s_i": 3.5,
+        "c_i": 11.0,
+        "s_i": 3.4641,
         "url": "https://doi.org/10.1093/mnras/stac1285"
       },
       {
@@ -623,22 +623,22 @@
         "title": "The Doppler Flip in HD 100546 as a Disk Eruption: The Elephant in the Room of Kinematic Protoplanet Searches",
         "year": 2022,
         "publication": "The Astrophysical Journal Letters",
-        "citations": 28,
+        "citations": 26,
         "author_position": 2,
         "leadership_factor": 1.0,
-        "c_i": 7.0,
-        "s_i": 2.8284,
+        "c_i": 6.5,
+        "s_i": 2.7386,
         "url": "https://doi.org/10.3847/2041-8213/ac75e8"
       },
       {
         "title": "Multi-frequency observations of PDS70c: Radio emission mechanisms in the circumplanetary environment",
         "year": 2025,
         "publication": "Astronomy and Astrophysics",
-        "citations": 19,
+        "citations": 18,
         "author_position": 5,
         "leadership_factor": 0.5,
-        "c_i": 19.0,
-        "s_i": 2.2361,
+        "c_i": 18.0,
+        "s_i": 2.1794,
         "url": "https://doi.org/10.1051/0004-6361/202554485"
       },
       {
@@ -708,8 +708,8 @@
         "url": "https://doi.org/10.48550/arXiv.2606.28221"
       }
     ],
-    "p_sum": 20.6904,
-    "np_score": 4.6257
+    "p_sum": 20.508,
+    "np_score": 4.6177
   },
   "chart_palette": {
     "primary": "#362cb1",
