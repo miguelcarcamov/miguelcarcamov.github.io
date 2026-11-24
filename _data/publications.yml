@@ -1,4 +1,4 @@
-generated_at_utc: '2026-11-23T21:27:10Z'
+generated_at_utc: '2026-11-24T19:30:38Z'
 source: NASA ADS API + Crossref
 orcid: 0000-0003-0564-8167
 query_authors:
@@ -27,7 +27,7 @@ first_author:
     - '-'
     - '-'
     title: 'Faraday Tomography with the SKA: A New Era of Cosmic Magnetism Studies'
-    publication: Advancing Astrophysics with the SKA I
+    publication: Advancing Astrophysics with the SKA - II
     year: 2026
     date_label: '2026'
     volume: ''
@@ -214,7 +214,7 @@ coauthored:
     - '-'
     - '-'
     title: Probing Anomalous Microwave Emission with the Square Kilometre Array
-    publication: Advancing Astrophysics with the SKA I
+    publication: Advancing Astrophysics with the SKA - II
     year: 2026
     date_label: '2026'
     volume: ''

@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-23T21:27:10Z",
+  "generated_at_utc": "2026-11-24T19:30:38Z",
   "source": "NASA ADS API",
   "volume": {
     "total_publications": 23,
@@ -160,11 +160,11 @@
         "papers_together": 5
       },
       {
-        "name": "Hales, Antonio",
+        "name": "Zurlo, Alice",
         "papers_together": 5
       },
       {
-        "name": "Zurlo, Alice",
+        "name": "Hales, Antonio",
         "papers_together": 5
       },
       {
@@ -688,7 +688,7 @@
       {
         "title": "Probing Anomalous Microwave Emission with the Square Kilometre Array",
         "year": 2026,
-        "publication": "Advancing Astrophysics with the SKA I",
+        "publication": "Advancing Astrophysics with the SKA - II",
         "citations": 2,
         "author_position": 4,
         "leadership_factor": 0.7,
@@ -699,7 +699,7 @@
       {
         "title": "Faraday Tomography with the SKA: A New Era of Cosmic Magnetism Studies",
         "year": 2026,
-        "publication": "Advancing Astrophysics with the SKA I",
+        "publication": "Advancing Astrophysics with the SKA - II",
         "citations": 0,
         "author_position": 1,
         "leadership_factor": 1.0,

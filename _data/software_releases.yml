@@ -1,4 +1,4 @@
-fetched_at_utc: '2026-11-23T21:27:10Z'
+fetched_at_utc: '2026-11-24T19:30:38Z'
 projects:
   pyralysis:
   - name: v3.4.0 - FISTA accelerates, consistent ROW gradient, deprecated APIs removed
