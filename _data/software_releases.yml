@@ -1,6 +1,21 @@
-fetched_at_utc: '2026-11-24T19:30:38Z'
+fetched_at_utc: '2026-11-25T18:39:29Z'
 projects:
   pyralysis:
+  - name: Pyralysis 4.0.0rc1 Ckapin
+    tag: v4.0.0rc1
+    published_at: '2026-11-24T20:55:36.115Z'
+    url: https://gitlab.com/clirai/pyralysis/-/releases/v4.0.0rc1
+    description: 'Release candidate 1 of Pyralysis 4.0.0, named **Ckapin**: the Sun
+      in Kunza, the language of the Likan Antai (Atacameño) people. The next major
+      release is named Choike (Mapudungun, the rhea). Sources are in the table of
+      `docs/source/versioning.rst`.
+
+
+      This is a pre-release, published so that the checks that need a larger machine
+      run before 4.0.0 becomes the default install.
+
+
+      - **Package:** `pip inst'
   - name: v3.4.0 - FISTA accelerates, consistent ROW gradient, deprecated APIs removed
     tag: v3.4.0
     published_at: '2026-11-10T03:59:47.563Z'
@@ -43,21 +58,6 @@ projects:
       - ROW fits with `Degridding` follow the gradient of their loss. The ROW adjoint,
       an exact inverse DFT, multiplied the gradient by the forward''s whole image-domain
       screen. For degridding that screen divides b'
-  - name: v3.2.0 - one off-grid rule, periodic grid reads and image-domain screens
-    tag: v3.2.0
-    published_at: '2026-10-22T02:01:44.892Z'
-    url: https://gitlab.com/clirai/pyralysis/-/releases/v3.2.0
-    description: 'The forward model, gridding and weighting agree on what the uv grid
-      holds, and image-domain screens replace each estimator''s response.
-
-
-      ## Important changes
-
-
-      - **One rule for visibilities outside the grid (#346, #369, #375).** The grid
-      represents `|u| < 1/(2 Δl)`, `|v| < 1/(2 Δm)` (`Grid.contains_uv_pix`). Gridding
-      (`DirtyMapper`), uniform and robust weighting and the fit leave out the same
-      sample'
   csromer: []
   gpuvmem:
   - name: v7.0.0
