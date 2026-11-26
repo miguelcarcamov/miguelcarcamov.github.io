@@ -1,6 +1,20 @@
-fetched_at_utc: '2026-11-25T18:39:29Z'
+fetched_at_utc: '2026-11-26T18:25:46Z'
 projects:
   pyralysis:
+  - name: Pyralysis 4.0.0rc2 Ckapin
+    tag: v4.0.0rc2
+    published_at: '2026-11-26T17:10:55.400Z'
+    url: https://gitlab.com/clirai/pyralysis/-/releases/v4.0.0rc2
+    description: 'Release candidate 2 of Pyralysis 4.0.0, named **Ckapin**: the Sun
+      in Kunza, the language of the Likan Antai (Atacameño) people. It supersedes
+      [v4.0.0rc1](https://gitlab.com/clirai/pyralysis/-/releases/v4.0.0rc1).
+
+
+      This is a pre-release, published so that the checks that need a larger machine
+      run before 4.0.0 becomes the default install.
+
+
+      - **Package:** `pip install --pre pyralysis` or `pip install'
   - name: Pyralysis 4.0.0rc1 Ckapin
     tag: v4.0.0rc1
     published_at: '2026-11-24T20:55:36.115Z'
@@ -43,21 +57,6 @@ projects:
       `TELESCOPE_NAME` and CASA''s observatory positions (#385-#391). Polynomial primary
       beams are evaluated at CASA''s radius, and the VLA gets CASA''s blocked Airy
       beam (#398).'
-  - name: v3.2.1 - ROW Degridding adjoint follows the loss
-    tag: v3.2.1
-    published_at: '2026-10-23T16:56:15.231Z'
-    url: https://gitlab.com/clirai/pyralysis/-/releases/v3.2.1
-    description: 'Patch release. ROW Degridding gradients follow the loss: the exact-IDFT
-      adjoint applies only the snapping `sinc` the forward''s taps cancel, so edge
-      pixels no longer dominate (#377).
-
-
-      ## Fixed
-
-
-      - ROW fits with `Degridding` follow the gradient of their loss. The ROW adjoint,
-      an exact inverse DFT, multiplied the gradient by the forward''s whole image-domain
-      screen. For degridding that screen divides b'
   csromer: []
   gpuvmem:
   - name: v7.0.0
