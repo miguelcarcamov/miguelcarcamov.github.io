@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-26T18:25:46Z",
+  "generated_at_utc": "2026-11-27T18:11:56Z",
   "source": "NASA ADS API",
   "volume": {
     "total_publications": 23,
@@ -15,8 +15,8 @@
     "open_access_share_percent": 82.61
   },
   "citations": {
-    "total_citations": 447,
-    "average_citations_per_paper": 19.43,
+    "total_citations": 449,
+    "average_citations_per_paper": 19.52,
     "median_citations_per_paper": 9.0,
     "h_index": 11,
     "h_index_h_paper_citations": 17,
@@ -26,11 +26,11 @@
       54,
       50,
       44,
-      38,
+      39,
       33,
       26,
       18,
-      17,
+      18,
       17,
       17,
       9,
@@ -56,9 +56,9 @@
     "window_start_year": 2022,
     "window_end_year": 2026,
     "papers_in_window": 15,
-    "citations_in_window": 152,
+    "citations_in_window": 153,
     "effective_paper_age_years": 38,
-    "citations_per_effective_year": 4.0
+    "citations_per_effective_year": 4.0263
   },
   "yearly": {
     "years": [
@@ -91,11 +91,11 @@
       0,
       50,
       131,
-      38,
+      39,
       17,
       59,
       87,
-      41,
+      42,
       0,
       18,
       6
@@ -104,14 +104,14 @@
       0,
       50,
       181,
-      219,
-      236,
-      295,
-      382,
-      423,
-      423,
-      441,
-      447
+      220,
+      237,
+      296,
+      383,
+      425,
+      425,
+      443,
+      449
     ]
   },
   "histogram": {
@@ -432,10 +432,10 @@
     "lead_papers": 8,
     "supporting_papers": 15,
     "lead_citations": 113,
-    "lead_citation_share_percent": 25.28,
+    "lead_citation_share_percent": 25.17,
     "lead_citations_per_paper": 14.12,
-    "supporting_citations_per_paper": 22.27,
-    "leadership_impact_ratio": 0.634,
+    "supporting_citations_per_paper": 22.4,
+    "leadership_impact_ratio": 0.63,
     "window_years": 5,
     "window_start_year": 2022,
     "window_end_year": 2026,
@@ -501,14 +501,14 @@
     "window_start_year": 2022,
     "window_end_year": 2026,
     "recent_papers": 15,
-    "recent_citations": 152,
+    "recent_citations": 153,
     "recent_paper_share_percent": 65.22,
-    "recent_citation_share_percent": 34.0,
-    "momentum_score": 49.61
+    "recent_citation_share_percent": 34.08,
+    "momentum_score": 49.65
   },
   "impact_concentration": {
-    "top3_citation_share_percent": 45.19,
-    "top5_citation_share_percent": 63.53
+    "top3_citation_share_percent": 44.99,
+    "top5_citation_share_percent": 63.47
   },
   "top_cited": [
     {
@@ -547,7 +547,7 @@
       "title": "Cm-wavelength observations of MWC 758: resolved dust trapping in a vortex",
       "year": 2019,
       "publication": "Monthly Notices of the Royal Astronomical Society",
-      "citation_count": 38,
+      "citation_count": 39,
       "url": "https://doi.org/10.1093/mnras/sty3269",
       "doi": "10.1093/mnras/sty3269"
     },
@@ -579,7 +579,7 @@
       "title": "Spirals and Clumps in V960 Mon: Signs of Planet Formation via Gravitational Instability around an FU Ori Star?",
       "year": 2023,
       "publication": "The Astrophysical Journal Letters",
-      "citation_count": 17,
+      "citation_count": 18,
       "url": "https://doi.org/10.3847/2041-8213/ace186",
       "doi": "10.3847/2041-8213/ace186"
     },
